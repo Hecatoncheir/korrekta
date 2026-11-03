@@ -1,0 +1,2768 @@
+{
+  "method": "Число дословных вхождений protected без нормализации",
+  "results": [
+    {
+      "path": "benchmarks/results/2026-11-03/preservation/sage95m-test.jsonl",
+      "count": 120,
+      "retention_failures": 90,
+      "retention_failures_on_controls": 45,
+      "changed_controls": 46,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "quotes": 18,
+        "names": 6,
+        "emoji": 20,
+        "formatting": 20,
+        "technical": 6,
+        "mixed": 20
+      },
+      "details": [
+        {
+          "id": "preserve-001-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Северное окно»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-001-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Северное окно»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-002-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«После дождя»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-002-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«После дождя»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-003-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Лесная почта»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-003-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Лесная почта»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-005-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "„Письмо к морю“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-005-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "„Письмо к морю“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-006-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Завтра будет встреча»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-006-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Завтра будет встреча»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-007-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Вопросы и ответы»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-007-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Вопросы и ответы»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-008-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Дом у реки»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-008-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Дом у реки»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-009-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Зелёный трамвай»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-009-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Зелёный трамвай»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-010-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Тихий час»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-010-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Тихий час»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-012-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Нотолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-012-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Нотолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-014-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "LumaNote",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-014-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "LumaNote",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-017-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Рунолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-017-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Рунолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-021-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "🙂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-021-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "🙂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-022-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "🙌",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-022-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "🙌",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-023-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "🚀",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-023-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "🚀",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-024-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "👍🏽",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-024-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "👍🏽",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-025-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "👩‍💻",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-025-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "👩‍💻",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-026-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "🛒",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-026-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "🛒",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-027-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "✅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-027-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "✅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-028-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "❤️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-028-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "❤️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-029-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "👨‍👩‍👧‍👦",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-029-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "👨‍👩‍👧‍👦",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-030-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "📌",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-030-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "📌",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-031-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-031-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-032-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-032-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-033-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "- Чай уже готов.\n- ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-033-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "- Чай уже готов.\n- ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-034-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "1. Проверить список.\n2. ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-034-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "1. Проверить список.\n2. ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-035-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-035-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-036-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Имя\tСтатус\nНина\t",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-036-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Имя\tСтатус\nНина\t",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-037-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-037-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-038-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "**Главное:**",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-038-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "**Главное:**",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-039-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "> ",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-039-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "> ",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-040-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-040-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-044-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "E:\\Notes\\drafts",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-044-error",
+          "category": "technical",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "E:\\Notes\\drafts",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-046-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "{\"enabled\":true,\"mode\":\"ru\"}",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-046-error",
+          "category": "technical",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "{\"enabled\":true,\"mode\":\"ru\"}",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-049-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "`git status --short`",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-049-error",
+          "category": "technical",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "`git status --short`",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-051-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Утро»",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "🌅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-051-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Утро»",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "🌅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-052-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "📎",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-052-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "📎",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-053-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "✅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-053-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "✅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-054-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Путь домой»",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "❤️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-054-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Путь домой»",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "❤️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-055-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-055-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-056-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "🙂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-056-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "🙂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-057-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "**Статус:**",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "🎉",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-057-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "**Статус:**",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "🎉",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-058-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "»",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "📂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-058-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "»",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "📂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-059-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "LumaNote",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-059-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "LumaNote",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-060-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "„Снег“",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "❄️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-060-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "„Снег“",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "❄️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/results/2026-11-03/preservation/lt68-test.jsonl",
+      "count": 120,
+      "retention_failures": 20,
+      "retention_failures_on_controls": 10,
+      "changed_controls": 10,
+      "notices_on_controls": 10,
+      "failures_by_category": {
+        "names": 10,
+        "formatting": 2,
+        "mixed": 8
+      },
+      "details": [
+        {
+          "id": "preserve-011-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-011-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-012-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Нотолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-012-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Нотолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-013-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Финнор",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-013-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Финнор",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-017-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Рунолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-017-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Рунолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-019-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Элины Ро",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-019-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Элины Ро",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-037-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-037-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-052-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-052-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-055-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Нотолист",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-055-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Нотолист",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-056-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Финнор",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-056-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Финнор",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-059-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-059-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/results/2026-11-03/preservation/lt68-sage-test.jsonl",
+      "count": 120,
+      "retention_failures": 96,
+      "retention_failures_on_controls": 48,
+      "changed_controls": 49,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "quotes": 18,
+        "names": 12,
+        "emoji": 20,
+        "formatting": 20,
+        "technical": 6,
+        "mixed": 20
+      },
+      "details": [
+        {
+          "id": "preserve-001-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Северное окно»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-001-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Северное окно»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-002-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«После дождя»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-002-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«После дождя»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-003-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Лесная почта»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-003-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Лесная почта»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-005-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "„Письмо к морю“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-005-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "„Письмо к морю“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-006-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Завтра будет встреча»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-006-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Завтра будет встреча»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-007-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Вопросы и ответы»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-007-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Вопросы и ответы»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-008-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Дом у реки»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-008-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Дом у реки»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-009-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Зелёный трамвай»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-009-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Зелёный трамвай»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-010-correct",
+          "category": "quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Тихий час»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-010-error",
+          "category": "quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Тихий час»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-011-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-011-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-012-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Нотолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-012-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Нотолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-013-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Финнор",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-013-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Финнор",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-014-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "LumaNote",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-014-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "LumaNote",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-017-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Рунолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-017-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Рунолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-019-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Элины Ро",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-019-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Элины Ро",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-021-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "🙂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-021-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "🙂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-022-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "🙌",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-022-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "🙌",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-023-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "🚀",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-023-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "🚀",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-024-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "👍🏽",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-024-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "👍🏽",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-025-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "👩‍💻",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-025-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "👩‍💻",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-026-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "🛒",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-026-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "🛒",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-027-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "✅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-027-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "✅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-028-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "❤️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-028-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "❤️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-029-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "👨‍👩‍👧‍👦",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-029-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "👨‍👩‍👧‍👦",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-030-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "📌",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-030-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "📌",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-031-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-031-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-032-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-032-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-033-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "- Чай уже готов.\n- ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-033-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "- Чай уже готов.\n- ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-034-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "1. Проверить список.\n2. ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-034-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "1. Проверить список.\n2. ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-035-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-035-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-036-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Имя\tСтатус\nНина\t",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-036-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Имя\tСтатус\nНина\t",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-037-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-037-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-038-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "**Главное:**",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-038-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "**Главное:**",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-039-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "> ",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-039-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "> ",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-040-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-040-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-044-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "E:\\Notes\\drafts",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-044-error",
+          "category": "technical",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "E:\\Notes\\drafts",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-046-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "{\"enabled\":true,\"mode\":\"ru\"}",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-046-error",
+          "category": "technical",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "{\"enabled\":true,\"mode\":\"ru\"}",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-049-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "`git status --short`",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-049-error",
+          "category": "technical",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "`git status --short`",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-051-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Утро»",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "🌅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-051-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Утро»",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "🌅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-052-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "📎",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-052-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "📎",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-053-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "✅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-053-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "✅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-054-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Путь домой»",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "❤️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-054-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Путь домой»",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "❤️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-055-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Нотолист",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-055-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Нотолист",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-056-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Финнор",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "🙂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-056-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Финнор",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "🙂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-057-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "**Статус:**",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "🎉",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-057-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "**Статус:**",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "🎉",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-058-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "»",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "📂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-058-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "»",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "📂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-059-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "LumaNote",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-059-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "LumaNote",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-060-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "„Снег“",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "❄️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-060-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "„Снег“",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": "❄️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
