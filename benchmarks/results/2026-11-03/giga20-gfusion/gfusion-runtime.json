@@ -1,0 +1,12 @@
+{
+  "transformers": "4.57.6",
+  "torch": "2.11.0+cu128",
+  "accelerate": "1.15.0",
+  "bitsandbytes": "0.50.2",
+  "device": "RTX 3080 Ti, CUDA capability 8.6",
+  "nf4_smoke": "Уменьшенная архитектура GFusion загружена в NF4, 26 Linear4bit, генерация на CUDA завершилась; это проверка совместимости библиотек, не языкового качества.",
+  "custom_code_sha256": "2ae320a2328f0c75d00d16ebb904e55a0822080ecf07d286541b7cc29235987b",
+  "libraries_path": "E:/korrekta/gfusion-packages;E:/korrekta/sage-transformers4",
+  "large_model_weights": "E:/korrekta/gfusion/bf16-96199b4",
+  "source_revision": "96199b4a88bf1a9145740c614aaaa942d4bb4e44"
+}

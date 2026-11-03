@@ -1,0 +1,29 @@
+{
+  "prefix": {
+    "prefix_tokens": 1120,
+    "cpu_bytes": 715653120,
+    "prepare_seconds": 28.468000399996527
+  },
+  "checks": [
+    {
+      "prompt": "text-only",
+      "case": "ru-002",
+      "identical_token_ids": true,
+      "uncached_seconds": 33.76222129999951,
+      "cached_seconds": 4.444235800001479,
+      "output_tokens": [
+        [
+          20130,
+          19199,
+          370,
+          74848,
+          12282,
+          1426,
+          40283,
+          16,
+          2
+        ]
+      ]
+    }
+  ]
+}

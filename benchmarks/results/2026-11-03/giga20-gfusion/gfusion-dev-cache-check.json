@@ -1,0 +1,49 @@
+{
+  "prefix": {
+    "prefix_tokens": 1056,
+    "cpu_bytes": 674758656,
+    "prepare_seconds": 27.132026200000837
+  },
+  "checks": [
+    {
+      "prompt": "text-only",
+      "case": "ru-001",
+      "identical_token_ids": true,
+      "uncached_seconds": 29.786571800003003,
+      "cached_seconds": 3.836771000002045,
+      "output_tokens": [
+        [
+          6146,
+          868,
+          11021,
+          55239,
+          31862,
+          42934,
+          21048,
+          2
+        ]
+      ]
+    },
+    {
+      "prompt": "text-json",
+      "case": "ru-001",
+      "identical_token_ids": true,
+      "uncached_seconds": 31.755460499996843,
+      "cached_seconds": 5.152200099997572,
+      "output_tokens": [
+        [
+          6146,
+          868,
+          11021,
+          55239,
+          31862,
+          42934,
+          21048,
+          3075,
+          95,
+          2
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "method": "Токенизация исходной строки без служебных токенов; decode без удаления токенов и без clean_up_tokenization_spaces. Без модели и нормализации.",
+  "results": [
+    {
+      "source": "benchmarks/cases-v1.jsonl",
+      "count": 200,
+      "changed": 0,
+      "details": []
+    },
+    {
+      "source": "benchmarks/preservation/cases-v1.jsonl",
+      "count": 120,
+      "changed": 0,
+      "details": []
+    },
+    {
+      "source": "benchmarks/gigachat-prompts/holdout-v1.jsonl",
+      "count": 80,
+      "changed": 0,
+      "details": []
+    },
+    {
+      "source": "benchmarks/sber-large/layout-smoke-v1.jsonl",
+      "count": 12,
+      "changed": 0,
+      "details": []
+    },
+    {
+      "source": "benchmarks/paragraphs-v1.jsonl",
+      "count": 3,
+      "changed": 0,
+      "details": []
+    }
+  ]
+}

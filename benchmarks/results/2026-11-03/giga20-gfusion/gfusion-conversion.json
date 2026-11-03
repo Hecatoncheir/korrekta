@@ -1,0 +1,106 @@
+{
+  "source_revision": "96199b4a88bf1a9145740c614aaaa942d4bb4e44",
+  "method": "FP8.float32 * повторённые по блокам 128x128 weight_scale_inv; затем BF16. Остальные тензоры сохранены без изменения значений.",
+  "files": [
+    {
+      "name": "model-00001.safetensors",
+      "bytes": 1070022680,
+      "sha256": "63b857a5f71089df8719bdbb7c72ec7eddf09804fc14908252e004e477ab2a45"
+    },
+    {
+      "name": "model-00002.safetensors",
+      "bytes": 1072602416,
+      "sha256": "3b182ee368f3653cfe4d1de6db4c2a5b2023da3f8441c5305810d8bc3eed6388"
+    },
+    {
+      "name": "model-00003.safetensors",
+      "bytes": 1072602584,
+      "sha256": "ebe4bc9466f9682e9f4b15f093ba92345b7b790035f3cdaf67af0492077b49b2"
+    },
+    {
+      "name": "model-00004.safetensors",
+      "bytes": 1071691816,
+      "sha256": "d3debbefa559574e306798a397dae92a372fd0c8a65c1f7ad39e92d3450b0da1"
+    },
+    {
+      "name": "model-00005.safetensors",
+      "bytes": 1072602584,
+      "sha256": "67c1ced3239a8c1f5248f512f588c6269127d96b3d7259a8db5c5a185fa57774"
+    },
+    {
+      "name": "model-00006.safetensors",
+      "bytes": 1072602584,
+      "sha256": "619c675e1677129422abe9c781f916157a30b2859e59e2ad7941acc7a5da68ba"
+    },
+    {
+      "name": "model-00007.safetensors",
+      "bytes": 1071691808,
+      "sha256": "8ca75282fc9bc86302f31ff00c9d952085c2925e5d9ce979cc04bed9f2757f8e"
+    },
+    {
+      "name": "model-00008.safetensors",
+      "bytes": 1072602584,
+      "sha256": "7ab60ab19759af909e4f2b34563becebf91a7caa2048b30e40640954fce3dcb6"
+    },
+    {
+      "name": "model-00009.safetensors",
+      "bytes": 1072602584,
+      "sha256": "264c02cf18cb900e3ed1dfef6b7342a7364614bcdd6b398efa29b60db3593370"
+    },
+    {
+      "name": "model-00010.safetensors",
+      "bytes": 1056746232,
+      "sha256": "1ec07c7c320570c20014a18a139e76871a2f3462f38444f56519b33513ebf62d"
+    },
+    {
+      "name": "model-00011.safetensors",
+      "bytes": 1071818840,
+      "sha256": "cd930847d439a9e84b1e7c595db978932bdcd6f50d85cf3a8488d055f19e5595"
+    },
+    {
+      "name": "model-00012.safetensors",
+      "bytes": 1072602584,
+      "sha256": "408843f4df91d00bc9eb26f6106a8c6dcd9ffaed178efae8b41cba87123f987e"
+    },
+    {
+      "name": "model-00013.safetensors",
+      "bytes": 1072602576,
+      "sha256": "59da8cfbd1b69122b3b3c53bec3fec2bdad05309fea409ce648ed513f2ace04f"
+    },
+    {
+      "name": "model-00014.safetensors",
+      "bytes": 1071691832,
+      "sha256": "b8317fa260e259c9e99da14b5a2beec4776a2eac3828152ae303c74a7f66ad31"
+    },
+    {
+      "name": "model-00015.safetensors",
+      "bytes": 1072602472,
+      "sha256": "5e741db38e9599b31ef05becb9e0cb148fbafa0f203eea10bedec1b4eec96899"
+    },
+    {
+      "name": "model-00016.safetensors",
+      "bytes": 1072602312,
+      "sha256": "288235b3b37203f915250d2a4582248428324a5b7fc59fe0cc9e6e7571c8dee0"
+    },
+    {
+      "name": "model-00017.safetensors",
+      "bytes": 1071691560,
+      "sha256": "2875d736f8a07fa16d29f03a61484cbbcd6bf27fbd448c5a699d3f851b298247"
+    },
+    {
+      "name": "model-00018.safetensors",
+      "bytes": 1072602312,
+      "sha256": "d27a19f2631a7d2c3bdc8a5d06069c0ae1c7e9c1bcaa1d3ad6465c0004edd811"
+    },
+    {
+      "name": "model-00019.safetensors",
+      "bytes": 1072602312,
+      "sha256": "0341433af600c5f01943c5d9498369a691255c9b79d657af30b3d3b66bead0f4"
+    },
+    {
+      "name": "model-00020.safetensors",
+      "bytes": 989113576,
+      "sha256": "26a5cf808fb84cb10238b240f60821169f3376cab999ed2944130e6abca96075"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "rule": "Для каждой модели отдельно только dev40: clean_corrections - 2*changed_controls - 4*contract_failures; при равенстве меньше изменённых контролей, затем больше чистых, затем порядок candidates. Зафиксировано после пробы первых dev-фраз и до полных dev/test. Ошибки транспорта, структуры и отсутствие завершения учитываются отдельно.",
+  "dev": [
+    {
+      "id": "text-only",
+      "path": "../../benchmarks/results/2026-11-03/giga20-gfusion/gfusion-text-only-dev.jsonl",
+      "clean_corrections": 4,
+      "changed_controls": 7,
+      "contract_failures": 0,
+      "utility": -10
+    },
+    {
+      "id": "text-json",
+      "path": "../../benchmarks/results/2026-11-03/giga20-gfusion/gfusion-text-json-dev.jsonl",
+      "clean_corrections": 7,
+      "changed_controls": 3,
+      "contract_failures": 19,
+      "utility": -75
+    }
+  ],
+  "selected": {
+    "id": "text-only",
+    "path": "../../benchmarks/results/2026-11-03/giga20-gfusion/gfusion-text-only-dev.jsonl",
+    "response_mode": "text",
+    "clean_corrections": 4,
+    "changed_controls": 7,
+    "contract_failures": 0,
+    "utility": -10,
+    "prompt": "benchmarks/gigachat-prompts/text-only.txt"
+  }
+}

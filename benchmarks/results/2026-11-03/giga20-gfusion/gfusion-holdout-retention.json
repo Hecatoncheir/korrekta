@@ -1,0 +1,176 @@
+{
+  "method": "Число дословных вхождений protected без нормализации",
+  "results": [
+    {
+      "path": "benchmarks/results/2026-11-03/giga20-gfusion/gfusion-holdout.jsonl",
+      "count": 80,
+      "retention_failures": 13,
+      "retention_failures_on_controls": 7,
+      "changed_controls": 20,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "names_quotes": 2,
+        "emoji_layout": 7,
+        "technical": 4
+      },
+      "details": [
+        {
+          "id": "prompt-016-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "„Медный сад“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-016-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "„Медный сад“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-025-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "🧑‍🔬",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-027-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "- Блокнот лежит в сумке.\n- ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-027-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "- Блокнот лежит в сумке.\n- ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-028-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-028-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-030-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-030-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-032-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "https://example.net/notes?id=17",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-033-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "team@example.net",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-036-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "{\"local\":true,\"lang\":\"ru\"}",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-036-error",
+          "category": "technical",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "{\"local\":true,\"lang\":\"ru\"}",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

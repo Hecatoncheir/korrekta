@@ -1,0 +1,14 @@
+{
+  "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+  "created_at": "2026-11-03T18:56:54.5241939Z",
+  "response": "{\"text\":\"Мне нравится читать книги.\"}",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12591738400,
+  "load_duration": 11739260300,
+  "prompt_eval_count": 167,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 578582000,
+  "eval_count": 10,
+  "eval_duration": 263493000
+}

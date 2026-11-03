@@ -1,0 +1,80 @@
+{
+  "models": [
+    {
+      "repo": "ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF",
+      "revision": "3eeb456eec6f91c2ad9ade015df413527d64cbc6",
+      "weights": [
+        {
+          "name": "GigaChat-20B-A3B-instruct-v1.5-q4_K_M.gguf",
+          "bytes": 12494806976,
+          "sha256": "5bd88ebea2a2ee2622c50ec5c0ec88f67169e4667c47762f51a4e2157367923b"
+        }
+      ]
+    },
+    {
+      "repo": "ai-sage/GFusion-10B-A1.8B",
+      "revision": "96199b4a88bf1a9145740c614aaaa942d4bb4e44",
+      "weights": [
+        {
+          "name": "model-00001-of-00003.safetensors",
+          "bytes": 4999182672,
+          "sha256": "648ef840a95ed96dc75f674469afc41426d75570eee6ab4b4f01cfbb7d8aba73"
+        },
+        {
+          "name": "model-00002-of-00003.safetensors",
+          "bytes": 4999305192,
+          "sha256": "1fa03338ec59d704121836edb703e56baa0157b9396a146deebeb3d395f56acd"
+        },
+        {
+          "name": "model-00003-of-00003.safetensors",
+          "bytes": 1074369480,
+          "sha256": "a5b3febcee57d0e1e9e5755553a958f9906f40eaff11977cbb9bc61d3c02d906"
+        }
+      ]
+    }
+  ],
+  "datasets_and_prompt": {
+    "benchmarks/cases-v1.jsonl": "a3e2a43453f886dea8db204d216c4a927fd8cf6409fdbc153f55e87d00e10b63",
+    "benchmarks/preservation/cases-v1.jsonl": "e969f419ec024d688f355845716d685debd92ce6da8234644528bf5bd8ab7d69",
+    "benchmarks/gigachat-prompts/holdout-v1.jsonl": "d344f5257fc925c834d7326bcdcbe7ba2c45b1878645ba38e00fa19cedfbec16",
+    "benchmarks/sber-large/layout-smoke-v1.jsonl": "bbb990154b3fe74b83093c880acbcf322bc750c16705879ecf94c8c270db3d98",
+    "benchmarks/paragraphs-v1.jsonl": "d823b62ef71e7636e1286acc0493cdb74bdbe879b2f1952ab71e629c42c702ec",
+    "benchmarks/gigachat-prompts/text-only.txt": "f9d086e4375875c3555622b6c8a261b8e313e79133a0a5655f17feccc3ee8955",
+    "benchmarks/gigachat-prompts/text-json.txt": "c2dab9675e57890f054f8c6036265e3c418e641cf5468340bdc31c8545dcb45a"
+  },
+  "input": "Промпт выбран только на dev из двух заранее заданных форматов. Компактный JSON text в user, промпт в system; официальные шаблоны. Исходники и содержимое ответа не нормализуются; JSON декодируется только в режиме text-json.",
+  "gigachat": {
+    "runtime": "Ollama 0.40.13",
+    "quantization": "Q4_K_M",
+    "parameters": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 4096,
+      "num_predict": 768,
+      "repeat_penalty": 1.0
+    },
+    "input": "raw=true; официальный шаблон токенизатора 8a6075316cd6d41269f7892caf046f7d5aa274a4; дополнительные специальные токены переданы явно. Первые пробы автоматического API сохранены отдельно и не используются как основные оценки."
+  },
+  "gfusion": {
+    "generation": "Официальная блочная диффузия: block_size=32, gamma=0.70, denoise_steps=32, greedy, seed=42, max_new_tokens=768. Формат весов выбирается по совместимости оборудования до оценки test; точный путь фиксируется отдельно.",
+    "precision": "FP8 -> BF16 потоковой деквантизацией блоков по официальным scale_inv -> bitsandbytes NF4, double quant, BF16 compute; исходные FP8 сохранены. Transformers 4.57.6, PyTorch 2.11.0+cu128, accelerate 1.15.0, bitsandbytes 0.50.2. Всё на E:, основной venv не изменяется.",
+    "prefix_cache": "Полные общие блоки инструкции по 32 токена сохраняются на CPU и копируются на GPU перед запросом. Официальный generate не меняется. До оценки сравниваются все token IDs с кешем и без него на первом dev-примере каждого формата; при различии прогон останавливается. Перед test проверка повторяется. Подготовка кеша и проверка совпадения не входят в время повторных запросов."
+  },
+  "evaluation": "dev40, test160, preservation120, holdout80; дополнительно раскладка12 и абзацы3 при приемлемом времени. Параметры не подбираются по test. Наборы уже использовались; это сравнение, не новая независимая приёмка.",
+  "prompt_selection": {
+    "candidates": [
+      {
+        "id": "text-only",
+        "path": "benchmarks/gigachat-prompts/text-only.txt",
+        "response_mode": "text"
+      },
+      {
+        "id": "text-json",
+        "path": "benchmarks/gigachat-prompts/text-json.txt",
+        "response_mode": "text-json"
+      }
+    ],
+    "rule": "Для каждой модели отдельно только dev40: clean_corrections - 2*changed_controls - 4*contract_failures; при равенстве меньше изменённых контролей, затем больше чистых, затем порядок candidates. Зафиксировано после пробы первых dev-фраз и до полных dev/test. Ошибки транспорта, структуры и отсутствие завершения учитываются отдельно.",
+    "why": "GigaChat 20B в пробе отвечает одним полем JSON даже при запросе только текста. Проверяем соответствующий простой контракт вместо удаления обёрток при оценке."
+  }
+}
