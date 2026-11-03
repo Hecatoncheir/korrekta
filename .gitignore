@@ -1,0 +1,23 @@
+# Dart и Flutter
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+coverage/
+
+# Локальные настройки и секреты
+.env
+.env.*
+!.env.example
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Веса моделей и локальные рабочие файлы
+*.gguf
+*.safetensors
+work/
