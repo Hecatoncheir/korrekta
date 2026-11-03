@@ -1,0 +1,870 @@
+{
+  "engine": "LanguageTool 6.8",
+  "java": "Temurin 21.0.13+9 Windows x64",
+  "jre_url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jre_x64_windows_hotspot_21.0.13_9.zip",
+  "jre_sha256": "2332c0b4cff6bed722da3567c91d5e47568bcba863fa4945d0a8d6fc76158628",
+  "maven_url": "https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.11/apache-maven-3.9.11-bin.zip",
+  "maven_sha512": "03e2d65d4483a3396980629f260e25cac0d8b6f7f2791e4dc20bc83f9514db8d0f05b0479e699a5f34679250c49c8e52e961262ded468a20de0be254d8207076",
+  "files": [
+    {
+      "name": "aho-corasick-double-array-trie-1.2.2.jar",
+      "bytes": 16929,
+      "sha256": "cbc79badb1e3d18dd18fdb77850da17d4566371c955e5ae85654b770c6e17858"
+    },
+    {
+      "name": "angus-activation-2.0.2.jar",
+      "bytes": 27050,
+      "sha256": "6dd3bcffc22bce83b07376a0e2e094e4964a3195d4118fb43e380ef35436cc1e"
+    },
+    {
+      "name": "animal-sniffer-annotations-1.24.jar",
+      "bytes": 3112,
+      "sha256": "c720e6e5bcbe6b2f48ded75a47bccdb763eede79d14330102e0d352e3d89ed92"
+    },
+    {
+      "name": "annotations-12.0.jar",
+      "bytes": 20195,
+      "sha256": "f8ab13b14be080fe2f617f90e55599760e4a1b4deeea5c595df63d0d6375ed6d"
+    },
+    {
+      "name": "annotations-4.1.1.4.jar",
+      "bytes": 3120,
+      "sha256": "ba734e1e84c09d615af6a09d33034b4f0442f8772dec120efb376d86a565ae15"
+    },
+    {
+      "name": "asturian-pos-dict-0.1.jar",
+      "bytes": 990589,
+      "sha256": "772fc113d9da478a242e4539f1c963561c45443dd63a9f1838b2564e0018be44"
+    },
+    {
+      "name": "bcrypt-0.10.2.jar",
+      "bytes": 40575,
+      "sha256": "0b1fb99db605955de904d8e61782a53dddbadd12619a0cf37dd88b5d14a61957"
+    },
+    {
+      "name": "bytes-1.5.0.jar",
+      "bytes": 80919,
+      "sha256": "b933631573148647943040d8d7496a64458b432610e6da2eb87ec3458814dee5"
+    },
+    {
+      "name": "caffeine-2.9.3.jar",
+      "bytes": 912143,
+      "sha256": "1e0a7bbef1dd791653143f3f05d0e489934bf5481e58a87c9e619cd46b68729b"
+    },
+    {
+      "name": "catalan-pos-dict-3.3.jar",
+      "bytes": 9299914,
+      "sha256": "e5f32aadd1852e8e442810611d89906c06369a94d2a62c1a142eb3e8f5bda2f1"
+    },
+    {
+      "name": "checker-qual-3.32.0.jar",
+      "bytes": 223972,
+      "sha256": "b66e025da0a6bf85f0b7f5fdadca832a32771f85a12cac1401a3c0cd8fd73ccd"
+    },
+    {
+      "name": "commons-cli-1.9.0.jar",
+      "bytes": 75479,
+      "sha256": "d3d530d0f28fd0fbbffe2b0b338f70e8cb96f1605579e2e3abd4db29cac24e69"
+    },
+    {
+      "name": "commons-codec-1.17.1.jar",
+      "bytes": 372687,
+      "sha256": "f9f6cb103f2ddc3c99a9d80ada2ae7bf0685111fd6bffccb72033d1da4e6ff23"
+    },
+    {
+      "name": "commons-digester-2.1.jar",
+      "bytes": 196768,
+      "sha256": "e0b2b980a84fc6533c5ce291f1917b32c507f62bcad64198fff44368c2196a3d"
+    },
+    {
+      "name": "commons-lang3-3.18.0.jar",
+      "bytes": 702952,
+      "sha256": "4eeeae8d20c078abb64b015ec158add383ac581571cddc45c68f0c9ae0230720"
+    },
+    {
+      "name": "commons-logging-1.3.4.jar",
+      "bytes": 73721,
+      "sha256": "bc2dfe32f1ef06509e6a065144c1adf7b420eabf11a87f30bd127f8faa332016"
+    },
+    {
+      "name": "commons-pool2-2.12.0.jar",
+      "bytes": 150048,
+      "sha256": "6d3bd18df8410f3e31b031aca582cc109342358a62a2759ebd0c4cdf30d06f8b"
+    },
+    {
+      "name": "commons-text-1.12.0.jar",
+      "bytes": 251227,
+      "sha256": "de023257ff166044a56bd1aa9124e843cd05dac5806cc705a9311f3556d5a15f"
+    },
+    {
+      "name": "commons-validator-1.9.0.jar",
+      "bytes": 201424,
+      "sha256": "c3c14748e2d78db58df88808740711bd643b32c45ffa7b8a739f00fb467cd7d7"
+    },
+    {
+      "name": "dutch-pos-dict-0.1.jar",
+      "bytes": 34506897,
+      "sha256": "f91c712ee961889f2950a5c9c97f4f84791b2fec59706af1970dadee5baba677"
+    },
+    {
+      "name": "ecs-logging-core-1.3.2.jar",
+      "bytes": 18426,
+      "sha256": "5c07330c539c0445394d71673cf374fa220fd2bb38d1f4b4ac651d236f76c16d"
+    },
+    {
+      "name": "english-pos-dict-0.6.jar",
+      "bytes": 4650617,
+      "sha256": "2a3e96b49854e5275f8eb7a1bb5b3b85b82f687fed272f3043882ccc0b1634b1"
+    },
+    {
+      "name": "error_prone_annotations-2.41.0.jar",
+      "bytes": 20389,
+      "sha256": "a56e782b5b50811ac204073a355a21d915a2107fce13ec711331ad036f660fcc"
+    },
+    {
+      "name": "failureaccess-1.0.3.jar",
+      "bytes": 10763,
+      "sha256": "cbfc3906b19b8f55dd7cfd6dfe0aa4532e834250d7f080bd8d211a3e246b59cb"
+    },
+    {
+      "name": "fastutil-core-8.5.14.jar",
+      "bytes": 6633624,
+      "sha256": "8fb6fe5989a32a74df3158fd8d6b91a4dfc44348772a8654c47dcadd1090a4d8"
+    },
+    {
+      "name": "french-pos-dict-0.7.jar",
+      "bytes": 1414238,
+      "sha256": "d3a92261ef88802b648dd63387794947fe1e3cae984f1150f87b809ca8350ade"
+    },
+    {
+      "name": "german-pos-dict-1.2.4.jar",
+      "bytes": 1517999,
+      "sha256": "56f0b00adb704cbc1e86776b45f6890efe90685ab370a34b5b299593cdcaae22"
+    },
+    {
+      "name": "grpc-api-1.75.0.jar",
+      "bytes": 323413,
+      "sha256": "7f309616691fa655d02512762049ed18bf4ab2b52ced424cab2f527d0bb8e3fc"
+    },
+    {
+      "name": "grpc-context-1.75.0.jar",
+      "bytes": 293,
+      "sha256": "7e1de7847ea621a9ec7cb988a8baa947748d0eaef94bfe457d04d9b57105079f"
+    },
+    {
+      "name": "grpc-core-1.75.0.jar",
+      "bytes": 655917,
+      "sha256": "f10cdbe558378494e4ffc6b1bb328b8a137f3201d46c8b24f0154eb9e51191a1"
+    },
+    {
+      "name": "grpc-netty-shaded-1.75.0.jar",
+      "bytes": 10573999,
+      "sha256": "d33d47a9720a392512c4e4ceaa17a458a0e3ed6188d17e98d6c4faf0679374d7"
+    },
+    {
+      "name": "grpc-protobuf-1.75.0.jar",
+      "bytes": 5204,
+      "sha256": "f52b53c349b0776815e437636dff3d3844e9b10cbb25be419a786bf3d6f20269"
+    },
+    {
+      "name": "grpc-protobuf-lite-1.75.0.jar",
+      "bytes": 7815,
+      "sha256": "60fafc627aa04bcab328dcc9206f0e7aa71d95f1b612774a18272dfe7dc24cf1"
+    },
+    {
+      "name": "grpc-stub-1.75.0.jar",
+      "bytes": 61041,
+      "sha256": "dc98fe18654206948666e6657e13fe301ad0754751f28c6c10961e1e6c457997"
+    },
+    {
+      "name": "grpc-util-1.75.0.jar",
+      "bytes": 98878,
+      "sha256": "92b5a1195dad4cbd7c405b01cbd9fd2dbbd548d13d4cfabf9d2d6a37bad4cb81"
+    },
+    {
+      "name": "gson-2.11.0.jar",
+      "bytes": 298435,
+      "sha256": "57928d6e5a6edeb2abd3770a8f95ba44dce45f3b23b7a9dc2b309c581552a78b"
+    },
+    {
+      "name": "guava-33.5.0-jre.jar",
+      "bytes": 3017283,
+      "sha256": "1e301f0c52ac248b0b14fdc3d12283c77252d4d6f48521d572e7d8c4c2cc4ac7"
+    },
+    {
+      "name": "hanlp-portable-1.8.2.jar",
+      "bytes": 8139979,
+      "sha256": "f4e8e42211f62dc952a669329f43b78c72927690407b1ccea37448c76f843379"
+    },
+    {
+      "name": "HdrHistogram-2.1.12.jar",
+      "bytes": 173763,
+      "sha256": "9b47fbae444feaac4b7e04f0ea294569e4bc282bc69d8c2ce2ac3f23577281e2"
+    },
+    {
+      "name": "hppc-0.8.2.jar",
+      "bytes": 1179544,
+      "sha256": "97e45d4e0106d98dd3e76d9610e0bd3895409bd1ab1ed189855b05af0571025e"
+    },
+    {
+      "name": "hunspell-2.1.2.jar",
+      "bytes": 849577,
+      "sha256": "973329ae3a43d35dacd618b93a5773a0a9210c8bf2b58a6b2d2a1e1c9f0389e9"
+    },
+    {
+      "name": "icu4j-77.1.jar",
+      "bytes": 14663227,
+      "sha256": "b3640b9f416a4411fd33c59abbeea8fd57d024c23e1819bf9673220a97499fe3"
+    },
+    {
+      "name": "indriya-1.3.jar",
+      "bytes": 251659,
+      "sha256": "7cbaa6f42e2c8412ef13cd0fb7f81936d64a1c3ea7c4f69cf75bb4e9410cb76b"
+    },
+    {
+      "name": "istack-commons-runtime-4.1.2.jar",
+      "bytes": 25788,
+      "sha256": "7fd6792361f4dd00f8c56af4a20cecc0066deea4a8f3dec38348af23fc2296ee"
+    },
+    {
+      "name": "j2objc-annotations-3.1.jar",
+      "bytes": 16762,
+      "sha256": "84d3a150518485f8140ea99b8a985656749629f6433c92b80c75b36aba3b099b"
+    },
+    {
+      "name": "jackson-annotations-2.18.0.jar",
+      "bytes": 79108,
+      "sha256": "a09367d2eeb526873abf737ff754c5085f82073a382ee72c3bbe15412217671f"
+    },
+    {
+      "name": "jackson-core-2.18.0.jar",
+      "bytes": 596823,
+      "sha256": "215bbd7c8fd65be504cb92ff3aa1c4b790fc7b14cca72f4546aac4143c101bb5"
+    },
+    {
+      "name": "jackson-databind-2.18.0.jar",
+      "bytes": 1663219,
+      "sha256": "2bf1927b7f3224683ed0157a1ec3b0ede75179da3e597d78c572d56ed00f9f3c"
+    },
+    {
+      "name": "jakarta.activation-1.2.2.jar",
+      "bytes": 68453,
+      "sha256": "02156773e4ae9d048d14a56ad35d644bee9f1052a791d072df3ded3c656e6e1a"
+    },
+    {
+      "name": "jakarta.activation-api-2.1.3.jar",
+      "bytes": 66514,
+      "sha256": "01b176d718a169263e78290691fc479977186bcc6b333487325084d6586f4627"
+    },
+    {
+      "name": "jakarta.xml.bind-api-2.3.3.jar",
+      "bytes": 115638,
+      "sha256": "c04539f472e9a6dd0c7685ea82d677282269ab8e7baca2e14500e381e0c6cec5"
+    },
+    {
+      "name": "java-diff-utils-4.12.jar",
+      "bytes": 72305,
+      "sha256": "9990a2039778f6b4cc94790141c2868864eacee0620c6c459451121a901cd5b5"
+    },
+    {
+      "name": "javax.activation-api-1.2.0.jar",
+      "bytes": 56674,
+      "sha256": "43fdef0b5b6ceb31b0424b208b930c74ab58fac2ceeb7b3f6fd3aeb8b5ca4393"
+    },
+    {
+      "name": "javax.annotation-api-1.3.2.jar",
+      "bytes": 26586,
+      "sha256": "e04ba5195bcd555dc95650f7cc614d151e4bcd52d29a10b8aa2197f3ab89ab9b"
+    },
+    {
+      "name": "jaxb-api-2.3.1.jar",
+      "bytes": 128076,
+      "sha256": "88b955a0df57880a26a74708bc34f74dcaf8ebf4e78843a28b50eae945732b06"
+    },
+    {
+      "name": "jaxb-core-2.3.0.1.jar",
+      "bytes": 254858,
+      "sha256": "d2ecba63615f317a11fb55c6468f6a9480f6411c10951d9881bafd9a9a8d0467"
+    },
+    {
+      "name": "jaxb-core-4.0.5.jar",
+      "bytes": 138682,
+      "sha256": "ad3fd9bf00de3eda9859f70b6cfb011e2fe9904804e16a2665092888ece0fdca"
+    },
+    {
+      "name": "jaxb-impl-2.3.3.jar",
+      "bytes": 1133924,
+      "sha256": "e5178d0c7948247f75a13c689bf36f4d5d4910a121f712aa3b20ae94377069d8"
+    },
+    {
+      "name": "jaxb-runtime-4.0.5.jar",
+      "bytes": 920213,
+      "sha256": "485d8940e76373a7f300815ea5504bf5b726c234425ad30971019d133124cca4"
+    },
+    {
+      "name": "jcip-annotations-1.0-1.jar",
+      "bytes": 4722,
+      "sha256": "4fccff8382aafc589962c4edb262f6aa595e34f1e11e61057d1c6a96e8fc7323"
+    },
+    {
+      "name": "jcl-over-slf4j-2.0.7.jar",
+      "bytes": 21143,
+      "sha256": "41806757e1d26dae5d6db2ca7d4a5176eed2d6e709cd86564d4a11dab0601742"
+    },
+    {
+      "name": "jna-5.13.0.jar",
+      "bytes": 1879325,
+      "sha256": "66d4f819a062a51a1d5627bffc23fac55d1677f0e0a1feba144aabdd670a64bb"
+    },
+    {
+      "name": "jna-platform-5.12.1.jar",
+      "bytes": 1356627,
+      "sha256": "8ce969116cac95bd61b07a8d5e07174b352e63301473caac72c395e3c08488d2"
+    },
+    {
+      "name": "json-20240303.jar",
+      "bytes": 78332,
+      "sha256": "3cf6cd6892e32e2b4c1c39e0f52f5248a2f5b37646fdfbb79a66b46b618414ed"
+    },
+    {
+      "name": "jsonic-1.2.11.jar",
+      "bytes": 161385,
+      "sha256": "76a787944faab6c9bea64dc78400949027ed6fb686fe9b328d18f949852bc89f"
+    },
+    {
+      "name": "jspecify-1.0.0.jar",
+      "bytes": 3819,
+      "sha256": "1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
+    },
+    {
+      "name": "jsr305-3.0.2.jar",
+      "bytes": 19936,
+      "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+    },
+    {
+      "name": "jwordsplitter-4.7.jar",
+      "bytes": 184872,
+      "sha256": "0435e604abe8b4a0b27f568db9349fbe0546df286bbe62f667c9fd9663df71b2"
+    },
+    {
+      "name": "language-all-6.8.jar",
+      "bytes": 2116,
+      "sha256": "ffc02a4f864d4580101dcdf91672350109c9ab99cafe635dc61b69c9220d626c"
+    },
+    {
+      "name": "language-ar-6.8.jar",
+      "bytes": 14561846,
+      "sha256": "c17b901363fd4cdff9eaa5bb8d33975a56a81c6b8c844ffbd1ef8dd5cea368f8"
+    },
+    {
+      "name": "language-ast-6.8.jar",
+      "bytes": 83140,
+      "sha256": "384bcea59d375b7dff3e4016c7a9302b7e822b873a1d5d13de6724e0a1129c26"
+    },
+    {
+      "name": "language-be-6.8.jar",
+      "bytes": 84082,
+      "sha256": "9fa03c55f341d00383dacbd2361837864a6a0e69b300c5d421e0a65471f5d00a"
+    },
+    {
+      "name": "language-br-6.8.jar",
+      "bytes": 1771841,
+      "sha256": "0addcf6bf65b55cd6197d19d8ef75edf7cd204ca63cade5ff00fc2f7f8d1d642"
+    },
+    {
+      "name": "language-ca-6.8.jar",
+      "bytes": 2029468,
+      "sha256": "d9a575bb27016a6f143a45d230575be9534f775c2f29cdd277fafdae543b6126"
+    },
+    {
+      "name": "language-crh-6.8.jar",
+      "bytes": 110036,
+      "sha256": "9c8c57aca4cdc1dc6efb5e75aa54d11320dc83518e12395283b8b3cfb68a03b0"
+    },
+    {
+      "name": "language-da-6.8.jar",
+      "bytes": 1105264,
+      "sha256": "819dd3789a84e66adebce0e6870fa0b553056b5c0e7107e92b0c198e272a3bda"
+    },
+    {
+      "name": "language-de-6.8.jar",
+      "bytes": 21053515,
+      "sha256": "d4328a19cd5a1cc0edb35f71411c0976db95681a11e61daef9760ceddbfbba11"
+    },
+    {
+      "name": "language-de-DE-x-simple-language-6.8.jar",
+      "bytes": 22179,
+      "sha256": "23f1a227ce1eb4e51d7bbbc4acc6d12ba2b696e4c34451cad2825a5a6552f47c"
+    },
+    {
+      "name": "language-detector-0.6.jar",
+      "bytes": 1879128,
+      "sha256": "f53ecc3d71da9ebc82edd10fb35638d32e8b9d849273dd717a021eca02f2278d"
+    },
+    {
+      "name": "language-el-6.8.jar",
+      "bytes": 592541,
+      "sha256": "87964131ec60455a71304b9b8c9ae96dbf62ac232f2185c2d3dd8b94cdccf17f"
+    },
+    {
+      "name": "language-en-6.8.jar",
+      "bytes": 2844558,
+      "sha256": "69d3fa1020dea45ad38266e3d54c81969f3ba7eef5efd0a83a8b3fd778acddd0"
+    },
+    {
+      "name": "language-eo-6.8.jar",
+      "bytes": 294520,
+      "sha256": "42ce51c64c3ba74e0c4d1aee4b16b244e49c8ba7d818cfa9e92c15b9c91f059b"
+    },
+    {
+      "name": "language-es-6.8.jar",
+      "bytes": 637409,
+      "sha256": "cec59b7cc41e3de98fbe0e13ce432a245afb687660c7f2051e031328caa92ffb"
+    },
+    {
+      "name": "language-fa-6.8.jar",
+      "bytes": 90157,
+      "sha256": "c70bcab3949dc4a2a42e9269c2ff8e1feaf499bc17baf0c871c642beb473680b"
+    },
+    {
+      "name": "language-fr-6.8.jar",
+      "bytes": 1732846,
+      "sha256": "b3cd16a015405f4138f93187dd1b773c014b02c761b68c6eb03a567e1d2d36ed"
+    },
+    {
+      "name": "language-ga-6.8.jar",
+      "bytes": 828743,
+      "sha256": "609de46ee324f85e723161c813ef3732f406a6532c3ada423a02197dcb7a7597"
+    },
+    {
+      "name": "language-gl-6.8.jar",
+      "bytes": 4397116,
+      "sha256": "56aa886ea8b56ffb4ef9f842b725b6b7c1b2c8c29be5509b750845f04969c65b"
+    },
+    {
+      "name": "language-it-6.8.jar",
+      "bytes": 864239,
+      "sha256": "99d29bc20627345f973856cea5660ebf52f1049438d1fc5c512dc68dc4b0c95a"
+    },
+    {
+      "name": "language-ja-6.8.jar",
+      "bytes": 51737,
+      "sha256": "ae9180bc2227643c3dc65a070663ab5dd9280b840e0459dc9235c00981aa4a82"
+    },
+    {
+      "name": "language-km-6.8.jar",
+      "bytes": 571639,
+      "sha256": "5fcfa74a19141b258b4792acd26b039a89f0d63631e21ddd021e065380f8a996"
+    },
+    {
+      "name": "language-nl-6.8.jar",
+      "bytes": 3420861,
+      "sha256": "bd0eef3121df61c9565255a6869ea25e5cfc8d97f186a7692ee036920af45f3f"
+    },
+    {
+      "name": "language-pl-6.8.jar",
+      "bytes": 5543023,
+      "sha256": "425af97a945ac90df6637a9575463c2d2af92562517b5d380ee9e478ffa2bbb1"
+    },
+    {
+      "name": "language-pt-6.8.jar",
+      "bytes": 2045849,
+      "sha256": "f2d07bb211c975ba273750becd742f624d4463a8647110eff375de233d61d600"
+    },
+    {
+      "name": "language-ro-6.8.jar",
+      "bytes": 1447981,
+      "sha256": "17d234dfd2d8d8f06867e5684e51c8bff94497cd0d0cacba6006e9e8c17e0977"
+    },
+    {
+      "name": "language-ru-6.8.jar",
+      "bytes": 6089891,
+      "sha256": "1fc0d8d56417f5807a6addcca915ddc26526aac8f938f73ff23c281a8655dbfe"
+    },
+    {
+      "name": "language-sk-6.8.jar",
+      "bytes": 2601522,
+      "sha256": "70378e9b328cb5db8c07aa13ab270245f0ad68c1834b5716ef2ac2ae36384e80"
+    },
+    {
+      "name": "language-sl-6.8.jar",
+      "bytes": 269752,
+      "sha256": "3753a81b2a23546fc421c44868b15dfeec4b00d0b5b37c92a7c7df609d1183c0"
+    },
+    {
+      "name": "language-sv-6.8.jar",
+      "bytes": 1262447,
+      "sha256": "fe8877bfaafc7b54049997973f128c192a09b965c7d9e3ab5a7eacbcf8aebffe"
+    },
+    {
+      "name": "language-ta-6.8.jar",
+      "bytes": 59546,
+      "sha256": "060ee6a7244f60ac7bdafece05cdeda97d591867e5d29e03d30e8578e444b5a4"
+    },
+    {
+      "name": "language-tl-6.8.jar",
+      "bytes": 142796,
+      "sha256": "fd4520f1c14110cdeca4e43dea6310b811c269b647b890198409b57e4c88d4dc"
+    },
+    {
+      "name": "language-uk-6.8.jar",
+      "bytes": 1253309,
+      "sha256": "1658e1e66f41d70fc86335d0f5691171b706ce9af2444fb9a9940bf15f9d5a78"
+    },
+    {
+      "name": "language-zh-6.8.jar",
+      "bytes": 333116,
+      "sha256": "9d1d803c09f22cef9eb0d197e043cfdb497bd0b334415ca7855810ecc985d8b6"
+    },
+    {
+      "name": "languagetool-core-6.8.jar",
+      "bytes": 1941626,
+      "sha256": "c441918b1cf2de5491756772cd4bce2a408c3b9eb08e4ab84d843b2cd50f1d2b"
+    },
+    {
+      "name": "languagetool-ga-dicts-0.02.jar",
+      "bytes": 12876802,
+      "sha256": "52a9ecb80eb72cbe1105ed68ce22d529eb6d5e830ff2d065cf99322bc5f795c0"
+    },
+    {
+      "name": "languagetool-gui-commons-6.8.jar",
+      "bytes": 87580,
+      "sha256": "b36f9856a74fd1f08f1b606e58770cf6c6b678c51f44556fa72e1ceb9435f0c7"
+    },
+    {
+      "name": "languagetool-server-6.8.jar",
+      "bytes": 206013,
+      "sha256": "07caad9dd6ba263c5827e87eebdbf27f0163f7f5a5056005576e373072043b2e"
+    },
+    {
+      "name": "LatencyUtils-2.0.3.jar",
+      "bytes": 29779,
+      "sha256": "a32a9ffa06b2f4e01c5360f8f9df7bc5d9454a5d373cd8f361347fa5a57165ec"
+    },
+    {
+      "name": "lettuce-core-7.2.0.RELEASE.jar",
+      "bytes": 2371692,
+      "sha256": "e9811eaa778865e2d8cf0407f520bb12434f76ab5c99ebb14c4384cd1c777433"
+    },
+    {
+      "name": "linguistics.grammardb.spell.languagetool-1.0.2.jar",
+      "bytes": 602074,
+      "sha256": "1d1a55e905faa9740d648144cf05c4a460f0f26416d2ee01157bad0877be31c2"
+    },
+    {
+      "name": "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+      "bytes": 2199,
+      "sha256": "b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99"
+    },
+    {
+      "name": "logback-classic-1.5.21.jar",
+      "bytes": 308056,
+      "sha256": "b2523f7b0dabf4386c81312f0371d267e3a9fbce409046f16b042bf68571ba4a"
+    },
+    {
+      "name": "logback-core-1.5.21.jar",
+      "bytes": 639441,
+      "sha256": "0825ac1fc5296369121e5423e397c52d125b0e3fae743cfc0d8e416159f14f44"
+    },
+    {
+      "name": "logback-ecs-encoder-1.3.2.jar",
+      "bytes": 10765,
+      "sha256": "c93248f3c344685956b450616ad47cdcdfff9612761b88931261ba51ff4381ca"
+    },
+    {
+      "name": "lucene-backward-codecs-5.5.5.jar",
+      "bytes": 430600,
+      "sha256": "b62e089f505bc72dd8abb0ad55040604cdd92306e14871d7febcbf947dd9c6e5"
+    },
+    {
+      "name": "lucene-core-5.5.5.jar",
+      "bytes": 2370237,
+      "sha256": "8d27a8ab4ee8883282d7713f067e72d1cfde1e88d0f5701a119100ec9e86d7e1"
+    },
+    {
+      "name": "lucene-gosen-6.2.1-ipadic.jar",
+      "bytes": 8314160,
+      "sha256": "1e5cd3b8c26e73ac13ba56ef80c7edda711dd7b58c1f497a9876f79a8d5c2947"
+    },
+    {
+      "name": "mariadb-java-client-3.4.1.jar",
+      "bytes": 698716,
+      "sha256": "f60e4b282f1f4bdb74f0a26436ba7078a5e480b6f6702f6a7b45d9ba5e604a24"
+    },
+    {
+      "name": "micrometer-core-1.7.12.jar",
+      "bytes": 638374,
+      "sha256": "e7137f16fdbb183bf6608403f604036fa53971ca8635947745e8080039ab0533"
+    },
+    {
+      "name": "micrometer-registry-prometheus-1.7.12.jar",
+      "bytes": 37100,
+      "sha256": "1fd64ca17b7ec6235dae4bb080283dcd7866e929189d82f5ba8a201e41ca9848"
+    },
+    {
+      "name": "morfologik-crh-lt-1.0.1.jar",
+      "bytes": 2193485,
+      "sha256": "62d0dea38eabdc4d4ea4e6417026e1dd4e338624bbacd692340f8ee647831311"
+    },
+    {
+      "name": "morfologik-fsa-2.1.9.jar",
+      "bytes": 18720,
+      "sha256": "1bfefce937df14cc94d32a98ce59c33f4d5b6c0eddbb436b6bfe27ff2120a23d"
+    },
+    {
+      "name": "morfologik-fsa-builders-2.1.9.jar",
+      "bytes": 30670,
+      "sha256": "f418c519b49470c2ec7024086bf210ba370ff158732368005d3b8cef964d3fff"
+    },
+    {
+      "name": "morfologik-speller-2.1.9.jar",
+      "bytes": 13413,
+      "sha256": "8d2566a216f401380878f25196f84bd351b807b11f18bc71acd1417e04a1ec29"
+    },
+    {
+      "name": "morfologik-stemming-2.1.9.jar",
+      "bytes": 52175,
+      "sha256": "6170895b2315b697f4da5630caf57c6c441f1cb419d89d1cb5326b0673293e8a"
+    },
+    {
+      "name": "morfologik-ukrainian-lt-6.8.0.jar",
+      "bytes": 6195274,
+      "sha256": "36ea195cb442c573a66082885ceb709e5b6c69a3b19deaa53b2a2918d847c1c0"
+    },
+    {
+      "name": "morphology-el-1.0.0.jar",
+      "bytes": 13855,
+      "sha256": "caa36b7e96fd4c1804b3f4763de803ce87468d86908087087814f7d47caee668"
+    },
+    {
+      "name": "mybatis-3.5.16.jar",
+      "bytes": 1818073,
+      "sha256": "1814d02fccd8dbeadf628cbac8962b1edaab9bfa67e8585c6a3663c48bd8953d"
+    },
+    {
+      "name": "netty-buffer-4.2.5.Final.jar",
+      "bytes": 372636,
+      "sha256": "dd747c293bf682eafb2c39b1ef88661d03aed542d8408a69e78f7c06ce9bd57b"
+    },
+    {
+      "name": "netty-codec-base-4.2.5.Final.jar",
+      "bytes": 152826,
+      "sha256": "65ebecb5914577f67994feb0dd4b1d54d77e02587823870103910093df1756ca"
+    },
+    {
+      "name": "netty-codec-dns-4.2.5.Final.jar",
+      "bytes": 70123,
+      "sha256": "4d3f99669bdcf4e13169d7b175cb35b5bcff5a080c23c1f5a2d88d04d3828281"
+    },
+    {
+      "name": "netty-common-4.2.5.Final.jar",
+      "bytes": 774370,
+      "sha256": "4b04c6f906908ea7100117d7529e055ba4e8facf626d3925295a2da223b13a4d"
+    },
+    {
+      "name": "netty-handler-4.2.5.Final.jar",
+      "bytes": 570884,
+      "sha256": "54f0c4e7afe64b027a8e44cfa9d82c5acca4942163b6580feacf4de2da6417c8"
+    },
+    {
+      "name": "netty-resolver-4.2.5.Final.jar",
+      "bytes": 38438,
+      "sha256": "7fe46823602bb7e4e966f5d3097d499e639fb260ac6c2101ee000ba999561275"
+    },
+    {
+      "name": "netty-resolver-dns-4.2.5.Final.jar",
+      "bytes": 188581,
+      "sha256": "e3bbc6737454e64998aa4194dbb8748258ec7ac786c8902e06b57919fdb0181c"
+    },
+    {
+      "name": "netty-transport-4.2.5.Final.jar",
+      "bytes": 561877,
+      "sha256": "02b4e9aace1260b10d00d7816fb42ea23fb05686ed7b7fb8e6ad4ecf3da61fff"
+    },
+    {
+      "name": "netty-transport-native-unix-common-4.2.5.Final.jar",
+      "bytes": 46591,
+      "sha256": "ce72f2423da312f9d9655fe54f4a0b5599de54fb9160ebd7ec3fb2730af8abc3"
+    },
+    {
+      "name": "nimbus-jose-jwt-9.37.4.jar",
+      "bytes": 788181,
+      "sha256": "8fcf4a978bbee7548e8dee6e0528bc85b0ffa84c0f8517c94dd29e590e459449"
+    },
+    {
+      "name": "opennlp-chunk-models-1.5.jar",
+      "bytes": 2563111,
+      "sha256": "e7090de37093d2b91a0136f9e1e9cf60567bc27f72781cfdd083d86e342d7cb0"
+    },
+    {
+      "name": "opennlp-postag-models-1.5.jar",
+      "bytes": 5699943,
+      "sha256": "4d58462b891dbe478a8a68c8a93749af5bedd874af1974596a72f5667fffc8c9"
+    },
+    {
+      "name": "opennlp-tokenize-models-1.5.jar",
+      "bytes": 442008,
+      "sha256": "1c10141d547b9ae1de1238d5a9ec69db043289cd6f8caf0d7d2f14bbfcda9502"
+    },
+    {
+      "name": "opennlp-tools-1.9.4.jar",
+      "bytes": 1298672,
+      "sha256": "0dfb53f81c8dbb9171338be3744c799b82413649fc0e39d1db928ccc0932098a"
+    },
+    {
+      "name": "openregex-1.1.1.jar",
+      "bytes": 74839,
+      "sha256": "33021c9cca70c6292d53ff7dac5d1832d422e986aba52ec998532a5f47f921f8"
+    },
+    {
+      "name": "opentelemetry-api-1.42.1.jar",
+      "bytes": 157347,
+      "sha256": "6b0f9d067260ea3ed6c3960352b80800b993cb3962fa6fb1b6383cd04c3c0874"
+    },
+    {
+      "name": "opentelemetry-context-1.42.1.jar",
+      "bytes": 47253,
+      "sha256": "fc8f47bc94bec89a3dbdbcf631470fb7fd7d3e628b10d43bc376f17ebde4b405"
+    },
+    {
+      "name": "opentelemetry-semconv-1.30.1-alpha.jar",
+      "bytes": 39675,
+      "sha256": "aaa73f6c6a3a67cdc07870387383808826d8dae7a84e47cae182b7a88a08e513"
+    },
+    {
+      "name": "perfmark-api-0.27.0.jar",
+      "bytes": 6954,
+      "sha256": "c7b478503ec524e55df19b424d46d27c8a68aeb801664fadd4f069b71f52d0f6"
+    },
+    {
+      "name": "portuguese-pos-dict-1.2.0.jar",
+      "bytes": 4351056,
+      "sha256": "fe8da88bb31b6372855741fbd81ee1c7477b4f8a0624d3dafd20ee23e184650e"
+    },
+    {
+      "name": "proto-google-common-protos-2.59.2.jar",
+      "bytes": 2713811,
+      "sha256": "9407f50aef5d1cb12675c170fa64ee216023eefca49f8f5eac45124f23a6cb29"
+    },
+    {
+      "name": "protobuf-java-3.25.8.jar",
+      "bytes": 1876626,
+      "sha256": "72bdb32eb38cafb7dcd288262c29a34d57cba2e19101af9685155ba8c0a56008"
+    },
+    {
+      "name": "reactive-streams-1.0.4.jar",
+      "bytes": 11640,
+      "sha256": "f75ca597789b3dac58f61857b9ac2e1034a68fa672db35055a8fb4509e325f28"
+    },
+    {
+      "name": "reactor-core-3.6.6.jar",
+      "bytes": 1873494,
+      "sha256": "44f055fbd033b6c976c53fb2e04b59027e79fb2312c37d2eaa54c77ea1ea80fe"
+    },
+    {
+      "name": "redis-authx-core-0.1.1-beta2.jar",
+      "bytes": 18264,
+      "sha256": "cc56edb08b3df8562cddac108dca61907d21cc4ad04de05e9f5d1b01058390af"
+    },
+    {
+      "name": "resilience4j-circuitbreaker-1.7.1.jar",
+      "bytes": 76387,
+      "sha256": "05ae08b684e6245b8d88bcb823dfd0a2994052098226bd1e614fb9828e5d13df"
+    },
+    {
+      "name": "resilience4j-core-1.7.1.jar",
+      "bytes": 65716,
+      "sha256": "3153a2c96c3e3b31122a7fa8ca8ea1ab0f305bf82d096c291b7416443fff6491"
+    },
+    {
+      "name": "resilience4j-micrometer-1.7.1.jar",
+      "bytes": 52784,
+      "sha256": "71d9be0d10026f2223f2afba5b10d5d1a7b569c6433bbc1fd189ca8817d66d60"
+    },
+    {
+      "name": "segment-2.0.3.jar",
+      "bytes": 80874,
+      "sha256": "a134be9884ddfa18304c8e437e64aa598d83ccfa439310029e61ea3fdae8b2ce"
+    },
+    {
+      "name": "simpleclient-0.16.0.jar",
+      "bytes": 90482,
+      "sha256": "22c374f237f7bc4fdb1f0ec2da379c0ba00e69ad2ffe8b6ade543d73062d377f"
+    },
+    {
+      "name": "simpleclient_common-0.16.0.jar",
+      "bytes": 8011,
+      "sha256": "eba6ec26ce7e40cbb8725e05fb83247a9f4f44945b9e7522e3375dde67b9f059"
+    },
+    {
+      "name": "simpleclient_guava-0.16.0.jar",
+      "bytes": 5267,
+      "sha256": "49959fe20423803b8958fe35ce6cdcc47e58e2251b191ad53eb7ef6fc46c4ae1"
+    },
+    {
+      "name": "simpleclient_hotspot-0.16.0.jar",
+      "bytes": 24768,
+      "sha256": "134f156cfeb44cbd3864065806ef5db5543c68af578d1d7ee59283e2e9853f73"
+    },
+    {
+      "name": "simpleclient_httpserver-0.16.0.jar",
+      "bytes": 14688,
+      "sha256": "cab87de10b6a474151cceebc3b634329a973ffb602ce6efef2c0fd97a90365c8"
+    },
+    {
+      "name": "simpleclient_tracer_common-0.16.0.jar",
+      "bytes": 3405,
+      "sha256": "e84a784ac8e24f182ee62da80b6b5c8140774b75bfa4bf9cc3d3b8390db625f6"
+    },
+    {
+      "name": "simpleclient_tracer_otel-0.16.0.jar",
+      "bytes": 4338,
+      "sha256": "a2a84c59bef3796bb7f9c6f2ae8b7de8b905313ef28180ac3de7ff61dd68df3f"
+    },
+    {
+      "name": "simpleclient_tracer_otel_agent-0.16.0.jar",
+      "bytes": 4611,
+      "sha256": "7ad2bb40df74a772d9f5445a3d03579b49d6b37a47d5e90f6cf3f59ecf41ad06"
+    },
+    {
+      "name": "slf4j-api-2.0.16.jar",
+      "bytes": 69435,
+      "sha256": "a12578dde1ba00bd9b816d388a0b879928d00bab3c83c240f7013bf4196c579a"
+    },
+    {
+      "name": "spanish-pos-dict-2.5.jar",
+      "bytes": 2914808,
+      "sha256": "f5cf2f9939c0fd17dd0cad75a8fd05893c7a0c035bbf159b5dc8f81740271b9a"
+    },
+    {
+      "name": "txw2-4.0.5.jar",
+      "bytes": 73266,
+      "sha256": "917355bc451481f30d043b24d123110517966af34383901773882810dca480e5"
+    },
+    {
+      "name": "unit-api-1.0.jar",
+      "bytes": 27785,
+      "sha256": "35da65fdbd3f9c1fe79cfc8399db975fd97660d8a219febfda9fd1a5fc058f10"
+    },
+    {
+      "name": "uom-lib-common-1.1.jar",
+      "bytes": 15225,
+      "sha256": "4add5fbcb7f548b79230ed7e01cb9fd4f9e2524bd1598dbcbfd8150563fe27f7"
+    },
+    {
+      "name": "vavr-0.10.2.jar",
+      "bytes": 897876,
+      "sha256": "1b2ae46cf352627e05b39ac1f1d3bda7b285a8f643cdc7472aea4aa279492e54"
+    },
+    {
+      "name": "vavr-match-0.10.2.jar",
+      "bytes": 3039,
+      "sha256": "5d7a9515b05e3291194e04e641acf74a9a544c1caa1e2c24f59a1424c6ec8288"
+    },
+    {
+      "name": "waffle-jna-3.3.0.jar",
+      "bytes": 71735,
+      "sha256": "301cb389402618a0a8e7fb56c4b47e20f1f9c774f99a3d7272435bae2d323580"
+    }
+  ]
+}

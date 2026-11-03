@@ -1,0 +1,156 @@
+{
+  "metric": "text-effects-v1",
+  "description": "Общий Unicode LCS diff итогового текста без нормализации",
+  "results": [
+    {
+      "path": "../../benchmarks/results/2026-11-03/languagetool/lt68-paragraphs.jsonl",
+      "count": 3,
+      "atomic_tp": 0,
+      "atomic_fp": 0,
+      "atomic_fn": 6,
+      "atomic_precision": null,
+      "atomic_recall": 0.0,
+      "matched_corrections": 0,
+      "gold_corrections": 6,
+      "correction_recall": 0.0,
+      "controls": 0,
+      "changed_controls": 0,
+      "changed_control_rate": null,
+      "exact_count": 0,
+      "exact_rate": 0.0,
+      "median_seconds": 0.038728,
+      "p95_seconds": 0.079696,
+      "categories": {
+        "length_profile": {
+          "count": 3,
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 6,
+          "atomic_precision": null,
+          "atomic_recall": 0.0,
+          "matched_corrections": 0,
+          "gold_corrections": 6,
+          "correction_recall": 0.0,
+          "controls": 0,
+          "changed_controls": 0,
+          "changed_control_rate": null,
+          "exact_count": 0,
+          "exact_rate": 0.0
+        }
+      },
+      "cases": [
+        {
+          "id": "paragraph-263",
+          "category": "length_profile",
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 2,
+          "matched_corrections": 0,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        },
+        {
+          "id": "paragraph-538",
+          "category": "length_profile",
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 2,
+          "matched_corrections": 0,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        },
+        {
+          "id": "paragraph-1183",
+          "category": "length_profile",
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 2,
+          "matched_corrections": 0,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "path": "../../benchmarks/results/2026-11-03/sage/sage95m-cpu-paragraphs.jsonl",
+      "count": 3,
+      "atomic_tp": 6,
+      "atomic_fp": 0,
+      "atomic_fn": 0,
+      "atomic_precision": 1.0,
+      "atomic_recall": 1.0,
+      "matched_corrections": 6,
+      "gold_corrections": 6,
+      "correction_recall": 1.0,
+      "controls": 0,
+      "changed_controls": 0,
+      "changed_control_rate": null,
+      "exact_count": 3,
+      "exact_rate": 1.0,
+      "median_seconds": 2.1374208999914117,
+      "p95_seconds": 4.534239800006617,
+      "categories": {
+        "length_profile": {
+          "count": 3,
+          "atomic_tp": 6,
+          "atomic_fp": 0,
+          "atomic_fn": 0,
+          "atomic_precision": 1.0,
+          "atomic_recall": 1.0,
+          "matched_corrections": 6,
+          "gold_corrections": 6,
+          "correction_recall": 1.0,
+          "controls": 0,
+          "changed_controls": 0,
+          "changed_control_rate": null,
+          "exact_count": 3,
+          "exact_rate": 1.0
+        }
+      },
+      "cases": [
+        {
+          "id": "paragraph-263",
+          "category": "length_profile",
+          "atomic_tp": 2,
+          "atomic_fp": 0,
+          "atomic_fn": 0,
+          "matched_corrections": 2,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": true
+        },
+        {
+          "id": "paragraph-538",
+          "category": "length_profile",
+          "atomic_tp": 2,
+          "atomic_fp": 0,
+          "atomic_fn": 0,
+          "matched_corrections": 2,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": true
+        },
+        {
+          "id": "paragraph-1183",
+          "category": "length_profile",
+          "atomic_tp": 2,
+          "atomic_fp": 0,
+          "atomic_fn": 0,
+          "matched_corrections": 2,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "measured_at": "2026-11-03T05:23:27.1105071Z",
+  "working_set_bytes": 524144640,
+  "pid": 26068,
+  "peak_working_set_bytes": 579170304,
+  "listeners": [
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 8081
+    }
+  ],
+  "cpu_seconds": 24.3125
+}

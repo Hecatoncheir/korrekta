@@ -2,9 +2,9 @@ name: Проверка инструмента сравнения моделей
 on:
   push:
     branches: [main]
-    paths: ['tools/model_benchmark/**', 'benchmarks/sage/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
+    paths: ['tools/model_benchmark/**', 'benchmarks/sage/**', 'benchmarks/languagetool/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
   pull_request:
-    paths: ['tools/model_benchmark/**', 'benchmarks/sage/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
+    paths: ['tools/model_benchmark/**', 'benchmarks/sage/**', 'benchmarks/languagetool/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -20,8 +20,8 @@ jobs:
         with:
           sdk: '3.13.7'
       - run: dart pub get --enforce-lockfile
-      - name: Проверить синтаксис исследовательского запуска SAGE
-        run: python3 -m py_compile ../../benchmarks/sage/run.py
+      - name: Проверить синтаксис исследовательских запусков
+        run: python3 -m py_compile ../../benchmarks/sage/run.py ../../benchmarks/languagetool/prepare.py ../../benchmarks/languagetool/pipeline.py
       - name: Проверить воспроизводимость набора
         run: |
           python3 ../../benchmarks/prepare_cases.py

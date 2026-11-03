@@ -1,0 +1,15 @@
+{
+  "engine": "LanguageTool 6.8",
+  "runtime": "Temurin JRE 21.0.13+9 Windows x64",
+  "components": ["org.languagetool:languagetool-server:6.8", "org.languagetool:language-ru:6.8"],
+  "parameters": {"language": "ru", "level": "default"},
+  "rules": "По умолчанию, без настройки по ответам test",
+  "replacement_policy": "Первый вариант в replacements; при пересечении первое замечание в порядке API. Замечания без замены учитываются отдельно. Эталон не используется для выбора.",
+  "dataset": "benchmarks/cases-v1.jsonl",
+  "dataset_sha256_lf": "a3e2a43453f886dea8db204d216c4a927fd8cf6409fdbc153f55e87d00e10b63",
+  "order": ["dev 40", "test 160", "paragraphs 3"],
+  "scoring": "text-effects-v1",
+  "hybrid": "Сначала первые непересекающиеся замены LanguageTool, затем SAGE 95M FP32 CPU целиком на полученном тексте; без фильтров, отбора по эталону и повторной настройки. Оценивается финальный текст относительно исходного.",
+  "network": "Локальный HTTP 127.0.0.1:8081, без --public и --allow-origin",
+  "limitation": "Диагностическое сравнение на ранее использованном наборе; окончательный выбор требует новых независимых текстов."
+}
