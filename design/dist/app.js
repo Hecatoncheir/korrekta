@@ -72,6 +72,9 @@ function renderEditor() {
   updateCount();
 }
 function renderEmpty() {
+  const stateKey = `${mode}:${busy}:${checked}`;
+  if (list.dataset.emptyState === stateKey) return;
+  list.dataset.emptyState = stateKey;
   let heading = 'Здесь будут подсказки';
   let description = `Напишите текст и нажмите «${modeLabel()}».`;
   let emptyIcon = 'edit';
@@ -92,6 +95,7 @@ function renderSuggestions() {
   document.getElementById('results-indicator').style.opacity = suggestions.length ? 1 : .3;
   const visible = suggestions.filter(item => filter === 'all' || item.category === filter);
   if (!suggestions.length) { renderEmpty(); return; }
+  delete list.dataset.emptyState;
   if (!visible.length) {
     list.innerHTML = '<div class="result-empty"><h3>Здесь всё спокойно</h3><p>Подсказок этого типа нет. Остальные — во вкладке «Все».</p></div>';
     return;
