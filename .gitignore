@@ -21,3 +21,8 @@ Thumbs.db
 *.gguf
 *.safetensors
 work/
+
+# Служебные настройки размещения и локальные снимки макета
+.openai/
+design/previews/
+__pycache__/

@@ -1,0 +1,51 @@
+name: Публикация сайта
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'design/dist/**'
+      - 'design/check-site.py'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Проверка и публикация
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Получить исходники
+        uses: actions/checkout@v6
+
+      - name: Проверить JavaScript и локальные ресурсы
+        run: |
+          for file in design/dist/*.js; do
+            node --check "$file"
+          done
+          python3 design/check-site.py
+
+      - name: Подготовить GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Подготовить файлы сайта
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: design/dist
+
+      - name: Опубликовать сайт
+        id: deployment
+        uses: actions/deploy-pages@v4
