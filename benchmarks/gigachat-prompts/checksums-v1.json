@@ -1,0 +1,8 @@
+{
+  "benchmarks/cases-v1.jsonl": "a3e2a43453f886dea8db204d216c4a927fd8cf6409fdbc153f55e87d00e10b63",
+  "benchmarks/prompt-v1.txt": "876a2df74e1a14a82eed3f4d6e8363eeef46d26ca90198ca3abd0f1f4ab8caf1",
+  "benchmarks/gigachat-prompts/short-edits.txt": "f42b3b9ce2eba71c310c6388dceee012fa2d2ebfae4f3c6923b4de8874386dd9",
+  "benchmarks/gigachat-prompts/text-json.txt": "c2dab9675e57890f054f8c6036265e3c418e641cf5468340bdc31c8545dcb45a",
+  "benchmarks/gigachat-prompts/text-only.txt": "f9d086e4375875c3555622b6c8a261b8e313e79133a0a5655f17feccc3ee8955",
+  "benchmarks/gigachat-prompts/holdout-v1.jsonl": "d344f5257fc925c834d7326bcdcbe7ba2c45b1878645ba38e00fa19cedfbec16"
+}

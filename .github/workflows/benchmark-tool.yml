@@ -2,9 +2,9 @@ name: Проверка инструмента сравнения моделей
 on:
   push:
     branches: [main]
-    paths: ['tools/model_benchmark/**', 'benchmarks/sage/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
+    paths: ['tools/model_benchmark/**', 'benchmarks/sage/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
   pull_request:
-    paths: ['tools/model_benchmark/**', 'benchmarks/sage/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
+    paths: ['tools/model_benchmark/**', 'benchmarks/sage/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -21,12 +21,13 @@ jobs:
           sdk: '3.13.7'
       - run: dart pub get --enforce-lockfile
       - name: Проверить синтаксис исследовательских запусков
-        run: python3 -m py_compile ../../benchmarks/sage/run.py ../../benchmarks/languagetool/prepare.py ../../benchmarks/languagetool/pipeline.py ../../benchmarks/preservation/prepare_cases.py ../../benchmarks/preservation/check_retention.py ../../benchmarks/sber-large/render_gigachat.py ../../benchmarks/sber-large/download_mt5.py ../../benchmarks/sber-large/summarize.py
+        run: python3 -m py_compile ../../benchmarks/sage/run.py ../../benchmarks/languagetool/prepare.py ../../benchmarks/languagetool/pipeline.py ../../benchmarks/preservation/prepare_cases.py ../../benchmarks/preservation/check_retention.py ../../benchmarks/sber-large/render_gigachat.py ../../benchmarks/sber-large/download_mt5.py ../../benchmarks/sber-large/summarize.py ../../benchmarks/gigachat-prompts/prepare_holdout.py ../../benchmarks/gigachat-prompts/select_candidate.py
       - name: Проверить воспроизводимость набора
         run: |
           python3 ../../benchmarks/prepare_cases.py
           python3 ../../benchmarks/preservation/prepare_cases.py
-          git diff --exit-code -- ../../benchmarks/cases-v1.jsonl ../../benchmarks/preservation/cases-v1.jsonl
+          python3 ../../benchmarks/gigachat-prompts/prepare_holdout.py
+          git diff --exit-code -- ../../benchmarks/cases-v1.jsonl ../../benchmarks/preservation/cases-v1.jsonl ../../benchmarks/gigachat-prompts/holdout-v1.jsonl
       - run: dart format --output=none --set-exit-if-changed .
       - run: dart analyze --fatal-infos
       - run: dart test

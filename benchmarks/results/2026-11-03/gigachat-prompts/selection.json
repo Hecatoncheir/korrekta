@@ -1,0 +1,47 @@
+{
+  "rule": "Только по dev: utility = clean_corrections - 2*changed_controls - 4*contract_failures. При равенстве меньше изменённых правильных текстов, затем больше чистых исправлений, затем порядок candidates. Ошибки структуры, транспорта и done_reason != stop считаются contract_failures. Отсутствие исправлений не даёт положительных баллов.",
+  "dev": [
+    {
+      "id": "gigachat-api-dev-control.jsonl",
+      "path": "../../benchmarks/results/2026-11-03/sber-large/gigachat-api-dev-control.jsonl",
+      "clean_corrections": 17,
+      "changed_controls": 7,
+      "contract_failures": 0,
+      "utility": 3
+    },
+    {
+      "id": "short-edits",
+      "path": "../../benchmarks/results/2026-11-03/gigachat-prompts/short-edits-dev.jsonl",
+      "clean_corrections": 0,
+      "changed_controls": 0,
+      "contract_failures": 0,
+      "utility": 0
+    },
+    {
+      "id": "text-only",
+      "path": "../../benchmarks/results/2026-11-03/gigachat-prompts/text-only-dev.jsonl",
+      "clean_corrections": 17,
+      "changed_controls": 1,
+      "contract_failures": 0,
+      "utility": 15
+    },
+    {
+      "id": "text-json",
+      "path": "../../benchmarks/results/2026-11-03/gigachat-prompts/text-json-dev.jsonl",
+      "clean_corrections": 17,
+      "changed_controls": 1,
+      "contract_failures": 0,
+      "utility": 15
+    }
+  ],
+  "selected": {
+    "id": "text-only",
+    "prompt": "text-only.txt",
+    "response_mode": "text",
+    "path": "../../benchmarks/results/2026-11-03/gigachat-prompts/text-only-dev.jsonl",
+    "clean_corrections": 17,
+    "changed_controls": 1,
+    "contract_failures": 0,
+    "utility": 15
+  }
+}

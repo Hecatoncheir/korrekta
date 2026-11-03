@@ -1,0 +1,18 @@
+{
+  "goal": "Проверить влияние простого запроса и разделения исправлений и объяснений на локальный GigaChat",
+  "source": "https://giga.chat/help/articles/ai-text-editor",
+  "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+  "runtime": "Ollama 0.40.13, /api/chat, тот же GGUF и шаблон",
+  "parameters": {"temperature": 0, "seed": 42, "num_ctx": 4096, "num_predict": 768, "repeat_penalty": 1.0, "think": false},
+  "candidates": [
+    {"id": "short-edits", "prompt": "short-edits.txt", "response_mode": "edits"},
+    {"id": "text-only", "prompt": "text-only.txt", "response_mode": "text"},
+    {"id": "text-json", "prompt": "text-json.txt", "response_mode": "text-json"}
+  ],
+  "input": "Для всех вариантов одинаковый компактный JSON text в сообщении user; промпт в system",
+  "dev": "40 прежних dev-примеров из benchmarks/cases-v1.jsonl",
+  "selection": "Только по dev: utility = clean_corrections - 2*changed_controls - 4*contract_failures. При равенстве меньше изменённых правильных текстов, затем больше чистых исправлений, затем порядок candidates. Ошибки структуры, транспорта и done_reason != stop считаются contract_failures. Отсутствие исправлений не даёт положительных баллов.",
+  "evaluation": "Выбранный вариант и прежний prompt-v1 проверяются на новом holdout из 80 текстов (40 пар). Выбранный дополнительно проверяется на старых test 160 и preservation 120. Test-ответы не используются для изменения промптов и выбора.",
+  "scoring": "Общий text-effects-v1; отдельно чистые исправления, изменения контролей, protected, ошибки контракта. Результат не обрезается и не нормализуется. У text-режимов precision всего предложения из summary не сравнивается с precision карточек JSON.",
+  "limitations": "Сравниваются и формулировки, и сложность формата ответа, а не только одна фраза. Новый holdout авторский и парный, не внешний независимый языковой рейтинг. Статья описывает онлайн-сервис и не раскрывает модель и внутренний промпт редактора."
+}

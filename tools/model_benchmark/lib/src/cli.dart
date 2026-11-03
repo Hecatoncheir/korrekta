@@ -5,6 +5,7 @@ import 'dart:math';
 import 'package:args/args.dart';
 
 import 'scoring.dart';
+import 'response_contract.dart';
 
 final schema = <String, Object>{
   'type': 'object',
@@ -43,6 +44,11 @@ Future<int> runCli(List<String> arguments) async {
     ..addOption('endpoint', defaultsTo: 'http://127.0.0.1:11434')
     ..addFlag('cpu', negatable: false)
     ..addFlag('raw', negatable: false)
+    ..addOption(
+      'response-mode',
+      defaultsTo: 'edits',
+      allowed: ['edits', 'text', 'text-json'],
+    )
     ..addFlag('help', abbr: 'h', negatable: false);
   try {
     final options = parser.parse(arguments);
@@ -80,6 +86,7 @@ Future<int> runCli(List<String> arguments) async {
 
 Future<int> runBenchmark(ArgResults options, Uri endpoint, int limit) async {
   final model = options.option('model')!;
+  final responseMode = options.option('response-mode')!;
   final prompt = await File(options.option('prompt')!).readAsString();
   final lines = await File(options.option('data')!).readAsLines();
   var cases = lines
@@ -118,7 +125,12 @@ Future<int> runBenchmark(ArgResults options, Uri endpoint, int limit) async {
         'model_info': show['model_info'],
         'template': show['template'],
         'prompt': prompt,
-        'schema': schema,
+        'schema': responseMode == 'edits'
+            ? schema
+            : responseMode == 'text-json'
+            ? textResponseSchema
+            : null,
+        'response_mode': responseMode,
         'split': options.option('split'),
         'cpu': options.flag('cpu'),
         'raw': options.flag('raw'),
@@ -142,6 +154,7 @@ Future<int> runBenchmark(ArgResults options, Uri endpoint, int limit) async {
       cases.first,
       options.flag('cpu'),
       options.flag('raw'),
+      responseMode,
     );
     sink.writeln(jsonEncode({...cold, 'type': 'cold_start'}));
     sink.writeln(
@@ -159,6 +172,7 @@ Future<int> runBenchmark(ArgResults options, Uri endpoint, int limit) async {
         item,
         options.flag('cpu'),
         options.flag('raw'),
+        responseMode,
       );
       records.add(record);
       sink.writeln(jsonEncode(record));
@@ -221,6 +235,7 @@ Future<JsonMap> checkCase(
   JsonMap item,
   bool cpu,
   bool raw,
+  String responseMode,
 ) async {
   final stopwatch = Stopwatch()..start();
   final text = item['text'] as String;
@@ -245,7 +260,8 @@ Future<JsonMap> checkCase(
           ],
         'stream': false,
         'think': false,
-        'format': schema,
+        if (responseMode != 'text')
+          'format': responseMode == 'edits' ? schema : textResponseSchema,
         'options': generationOptions(cpu),
         'keep_alive': '10m',
       },
@@ -254,25 +270,14 @@ Future<JsonMap> checkCase(
     final content = raw
         ? response['response'] as String
         : (response['message'] as JsonMap)['content'] as String;
-    Object? parsed;
-    try {
-      parsed = jsonDecode(content);
-    } on FormatException {
-      parsed = null;
-    }
-    final valid = validSchema(parsed);
-    final predicted = valid
-        ? (parsed as JsonMap)['edits'] as List<dynamic>
-        : <dynamic>[];
     return {
       'type': 'case',
       'id': item['id'],
       'category': item['category'],
       'text': text,
       'expected': expected,
-      'predicted': parsed,
+      'content': content,
       if (raw) 'rendered_prompt_sha256': item['rendered_prompt_sha256'],
-      'schema_valid': valid,
       'seconds': stopwatch.elapsedMicroseconds / 1e6,
       'done_reason': response['done_reason'],
       'load_duration': response['load_duration'],
@@ -280,8 +285,7 @@ Future<JsonMap> checkCase(
       'eval_duration': response['eval_duration'],
       'prompt_eval_count': response['prompt_eval_count'],
       'prompt_eval_duration': response['prompt_eval_duration'],
-      ...scoreCase(text, expected, predicted),
-      if (!valid) 'invalid_response': content,
+      ...evaluateResponse(text, expected, content, responseMode),
     };
   } catch (error) {
     stopwatch.stop();
