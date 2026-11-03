@@ -1,0 +1,39 @@
+{
+  "model": "ai-forever/sage-v1.1.0",
+  "revision": "0677d3c457c4088a7146118554fe82c2e8eb86bd",
+  "weights_sha256": "fd500038a683bd85df36c46581e85a5d595cf46a1a69660567b7023f50886421",
+  "weights_bytes": 6961484928,
+  "tokenizer_model": "ai-forever/FRED-T5-1.7B",
+  "tokenizer_revision": "fbff67a8b062bb34656fe27794b7874b63f54db8",
+  "prefix": "<LM>",
+  "dtype": "float32",
+  "device": "cuda",
+  "beams": 1,
+  "do_sample": false,
+  "max_length": "max(16, ceil(input_tokens * 1.5))",
+  "input_normalization": false,
+  "output_normalization": false,
+  "selection": "Один заранее заданный режим; параметры после просмотра ответов не подбираются. Наборы уже использованы для исследования других моделей, это сравнение, а не новая независимая приёмка.",
+  "datasets": [
+    {
+      "path": "benchmarks/cases-v1.jsonl",
+      "sha256_lf": "a3e2a43453f886dea8db204d216c4a927fd8cf6409fdbc153f55e87d00e10b63"
+    },
+    {
+      "path": "benchmarks/preservation/cases-v1.jsonl",
+      "sha256_lf": "e969f419ec024d688f355845716d685debd92ce6da8234644528bf5bd8ab7d69"
+    },
+    {
+      "path": "benchmarks/gigachat-prompts/holdout-v1.jsonl",
+      "sha256_lf": "d344f5257fc925c834d7326bcdcbe7ba2c45b1878645ba38e00fa19cedfbec16"
+    },
+    {
+      "path": "benchmarks/sber-large/layout-smoke-v1.jsonl",
+      "sha256_lf": "bbb990154b3fe74b83093c880acbcf322bc750c16705879ecf94c8c270db3d98"
+    },
+    {
+      "path": "benchmarks/paragraphs-v1.jsonl",
+      "sha256_lf": "d823b62ef71e7636e1286acc0493cdb74bdbe879b2f1952ab71e629c42c702ec"
+    }
+  ]
+}

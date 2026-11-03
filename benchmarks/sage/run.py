@@ -12,6 +12,10 @@ import sys
 import time
 
 MODELS = {
+    "ai-forever/sage-v1.1.0": (
+        "0677d3c457c4088a7146118554fe82c2e8eb86bd",
+        "fd500038a683bd85df36c46581e85a5d595cf46a1a69660567b7023f50886421",
+    ),
     "ai-forever/sage-fredt5-distilled-95m": (
         "ed51b4a46603931380951a3d8456685c9215864f",
         "e005b48ae460cbf5f82f0f3da8b13d5df7c2c98eb1e02ed8a7d525d3de7a9bfe",
@@ -30,6 +34,9 @@ MODELS = {
     ),
 }
 FILES = ["*.json", "*.safetensors", "*.txt", "*.model", "README.md"]
+TOKENIZER_MODEL = "ai-forever/FRED-T5-1.7B"
+TOKENIZER_REVISION = "fbff67a8b062bb34656fe27794b7874b63f54db8"
+TOKENIZER_FILES = ["config.json", "added_tokens.json", "merges.txt", "special_tokens_map.json", "tokenizer_config.json", "vocab.json"]
 
 
 def file_digest(path):
@@ -40,7 +47,7 @@ def file_digest(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--storage", default="E:/korrekta")
-    parser.add_argument("--model", choices=MODELS, default=next(iter(MODELS)))
+    parser.add_argument("--model", choices=MODELS, default="ai-forever/sage-fredt5-distilled-95m")
     parser.add_argument("--beams", type=int, default=1)
     parser.add_argument("--download", action="store_true")
     parser.add_argument("--data")
@@ -79,6 +86,8 @@ def main():
         )
         if file_digest(Path(path) / "model.safetensors") != expected_weights:
             raise ValueError("Не совпала контрольная сумма весов")
+        if model_id == "ai-forever/sage-v1.1.0":
+            snapshot_download(TOKENIZER_MODEL, revision=TOKENIZER_REVISION, allow_patterns=TOKENIZER_FILES)
         print(json.dumps({"snapshot": path, "revision": revision, "sha256_verified": True}))
         return
     if not options.data or not options.output or options.limit < 0:
@@ -108,7 +117,15 @@ def main():
     if file_digest(path / "model.safetensors") != expected_weights:
         raise ValueError("Не совпала контрольная сумма весов")
     tokenizer_options = {"src_lang": "ru", "tgt_lang": "ru"} if "m2m100" in model_id else {}
-    tokenizer = AutoTokenizer.from_pretrained(path, local_files_only=True, **tokenizer_options)
+    tokenizer_path = path
+    prefix = ""
+    if model_id == "ai-forever/sage-v1.1.0":
+        tokenizer_path = Path(snapshot_download(
+            TOKENIZER_MODEL, revision=TOKENIZER_REVISION,
+            allow_patterns=TOKENIZER_FILES, local_files_only=True,
+        ))
+        prefix = "<LM>"
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_path, local_files_only=True, **tokenizer_options)
     model = AutoModelForSeq2SeqLM.from_pretrained(path, local_files_only=True, dtype=torch.float32)
     model.to(options.device).eval()
     if options.device == "cuda":
@@ -125,6 +142,12 @@ def main():
         "parameters": sum(p.numel() for p in model.parameters()),
         "dtype": "float32", "threads": torch.get_num_threads(),
         "seed": 42, "do_sample": False, "num_beams": options.beams,
+        "input_prefix": prefix, "input_normalization": False,
+        "tokenizer_model": TOKENIZER_MODEL if prefix else model_id,
+        "tokenizer_revision": TOKENIZER_REVISION if prefix else revision,
+        "tokenizer_files": [{"name": f.name, "bytes": f.stat().st_size,
+                             "sha256": file_digest(f)}
+                            for f in sorted(tokenizer_path.iterdir()) if f.is_file() and f.name in TOKENIZER_FILES],
         "forced_bos_token_id": tokenizer.get_lang_id("ru") if "m2m100" in model_id else None,
         "max_length": "max(16, ceil(input_tokens * 1.5))", "truncation": False,
         "offline": True, "split": options.split, "load_seconds": load_seconds,
@@ -139,7 +162,7 @@ def main():
         if options.device == "cuda":
             torch.cuda.synchronize()
         start = time.perf_counter()
-        inputs = tokenizer(item["text"], padding="longest", truncation=False, return_tensors="pt").to(options.device)
+        inputs = tokenizer(prefix + item["text"], padding="longest", truncation=False, return_tensors="pt").to(options.device)
         max_length = max(16, math.ceil(inputs["input_ids"].shape[1] * 1.5))
         generation = {"forced_bos_token_id": tokenizer.get_lang_id("ru")} if "m2m100" in model_id else {}
         with torch.inference_mode():

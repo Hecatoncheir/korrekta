@@ -1,0 +1,11 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.15",
+  "memory_total_bytes": 34274750464,
+  "memory_available_before_run_bytes": 17919651840,
+  "disk_E_free_bytes": 105241821184,
+  "gpu_before_run": "NVIDIA GeForce RTX 3080 Ti, 12288 MiB, 2787 MiB, 621.01",
+  "download_seconds": 116.1,
+  "storage": "E:/korrekta/cache/huggingface/hub/models--ai-forever--sage-v1.1.0",
+  "runner_sha256_lf": "dc7c196cfff8198db5003e5c4bb068837a3f5060ee75fd1324776f2cfdba660f"
+}

@@ -1,0 +1,35 @@
+{
+  "method": "encode <LM> + text; batch_decode(skip_special_tokens=True), без модели и нормализации",
+  "datasets": [
+    {
+      "path": "benchmarks/cases-v1.jsonl",
+      "count": 200,
+      "changed": 0,
+      "details": []
+    },
+    {
+      "path": "benchmarks/preservation/cases-v1.jsonl",
+      "count": 120,
+      "changed": 0,
+      "details": []
+    },
+    {
+      "path": "benchmarks/gigachat-prompts/holdout-v1.jsonl",
+      "count": 80,
+      "changed": 0,
+      "details": []
+    },
+    {
+      "path": "benchmarks/sber-large/layout-smoke-v1.jsonl",
+      "count": 12,
+      "changed": 0,
+      "details": []
+    },
+    {
+      "path": "benchmarks/paragraphs-v1.jsonl",
+      "count": 3,
+      "changed": 0,
+      "details": []
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+{
+  "method": "Число дословных вхождений protected без нормализации",
+  "results": [
+    {
+      "path": "benchmarks/results/2026-11-03/sage-v1.1/sage11-holdout.jsonl",
+      "count": 80,
+      "retention_failures": 33,
+      "retention_failures_on_controls": 16,
+      "changed_controls": 16,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "names_quotes": 8,
+        "emoji_layout": 18,
+        "technical": 7
+      },
+      "details": [
+        {
+          "id": "prompt-014-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Лисолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-014-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Лисолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-015-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Пятый причал»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-015-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Пятый причал»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-016-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "„Медный сад“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-016-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "„Медный сад“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-020-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Три фонаря»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-020-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Три фонаря»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-021-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "📷",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-021-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "📷",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-022-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "🤝",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-022-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "🤝",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-023-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "🌙",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-023-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "🌙",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-024-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "👍🏻",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-024-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "👍🏻",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-025-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "🧑‍🔬",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-025-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "🧑‍🔬",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-026-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-026-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-028-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-028-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-029-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "**Примечание:**",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-029-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "**Примечание:**",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-030-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-030-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-034-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "E:\\Archive\\notes",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-034-error",
+          "category": "technical",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "E:\\Archive\\notes",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-035-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "`timeout_ms=5000`",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-035-error",
+          "category": "technical",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "`timeout_ms=5000`",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-036-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "{\"local\":true,\"lang\":\"ru\"}",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-036-error",
+          "category": "technical",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "{\"local\":true,\"lang\":\"ru\"}",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-038-error",
+          "category": "technical",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "v1.8.0-rc.3",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/results/2026-11-03/gigachat-prompts/text-only-holdout.jsonl",
+      "count": 80,
+      "retention_failures": 5,
+      "retention_failures_on_controls": 2,
+      "changed_controls": 2,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "names_quotes": 3,
+        "emoji_layout": 2
+      },
+      "details": [
+        {
+          "id": "prompt-016-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "„Медный сад“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-016-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "„Медный сад“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-017-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\"Записки на полях\"",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-030-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-030-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/results/2026-11-03/gigachat-prompts/baseline-holdout.jsonl",
+      "count": 80,
+      "retention_failures": 6,
+      "retention_failures_on_controls": 6,
+      "changed_controls": 17,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "names_quotes": 5,
+        "emoji_layout": 1
+      },
+      "details": [
+        {
+          "id": "prompt-011-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Ривена",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-014-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Лисолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-016-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "„Медный сад“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-018-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "arlo_notes",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-019-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Тэо",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-029-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "**Примечание:**",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
