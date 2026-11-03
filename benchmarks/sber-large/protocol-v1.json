@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-03",
+  "goal": "Проверить более крупные локальные корректоры Сбера и GigaChat с родным шаблоном диалога",
+  "sage_models": [
+    {"id": "ai-forever/sage-fredt5-large", "revision": "5a7a9960c8f0743eec57fa2fc8c034cc1dc8326a", "beams": 1},
+    {"id": "ai-forever/sage-m2m100-1.2B", "revision": "1773f13bcbf21d7d945a3ba58473acac3aea6690", "beams": 5, "source_language": "ru", "target_language": "ru", "forced_bos": "ru"},
+    {"id": "ai-forever/sage-mt5-large", "revision": "ab7807052d9728547c97270408cccd9c605af897", "beams": 1}
+  ],
+  "sage_runtime": "Существующая среда на E:; Transformers 5.22.1, PyTorch 2.11.0+cu128, FP32, CUDA, seed 42, без sampling, max_length=max(16, ceil(input_tokens*1.5)); контрольные суммы весов проверяются",
+  "datasets": ["benchmarks/cases-v1.jsonl dev 40, затем test 160", "benchmarks/preservation/cases-v1.jsonl test 120", "benchmarks/sber-large/layout-smoke-v1.jsonl dev 12"],
+  "scoring": "text-effects-v1, полный правильный итог и сохранение protected отдельно; исходные критерии M1 не меняются",
+  "gigachat": "Существующий GigaChat3.1-10B-A1.8B Q4_K_M; параметры prompt-v1 и schema-v1 сохраняются, но диалог предварительно рендерится официальным chat_template.jinja bf16-репозитория ревизии 189fff27a1dee68473960c3d5bca53e0e07a3191 и подаётся через /api/generate raw=true. Это отдельный режим, а не замена прежних результатов.",
+  "gigachat_api_control": "Дополнительная проверка через /api/chat: на dev сравнить с raw, затем сохранить отдельный полный test/preservation/layout. Текущий /api/show возвращает тот же официальный Jinja-шаблон, хотя в старом отчёте был {{ .Prompt }}. Входной JSON в raw имеет стандартные пробелы Python, а API использует компактный Dart JSON; режимы не изолируют только влияние шаблона. Параметры и инструкцию не настраивать по test. Старый отчёт не заменять.",
+  "layout_probe": "8 ошибок раскладки и 4 правильных технических текста. Дополнительно к строгому совпадению проверяется восстановление с игнорированием регистра и конечных .!?, без других нормализаций.",
+  "limitations": "Наборы уже использовались. Это диагностическое сравнение, без настройки по test, не независимая итоговая приёмка. Крупнее не значит лучше; показатели ft и облачного sage-ai-service из карточек не приписываются скачанным весам. Модели GigaChat Ultra/Reasoning 432B/702B и экспериментальная diffusion GFusion не запускаются на этом оборудовании в данной проверке."
+}

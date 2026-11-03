@@ -42,6 +42,7 @@ Future<int> runCli(List<String> arguments) async {
     ..addOption('limit', defaultsTo: '0')
     ..addOption('endpoint', defaultsTo: 'http://127.0.0.1:11434')
     ..addFlag('cpu', negatable: false)
+    ..addFlag('raw', negatable: false)
     ..addFlag('help', abbr: 'h', negatable: false);
   try {
     final options = parser.parse(arguments);
@@ -90,6 +91,12 @@ Future<int> runBenchmark(ArgResults options, Uri endpoint, int limit) async {
   if (cases.isEmpty) {
     throw const FormatException('Нет примеров для выбранной части набора');
   }
+  if (options.flag('raw') &&
+      cases.any((row) => row['rendered_prompt'] is! String)) {
+    throw const FormatException(
+      'Для --raw нужен rendered_prompt у каждого примера',
+    );
+  }
   final output = File(options.option('output')!);
   await output.parent.create(recursive: true);
   if (output.existsSync()) {
@@ -114,6 +121,8 @@ Future<int> runBenchmark(ArgResults options, Uri endpoint, int limit) async {
         'schema': schema,
         'split': options.option('split'),
         'cpu': options.flag('cpu'),
+        'raw': options.flag('raw'),
+        if (options.flag('raw')) 'prompt_source': cases.first['prompt_source'],
         'time': DateTime.now().toUtc().toIso8601String(),
         'options': generationOptions(options.flag('cpu')),
       }),
@@ -132,6 +141,7 @@ Future<int> runBenchmark(ArgResults options, Uri endpoint, int limit) async {
       prompt,
       cases.first,
       options.flag('cpu'),
+      options.flag('raw'),
     );
     sink.writeln(jsonEncode({...cold, 'type': 'cold_start'}));
     sink.writeln(
@@ -148,6 +158,7 @@ Future<int> runBenchmark(ArgResults options, Uri endpoint, int limit) async {
         prompt,
         item,
         options.flag('cpu'),
+        options.flag('raw'),
       );
       records.add(record);
       sink.writeln(jsonEncode(record));
@@ -209,28 +220,40 @@ Future<JsonMap> checkCase(
   String prompt,
   JsonMap item,
   bool cpu,
+  bool raw,
 ) async {
   final stopwatch = Stopwatch()..start();
   final text = item['text'] as String;
   final expected = item['edits'] as List<dynamic>;
   try {
-    final response = await request(client, endpoint, 'chat', {
-      'model': model,
-      'messages': [
-        {'role': 'system', 'content': prompt},
-        {
-          'role': 'user',
-          'content': jsonEncode({'text': text}),
-        },
-      ],
-      'stream': false,
-      'think': false,
-      'format': schema,
-      'options': generationOptions(cpu),
-      'keep_alive': '10m',
-    });
+    final response = await request(
+      client,
+      endpoint,
+      raw ? 'generate' : 'chat',
+      {
+        'model': model,
+        if (raw) ...{
+          'prompt': item['rendered_prompt'],
+          'raw': true,
+        } else
+          'messages': [
+            {'role': 'system', 'content': prompt},
+            {
+              'role': 'user',
+              'content': jsonEncode({'text': text}),
+            },
+          ],
+        'stream': false,
+        'think': false,
+        'format': schema,
+        'options': generationOptions(cpu),
+        'keep_alive': '10m',
+      },
+    );
     stopwatch.stop();
-    final content = (response['message'] as JsonMap)['content'] as String;
+    final content = raw
+        ? response['response'] as String
+        : (response['message'] as JsonMap)['content'] as String;
     Object? parsed;
     try {
       parsed = jsonDecode(content);
@@ -248,6 +271,7 @@ Future<JsonMap> checkCase(
       'text': text,
       'expected': expected,
       'predicted': parsed,
+      if (raw) 'rendered_prompt_sha256': item['rendered_prompt_sha256'],
       'schema_valid': valid,
       'seconds': stopwatch.elapsedMicroseconds / 1e6,
       'done_reason': response['done_reason'],

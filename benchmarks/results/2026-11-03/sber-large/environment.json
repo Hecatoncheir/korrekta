@@ -1,0 +1,18 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.15",
+  "dataset_sha256_lf": {
+    "benchmarks/cases-v1.jsonl": "a3e2a43453f886dea8db204d216c4a927fd8cf6409fdbc153f55e87d00e10b63",
+    "benchmarks/preservation/cases-v1.jsonl": "e969f419ec024d688f355845716d685debd92ce6da8234644528bf5bd8ab7d69",
+    "benchmarks/sber-large/layout-smoke-v1.jsonl": "bbb990154b3fe74b83093c880acbcf322bc750c16705879ecf94c8c270db3d98",
+    "benchmarks/prompt-v1.txt": "876a2df74e1a14a82eed3f4d6e8363eeef46d26ca90198ca3abd0f1f4ab8caf1"
+  },
+  "gpu": "RTX 3080 Ti 12 GiB",
+  "cpu": "Ryzen 9 3900XT",
+  "ram_gb": 32,
+  "ollama_version": "0.40.13",
+  "owned_ollama_endpoint": "127.0.0.1:11435",
+  "owned_ollama_stopped": true,
+  "models_stored_on": "E:/korrekta/cache/huggingface",
+  "new_weights_bytes": 12692446648
+}
