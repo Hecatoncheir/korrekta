@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-03",
+  "cpu": {
+    "name": "AMD Ryzen 9 3900XT 12-Core Processor",
+    "cores": 12,
+    "threads": 24
+  },
+  "ramBytes": 34274750464,
+  "os": {
+    "caption": "Майкрософт Windows 11 Pro",
+    "build": "26200",
+    "architecture": "x64"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 3080 Ti",
+    "memoryMiB": 12288,
+    "driver": "621.01"
+  },
+  "volumes": [
+    {
+      "drive": "C",
+      "fileSystem": "NTFS",
+      "sizeBytes": 999128297472,
+      "freeBytes": 28114309120
+    },
+    {
+      "drive": "E",
+      "fileSystem": "NTFS",
+      "sizeBytes": 998577795072,
+      "freeBytes": 132363173888
+    }
+  ],
+  "modelsDirectory": "E:\\ollama\\models",
+  "installedOllamaVersion": "0.40.4",
+  "benchmarkOllamaVersion": "0.40.13",
+  "benchmarkRuntimeDirectory": "E:\\ollama\\korrekta-runtime\\0.40.13",
+  "flutter": "3.47.9",
+  "dart": "3.13.7",
+  "flutterStableRevision": "c197ca5199e9ee5661e865596c9c07294dfab51c"
+}

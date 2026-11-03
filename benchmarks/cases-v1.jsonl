@@ -1,0 +1,200 @@
+{"id": "ru-001", "split": "dev", "category": "verb", "text": "Мне нравиться читать книги.", "edits": [{"original": "нравиться", "replacement": "нравится"}]}
+{"id": "ru-002", "split": "test", "category": "verb", "text": "Он стараеться прийти вовремя.", "edits": [{"original": "стараеться", "replacement": "старается"}]}
+{"id": "ru-003", "split": "test", "category": "verb", "text": "Ребёнок учиться в третьем классе.", "edits": [{"original": "учиться", "replacement": "учится"}]}
+{"id": "ru-004", "split": "test", "category": "verb", "text": "Она хочеть увидеть море.", "edits": [{"original": "хочеть", "replacement": "хочет"}]}
+{"id": "ru-005", "split": "test", "category": "verb", "text": "Мы надеемся, что всё получиться.", "edits": [{"original": "получиться", "replacement": "получится"}]}
+{"id": "ru-006", "split": "dev", "category": "verb", "text": "Тебе нужно хорошо выспатся.", "edits": [{"original": "выспатся", "replacement": "выспаться"}]}
+{"id": "ru-007", "split": "test", "category": "verb", "text": "Пора возвращатся домой.", "edits": [{"original": "возвращатся", "replacement": "возвращаться"}]}
+{"id": "ru-008", "split": "test", "category": "verb", "text": "Он часто ошибаеться в расчётах.", "edits": [{"original": "ошибаеться", "replacement": "ошибается"}]}
+{"id": "ru-009", "split": "test", "category": "verb", "text": "Собака боиться грома.", "edits": [{"original": "боиться", "replacement": "боится"}]}
+{"id": "ru-010", "split": "test", "category": "verb", "text": "Мне кажеться, что дождь закончился.", "edits": [{"original": "кажеться", "replacement": "кажется"}]}
+{"id": "ru-011", "split": "dev", "category": "verb", "text": "Я хочу научится плавать.", "edits": [{"original": "научится", "replacement": "научиться"}]}
+{"id": "ru-012", "split": "test", "category": "verb", "text": "Нужно убедится в этом лично.", "edits": [{"original": "убедится", "replacement": "убедиться"}]}
+{"id": "ru-013", "split": "test", "category": "verb", "text": "Он собираеться в поездку.", "edits": [{"original": "собираеться", "replacement": "собирается"}]}
+{"id": "ru-014", "split": "test", "category": "verb", "text": "Завтра начнёться новая неделя.", "edits": [{"original": "начнёться", "replacement": "начнётся"}]}
+{"id": "ru-015", "split": "test", "category": "verb", "text": "Она вернёться вечером.", "edits": [{"original": "вернёться", "replacement": "вернётся"}]}
+{"id": "ru-016", "split": "dev", "category": "verb", "text": "Не стоит торопится с ответом.", "edits": [{"original": "торопится", "replacement": "торопиться"}]}
+{"id": "ru-017", "split": "test", "category": "verb", "text": "Надо заботится о близких.", "edits": [{"original": "заботится", "replacement": "заботиться"}]}
+{"id": "ru-018", "split": "test", "category": "verb", "text": "Мне не спиться.", "edits": [{"original": "спиться", "replacement": "спится"}]}
+{"id": "ru-019", "split": "test", "category": "verb", "text": "Это может пригодится позже.", "edits": [{"original": "пригодится", "replacement": "пригодиться"}]}
+{"id": "ru-020", "split": "test", "category": "verb", "text": "Он проситься домой.", "edits": [{"original": "проситься", "replacement": "просится"}]}
+{"id": "ru-021", "split": "dev", "category": "agreement", "text": "Моя брат живёт рядом.", "edits": [{"original": "Моя брат", "replacement": "Мой брат"}]}
+{"id": "ru-022", "split": "test", "category": "agreement", "text": "Это очень интересная фильм.", "edits": [{"original": "интересная фильм", "replacement": "интересный фильм"}]}
+{"id": "ru-023", "split": "test", "category": "agreement", "text": "За окном стояла густой туман.", "edits": [{"original": "стояла густой туман", "replacement": "стоял густой туман"}]}
+{"id": "ru-024", "split": "test", "category": "agreement", "text": "На столе лежали новая книга.", "edits": [{"original": "лежали новая книга", "replacement": "лежала новая книга"}]}
+{"id": "ru-025", "split": "test", "category": "agreement", "text": "Эти задача оказалась сложной.", "edits": [{"original": "Эти задача", "replacement": "Эта задача"}]}
+{"id": "ru-026", "split": "dev", "category": "agreement", "text": "Наш команда выиграла матч.", "edits": [{"original": "Наш команда", "replacement": "Наша команда"}]}
+{"id": "ru-027", "split": "test", "category": "agreement", "text": "Солнце медленно поднялась над лесом.", "edits": [{"original": "поднялась", "replacement": "поднялось"}]}
+{"id": "ru-028", "split": "test", "category": "agreement", "text": "Дети вернулся из школы.", "edits": [{"original": "вернулся", "replacement": "вернулись"}]}
+{"id": "ru-029", "split": "test", "category": "agreement", "text": "Девочка открыл дверь.", "edits": [{"original": "открыл", "replacement": "открыла"}]}
+{"id": "ru-030", "split": "test", "category": "agreement", "text": "Окна был закрыты.", "edits": [{"original": "был", "replacement": "были"}]}
+{"id": "ru-031", "split": "dev", "category": "agreement", "text": "Эта письмо пришло вчера.", "edits": [{"original": "Эта письмо", "replacement": "Это письмо"}]}
+{"id": "ru-032", "split": "test", "category": "agreement", "text": "Красивый платье висело в шкафу.", "edits": [{"original": "Красивый платье", "replacement": "Красивое платье"}]}
+{"id": "ru-033", "split": "test", "category": "agreement", "text": "Мы готов к поездке.", "edits": [{"original": "готов", "replacement": "готовы"}]}
+{"id": "ru-034", "split": "test", "category": "agreement", "text": "Она доволен результатом.", "edits": [{"original": "доволен", "replacement": "довольна"}]}
+{"id": "ru-035", "split": "test", "category": "agreement", "text": "Они уверен в победе.", "edits": [{"original": "уверен", "replacement": "уверены"}]}
+{"id": "ru-036", "split": "dev", "category": "agreement", "text": "Здесь растёт высокие сосны.", "edits": [{"original": "растёт", "replacement": "растут"}]}
+{"id": "ru-037", "split": "test", "category": "agreement", "text": "Эта дверь были открыта.", "edits": [{"original": "были", "replacement": "была"}]}
+{"id": "ru-038", "split": "test", "category": "agreement", "text": "Мои сестра учится в университете.", "edits": [{"original": "Мои сестра", "replacement": "Моя сестра"}]}
+{"id": "ru-039", "split": "test", "category": "agreement", "text": "Два кота сидит на окне.", "edits": [{"original": "сидит", "replacement": "сидят"}]}
+{"id": "ru-040", "split": "test", "category": "agreement", "text": "Мы был дома весь вечер.", "edits": [{"original": "был", "replacement": "были"}]}
+{"id": "ru-041", "split": "dev", "category": "spelling", "text": "Я хочу прийдти пораньше.", "edits": [{"original": "прийдти", "replacement": "прийти"}]}
+{"id": "ru-042", "split": "test", "category": "spelling", "text": "Пожалуста, закрой окно.", "edits": [{"original": "Пожалуста", "replacement": "Пожалуйста"}]}
+{"id": "ru-043", "split": "test", "category": "spelling", "text": "Он аккуратно разложил инградиенты.", "edits": [{"original": "инградиенты", "replacement": "ингредиенты"}]}
+{"id": "ru-044", "split": "test", "category": "spelling", "text": "Это произошло в течении часа.", "edits": [{"original": "в течении часа", "replacement": "в течение часа"}]}
+{"id": "ru-045", "split": "test", "category": "spelling", "text": "В следствии дождя прогулку отменили.", "edits": [{"original": "В следствии дождя", "replacement": "Вследствие дождя"}]}
+{"id": "ru-046", "split": "dev", "category": "spelling", "text": "Мы разговаривали на счёт отпуска.", "edits": [{"original": "на счёт отпуска", "replacement": "насчёт отпуска"}]}
+{"id": "ru-047", "split": "test", "category": "spelling", "text": "Она выглядела по настоящему счастливой.", "edits": [{"original": "по настоящему", "replacement": "по-настоящему"}]}
+{"id": "ru-048", "split": "test", "category": "spelling", "text": "Всётаки мы успели на поезд.", "edits": [{"original": "Всётаки", "replacement": "Всё-таки"}]}
+{"id": "ru-049", "split": "test", "category": "spelling", "text": "Кто то оставил здесь зонт.", "edits": [{"original": "Кто то", "replacement": "Кто-то"}]}
+{"id": "ru-050", "split": "test", "category": "spelling", "text": "Мы когда нибудь встретимся снова.", "edits": [{"original": "когда нибудь", "replacement": "когда-нибудь"}]}
+{"id": "ru-051", "split": "dev", "category": "spelling", "text": "Он кое что забыл дома.", "edits": [{"original": "кое что", "replacement": "кое-что"}]}
+{"id": "ru-052", "split": "test", "category": "spelling", "text": "Её рассказ был черезчур длинным.", "edits": [{"original": "черезчур", "replacement": "чересчур"}]}
+{"id": "ru-053", "split": "test", "category": "spelling", "text": "В комнате было черезвычайно тихо.", "edits": [{"original": "черезвычайно", "replacement": "чрезвычайно"}]}
+{"id": "ru-054", "split": "test", "category": "spelling", "text": "На стене висел новый колендарь.", "edits": [{"original": "колендарь", "replacement": "календарь"}]}
+{"id": "ru-055", "split": "test", "category": "spelling", "text": "Мы поздравили юбиляра с днём рожденья и пожелали счатья.", "edits": [{"original": "счатья", "replacement": "счастья"}]}
+{"id": "ru-056", "split": "dev", "category": "spelling", "text": "Он извинился за инциндент.", "edits": [{"original": "инциндент", "replacement": "инцидент"}]}
+{"id": "ru-057", "split": "test", "category": "spelling", "text": "Я получил оффициальный ответ.", "edits": [{"original": "оффициальный", "replacement": "официальный"}]}
+{"id": "ru-058", "split": "test", "category": "spelling", "text": "Это исскуство требует терпения.", "edits": [{"original": "исскуство", "replacement": "искусство"}]}
+{"id": "ru-059", "split": "test", "category": "spelling", "text": "Она выбрала серебрянный браслет.", "edits": [{"original": "серебрянный", "replacement": "серебряный"}]}
+{"id": "ru-060", "split": "test", "category": "spelling", "text": "Мы заказали вкусный винегретт.", "edits": [{"original": "винегретт", "replacement": "винегрет"}]}
+{"id": "ru-061", "split": "dev", "category": "punctuation", "text": "Я знаю что ты придёшь.", "edits": [{"original": "знаю что", "replacement": "знаю, что"}]}
+{"id": "ru-062", "split": "test", "category": "punctuation", "text": "Мы остались дома потому что шёл дождь.", "edits": [{"original": "дома потому что", "replacement": "дома, потому что"}]}
+{"id": "ru-063", "split": "test", "category": "punctuation", "text": "Если завтра будет тепло мы поедем на дачу.", "edits": [{"original": "тепло мы", "replacement": "тепло, мы"}]}
+{"id": "ru-064", "split": "test", "category": "punctuation", "text": "Когда стемнело мы зажгли лампу.", "edits": [{"original": "стемнело мы", "replacement": "стемнело, мы"}]}
+{"id": "ru-065", "split": "test", "category": "punctuation", "text": "Книга которую я купил вчера лежит на столе.", "edits": [{"original": "Книга которую я купил вчера лежит", "replacement": "Книга, которую я купил вчера, лежит"}]}
+{"id": "ru-066", "split": "dev", "category": "punctuation", "text": "Дом где прошло моё детство снесли.", "edits": [{"original": "Дом где прошло моё детство снесли", "replacement": "Дом, где прошло моё детство, снесли"}]}
+{"id": "ru-067", "split": "test", "category": "punctuation", "text": "Я спросил когда начнётся встреча.", "edits": [{"original": "спросил когда", "replacement": "спросил, когда"}]}
+{"id": "ru-068", "split": "test", "category": "punctuation", "text": "Она улыбнулась хотя очень устала.", "edits": [{"original": "улыбнулась хотя", "replacement": "улыбнулась, хотя"}]}
+{"id": "ru-069", "split": "test", "category": "punctuation", "text": "Мы пошли туда где было светло.", "edits": [{"original": "туда где", "replacement": "туда, где"}]}
+{"id": "ru-070", "split": "test", "category": "punctuation", "text": "Я позвоню тебе как только освобожусь.", "edits": [{"original": "тебе как только", "replacement": "тебе, как только"}]}
+{"id": "ru-071", "split": "dev", "category": "punctuation", "text": "Он остановился чтобы перевести дух.", "edits": [{"original": "остановился чтобы", "replacement": "остановился, чтобы"}]}
+{"id": "ru-072", "split": "test", "category": "punctuation", "text": "Пока ты спал я приготовил завтрак.", "edits": [{"original": "спал я", "replacement": "спал, я"}]}
+{"id": "ru-073", "split": "test", "category": "punctuation", "text": "Я не уверен что это хорошая идея.", "edits": [{"original": "уверен что", "replacement": "уверен, что"}]}
+{"id": "ru-074", "split": "test", "category": "punctuation", "text": "Она сказала что вернётся к ужину.", "edits": [{"original": "сказала что", "replacement": "сказала, что"}]}
+{"id": "ru-075", "split": "test", "category": "punctuation", "text": "Тот кто пришёл первым получил приз.", "edits": [{"original": "Тот кто пришёл первым получил", "replacement": "Тот, кто пришёл первым, получил"}]}
+{"id": "ru-076", "split": "dev", "category": "punctuation", "text": "Мы заметили как за окном пошёл снег.", "edits": [{"original": "заметили как", "replacement": "заметили, как"}]}
+{"id": "ru-077", "split": "test", "category": "punctuation", "text": "Я помню как мы познакомились.", "edits": [{"original": "помню как", "replacement": "помню, как"}]}
+{"id": "ru-078", "split": "test", "category": "punctuation", "text": "Хотя было поздно он продолжал работать.", "edits": [{"original": "поздно он", "replacement": "поздно, он"}]}
+{"id": "ru-079", "split": "test", "category": "punctuation", "text": "Чем дольше я думал тем яснее становился ответ.", "edits": [{"original": "думал тем", "replacement": "думал, тем"}]}
+{"id": "ru-080", "split": "test", "category": "punctuation", "text": "Нам нужно решить куда идти дальше.", "edits": [{"original": "решить куда", "replacement": "решить, куда"}]}
+{"id": "ru-081", "split": "dev", "category": "word_form", "text": "Согласно приказа встречу перенесли.", "edits": [{"original": "Согласно приказа", "replacement": "Согласно приказу"}]}
+{"id": "ru-082", "split": "test", "category": "word_form", "text": "Благодаря помощь друга я справился с задачей.", "edits": [{"original": "Благодаря помощь друга", "replacement": "Благодаря помощи друга"}]}
+{"id": "ru-083", "split": "test", "category": "word_form", "text": "Вопреки прогноза день оказался солнечным.", "edits": [{"original": "Вопреки прогноза", "replacement": "Вопреки прогнозу"}]}
+{"id": "ru-084", "split": "test", "category": "word_form", "text": "По приезду в город я позвонил родителям.", "edits": [{"original": "По приезду", "replacement": "По приезде"}]}
+{"id": "ru-085", "split": "test", "category": "word_form", "text": "По окончанию школы он поступил в колледж.", "edits": [{"original": "По окончанию", "replacement": "По окончании"}]}
+{"id": "ru-086", "split": "dev", "category": "word_form", "text": "Я оплатил за проезд.", "edits": [{"original": "оплатил за проезд", "replacement": "оплатил проезд"}]}
+{"id": "ru-087", "split": "test", "category": "word_form", "text": "Мы обсудили о проблеме.", "edits": [{"original": "обсудили о проблеме", "replacement": "обсудили проблему"}]}
+{"id": "ru-088", "split": "test", "category": "word_form", "text": "Она одела новое пальто.", "edits": [{"original": "одела", "replacement": "надела"}]}
+{"id": "ru-089", "split": "test", "category": "word_form", "text": "Он жгёт старые письма.", "edits": [{"original": "жгёт", "replacement": "жжёт"}]}
+{"id": "ru-090", "split": "test", "category": "word_form", "text": "Я ложу ключи на полку.", "edits": [{"original": "ложу", "replacement": "кладу"}]}
+{"id": "ru-091", "split": "dev", "category": "word_form", "text": "Мне не хватает полтора недели.", "edits": [{"original": "полтора недели", "replacement": "полутора недель"}]}
+{"id": "ru-092", "split": "test", "category": "word_form", "text": "Полтора недели пролетели незаметно.", "edits": [{"original": "Полтора недели", "replacement": "Полторы недели"}]}
+{"id": "ru-093", "split": "test", "category": "word_form", "text": "Обоих подруг пригласили на праздник.", "edits": [{"original": "Обоих подруг", "replacement": "Обеих подруг"}]}
+{"id": "ru-094", "split": "test", "category": "word_form", "text": "Я встретил обоих сестёр у входа.", "edits": [{"original": "обоих сестёр", "replacement": "обеих сестёр"}]}
+{"id": "ru-095", "split": "test", "category": "word_form", "text": "Это более лучшее решение.", "edits": [{"original": "более лучшее", "replacement": "лучшее"}]}
+{"id": "ru-096", "split": "dev", "category": "word_form", "text": "Он самый старейший участник команды.", "edits": [{"original": "самый старейший", "replacement": "старейший"}]}
+{"id": "ru-097", "split": "test", "category": "word_form", "text": "Мы уверены о том, что справимся.", "edits": [{"original": "уверены о том", "replacement": "уверены в том"}]}
+{"id": "ru-098", "split": "test", "category": "word_form", "text": "Я интересуюсь о результатах конкурса.", "edits": [{"original": "интересуюсь о результатах", "replacement": "интересуюсь результатами"}]}
+{"id": "ru-099", "split": "test", "category": "word_form", "text": "Она уделяет внимание на детали.", "edits": [{"original": "внимание на детали", "replacement": "внимание деталям"}]}
+{"id": "ru-100", "split": "test", "category": "word_form", "text": "Встреча состоится в пятницу, пятого ноябрём.", "edits": [{"original": "ноябрём", "replacement": "ноября"}]}
+{"id": "ru-101", "split": "dev", "category": "punctuation_other", "text": "Кажется это начало новой истории.", "edits": [{"original": "Кажется это", "replacement": "Кажется, это"}]}
+{"id": "ru-102", "split": "test", "category": "punctuation_other", "text": "К счастью поезд ещё не ушёл.", "edits": [{"original": "К счастью поезд", "replacement": "К счастью, поезд"}]}
+{"id": "ru-103", "split": "test", "category": "punctuation_other", "text": "Во-первых нужно проверить адрес.", "edits": [{"original": "Во-первых нужно", "replacement": "Во-первых, нужно"}]}
+{"id": "ru-104", "split": "test", "category": "punctuation_other", "text": "Итак мы начинаем.", "edits": [{"original": "Итак мы", "replacement": "Итак, мы"}]}
+{"id": "ru-105", "split": "test", "category": "punctuation_other", "text": "Друзья давайте встретимся завтра.", "edits": [{"original": "Друзья давайте", "replacement": "Друзья, давайте"}]}
+{"id": "ru-106", "split": "dev", "category": "punctuation_other", "text": "Мама я уже дома.", "edits": [{"original": "Мама я", "replacement": "Мама, я"}]}
+{"id": "ru-107", "split": "test", "category": "punctuation_other", "text": "Спасибо Анна за помощь.", "edits": [{"original": "Спасибо Анна за помощь", "replacement": "Спасибо, Анна, за помощь"}]}
+{"id": "ru-108", "split": "test", "category": "punctuation_other", "text": "Прочитав письмо она задумалась.", "edits": [{"original": "Прочитав письмо она", "replacement": "Прочитав письмо, она"}]}
+{"id": "ru-109", "split": "test", "category": "punctuation_other", "text": "Закрыв дверь он спустился по лестнице.", "edits": [{"original": "Закрыв дверь он", "replacement": "Закрыв дверь, он"}]}
+{"id": "ru-110", "split": "test", "category": "punctuation_other", "text": "Улыбаясь она смотрела на ребёнка.", "edits": [{"original": "Улыбаясь она", "replacement": "Улыбаясь, она"}]}
+{"id": "ru-111", "split": "dev", "category": "punctuation_other", "text": "Я купил хлеб молоко и сыр.", "edits": [{"original": "хлеб молоко", "replacement": "хлеб, молоко"}]}
+{"id": "ru-112", "split": "test", "category": "punctuation_other", "text": "Он не только прочитал книгу но и написал отзыв.", "edits": [{"original": "книгу но и", "replacement": "книгу, но и"}]}
+{"id": "ru-113", "split": "test", "category": "punctuation_other", "text": "День был холодный но солнечный.", "edits": [{"original": "холодный но", "replacement": "холодный, но"}]}
+{"id": "ru-114", "split": "test", "category": "punctuation_other", "text": "Мы ждали долго однако дождались.", "edits": [{"original": "долго однако", "replacement": "долго, однако"}]}
+{"id": "ru-115", "split": "test", "category": "punctuation_other", "text": "Она хотела уйти а он просил остаться.", "edits": [{"original": "уйти а он", "replacement": "уйти, а он"}]}
+{"id": "ru-116", "split": "dev", "category": "punctuation_other", "text": "Да я согласен.", "edits": [{"original": "Да я", "replacement": "Да, я"}]}
+{"id": "ru-117", "split": "test", "category": "punctuation_other", "text": "Нет я не забыл.", "edits": [{"original": "Нет я", "replacement": "Нет, я"}]}
+{"id": "ru-118", "split": "test", "category": "punctuation_other", "text": "Конечно мы поможем.", "edits": [{"original": "Конечно мы", "replacement": "Конечно, мы"}]}
+{"id": "ru-119", "split": "test", "category": "punctuation_other", "text": "По-моему это отличный план.", "edits": [{"original": "По-моему это", "replacement": "По-моему, это"}]}
+{"id": "ru-120", "split": "test", "category": "punctuation_other", "text": "К сожалению встречу отменили.", "edits": [{"original": "К сожалению встречу", "replacement": "К сожалению, встречу"}]}
+{"id": "ru-121", "split": "dev", "category": "correct", "text": "Мне нравится читать книги.", "edits": []}
+{"id": "ru-122", "split": "test", "category": "correct", "text": "Нужно научиться говорить об этом спокойно.", "edits": []}
+{"id": "ru-123", "split": "test", "category": "correct", "text": "Кажется, мы уже встречались.", "edits": []}
+{"id": "ru-124", "split": "test", "category": "correct", "text": "Он хочет вернуться домой.", "edits": []}
+{"id": "ru-125", "split": "test", "category": "correct", "text": "Эта задача оказалась интересной.", "edits": []}
+{"id": "ru-126", "split": "dev", "category": "correct", "text": "Все дети вернулись с прогулки.", "edits": []}
+{"id": "ru-127", "split": "test", "category": "correct", "text": "Два кота спят на подоконнике.", "edits": []}
+{"id": "ru-128", "split": "test", "category": "correct", "text": "Большинство участников поддержало предложение.", "edits": []}
+{"id": "ru-129", "split": "test", "category": "correct", "text": "Мы обсудили план и назначили встречу.", "edits": []}
+{"id": "ru-130", "split": "test", "category": "correct", "text": "Она надела пальто и вышла.", "edits": []}
+{"id": "ru-131", "split": "dev", "category": "correct", "text": "Благодаря вашей помощи всё получилось.", "edits": []}
+{"id": "ru-132", "split": "test", "category": "correct", "text": "Согласно приказу занятия отменены.", "edits": []}
+{"id": "ru-133", "split": "test", "category": "correct", "text": "Вопреки прогнозу пошёл снег.", "edits": []}
+{"id": "ru-134", "split": "test", "category": "correct", "text": "По приезде я сразу позвонил.", "edits": []}
+{"id": "ru-135", "split": "test", "category": "correct", "text": "По окончании встречи мы разошлись.", "edits": []}
+{"id": "ru-136", "split": "dev", "category": "correct", "text": "В течение недели было холодно.", "edits": []}
+{"id": "ru-137", "split": "test", "category": "correct", "text": "В течении реки заметны изменения.", "edits": []}
+{"id": "ru-138", "split": "test", "category": "correct", "text": "Он перевёл деньги на счёт друга.", "edits": []}
+{"id": "ru-139", "split": "test", "category": "correct", "text": "Мы говорили насчёт поездки.", "edits": []}
+{"id": "ru-140", "split": "test", "category": "correct", "text": "Вследствие снегопада дорогу закрыли.", "edits": []}
+{"id": "ru-141", "split": "dev", "category": "correct", "text": "В следствии по делу появились новые сведения.", "edits": []}
+{"id": "ru-142", "split": "test", "category": "correct", "text": "Это тоже важный вопрос.", "edits": []}
+{"id": "ru-143", "split": "test", "category": "correct", "text": "Он повторил то же самое.", "edits": []}
+{"id": "ru-144", "split": "test", "category": "correct", "text": "Я так же, как и ты, люблю осень.", "edits": []}
+{"id": "ru-145", "split": "test", "category": "correct", "text": "Я тоже люблю осень.", "edits": []}
+{"id": "ru-146", "split": "dev", "category": "correct", "text": "Чтобы успеть, мы вышли раньше.", "edits": []}
+{"id": "ru-147", "split": "test", "category": "correct", "text": "Что бы ты выбрал?", "edits": []}
+{"id": "ru-148", "split": "test", "category": "correct", "text": "Зато теперь всё понятно.", "edits": []}
+{"id": "ru-149", "split": "test", "category": "correct", "text": "Спасибо за то, что пришёл.", "edits": []}
+{"id": "ru-150", "split": "test", "category": "correct", "text": "Он не пришёл, потому что заболел.", "edits": []}
+{"id": "ru-151", "split": "dev", "category": "correct", "text": "Когда закончится дождь, мы выйдем.", "edits": []}
+{"id": "ru-152", "split": "test", "category": "correct", "text": "Книга, которую ты советовал, мне понравилась.", "edits": []}
+{"id": "ru-153", "split": "test", "category": "correct", "text": "Я знаю, что делать дальше.", "edits": []}
+{"id": "ru-154", "split": "test", "category": "correct", "text": "Если хочешь, оставайся.", "edits": []}
+{"id": "ru-155", "split": "test", "category": "correct", "text": "Утром было тихо и шёл снег.", "edits": []}
+{"id": "ru-156", "split": "dev", "category": "correct", "text": "В саду цвели яблони и пели птицы.", "edits": []}
+{"id": "ru-157", "split": "test", "category": "correct", "text": "Он сидел сложа руки.", "edits": []}
+{"id": "ru-158", "split": "test", "category": "correct", "text": "Она работала не покладая рук.", "edits": []}
+{"id": "ru-159", "split": "test", "category": "correct", "text": "Он шёл не спеша.", "edits": []}
+{"id": "ru-160", "split": "test", "category": "correct", "text": "Всё оказалось не так просто.", "edits": []}
+{"id": "ru-161", "split": "dev", "category": "correct", "text": "Привет! Как дела?", "edits": []}
+{"id": "ru-162", "split": "test", "category": "correct", "text": "Ну что, пойдём?", "edits": []}
+{"id": "ru-163", "split": "test", "category": "correct", "text": "Да ладно, бывает.", "edits": []}
+{"id": "ru-164", "split": "test", "category": "correct", "text": "Окей, договорились.", "edits": []}
+{"id": "ru-165", "split": "test", "category": "correct", "text": "Ага, уже иду.", "edits": []}
+{"id": "ru-166", "split": "dev", "category": "correct", "text": "Мне бы кофе и немного тишины.", "edits": []}
+{"id": "ru-167", "split": "test", "category": "correct", "text": "Вот это поворот.", "edits": []}
+{"id": "ru-168", "split": "test", "category": "correct", "text": "Ну и денёк!", "edits": []}
+{"id": "ru-169", "split": "test", "category": "correct", "text": "Если что, я рядом.", "edits": []}
+{"id": "ru-170", "split": "test", "category": "correct", "text": "Можно попроще?", "edits": []}
+{"id": "ru-171", "split": "dev", "category": "correct", "text": "В общем, всё хорошо.", "edits": []}
+{"id": "ru-172", "split": "test", "category": "correct", "text": "В общем случае это верно.", "edits": []}
+{"id": "ru-173", "split": "test", "category": "correct", "text": "Он наконец пришёл.", "edits": []}
+{"id": "ru-174", "split": "test", "category": "correct", "text": "Наконец, перейдём к последнему вопросу.", "edits": []}
+{"id": "ru-175", "split": "test", "category": "correct", "text": "Однако он не согласился.", "edits": []}
+{"id": "ru-176", "split": "dev", "category": "correct", "text": "Дождь, однако, скоро закончился.", "edits": []}
+{"id": "ru-177", "split": "test", "category": "correct", "text": "Это действительно важно.", "edits": []}
+{"id": "ru-178", "split": "test", "category": "correct", "text": "Он будто ничего не заметил.", "edits": []}
+{"id": "ru-179", "split": "test", "category": "correct", "text": "Она словно знала ответ заранее.", "edits": []}
+{"id": "ru-180", "split": "test", "category": "correct", "text": "Может быть, завтра станет теплее.", "edits": []}
+{"id": "ru-181", "split": "dev", "category": "correct", "text": "Корректа работает локально.", "edits": []}
+{"id": "ru-182", "split": "test", "category": "correct", "text": "Я использую Flutter и Dart.", "edits": []}
+{"id": "ru-183", "split": "test", "category": "correct", "text": "Ollama уже запущена.", "edits": []}
+{"id": "ru-184", "split": "test", "category": "correct", "text": "Файл README.md лежит в корне проекта.", "edits": []}
+{"id": "ru-185", "split": "test", "category": "correct", "text": "Вызови метод buildTextSpan.", "edits": []}
+{"id": "ru-186", "split": "dev", "category": "correct", "text": "API вернул JSON без ошибок.", "edits": []}
+{"id": "ru-187", "split": "test", "category": "correct", "text": "Сохрани файл в UTF-8.", "edits": []}
+{"id": "ru-188", "split": "test", "category": "correct", "text": "У меня 32 ГБ оперативной памяти.", "edits": []}
+{"id": "ru-189", "split": "test", "category": "correct", "text": "Алексей и Мария пришли вовремя.", "edits": []}
+{"id": "ru-190", "split": "test", "category": "correct", "text": "Лев Толстой написал «Войну и мир».", "edits": []}
+{"id": "ru-191", "split": "dev", "category": "correct", "text": "Нижний Новгород встретил нас дождём.", "edits": []}
+{"id": "ru-192", "split": "test", "category": "correct", "text": "Анна-Мария прислала сообщение.", "edits": []}
+{"id": "ru-193", "split": "test", "category": "correct", "text": "Санкт-Петербург сегодня особенно красив.", "edits": []}
+{"id": "ru-194", "split": "test", "category": "correct", "text": "Проект называется «Тихий берег».", "edits": []}
+{"id": "ru-195", "split": "test", "category": "correct", "text": "Я люблю кофе без сахара.", "edits": []}
+{"id": "ru-196", "split": "dev", "category": "correct", "text": "Мы выбрали тёмно-зелёный цвет.", "edits": []}
+{"id": "ru-197", "split": "test", "category": "correct", "text": "В комнате было по-настоящему уютно.", "edits": []}
+{"id": "ru-198", "split": "test", "category": "correct", "text": "Кто-то тихо постучал в дверь.", "edits": []}
+{"id": "ru-199", "split": "test", "category": "correct", "text": "Когда-нибудь я вернусь сюда.", "edits": []}
+{"id": "ru-200", "split": "test", "category": "correct", "text": "Я уже всё проверил 🙂", "edits": []}

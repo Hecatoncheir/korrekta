@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-03",
+  "data_sha256": "a3e2a43453f886dea8db204d216c4a927fd8cf6409fdbc153f55e87d00e10b63",
+  "prompt_sha256": "876a2df74e1a14a82eed3f4d6e8363eeef46d26ca90198ca3abd0f1f4ab8caf1",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 4096,
+    "num_predict": 768,
+    "repeat_penalty": 1.0,
+    "think": false
+  },
+  "quality_gates": {
+    "precision": 0.95,
+    "recall": 0.7,
+    "max_control_false_notice_rate": 0.05,
+    "schema_valid_rate": 0.99,
+    "warm_p95_seconds": 8
+  },
+  "split": {
+    "dev": 40,
+    "test": 160
+  },
+  "runtime": "Ollama 0.40.13",
+  "candidates": [
+    "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "qwen3.5:4b",
+    "qwen3.5:9b"
+  ],
+  "candidate_note": "Вариант 9B добавлен после предварительного сравнения первых двух моделей; инструкция и набор не изменялись.",
+  "hash_normalization": "UTF-8, CRLF → LF"
+}

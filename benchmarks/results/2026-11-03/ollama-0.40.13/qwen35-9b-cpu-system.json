@@ -1,0 +1,30 @@
+{
+  "utc": "2026-11-03T02:35:03.5540997Z",
+  "model": "qwen3.5:9b",
+  "ps": {
+    "models": [
+      {
+        "name": "qwen3.5:9b",
+        "model": "qwen3.5:9b",
+        "size": 6187856689,
+        "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "9.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-11-03T05:45:03.258941+03:00",
+        "size_vram": 0,
+        "context_length": 4096,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "workingSetMiB": 6736.8,
+  "gpu": "2714, 9373, 29"
+}

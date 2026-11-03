@@ -1,0 +1,165 @@
+{
+  "models": [
+    {
+      "label": "gigachat",
+      "title": "GigaChat 3.1 Lightning Q4_K_M",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "manifest_digest": "852c0b21ab28c34330a6050f8af936e4f9f8335265409f480392e133d2aabc82",
+      "disk_bytes": 6474712902,
+      "gpu_resident_bytes": 6585361366,
+      "quality": {
+        "type": "summary",
+        "cases": 160,
+        "tp": 71,
+        "fp": 35,
+        "fn": 25,
+        "rejected": 43,
+        "correct_predictions": 68,
+        "precision": 0.6601941747572816,
+        "raw_precision": 0.4657534246575342,
+        "recall": 0.7395833333333334,
+        "controls": 64,
+        "false_notices": 48,
+        "false_notice_rate": 0.75,
+        "schema_valid_rate": 1.0,
+        "exact_rate": 0.51875,
+        "median_seconds": 0.325888,
+        "p95_seconds": 0.454568,
+        "max_seconds": 0.548208,
+        "total_seconds": 51.47449,
+        "errors": 0
+      },
+      "control_false_notices_after_validation": 21,
+      "gpu_first_load_seconds": 64.61107,
+      "gpu_reload_seconds": 4.550567,
+      "cpu_median_seconds": 3.490824,
+      "cpu_samples": 3,
+      "cpu_working_set_mib": 6527.2,
+      "cpu_vram_bytes": 0,
+      "paragraphs": [
+        {
+          "characters": 263,
+          "seconds": 0.346873
+        },
+        {
+          "characters": 538,
+          "seconds": 0.37528
+        },
+        {
+          "characters": 1183,
+          "seconds": 0.458414
+        }
+      ]
+    },
+    {
+      "label": "qwen35-4b",
+      "title": "Qwen 3.5 4B Q4_K_M",
+      "model": "qwen3.5:4b",
+      "manifest_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "disk_bytes": 3324173934,
+      "gpu_resident_bytes": 3140495604,
+      "quality": {
+        "type": "summary",
+        "cases": 160,
+        "tp": 54,
+        "fp": 23,
+        "fn": 42,
+        "rejected": 13,
+        "correct_predictions": 58,
+        "precision": 0.7160493827160493,
+        "raw_precision": 0.6170212765957447,
+        "recall": 0.5625,
+        "controls": 64,
+        "false_notices": 9,
+        "false_notice_rate": 0.140625,
+        "schema_valid_rate": 0.99375,
+        "exact_rate": 0.675,
+        "median_seconds": 0.500988,
+        "p95_seconds": 0.859247,
+        "max_seconds": 7.60267,
+        "total_seconds": 82.83731500000002,
+        "errors": 0
+      },
+      "control_false_notices_after_validation": 7,
+      "gpu_first_load_seconds": 62.168834,
+      "gpu_reload_seconds": 4.577214,
+      "cpu_median_seconds": 8.652098,
+      "cpu_samples": 3,
+      "cpu_working_set_mib": 3633.3,
+      "cpu_vram_bytes": 0,
+      "paragraphs": [
+        {
+          "characters": 263,
+          "seconds": 0.681732
+        },
+        {
+          "characters": 538,
+          "seconds": 0.754823
+        },
+        {
+          "characters": 1183,
+          "seconds": 0.64999
+        }
+      ]
+    },
+    {
+      "label": "qwen35-9b",
+      "title": "Qwen 3.5 9B Q4_K_M",
+      "model": "qwen3.5:9b",
+      "manifest_digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+      "disk_bytes": 6550825550,
+      "gpu_resident_bytes": 5606337412,
+      "quality": {
+        "type": "summary",
+        "cases": 160,
+        "tp": 70,
+        "fp": 22,
+        "fn": 26,
+        "rejected": 3,
+        "correct_predictions": 71,
+        "precision": 0.7634408602150538,
+        "raw_precision": 0.7395833333333334,
+        "recall": 0.7291666666666666,
+        "controls": 64,
+        "false_notices": 10,
+        "false_notice_rate": 0.15625,
+        "schema_valid_rate": 0.99375,
+        "exact_rate": 0.76875,
+        "median_seconds": 0.738487,
+        "p95_seconds": 1.315575,
+        "max_seconds": 9.974825,
+        "total_seconds": 129.949898,
+        "errors": 0
+      },
+      "control_false_notices_after_validation": 10,
+      "gpu_first_load_seconds": 5.612285,
+      "gpu_reload_seconds": 5.202638,
+      "cpu_median_seconds": 15.756847,
+      "cpu_samples": 3,
+      "cpu_working_set_mib": 6736.8,
+      "cpu_vram_bytes": 0,
+      "paragraphs": [
+        {
+          "characters": 263,
+          "seconds": 0.803771
+        },
+        {
+          "characters": 538,
+          "seconds": 1.358276
+        },
+        {
+          "characters": 1183,
+          "seconds": 1.420305
+        }
+      ]
+    }
+  ],
+  "observed_resources": {
+    "samples": 441,
+    "interval_seconds": 2,
+    "gpu_used_peak_mib": 10186,
+    "ollama_working_set_peak_mib": 6736.8,
+    "available_ram_min_mib": 7519.8
+  },
+  "runtime_archive_sha256": "7afa38624fa62ee5d8293422d0ab084c1bb4603134c7f4dafce11a033b57cc19"
+}
