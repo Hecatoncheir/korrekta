@@ -1,0 +1,19 @@
+{
+  "profile": "inflections",
+  "strict_threshold_met": true,
+  "development": {
+    "clean": 177,
+    "errors": 0,
+    "controls": 208,
+    "changed_controls": 0,
+    "gold": 240,
+    "atomic_tp": 204,
+    "atomic_fp": 0,
+    "atomic_fn": 69,
+    "protected_failures": 0,
+    "precision": 1.0,
+    "recall": 0.7472527472527473,
+    "f05": 0.9366391184573003
+  },
+  "rule_sha256_lf": "1b52ae58136f69d09fd9188a6672b1b9917f89b32eadc339564bfdc791fe8336"
+}

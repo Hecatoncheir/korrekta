@@ -49,16 +49,32 @@ Future<void> main(List<String> arguments) async {
       slots,
       List.filled(slots.length, 1),
     );
+    final features = await roleFeatures(
+      collected,
+      SharedLexicon(runtime.hunspell, runtime.symspell),
+    );
+    final decision = chooseRoles({
+      ...collected,
+      'role_features': features,
+    }, 'inflections');
+    final choices = (decision['choices'] as List<dynamic>).cast<int>();
     final complete = !collected.containsKey('collection_error');
     final result = {
       'status': !complete
           ? 'incomplete'
           : (slots.isEmpty ? 'no_suggestions' : 'review_required'),
       'original': text,
-      'proposed_text': proposal.output,
+      'proposed_text': decision['output'],
+      'all_sources_proposed_text': proposal.output,
+      'selection_profile': 'inflections',
+      'recommended_choices': choices,
+      'deferred_slots': [
+        for (var i = 0; i < choices.length; i++)
+          if (choices[i] == 0) i,
+      ],
       'automatic_application': false,
       'note': 'Предварительный вариант. Проверьте правки перед принятием. Отсутствие подсказок не гарантирует отсутствие ошибок.',
-      'details': collected,
+      'details': {...collected, 'role_features': features},
     };
     await destination.parent.create(recursive: true);
     await destination.writeAsString(

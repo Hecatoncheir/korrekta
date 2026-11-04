@@ -1,0 +1,75 @@
+{
+  "all": {
+    "clean": 177,
+    "errors": 0,
+    "controls": 208,
+    "changed_controls": 0,
+    "gold": 240,
+    "atomic_tp": 204,
+    "atomic_fp": 0,
+    "atomic_fn": 69,
+    "protected_failures": 0,
+    "precision": 1.0,
+    "recall": 0.7472527472527473,
+    "f05": 0.9366391184573003
+  },
+  "without": {
+    "without_gigachat": {
+      "clean": 51,
+      "errors": 0,
+      "controls": 208,
+      "changed_controls": 0,
+      "gold": 240,
+      "atomic_tp": 56,
+      "atomic_fp": 1,
+      "atomic_fn": 217,
+      "precision": 0.9824561403508771,
+      "recall": 0.20512820512820512,
+      "f05": 0.558882235528942,
+      "protected_failures": 0
+    },
+    "without_languagetool": {
+      "clean": 164,
+      "errors": 0,
+      "controls": 208,
+      "changed_controls": 0,
+      "gold": 240,
+      "atomic_tp": 190,
+      "atomic_fp": 2,
+      "atomic_fn": 83,
+      "precision": 0.9895833333333334,
+      "recall": 0.6959706959706959,
+      "f05": 0.9125840537944284,
+      "protected_failures": 0
+    },
+    "without_hunspell": {
+      "clean": 176,
+      "errors": 0,
+      "controls": 208,
+      "changed_controls": 0,
+      "gold": 240,
+      "atomic_tp": 203,
+      "atomic_fp": 0,
+      "atomic_fn": 70,
+      "precision": 1.0,
+      "recall": 0.7435897435897436,
+      "f05": 0.935483870967742,
+      "protected_failures": 0
+    },
+    "without_symspell": {
+      "clean": 176,
+      "errors": 0,
+      "controls": 208,
+      "changed_controls": 0,
+      "gold": 240,
+      "atomic_tp": 203,
+      "atomic_fp": 1,
+      "atomic_fn": 70,
+      "precision": 0.9950980392156863,
+      "recall": 0.7435897435897436,
+      "f05": 0.9320477502295684,
+      "protected_failures": 0
+    }
+  },
+  "dominates_full": []
+}

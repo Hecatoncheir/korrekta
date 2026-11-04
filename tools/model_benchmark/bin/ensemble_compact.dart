@@ -125,8 +125,9 @@ Future<void> main(List<String> arguments) async {
           : {...row, 'compact_result': await decide(runtime!, row, system)};
       sink.writeln(jsonEncode(result));
       await sink.flush();
-      if ((i + 1) % 50 == 0)
+      if ((i + 1) % 50 == 0) {
         stdout.writeln('Компактный выбор ${i + 1}/${rows.length}');
+      }
     }
     sink.writeln(
       jsonEncode({'type': 'summary', 'completed': true, 'count': rows.length}),

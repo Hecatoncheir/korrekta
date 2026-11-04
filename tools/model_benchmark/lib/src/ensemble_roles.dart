@@ -102,7 +102,7 @@ bool _variableAgreement(String text, WordChoices slot, String replacement) {
     return false;
   }
   return RegExp(
-    r'\b(?:большинство|меньшинство|часть|ряд|половина|треть|четверть|два|две|три|четыре|пять|шесть|семь|восемь|девять|десять)\b|\d',
+    r'(?<![а-яё])(?:большинство|меньшинство|часть|ряд|половина|треть|четверть|два|две|три|четыре|пять|шесть|семь|восемь|девять|десять)(?![а-яё])|\d',
     caseSensitive: false,
   ).hasMatch(text);
 }
@@ -125,18 +125,19 @@ bool _clauseComma(String text, WordChoices slot, String target) {
   // Не отделяем вторую часть составного союза от первой.
   if (RegExp(r'(?:потому|так|тем|оттого)\s*$').hasMatch(left)) return false;
   if (RegExp(
-    r'^(?:что|чтобы|если|когда|который|которая|которое|которые|хотя|поскольку|потому что)\b',
+    r'^(?:что|чтобы|если|когда|который|которая|которое|которые|хотя|поскольку|потому что)(?![а-яё])',
   ).hasMatch(right)) {
     return true;
   }
-  if (RegExp(r'^чем\b').hasMatch(left) && RegExp(r'^тем\b').hasMatch(right)) {
+  if (RegExp(r'^чем(?![а-яё])').hasMatch(left) &&
+      RegExp(r'^тем(?![а-яё])').hasMatch(right)) {
     return true;
   }
-  final leading = RegExp(r'^(?:когда|пока|если|хотя|чтобы|поскольку)\b')
+  final leading = RegExp(r'^(?:когда|пока|если|хотя|чтобы|поскольку)(?![а-яё])')
       .hasMatch(left);
   return leading &&
       !left.contains(',') &&
-      RegExp(r'^(?:я|ты|он|она|оно|мы|вы|они|то)\b').hasMatch(right);
+      RegExp(r'^(?:я|ты|он|она|оно|мы|вы|они|то)(?![а-яё])').hasMatch(right);
 }
 
 bool _gigaAllowed(
@@ -149,6 +150,9 @@ bool _gigaAllowed(
   String profile,
 ) {
   if (option['style_risk'] == true) return false;
+  if ('ё'.allMatches(slot.original).length > 'ё'.allMatches(target).length) {
+    return false;
+  }
   if (!_word(slot.original) || !_word(target)) {
     final categories = (option['lt_categories'] as List<dynamic>)
         .cast<String>();
@@ -166,6 +170,48 @@ bool _gigaAllowed(
       originalKnown &&
       option['known'] == true &&
       _inflection(slot.original, target);
+}
+
+List<int> _agreedOptions(
+  List<Set<String>> sources,
+  List<Map<String, dynamic>> options,
+) => [
+  for (var i = 1; i < sources.length; i++)
+    if (sources[i].containsAll({'hunspell', 'symspell', 'languagetool'}) &&
+        options[i]['known'] == true)
+      i,
+];
+
+int _preserveForm(
+  WordChoices slot,
+  int candidate,
+  List<Set<String>> sources,
+  List<Map<String, dynamic>> options,
+) {
+  final target = slot.options[candidate];
+  for (var i = 1; i < slot.options.length; i++) {
+    if (dictionaryKey(slot.options[i]) == dictionaryKey(target) &&
+        'ё'.allMatches(slot.options[i]).length >=
+            'ё'.allMatches(slot.original).length) {
+      candidate = i;
+      break;
+    }
+  }
+  final distance = spellingDistance(
+    dictionaryKey(slot.original),
+    dictionaryKey(slot.options[candidate]),
+  );
+  final closer = _agreedOptions(sources, options)
+      .where(
+        (i) =>
+            spellingDistance(
+              dictionaryKey(slot.original),
+              dictionaryKey(slot.options[i]),
+            ) <
+            distance,
+      )
+      .toList();
+  return closer.length == 1 ? closer.single : candidate;
 }
 
 int _chooseRole(
@@ -186,7 +232,8 @@ int _chooseRole(
   ];
   if (profile == 'context') return giga.isEmpty ? 1 : giga.first;
   if (options.first['known'] != true && _nameContext(text, slot)) return 0;
-  for (final i in giga) {
+  for (final proposed in giga) {
+    final i = _preserveForm(slot, proposed, sources, options);
     if (_gigaAllowed(
       text,
       slot,
@@ -202,16 +249,13 @@ int _chooseRole(
   final grammar = [
     for (var i = 1; i < sources.length; i++)
       if ((options[i]['lt_categories'] as List<dynamic>).contains('GRAMMAR') &&
-          options[i]['lt_preferred'] == true)
+          options[i]['lt_preferred'] == true &&
+          options[i]['style_risk'] != true &&
+          !_variableAgreement(text, slot, slot.options[i]))
         i,
   ];
   if (grammar.length == 1) return grammar.single;
-  final agreement = [
-    for (var i = 1; i < sources.length; i++)
-      if (sources[i].containsAll({'hunspell', 'symspell', 'languagetool'}) &&
-          options[i]['known'] == true)
-        i,
-  ];
+  final agreement = _agreedOptions(sources, options);
   return agreement.length == 1 ? agreement.single : 0;
 }
 

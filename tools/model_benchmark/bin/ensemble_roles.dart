@@ -10,6 +10,7 @@ Future<void> main(List<String> arguments) async {
   final parser = ArgParser()
     ..addOption('input', mandatory: true)
     ..addOption('output', mandatory: true)
+    ..addOption('profile', allowed: roleProfiles)
     ..addFlag('features', negatable: false);
   EnsembleRuntime? runtime;
   IOSink? sink;
@@ -25,7 +26,10 @@ Future<void> main(List<String> arguments) async {
     if (options.flag('features')) runtime = await EnsembleRuntime.open();
     await file.parent.create(recursive: true);
     sink = file.openWrite();
-    sink.writeln(jsonEncode({'type': 'metadata', 'profiles': roleProfiles}));
+    final profiles = options.option('profile') == null
+        ? roleProfiles
+        : [options.option('profile')!];
+    sink.writeln(jsonEncode({'type': 'metadata', 'profiles': profiles}));
     for (final row in rows) {
       if (runtime != null) {
         final features = await roleFeatures(
@@ -38,7 +42,7 @@ Future<void> main(List<String> arguments) async {
           jsonEncode({
             ...row,
             'role_results': {
-              for (final profile in roleProfiles)
+              for (final profile in profiles)
                 profile: chooseRoles(row, profile),
             },
           }),

@@ -96,7 +96,7 @@ def main():
     args = parser.parse_args()
     rule = json.loads((HERE / 'selection-rule.json').read_text(encoding='utf-8'))
     if args.phase == 'dev':
-        roles = [r for r in read(OUT / 'dev-roles.jsonl') if r.get('type') == 'case']
+        roles = [r for r in read(OUT / 'dev-roles-final2.jsonl') if r.get('type') == 'case']
         compact_raw = read(OUT / 'compact-responses.jsonl')
         assert compact_raw[-1]['completed']
         compact = {(r['run'], r['id']): r for r in compact_raw if r.get('type') == 'case'}
@@ -105,7 +105,7 @@ def main():
         assert len(rows) == len(compact) == 448
         profiles = rule['profiles']
     else:
-        decision = json.loads((OUT / 'selection.json').read_text(encoding='utf-8'))
+        decision = json.loads((OUT / 'selection-final.json').read_text(encoding='utf-8'))
         assert decision['profile'] != 'compact', 'Для выбранного compact нужен его свежий реальный прогон'
         raw = read(OUT / 'fresh-roles.jsonl')
         assert raw[-1]['completed']
@@ -117,11 +117,14 @@ def main():
     overview = {}
     for run in dict.fromkeys(r['run'] for r in rows):
         selected = [r for r in rows if r['run'] == run]
-        overview[run] = {p: metrics(selected, p, f'{args.phase}-{run}', args.check) for p in profiles}
+        prefix = 'dev-final' if args.phase == 'dev' else 'fresh'
+        overview[run] = {p: metrics(selected, p, f'{prefix}-{run}', args.check) for p in profiles}
+        print(f'Оценён {args.phase}/{run}', flush=True)
     aggregate = {p: combine([m[p] for m in overview.values()]) for p in profiles}
-    save(OUT / f'{args.phase}-overview.json', {'runs': overview, 'aggregate': aggregate}, args.check)
+    name = 'dev-final' if args.phase == 'dev' else 'fresh'
+    save(OUT / f'{name}-overview.json', {'runs': overview, 'aggregate': aggregate}, args.check)
     if args.phase == 'dev':
-        save(OUT / 'selection.json', choose(aggregate), args.check)
+        save(OUT / 'selection-final.json', choose(aggregate), args.check)
     print(json.dumps(aggregate, ensure_ascii=False))
 
 
