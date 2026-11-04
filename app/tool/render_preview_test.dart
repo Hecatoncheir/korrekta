@@ -44,19 +44,42 @@ void main() {
     await editor.check();
     await editor.flush();
     await tester.pumpAndSettle();
-    final boundary =
-        boundaryKey.currentContext!.findRenderObject()!
-            as RenderRepaintBoundary;
-    await tester.runAsync(() async {
-      final image = await boundary.toImage();
-      final data = (await image.toByteData(format: ui.ImageByteFormat.png))!;
-      final file = File('../work/previews/editor-vim.png');
-      await file.parent.create(recursive: true);
-      await file.writeAsBytes(data.buffer.asUint8List());
-      image.dispose();
-    });
+    await savePreview(tester, boundaryKey, 'editor-vim');
+    editor.configure(editor.state.settings.copyWith(dark: false));
+    await editor.flush();
+    await tester.pumpAndSettle();
+    await savePreview(tester, boundaryKey, 'editor-errors-light');
+    editor.accept(editor.state.result!.recommended);
+    await editor.flush();
+    await tester.pumpAndSettle();
+    await savePreview(tester, boundaryKey, 'editor-corrections-light');
+    editor.configure(editor.state.settings.copyWith(dark: true));
+    await editor.flush();
+    await tester.pumpAndSettle();
+    await savePreview(tester, boundaryKey, 'editor-corrections-dark');
+    editor.edit('');
+    await editor.flush();
+    await tester.pumpAndSettle();
+    await savePreview(tester, boundaryKey, 'editor-empty');
     expect(tester.takeException(), isNull);
     await tester.pumpWidget(const SizedBox());
     await editor.close();
+  });
+}
+
+Future<void> savePreview(
+  WidgetTester tester,
+  GlobalKey key,
+  String name,
+) async {
+  final boundary =
+      key.currentContext!.findRenderObject()! as RenderRepaintBoundary;
+  await tester.runAsync(() async {
+    final image = await boundary.toImage();
+    final data = (await image.toByteData(format: ui.ImageByteFormat.png))!;
+    final file = File('../work/previews/$name.png');
+    await file.parent.create(recursive: true);
+    await file.writeAsBytes(data.buffer.asUint8List());
+    image.dispose();
   });
 }

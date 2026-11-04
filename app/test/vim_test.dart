@@ -119,6 +119,38 @@ void main() {
     expect(controller.selection.extentOffset, 0);
   });
 
+  test('s заменяет целый символ, ввод и удаление отменяются вместе', () {
+    keys(vim, 'ls');
+    expect(controller.text, 'АБ\r\nВГ');
+    expect(vim.state.mode, VimMode.insert);
+    expect(controller.selection.extentOffset, 1);
+    controller.value = const TextEditingValue(
+      text: 'АяБ\r\nВГ',
+      selection: TextSelection.collapsed(offset: 2),
+    );
+    vim.escape();
+    vim.undo();
+    expect(controller.text, 'А🙂Б\r\nВГ');
+    vim.redo();
+    expect(controller.text, 'АяБ\r\nВГ');
+  });
+
+  test('3s не удаляет перенос и сохраняет следующую строку', () {
+    keys(vim, 'l3s');
+    expect(controller.text, 'А\r\nВГ');
+    expect(vim.state.mode, VimMode.insert);
+    vim.escape();
+    vim.undo();
+    expect(controller.text, 'А🙂Б\r\nВГ');
+  });
+
+  test('s в Visual заменяет выделение', () {
+    keys(vim, 'vls');
+    expect(controller.text, 'Б\r\nВГ');
+    expect(vim.state.mode, VimMode.insert);
+    expect(controller.selection.extentOffset, 0);
+  });
+
   test('Старые настройки читаются, Vim mode сохраняется', () {
     final json = const Settings().toJson()..remove('vimMode');
     expect(Settings.fromJson(json).vimMode, isFalse);

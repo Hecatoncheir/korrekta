@@ -62,7 +62,7 @@ class TextEditor extends StatelessWidget {
                       textAlignVertical: TextAlignVertical.top,
                       style: const TextStyle(fontSize: 21, height: 1.7),
                       decoration: const InputDecoration(
-                        hintText: 'Ваш голос остаётся.\nНачните писать…',
+                        hintText: 'Начните писать…',
                         border: InputBorder.none,
                         enabledBorder: InputBorder.none,
                         focusedBorder: InputBorder.none,

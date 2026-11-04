@@ -36,16 +36,17 @@ class EditorBinding {
 
   void update(EditorState state) {
     vim.enable(state.settings.vimMode);
-    controller.suggestions = state.result?.suggestions ?? const [];
-    if (controller.text == state.text) return;
-    final offset = controller.selection.extentOffset.clamp(
-      0,
-      state.text.length,
-    );
-    controller.value = TextEditingValue(
-      text: state.text,
-      selection: TextSelection.collapsed(offset: offset),
-    );
+    if (controller.text != state.text) {
+      final offset = controller.selection.extentOffset.clamp(
+        0,
+        state.text.length,
+      );
+      controller.value = TextEditingValue(
+        text: state.text,
+        selection: TextSelection.collapsed(offset: offset),
+      );
+    }
+    controller.review(state.result, previous: state.previous);
   }
 
   void dispose() {

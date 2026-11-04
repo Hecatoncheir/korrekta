@@ -47,15 +47,30 @@ String? commandCharacter(KeyEvent event) {
     PhysicalKeyboardKey.keyL: 'l',
     PhysicalKeyboardKey.keyO: 'o',
     PhysicalKeyboardKey.keyP: 'p',
+    PhysicalKeyboardKey.keyS: 's',
     PhysicalKeyboardKey.keyU: 'u',
     PhysicalKeyboardKey.keyV: 'v',
     PhysicalKeyboardKey.keyW: 'w',
     PhysicalKeyboardKey.keyX: 'x',
     PhysicalKeyboardKey.keyY: 'y',
   };
+  final digits = {
+    PhysicalKeyboardKey.digit0: ('0', ')'),
+    PhysicalKeyboardKey.digit1: ('1', '!'),
+    PhysicalKeyboardKey.digit2: ('2', '@'),
+    PhysicalKeyboardKey.digit3: ('3', '#'),
+    PhysicalKeyboardKey.digit4: ('4', r'$'),
+    PhysicalKeyboardKey.digit5: ('5', '%'),
+    PhysicalKeyboardKey.digit6: ('6', '^'),
+    PhysicalKeyboardKey.digit7: ('7', '&'),
+    PhysicalKeyboardKey.digit8: ('8', '*'),
+    PhysicalKeyboardKey.digit9: ('9', '('),
+  };
+  final shift = HardwareKeyboard.instance.isShiftPressed;
+  if (digits[event.physicalKey] case (final plain, final shifted)) {
+    return shift ? shifted : plain;
+  }
   final letter = letters[event.physicalKey];
   if (letter == null) return event.character;
-  return HardwareKeyboard.instance.isShiftPressed
-      ? letter.toUpperCase()
-      : letter;
+  return shift ? letter.toUpperCase() : letter;
 }

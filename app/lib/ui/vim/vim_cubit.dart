@@ -133,7 +133,8 @@ class VimCubit extends Cubit<VimState> {
       'O': () => _openLine(true),
       'v': () => _visual(VimMode.visual),
       'V': () => _visual(VimMode.visualLine),
-      'x': _deleteCharacter,
+      'x': () => _changeCharacters('d'),
+      's': () => _changeCharacters('c'),
       'D': () => _operate('d', _cursor, lineAt(text, _cursor).end),
       'C': () => _operate('c', _cursor, lineAt(text, _cursor).end),
       'p': () => unawaited(paste(false)),
@@ -289,11 +290,11 @@ class VimCubit extends Cubit<VimState> {
     _selecting = false;
   }
 
-  void _deleteCharacter() {
+  void _changeCharacters(String operation) {
     if (visual) {
       final selection = controller.selection;
       _operate(
-        'd',
+        operation,
         selection.start,
         selection.end,
         linewise: state.mode == VimMode.visualLine,
@@ -302,7 +303,11 @@ class VimCubit extends Cubit<VimState> {
     }
     final target = motionTarget(text, _cursor, 'l', count);
     _linewise = false;
-    _operate('d', _cursor, target.clamp(_cursor, lineAt(text, _cursor).end));
+    _operate(
+      operation,
+      _cursor,
+      target.clamp(_cursor, lineAt(text, _cursor).end),
+    );
   }
 
   Future<void> paste(bool before) async {
