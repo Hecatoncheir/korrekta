@@ -1,0 +1,40 @@
+{
+  "guard_version": "text-guard-v1",
+  "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+  "gguf_sha256": "5bd88ebea2a2ee2622c50ec5c0ec88f67169e4667c47762f51a4e2157367923b",
+  "profiles": {
+    "automatic": "Все старые наборы и новый holdout: names=[], диапазоны определяются только по исходнику.",
+    "personal_names": "Отдельная демонстрация на новом holdout с фиксированным личным словарём personal-names.json. Это имитация пользовательской настройки, не автоматическое распознавание."
+  },
+  "policy": "Защита слов с заглавной буквой (включая начало предложения), латиницы, цитат, пробелов/переносов/табуляции, эмодзи и комбинируемых знаков, технических строк и Markdown. Допускаются небольшие замены одного слова (до 2 операций и 40% длины) и внутренняя пунктуация , : ;. Новые слова, перестановки, изменение конечной пунктуации и чистые е/ё замены отклоняются. Лимит 4000 рун и 4 млн ячеек diff. Снимок текста проверяется перед применением.",
+  "evaluation": "Сначала функциональные тесты и фиксация этой версии; затем одни и те же сохранённые реальные ответы GigaChat 20B до/после защиты на dev40, test160, preservation120, holdout80, layout12, paragraphs3. Фильтр не получает expected/edits/protected/pair/category. Новые 40 текстов созданы и зафиксированы до новых запросов к модели. После основных оценок политика не подбирается.",
+  "runtime": "Ollama 0.40.13, официальный шаблон и прежний text-json промпт, прежние параметры генерации; модель локальна. Отдельный живой smoke с --protect подтверждает подключение того же Dart-фильтра.",
+  "hashes_sha256_lf": {
+    "tools/model_benchmark/lib/src/text_guard.dart": "b17a9db1f5646d168ae82232a03b3624e3a0d92c222a9978e80e3906e1e8766e",
+    "tools/model_benchmark/lib/src/protected_spans.dart": "87fcd6155f442f02d7244361aa149b1c0cb773ee834cbd233515a123a6164018",
+    "tools/model_benchmark/lib/src/text_diff.dart": "76b7c90d57e8f68f4daee9d75bc1c8b9167e38047d0ff5342c104743433faf8b",
+    "tools/model_benchmark/lib/src/guard_response.dart": "db4069f8d39830c924d57e4478ee15f3ca3b47bd7f3edf56471b9ec5394ef7a0",
+    "benchmarks/cases-v1.jsonl": "a3e2a43453f886dea8db204d216c4a927fd8cf6409fdbc153f55e87d00e10b63",
+    "benchmarks/preservation/cases-v1.jsonl": "e969f419ec024d688f355845716d685debd92ce6da8234644528bf5bd8ab7d69",
+    "benchmarks/gigachat-prompts/holdout-v1.jsonl": "d344f5257fc925c834d7326bcdcbe7ba2c45b1878645ba38e00fa19cedfbec16",
+    "benchmarks/sber-large/layout-smoke-v1.jsonl": "bbb990154b3fe74b83093c880acbcf322bc750c16705879ecf94c8c270db3d98",
+    "benchmarks/paragraphs-v1.jsonl": "d823b62ef71e7636e1286acc0493cdb74bdbe879b2f1952ab71e629c42c702ec",
+    "benchmarks/text-guard/holdout-v1.jsonl": "b3e3828e1f6c2ea7c6bd66b6f1a44630090b81ef2e8a7c8c578977ad00c5b1ae",
+    "benchmarks/text-guard/personal-names.json": "26895d3a7f780fbe068b2d335691087ce345a2e178eb0821d05083ae92137f0c",
+    "benchmarks/gigachat-prompts/text-json.txt": "c2dab9675e57890f054f8c6036265e3c418e641cf5468340bdc31c8545dcb45a"
+  },
+  "replay_source_commit": "00bee04",
+  "replay_sources_sha256_lf": {
+    "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-text-json-dev.jsonl": "19b8c9669608f59e81a5ae9262b2437ffecba39879f941e5aff357774b048963",
+    "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-test.jsonl": "4b61a5f72c2492c59f142c4343692513fe54e359ea3aa532f3b3235ee1c4563d",
+    "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-preservation.jsonl": "1eb88a3452a1d273041efe1737dbab643551616ae21705629b84531d2505d2fb",
+    "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-holdout.jsonl": "9cca1beb5ed9ffbeb87a8530c1f59a641c60d9a24a130ba2b0657397d3b69d1a",
+    "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-layout.jsonl": "b28ae9ee583416c7b495ed2d91c5f5d8ffccc32cefd91bd8aa9fd6741ae1824e",
+    "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-paragraphs.jsonl": "baa1e23b79e64d41ca35b5cb7a32ab85785073799076814a94311afa58c07cb8"
+  },
+  "post_measurement_formatting": {
+    "file": "tools/model_benchmark/lib/src/text_guard.dart",
+    "frozen_sha256_lf": "c67825abd1c11a3aa56dffbb7e6f27d6774bc544319afbec581dd93765b6e519",
+    "change": "Только перенос условия includeInsertion на три строки форматировщиком Dart; политика и токены кода не изменены."
+  }
+}

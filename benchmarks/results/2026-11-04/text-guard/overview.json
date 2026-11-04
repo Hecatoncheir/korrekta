@@ -1,0 +1,268 @@
+{
+  "guard_version": "text-guard-v1",
+  "metric": "text-effects-v1",
+  "datasets": {
+    "text-json-dev": [
+      {
+        "count": 40,
+        "gold_corrections": 24,
+        "matched_corrections": 19,
+        "controls": 16,
+        "changed_controls": 2,
+        "atomic_precision": 0.6896551724137931,
+        "clean_error_texts": 17,
+        "path": "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-text-json-dev.jsonl"
+      },
+      {
+        "count": 40,
+        "gold_corrections": 24,
+        "matched_corrections": 15,
+        "controls": 16,
+        "changed_controls": 2,
+        "atomic_precision": 0.8,
+        "clean_error_texts": 15,
+        "path": "benchmarks/results/2026-11-04/text-guard/gigachat20-text-json-dev-guarded.jsonl",
+        "guard_median_ms": 0.15100000000000002,
+        "guard_p95_ms": 0.406,
+        "statuses": {
+          "ok": 34,
+          "all_changes_blocked": 6
+        },
+        "rejection_reasons": {
+          "protected_name_candidate": 3,
+          "optional_yo": 3,
+          "nonlocal_or_formatting": 3
+        }
+      }
+    ],
+    "test": [
+      {
+        "count": 160,
+        "gold_corrections": 96,
+        "matched_corrections": 88,
+        "controls": 64,
+        "changed_controls": 11,
+        "atomic_precision": 0.7967479674796748,
+        "clean_error_texts": 81,
+        "path": "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-test.jsonl"
+      },
+      {
+        "count": 160,
+        "gold_corrections": 96,
+        "matched_corrections": 76,
+        "controls": 64,
+        "changed_controls": 5,
+        "atomic_precision": 0.9239130434782609,
+        "clean_error_texts": 75,
+        "path": "benchmarks/results/2026-11-04/text-guard/gigachat20-test-guarded.jsonl",
+        "guard_median_ms": 0.132,
+        "guard_p95_ms": 0.26899999999999996,
+        "statuses": {
+          "ok": 142,
+          "all_changes_blocked": 18
+        },
+        "rejection_reasons": {
+          "protected_name_candidate": 5,
+          "optional_yo": 11,
+          "nonlocal_or_formatting": 11,
+          "large_word_change": 3
+        }
+      }
+    ],
+    "preservation": [
+      {
+        "count": 120,
+        "gold_corrections": 60,
+        "matched_corrections": 57,
+        "controls": 60,
+        "changed_controls": 17,
+        "atomic_precision": 0.7,
+        "clean_error_texts": 51,
+        "path": "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-preservation.jsonl",
+        "protected_failures": 19
+      },
+      {
+        "count": 120,
+        "gold_corrections": 60,
+        "matched_corrections": 55,
+        "controls": 60,
+        "changed_controls": 0,
+        "atomic_precision": 0.9714285714285714,
+        "clean_error_texts": 54,
+        "path": "benchmarks/results/2026-11-04/text-guard/gigachat20-preservation-guarded.jsonl",
+        "guard_median_ms": 0.184,
+        "guard_p95_ms": 0.373,
+        "statuses": {
+          "ok": 100,
+          "all_changes_blocked": 20
+        },
+        "rejection_reasons": {
+          "protected_name_candidate": 6,
+          "nonlocal_or_formatting": 17,
+          "protected_symbol": 2,
+          "optional_yo": 2,
+          "word_shape": 2,
+          "protected_quoted": 1
+        },
+        "protected_failures": 0
+      }
+    ],
+    "holdout": [
+      {
+        "count": 80,
+        "gold_corrections": 40,
+        "matched_corrections": 35,
+        "controls": 40,
+        "changed_controls": 7,
+        "atomic_precision": 0.7205882352941176,
+        "clean_error_texts": 30,
+        "path": "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-holdout.jsonl",
+        "protected_failures": 8
+      },
+      {
+        "count": 80,
+        "gold_corrections": 40,
+        "matched_corrections": 35,
+        "controls": 40,
+        "changed_controls": 0,
+        "atomic_precision": 0.9423076923076923,
+        "clean_error_texts": 34,
+        "path": "benchmarks/results/2026-11-04/text-guard/gigachat20-holdout-guarded.jsonl",
+        "guard_median_ms": 0.1985,
+        "guard_p95_ms": 0.408,
+        "statuses": {
+          "ok": 72,
+          "all_changes_blocked": 8
+        },
+        "rejection_reasons": {
+          "large_word_change": 1,
+          "optional_yo": 3,
+          "protected_name_candidate": 1,
+          "nonlocal_or_formatting": 9,
+          "word_shape": 1
+        },
+        "protected_failures": 0
+      }
+    ],
+    "layout": [
+      {
+        "count": 12,
+        "gold_corrections": 8,
+        "matched_corrections": 2,
+        "controls": 4,
+        "changed_controls": 1,
+        "atomic_precision": 0.2222222222222222,
+        "clean_error_texts": 2,
+        "path": "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-layout.jsonl"
+      },
+      {
+        "count": 12,
+        "gold_corrections": 8,
+        "matched_corrections": 0,
+        "controls": 4,
+        "changed_controls": 0,
+        "atomic_precision": 0.0,
+        "clean_error_texts": 0,
+        "path": "benchmarks/results/2026-11-04/text-guard/gigachat20-layout-guarded.jsonl",
+        "guard_median_ms": 0.18,
+        "guard_p95_ms": 1.387,
+        "statuses": {
+          "all_changes_blocked": 7,
+          "ok": 5
+        },
+        "rejection_reasons": {
+          "protected_name_candidate": 4,
+          "nonlocal_or_formatting": 1,
+          "word_shape": 1,
+          "protected_technical": 1
+        }
+      }
+    ],
+    "paragraphs": [
+      {
+        "count": 3,
+        "gold_corrections": 6,
+        "matched_corrections": 6,
+        "controls": 0,
+        "changed_controls": 0,
+        "atomic_precision": 1.0,
+        "clean_error_texts": 3,
+        "path": "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-paragraphs.jsonl"
+      },
+      {
+        "count": 3,
+        "gold_corrections": 6,
+        "matched_corrections": 6,
+        "controls": 0,
+        "changed_controls": 0,
+        "atomic_precision": 1.0,
+        "clean_error_texts": 3,
+        "path": "benchmarks/results/2026-11-04/text-guard/gigachat20-paragraphs-guarded.jsonl",
+        "guard_median_ms": 3.097,
+        "guard_p95_ms": 9.775,
+        "statuses": {
+          "ok": 3
+        },
+        "rejection_reasons": {}
+      }
+    ],
+    "fresh": [
+      {
+        "count": 40,
+        "gold_corrections": 20,
+        "matched_corrections": 19,
+        "controls": 20,
+        "changed_controls": 7,
+        "atomic_precision": 0.5609756097560976,
+        "clean_error_texts": 12,
+        "path": "benchmarks/results/2026-11-04/text-guard/fresh-raw.jsonl",
+        "protected_failures": 13
+      },
+      {
+        "count": 40,
+        "gold_corrections": 20,
+        "matched_corrections": 19,
+        "controls": 20,
+        "changed_controls": 0,
+        "atomic_precision": 1.0,
+        "clean_error_texts": 19,
+        "path": "benchmarks/results/2026-11-04/text-guard/fresh-guarded.jsonl",
+        "guard_median_ms": 0.222,
+        "guard_p95_ms": 0.55,
+        "statuses": {
+          "ok": 32,
+          "all_changes_blocked": 8
+        },
+        "rejection_reasons": {
+          "protected_name_candidate": 1,
+          "word_shape": 6,
+          "nonlocal_or_formatting": 11
+        },
+        "protected_failures": 0
+      },
+      {
+        "count": 40,
+        "gold_corrections": 20,
+        "matched_corrections": 19,
+        "controls": 20,
+        "changed_controls": 0,
+        "atomic_precision": 1.0,
+        "clean_error_texts": 19,
+        "path": "benchmarks/results/2026-11-04/text-guard/fresh-personal-names.jsonl",
+        "guard_median_ms": 0.2195,
+        "guard_p95_ms": 0.867,
+        "statuses": {
+          "ok": 32,
+          "all_changes_blocked": 8
+        },
+        "rejection_reasons": {
+          "protected_name_candidate": 1,
+          "protected_personal_name": 2,
+          "nonlocal_or_formatting": 11,
+          "word_shape": 4
+        },
+        "protected_failures": 0
+      }
+    ]
+  }
+}

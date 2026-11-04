@@ -1,0 +1,40 @@
+{"id": "guard-001-correct", "pair": 1, "split": "test", "category": "plain", "text": "Мне нравится спокойный темп работы.", "edits": [], "protected": []}
+{"id": "guard-001-error", "pair": 1, "split": "test", "category": "plain", "text": "Мне нравиться спокойный темп работы.", "edits": [{"original": "нравиться", "replacement": "нравится"}], "protected": []}
+{"id": "guard-002-correct", "pair": 2, "split": "test", "category": "plain", "text": "Эта команда вернулась к обсуждению.", "edits": [], "protected": []}
+{"id": "guard-002-error", "pair": 2, "split": "test", "category": "plain", "text": "Эта команда вернулся к обсуждению.", "edits": [{"original": "вернулся", "replacement": "вернулась"}], "protected": []}
+{"id": "guard-003-correct", "pair": 3, "split": "test", "category": "plain", "text": "Я уверен, что записка уже отправлена.", "edits": [], "protected": []}
+{"id": "guard-003-error", "pair": 3, "split": "test", "category": "plain", "text": "Я уверен что записка уже отправлена.", "edits": [{"original": "уверен что", "replacement": "уверен, что"}], "protected": []}
+{"id": "guard-004-correct", "pair": 4, "split": "test", "category": "names", "text": "Лиорена принесла новые материалы.", "edits": [], "protected": ["Лиорена"]}
+{"id": "guard-004-error", "pair": 4, "split": "test", "category": "names", "text": "Лиорена принесли новые материалы.", "edits": [{"original": "принесли", "replacement": "принесла"}], "protected": ["Лиорена"]}
+{"id": "guard-005-correct", "pair": 5, "split": "test", "category": "names", "text": "Участница норвета подготовила короткую заметку.", "edits": [], "protected": ["норвета"]}
+{"id": "guard-005-error", "pair": 5, "split": "test", "category": "names", "text": "Участница норвета подготовил короткую заметку.", "edits": [{"original": "подготовил", "replacement": "подготовила"}], "protected": ["норвета"]}
+{"id": "guard-006-correct", "pair": 6, "split": "test", "category": "names", "text": "Проект «Ясный сад» сохраняет историю записей.", "edits": [], "protected": ["«Ясный сад»"]}
+{"id": "guard-006-error", "pair": 6, "split": "test", "category": "names", "text": "Проект «Ясный сад» сохроняет историю записей.", "edits": [{"original": "сохроняет", "replacement": "сохраняет"}], "protected": ["«Ясный сад»"]}
+{"id": "guard-007-correct", "pair": 7, "split": "test", "category": "names", "text": "Приложение ThreadNote проверяет черновик локально.", "edits": [], "protected": ["ThreadNote"]}
+{"id": "guard-007-error", "pair": 7, "split": "test", "category": "names", "text": "Приложение ThreadNote проверяит черновик локально.", "edits": [{"original": "проверяит", "replacement": "проверяет"}], "protected": ["ThreadNote"]}
+{"id": "guard-008-correct", "pair": 8, "split": "test", "category": "names", "text": "Марек Лиор отправил редактору письмо.", "edits": [], "protected": ["Марек Лиор"]}
+{"id": "guard-008-error", "pair": 8, "split": "test", "category": "names", "text": "Марек Лиор отправела редактору письмо.", "edits": [{"original": "отправела", "replacement": "отправил"}], "protected": ["Марек Лиор"]}
+{"id": "guard-009-correct", "pair": 9, "split": "test", "category": "formatting", "text": "Записка готова.\n\nредактор проверяет подписи.", "edits": [], "protected": ["\n\n"]}
+{"id": "guard-009-error", "pair": 9, "split": "test", "category": "formatting", "text": "Записка готова.\n\nредактор проверяит подписи.", "edits": [{"original": "проверяит", "replacement": "проверяет"}], "protected": ["\n\n"]}
+{"id": "guard-010-correct", "pair": 10, "split": "test", "category": "formatting", "text": "- автор читает письмо.\n- записка лежит в папке.", "edits": [], "protected": ["- ", "\n"]}
+{"id": "guard-010-error", "pair": 10, "split": "test", "category": "formatting", "text": "- автор читает письмо.\n- записка лежыт в папке.", "edits": [{"original": "лежыт", "replacement": "лежит"}], "protected": ["- ", "\n"]}
+{"id": "guard-011-correct", "pair": 11, "split": "test", "category": "formatting", "text": "Результат:\n    копия сохраняется на устройстве.", "edits": [], "protected": ["\n    "]}
+{"id": "guard-011-error", "pair": 11, "split": "test", "category": "formatting", "text": "Результат:\n    копия сохраняеться на устройстве.", "edits": [{"original": "сохраняеться", "replacement": "сохраняется"}], "protected": ["\n    "]}
+{"id": "guard-012-correct", "pair": 12, "split": "test", "category": "formatting", "text": "Важно:  эта копия уже готова.", "edits": [], "protected": [":  "]}
+{"id": "guard-012-error", "pair": 12, "split": "test", "category": "formatting", "text": "Важно:  эта копия уже готов.", "edits": [{"original": "готов", "replacement": "готова"}], "protected": [":  "]}
+{"id": "guard-013-correct", "pair": 13, "split": "test", "category": "emoji", "text": "Мы отправили заметку коллеге 👍🏾", "edits": [], "protected": ["👍🏾"]}
+{"id": "guard-013-error", "pair": 13, "split": "test", "category": "emoji", "text": "Мы отправил заметку коллеге 👍🏾", "edits": [{"original": "отправил", "replacement": "отправили"}], "protected": ["👍🏾"]}
+{"id": "guard-014-correct", "pair": 14, "split": "test", "category": "emoji", "text": "Семья вернулась после прогулки 👩‍👩‍👧", "edits": [], "protected": ["👩‍👩‍👧"]}
+{"id": "guard-014-error", "pair": 14, "split": "test", "category": "emoji", "text": "Семья вернулся после прогулки 👩‍👩‍👧", "edits": [{"original": "вернулся", "replacement": "вернулась"}], "protected": ["👩‍👩‍👧"]}
+{"id": "guard-015-correct", "pair": 15, "split": "test", "category": "technical", "text": "Страница https://example.com/read?id=29 доступна для чтения.", "edits": [], "protected": ["https://example.com/read?id=29"]}
+{"id": "guard-015-error", "pair": 15, "split": "test", "category": "technical", "text": "Страница https://example.com/read?id=29 доступен для чтения.", "edits": [{"original": "доступен", "replacement": "доступна"}], "protected": ["https://example.com/read?id=29"]}
+{"id": "guard-016-correct", "pair": 16, "split": "test", "category": "technical", "text": "Каталог E:\\Inbox\\pages содержит сохранённые заметки.", "edits": [], "protected": ["E:\\Inbox\\pages"]}
+{"id": "guard-016-error", "pair": 16, "split": "test", "category": "technical", "text": "Каталог E:\\Inbox\\pages содержыт сохранённые заметки.", "edits": [{"original": "содержыт", "replacement": "содержит"}], "protected": ["E:\\Inbox\\pages"]}
+{"id": "guard-017-correct", "pair": 17, "split": "test", "category": "technical", "text": "Файл report_8.csv успешно загружен.", "edits": [], "protected": ["report_8.csv"]}
+{"id": "guard-017-error", "pair": 17, "split": "test", "category": "technical", "text": "Файл report_8.csv успешно загружена.", "edits": [{"original": "загружена", "replacement": "загружен"}], "protected": ["report_8.csv"]}
+{"id": "guard-018-correct", "pair": 18, "split": "test", "category": "technical", "text": "Команда `git diff --stat` показывает список файлов.", "edits": [], "protected": ["`git diff --stat`"]}
+{"id": "guard-018-error", "pair": 18, "split": "test", "category": "technical", "text": "Команда `git diff --stat` показываит список файлов.", "edits": [{"original": "показываит", "replacement": "показывает"}], "protected": ["`git diff --stat`"]}
+{"id": "guard-019-correct", "pair": 19, "split": "test", "category": "technical", "text": "Объект {\"local\":true,\"ready\":false} передаётся обработчику.", "edits": [], "protected": ["{\"local\":true,\"ready\":false}"]}
+{"id": "guard-019-error", "pair": 19, "split": "test", "category": "technical", "text": "Объект {\"local\":true,\"ready\":false} передаёться обработчику.", "edits": [{"original": "передаёться", "replacement": "передаётся"}], "protected": ["{\"local\":true,\"ready\":false}"]}
+{"id": "guard-020-correct", "pair": 20, "split": "test", "category": "formatting", "text": "**Примечание:** эта версия работает устойчиво.", "edits": [], "protected": ["**Примечание:**"]}
+{"id": "guard-020-error", "pair": 20, "split": "test", "category": "formatting", "text": "**Примечание:** эта версия работают устойчиво.", "edits": [{"original": "работают", "replacement": "работает"}], "protected": ["**Примечание:**"]}

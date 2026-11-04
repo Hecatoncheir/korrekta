@@ -1,0 +1,125 @@
+{
+  "method": "Число дословных вхождений protected без нормализации",
+  "results": [
+    {
+      "path": "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-holdout.jsonl",
+      "count": 80,
+      "retention_failures": 8,
+      "retention_failures_on_controls": 4,
+      "changed_controls": 7,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "names_quotes": 3,
+        "emoji_layout": 5
+      },
+      "details": [
+        {
+          "id": "prompt-011-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Ривена",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-016-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "„Медный сад“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-016-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "„Медный сад“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-026-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-026-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-028-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-030-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-030-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/results/2026-11-04/text-guard/gigachat20-holdout-guarded.jsonl",
+      "count": 80,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    }
+  ]
+}

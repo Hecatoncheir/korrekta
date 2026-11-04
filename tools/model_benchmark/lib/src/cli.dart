@@ -6,6 +6,7 @@ import 'package:args/args.dart';
 
 import 'scoring.dart';
 import 'response_contract.dart';
+import 'guard_response.dart';
 
 final schema = <String, Object>{
   'type': 'object',
@@ -44,6 +45,8 @@ Future<int> runCli(List<String> arguments) async {
     ..addOption('endpoint', defaultsTo: 'http://127.0.0.1:11434')
     ..addFlag('cpu', negatable: false)
     ..addFlag('raw', negatable: false)
+    ..addFlag('protect', negatable: false)
+    ..addOption('names')
     ..addOption(
       'response-mode',
       defaultsTo: 'edits',
@@ -88,6 +91,14 @@ Future<int> runBenchmark(ArgResults options, Uri endpoint, int limit) async {
   final model = options.option('model')!;
   final responseMode = options.option('response-mode')!;
   final prompt = await File(options.option('prompt')!).readAsString();
+  final namesPath = options.option('names');
+  if (namesPath != null && !options.flag('protect')) {
+    throw const FormatException('--names требует --protect');
+  }
+  final names = namesPath == null
+      ? <String>[]
+      : (jsonDecode(await File(namesPath).readAsString()) as List<dynamic>)
+            .cast<String>();
   final lines = await File(options.option('data')!).readAsLines();
   var cases = lines
       .where((line) => line.trim().isNotEmpty)
@@ -134,6 +145,10 @@ Future<int> runBenchmark(ArgResults options, Uri endpoint, int limit) async {
         'split': options.option('split'),
         'cpu': options.flag('cpu'),
         'raw': options.flag('raw'),
+        if (options.flag('protect')) ...{
+          'guard_version': guardVersion,
+          'personal_names': names,
+        },
         if (options.flag('raw')) 'prompt_source': cases.first['prompt_source'],
         'time': DateTime.now().toUtc().toIso8601String(),
         'options': generationOptions(options.flag('cpu')),
@@ -155,6 +170,8 @@ Future<int> runBenchmark(ArgResults options, Uri endpoint, int limit) async {
       options.flag('cpu'),
       options.flag('raw'),
       responseMode,
+      protect: options.flag('protect'),
+      names: names,
     );
     sink.writeln(jsonEncode({...cold, 'type': 'cold_start'}));
     sink.writeln(
@@ -173,6 +190,8 @@ Future<int> runBenchmark(ArgResults options, Uri endpoint, int limit) async {
         options.flag('cpu'),
         options.flag('raw'),
         responseMode,
+        protect: options.flag('protect'),
+        names: names,
       );
       records.add(record);
       sink.writeln(jsonEncode(record));
@@ -235,8 +254,10 @@ Future<JsonMap> checkCase(
   JsonMap item,
   bool cpu,
   bool raw,
-  String responseMode,
-) async {
+  String responseMode, {
+  bool protect = false,
+  List<String> names = const [],
+}) async {
   final stopwatch = Stopwatch()..start();
   final text = item['text'] as String;
   final expected = item['edits'] as List<dynamic>;
@@ -270,7 +291,7 @@ Future<JsonMap> checkCase(
     final content = raw
         ? response['response'] as String
         : (response['message'] as JsonMap)['content'] as String;
-    return {
+    final record = <String, dynamic>{
       'type': 'case',
       'id': item['id'],
       'category': item['category'],
@@ -287,9 +308,10 @@ Future<JsonMap> checkCase(
       'prompt_eval_duration': response['prompt_eval_duration'],
       ...evaluateResponse(text, expected, content, responseMode),
     };
+    return protect ? protectResponse(record, names: names) : record;
   } catch (error) {
     stopwatch.stop();
-    return {
+    final record = <String, dynamic>{
       'type': 'case',
       'id': item['id'],
       'category': item['category'],
@@ -300,6 +322,7 @@ Future<JsonMap> checkCase(
       'error': error.toString(),
       ...scoreCase(text, expected, <dynamic>[]),
     };
+    return protect ? protectResponse(record, names: names) : record;
   }
 }
 

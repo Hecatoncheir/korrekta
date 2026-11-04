@@ -1,0 +1,197 @@
+{
+  "method": "Число дословных вхождений protected без нормализации",
+  "results": [
+    {
+      "path": "benchmarks/results/2026-11-04/text-guard/fresh-raw.jsonl",
+      "count": 40,
+      "retention_failures": 13,
+      "retention_failures_on_controls": 6,
+      "changed_controls": 7,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "names": 3,
+        "formatting": 6,
+        "emoji": 2,
+        "technical": 2
+      },
+      "details": [
+        {
+          "id": "guard-004-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Лиорена",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "guard-005-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "норвета",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "guard-005-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "норвета",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "guard-009-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "guard-009-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "guard-011-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "guard-011-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "guard-012-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "guard-012-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "guard-013-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "👍🏾",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "guard-014-error",
+          "category": "emoji",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "👩‍👩‍👧",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "guard-019-correct",
+          "category": "technical",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "{\"local\":true,\"ready\":false}",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "guard-019-error",
+          "category": "technical",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "{\"local\":true,\"ready\":false}",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/results/2026-11-04/text-guard/fresh-guarded.jsonl",
+      "count": 40,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    },
+    {
+      "path": "benchmarks/results/2026-11-04/text-guard/fresh-personal-names.jsonl",
+      "count": 40,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    }
+  ]
+}
