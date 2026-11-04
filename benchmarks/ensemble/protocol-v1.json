@@ -1,0 +1,28 @@
+{
+  "version": "ensemble-v1",
+  "rows": 448,
+  "fresh": 48,
+  "profiles": [
+    "lt_guarded",
+    "priority_union",
+    "giga_selection"
+  ],
+  "policy": "Общий known=OpenCorpora OR Hunspell; независимые предложения SymSpell/Hunspell, все первые 8 вариантов LT, допустимые предложения GigaChat. Только spelling, раскладка отдельной командой. До 32 групп, до 32 замен в группе; превышение прерывает обработку. Нет молчаливого обрезания групп. Приоритет LT/Hunspell-frequency/SymSpell/GigaChat. Альтернативный профиль — закрытый выбор GigaChat, отказ0. Составной вариант LT целиком проходит защиту. Защита и снимок обязательны. Личный словарь пуст. Параметры temperature0 seed42 ctx8192, предложение1024/выбор512 токенов. Число байтов входа не превышает контекст минус ответ и32. Один проход, без итераций и подбора по оценкам.",
+  "timing": "Старые свободные ответы GigaChat повторно используются для изоляции объединения; свежие48 запрашиваются заново. LT и оба словарных механизма запускаются заново для всех448. Последующий выбор GigaChat реальный для каждого непустого списка. Текст без вариантов не считается проверенным без ошибок.",
+  "sha256_lf": {
+    "benchmarks/ensemble/prepare.py": "7eb18aeacf796e444cc16acb3ee28ef4b0025813c3eeb7ddf7921103a31e4a7d",
+    "benchmarks/ensemble/selection.txt": "dd85d457fb7c9f724852ba4f44c60952a032ddd49a197c76d824902407afb37f",
+    "benchmarks/ensemble/fresh-v1.jsonl": "d876597eba49c8428d8018daea42ae16add83db6407b0fd9bbdb2bec325163da",
+    "benchmarks/gigachat-prompts/text-json.txt": "c2dab9675e57890f054f8c6036265e3c418e641cf5468340bdc31c8545dcb45a",
+    "benchmarks/results/2026-11-04/ensemble/inputs.jsonl": "c4c0111d758023813c852a5066b0d545a57f5972d07dc39e5fe33a4643f8e395",
+    "tools/model_benchmark/bin/ensemble_check.dart": "51dd6607dbc4a520e846ef96fe05cbed3b536e180593a7f52e91d75466e2b76c",
+    "tools/model_benchmark/lib/src/ensemble.dart": "ce4ad90838b76ea5c8171cbb8fae20e58030862cc13ba60d916c7bda6f5d7142",
+    "tools/model_benchmark/lib/src/ensemble_runtime.dart": "7f0a7ff2e696eb0ca55efd14565af4d839ca792c40227a9db48e11045a77c120",
+    "tools/model_benchmark/lib/src/text_guard.dart": "b17a9db1f5646d168ae82232a03b3624e3a0d92c222a9978e80e3906e1e8766e",
+    "tools/model_benchmark/lib/src/protected_spans.dart": "87fcd6155f442f02d7244361aa149b1c0cb773ee834cbd233515a123a6164018",
+    "tools/model_benchmark/lib/src/hunspell_choices.dart": "b2c1dc819168ec028b950a9acbcd772b3526e09813e56869f9bb0aba09cf97d3",
+    "tools/model_benchmark/lib/src/dictionary_checker.dart": "0af016c4fa89c705dd702b01f19d9bb96390c09a5ac23402797206497126d8f0",
+    "tools/model_benchmark/lib/src/dictionary_engines.dart": "c1ec07bb2324ba269baa00fef8ac6155036abad0516d75ab7a26680bdc810620",
+    "tools/model_benchmark/lib/src/symspell.dart": "405365f721121a3cc51fd475c006315c9f0742c1232d145a2f49bdcb22a45d0e"
+  }
+}

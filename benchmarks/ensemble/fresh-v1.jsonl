@@ -1,0 +1,48 @@
+{"id": "ensemble-001-correct", "pair": 1, "split": "test", "category": "spelling", "text": "После обеда редактор проверяет заметку.", "edits": [], "protected": []}
+{"id": "ensemble-001-error", "pair": 1, "split": "test", "category": "spelling", "text": "После обеда редактор проверяит заметку.", "edits": [{"original": "проверяит", "replacement": "проверяет"}], "protected": []}
+{"id": "ensemble-002-correct", "pair": 2, "split": "test", "category": "grammar", "text": "Она хочет закончить отчёт сегодня.", "edits": [], "protected": []}
+{"id": "ensemble-002-error", "pair": 2, "split": "test", "category": "grammar", "text": "Она хочеть закончить отчёт сегодня.", "edits": [{"original": "хочеть", "replacement": "хочет"}], "protected": []}
+{"id": "ensemble-003-correct", "pair": 3, "split": "test", "category": "agreement", "text": "Эти ребята придут чуть позже.", "edits": [], "protected": []}
+{"id": "ensemble-003-error", "pair": 3, "split": "test", "category": "agreement", "text": "Эти ребята придёт чуть позже.", "edits": [{"original": "придёт", "replacement": "придут"}], "protected": []}
+{"id": "ensemble-004-correct", "pair": 4, "split": "test", "category": "agreement", "text": "Мы долго искали запасной ключ.", "edits": [], "protected": []}
+{"id": "ensemble-004-error", "pair": 4, "split": "test", "category": "agreement", "text": "Мы долго искала запасной ключ.", "edits": [{"original": "искала", "replacement": "искали"}], "protected": []}
+{"id": "ensemble-005-correct", "pair": 5, "split": "test", "category": "case", "text": "Благодаря помощи соседей ремонт завершён.", "edits": [], "protected": []}
+{"id": "ensemble-005-error", "pair": 5, "split": "test", "category": "case", "text": "Благодаря помощь соседей ремонт завершён.", "edits": [{"original": "помощь", "replacement": "помощи"}], "protected": []}
+{"id": "ensemble-006-correct", "pair": 6, "split": "test", "category": "case", "text": "Он скучает по своим друзьям.", "edits": [], "protected": []}
+{"id": "ensemble-006-error", "pair": 6, "split": "test", "category": "case", "text": "Он скучает по своим друзьях.", "edits": [{"original": "друзьях", "replacement": "друзьям"}], "protected": []}
+{"id": "ensemble-007-correct", "pair": 7, "split": "test", "category": "comma", "text": "Когда стемнело, путешественники вернулись домой.", "edits": [], "protected": []}
+{"id": "ensemble-007-error", "pair": 7, "split": "test", "category": "comma", "text": "Когда стемнело путешественники вернулись домой.", "edits": [{"original": "стемнело", "replacement": "стемнело,"}], "protected": []}
+{"id": "ensemble-008-correct", "pair": 8, "split": "test", "category": "comma", "text": "Я заметил, что дверь открыта.", "edits": [], "protected": []}
+{"id": "ensemble-008-error", "pair": 8, "split": "test", "category": "comma", "text": "Я заметил что дверь открыта.", "edits": [{"original": "заметил", "replacement": "заметил,"}], "protected": []}
+{"id": "ensemble-009-correct", "pair": 9, "split": "test", "category": "comma", "text": "Пожалуйста, закрой окно перед уходом.", "edits": [], "protected": []}
+{"id": "ensemble-009-error", "pair": 9, "split": "test", "category": "comma", "text": "Пожалуйста закрой окно перед уходом.", "edits": [{"original": "Пожалуйста", "replacement": "Пожалуйста,"}], "protected": []}
+{"id": "ensemble-010-correct", "pair": 10, "split": "test", "category": "agreement", "text": "В альбоме лежат красные фотографии.", "edits": [], "protected": []}
+{"id": "ensemble-010-error", "pair": 10, "split": "test", "category": "agreement", "text": "В альбоме лежат красный фотографии.", "edits": [{"original": "красный", "replacement": "красные"}], "protected": []}
+{"id": "ensemble-011-correct", "pair": 11, "split": "test", "category": "case", "text": "В шкафу нет чистых полотенец.", "edits": [], "protected": []}
+{"id": "ensemble-011-error", "pair": 11, "split": "test", "category": "case", "text": "В шкафу нет чистых полотенцев.", "edits": [{"original": "полотенцев", "replacement": "полотенец"}], "protected": []}
+{"id": "ensemble-012-correct", "pair": 12, "split": "test", "category": "spelling", "text": "Нужно подъехать к соседнему зданию.", "edits": [], "protected": []}
+{"id": "ensemble-012-error", "pair": 12, "split": "test", "category": "spelling", "text": "Нужно подьехать к соседнему зданию.", "edits": [{"original": "подьехать", "replacement": "подъехать"}], "protected": []}
+{"id": "ensemble-013-correct", "pair": 13, "split": "test", "category": "name", "text": "Ливея аккуратно складывает письма.", "edits": [], "protected": ["Ливея"]}
+{"id": "ensemble-013-error", "pair": 13, "split": "test", "category": "name", "text": "Ливея акуратно складывает письма.", "edits": [{"original": "акуратно", "replacement": "аккуратно"}], "protected": ["Ливея"]}
+{"id": "ensemble-014-correct", "pair": 14, "split": "test", "category": "unknown_name", "text": "норвета сегодня готовит ужин.", "edits": [], "protected": ["норвета"]}
+{"id": "ensemble-014-error", "pair": 14, "split": "test", "category": "unknown_name", "text": "норвета сегодня готоветь ужин.", "edits": [{"original": "готоветь", "replacement": "готовит"}], "protected": ["норвета"]}
+{"id": "ensemble-015-correct", "pair": 15, "split": "test", "category": "agreement", "text": "На полке стоят две чашки.", "edits": [], "protected": []}
+{"id": "ensemble-015-error", "pair": 15, "split": "test", "category": "agreement", "text": "На полке стоят две чашка.", "edits": [{"original": "чашка", "replacement": "чашки"}], "protected": []}
+{"id": "ensemble-016-correct", "pair": 16, "split": "test", "category": "url", "text": "Запиши адрес: https://example.org/a?q=1 и проверь вложение.", "edits": [], "protected": ["https://example.org/a?q=1"]}
+{"id": "ensemble-016-error", "pair": 16, "split": "test", "category": "url", "text": "Запиши адрес: https://example.org/a?q=1 и проверь вложенние.", "edits": [{"original": "вложенние", "replacement": "вложение"}], "protected": ["https://example.org/a?q=1"]}
+{"id": "ensemble-017-correct", "pair": 17, "split": "test", "category": "crlf", "text": "- Отправь документ.\r\n- Проверь расписание.", "edits": [], "protected": ["\r\n", "- "]}
+{"id": "ensemble-017-error", "pair": 17, "split": "test", "category": "crlf", "text": "- Отправь документ.\r\n- Проверь расписанне.", "edits": [{"original": "расписанне", "replacement": "расписание"}], "protected": ["\r\n", "- "]}
+{"id": "ensemble-018-correct", "pair": 18, "split": "test", "category": "emoji", "text": "🙂 Эта история кажется невероятной!", "edits": [], "protected": ["🙂"]}
+{"id": "ensemble-018-error", "pair": 18, "split": "test", "category": "emoji", "text": "🙂 Эта история кажется невероятнои!", "edits": [{"original": "невероятнои", "replacement": "невероятной"}], "protected": ["🙂"]}
+{"id": "ensemble-019-correct", "pair": 19, "split": "test", "category": "quoted", "text": "Термин «кварзит» здесь используется намеренно.", "edits": [], "protected": ["«кварзит»"]}
+{"id": "ensemble-019-error", "pair": 19, "split": "test", "category": "quoted", "text": "Термин «кварзит» здесь используетса намеренно.", "edits": [{"original": "используетса", "replacement": "используется"}], "protected": ["«кварзит»"]}
+{"id": "ensemble-020-correct", "pair": 20, "split": "test", "category": "code", "text": "Команда `git sttaus` записана в инструкции.", "edits": [], "protected": ["`git sttaus`"]}
+{"id": "ensemble-020-error", "pair": 20, "split": "test", "category": "code", "text": "Команда `git sttaus` записана в инструкцыи.", "edits": [{"original": "инструкцыи", "replacement": "инструкции"}], "protected": ["`git sttaus`"]}
+{"id": "ensemble-021-correct", "pair": 21, "split": "test", "category": "spacing", "text": "Сегодня  будет очень тихо.\nЗавтра тоже.", "edits": [], "protected": ["  ", "\n"]}
+{"id": "ensemble-021-error", "pair": 21, "split": "test", "category": "spacing", "text": "Сегодня  будет очинь тихо.\nЗавтра тоже.", "edits": [{"original": "очинь", "replacement": "очень"}], "protected": ["  ", "\n"]}
+{"id": "ensemble-022-correct", "pair": 22, "split": "test", "category": "literal", "text": "Никнейм Ghbdtn появился в списке гостей.", "edits": [], "protected": ["Ghbdtn"]}
+{"id": "ensemble-022-error", "pair": 22, "split": "test", "category": "literal", "text": "Никнейм Ghbdtn появилса в списке гостей.", "edits": [{"original": "появилса", "replacement": "появился"}], "protected": ["Ghbdtn"]}
+{"id": "ensemble-023-correct", "pair": 23, "split": "test", "category": "unknown_name", "text": "пользователь руддщ оставил комментарий.", "edits": [], "protected": ["руддщ"]}
+{"id": "ensemble-023-error", "pair": 23, "split": "test", "category": "unknown_name", "text": "пользователь руддщ оставил коментарий.", "edits": [{"original": "коментарий", "replacement": "комментарий"}], "protected": ["руддщ"]}
+{"id": "ensemble-024-correct", "pair": 24, "split": "test", "category": "style_control", "text": "Обычно он пишет попроще и без канцеляризмов.", "edits": [], "protected": []}
+{"id": "ensemble-024-error", "pair": 24, "split": "test", "category": "style_control", "text": "Обычьно он пишет попроще и без канцеляризмов.", "edits": [{"original": "Обычьно", "replacement": "Обычно"}], "protected": []}
