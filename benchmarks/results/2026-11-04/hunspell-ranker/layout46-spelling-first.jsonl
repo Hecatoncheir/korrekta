@@ -1,0 +1,48 @@
+{"type": "metadata", "profile": "first", "run": {"id": "layout46", "data": "benchmarks/dictionaries/layout-holdout-v1.jsonl", "split": "test", "count": 46}, "mode": "spelling"}
+{"type": "case", "id": "dict-layout-001-correct", "category": "layout-ru", "text": "доброе утро", "expected": [], "output": "доброе утро", "seconds": 0.000361}
+{"type": "case", "id": "dict-layout-001-error", "category": "layout-ru", "text": "lj,hjt enhj", "expected": [{"original": "lj,hjt enhj", "replacement": "доброе утро"}], "output": "lj,hjt enhj", "seconds": 5.1e-05}
+{"type": "case", "id": "dict-layout-002-correct", "category": "layout-ru", "text": "Спасибо!", "expected": [], "output": "Спасибо!", "seconds": 5.4e-05}
+{"type": "case", "id": "dict-layout-002-error", "category": "layout-ru", "text": "Cgfcb,j!", "expected": [{"original": "Cgfcb,j", "replacement": "Спасибо"}], "output": "Cgfcb,j!", "seconds": 3.6e-05}
+{"type": "case", "id": "dict-layout-003-correct", "category": "layout-ru", "text": "документ готов", "expected": [], "output": "документ готов", "seconds": 0.000298}
+{"type": "case", "id": "dict-layout-003-error", "category": "layout-ru", "text": "ljrevtyn ujnjd", "expected": [{"original": "ljrevtyn ujnjd", "replacement": "документ готов"}], "output": "ljrevtyn ujnjd", "seconds": 5.6e-05}
+{"type": "case", "id": "dict-layout-004-correct", "category": "layout-ru", "text": "Нужно проверить файл.", "expected": [], "output": "Нужно проверить файл.", "seconds": 0.000339}
+{"type": "case", "id": "dict-layout-004-error", "category": "layout-ru", "text": "Нужно ghjdthbnm файл.", "expected": [{"original": "ghjdthbnm", "replacement": "проверить"}], "output": "Нужно ghjdthbnm файл.", "seconds": 0.000116}
+{"type": "case", "id": "dict-layout-005-correct", "category": "layout-ru", "text": "Она открыла папку.", "expected": [], "output": "Она открыла папку.", "seconds": 0.000273}
+{"type": "case", "id": "dict-layout-005-error", "category": "layout-ru", "text": "Она открыла gfgre.", "expected": [{"original": "gfgre", "replacement": "папку"}], "output": "Она открыла gfgre.", "seconds": 0.000203}
+{"type": "case", "id": "dict-layout-006-correct", "category": "layout-ru", "text": "Теперь всё работает 🙂", "expected": [], "output": "Теперь всё работает 🙂", "seconds": 0.000236}
+{"type": "case", "id": "dict-layout-006-error", "category": "layout-ru", "text": "Теперь всё hf,jnftn 🙂", "expected": [{"original": "hf,jnftn", "replacement": "работает"}], "output": "Теперь всё hf,jnftn 🙂", "seconds": 0.000165}
+{"type": "case", "id": "dict-layout-007-correct", "category": "layout-ru", "text": "План:\r\n\t  завтра обсудим детали.", "expected": [], "output": "План:\r\n\t  завтра обсудим детали.", "seconds": 0.000447}
+{"type": "case", "id": "dict-layout-007-error", "category": "layout-ru", "text": "План:\r\n\t  завтра j,celbv детали.", "expected": [{"original": "j,celbv", "replacement": "обсудим"}], "output": "План:\r\n\t  завтра j,celbv детали.", "seconds": 0.000339}
+{"type": "case", "id": "dict-layout-008-correct", "category": "layout-ru", "text": "**Итог:** версия готова.", "expected": [], "output": "**Итог:** версия готова.", "seconds": 0.000268}
+{"type": "case", "id": "dict-layout-008-error", "category": "layout-ru", "text": "**Итог:** dthcbz готова.", "expected": [{"original": "dthcbz", "replacement": "версия"}], "output": "**Итог:** dthcbz готова.", "seconds": 0.000121}
+{"type": "case", "id": "dict-layout-009-correct", "category": "layout-ru", "text": "Файл note_84.md содержит план.", "expected": [], "output": "Файл note_84.md содержит план.", "seconds": 0.000304}
+{"type": "case", "id": "dict-layout-009-error", "category": "layout-ru", "text": "Файл note_84.md cjlth;bn план.", "expected": [{"original": "cjlth;bn", "replacement": "содержит"}], "output": "Файл note_84.md cjlth;bn план.", "seconds": 0.000143}
+{"type": "case", "id": "dict-layout-010-correct", "category": "layout-ru", "text": "Равина проверяет заметку.", "expected": [], "output": "Равина проверяет заметку.", "seconds": 0.000302}
+{"type": "case", "id": "dict-layout-010-error", "category": "layout-ru", "text": "Равина ghjdthztn заметку.", "expected": [{"original": "ghjdthztn", "replacement": "проверяет"}], "output": "Равина ghjdthztn заметку.", "seconds": 0.00015}
+{"type": "case", "id": "dict-layout-011-correct", "category": "layout-en", "text": "we are ready", "expected": [], "output": "we are ready", "seconds": 5.8e-05}
+{"type": "case", "id": "dict-layout-011-error", "category": "layout-en", "text": "цу фку куфвн", "expected": [{"original": "цу фку куфвн", "replacement": "we are ready"}], "output": "цуг фу куфвн", "seconds": 0.038292}
+{"type": "case", "id": "dict-layout-012-correct", "category": "layout-en", "text": "open this file", "expected": [], "output": "open this file", "seconds": 7.5e-05}
+{"type": "case", "id": "dict-layout-012-error", "category": "layout-en", "text": "щзут ершы ашду", "expected": [{"original": "щзут ершы ашду", "replacement": "open this file"}], "output": "мазут ерш аду", "seconds": 0.047913}
+{"type": "case", "id": "dict-layout-013-correct", "category": "layout-en", "text": "The draft is saved.", "expected": [], "output": "The draft is saved.", "seconds": 8.7e-05}
+{"type": "case", "id": "dict-layout-013-error", "category": "layout-en", "text": "Еру вкфае шы ыфмув.", "expected": [{"original": "Еру вкфае шы ыфмув", "replacement": "The draft is saved"}], "output": "Еру вкфае швы ыфмув.", "seconds": 0.057777}
+{"type": "case", "id": "dict-layout-014-correct", "category": "layout-en", "text": "Пожалуйста, напиши hello.", "expected": [], "output": "Пожалуйста, напиши hello.", "seconds": 0.000216}
+{"type": "case", "id": "dict-layout-014-error", "category": "layout-en", "text": "Пожалуйста, напиши руддщ.", "expected": [{"original": "руддщ", "replacement": "hello"}], "output": "Пожалуйста, напиши руд.", "seconds": 0.020707}
+{"type": "case", "id": "dict-layout-015-correct", "category": "layout-en", "text": "Слово world оставлено по-английски.", "expected": [], "output": "Слово world оставлено по-английски.", "seconds": 0.000263}
+{"type": "case", "id": "dict-layout-015-error", "category": "layout-en", "text": "Слово цщкдв оставлено по-английски.", "expected": [{"original": "цщкдв", "replacement": "world"}], "output": "Слово цщкдв оставлено по-английски.", "seconds": 0.018244}
+{"type": "case", "id": "dict-layout-016-correct", "category": "layout-en", "text": "keep calm", "expected": [], "output": "keep calm", "seconds": 6.9e-05}
+{"type": "case", "id": "dict-layout-016-error", "category": "layout-en", "text": "лууз сфдь", "expected": [{"original": "лууз сфдь", "replacement": "keep calm"}], "output": "лузу сядь", "seconds": 0.025182}
+{"type": "case", "id": "dict-layout-017-correct", "category": "layout-ru", "text": "новая запись", "expected": [], "output": "новая запись", "seconds": 0.000257}
+{"type": "case", "id": "dict-layout-017-error", "category": "layout-ru", "text": "yjdfz pfgbcm", "expected": [{"original": "yjdfz pfgbcm", "replacement": "новая запись"}], "output": "yjdfz pfgbcm", "seconds": 5.2e-05}
+{"type": "case", "id": "dict-layout-018-correct", "category": "layout-en", "text": "report ready", "expected": [], "output": "report ready", "seconds": 4.2e-05}
+{"type": "case", "id": "dict-layout-018-error", "category": "layout-en", "text": "кузщке куфвн", "expected": [{"original": "кузщке куфвн", "replacement": "report ready"}], "output": "кузьке куфвн", "seconds": 0.048533}
+{"type": "case", "id": "dict-layout-019-correct", "category": "layout-ru", "text": "Новая строка:\nзапись сохранена.", "expected": [], "output": "Новая строка:\nзапись сохранена.", "seconds": 0.000385}
+{"type": "case", "id": "dict-layout-019-error", "category": "layout-ru", "text": "Новая строка:\nзапись cj[hfytyf.", "expected": [{"original": "cj[hfytyf", "replacement": "сохранена"}], "output": "Новая строка:\nзапись cj[hfytyf.", "seconds": 0.000254}
+{"type": "case", "id": "dict-layout-020-correct", "category": "layout-ru", "text": "Мы идём домой.", "expected": [], "output": "Мы идём домой.", "seconds": 0.000192}
+{"type": "case", "id": "dict-layout-020-error", "category": "layout-ru", "text": "Мы идём ljvjq.", "expected": [{"original": "ljvjq", "replacement": "домой"}], "output": "Мы идём ljvjq.", "seconds": 0.000139}
+{"type": "case", "id": "dict-literal-001", "category": "literal", "text": "Проект Ghbdtn готов.", "expected": [], "output": "Проект Ghbdtn готов.", "seconds": 0.000152}
+{"type": "case", "id": "dict-literal-002", "category": "literal", "text": "Автор руддщ добавил заметку.", "expected": [], "output": "Автор руд добавил заметку.", "seconds": 0.02112}
+{"type": "case", "id": "dict-literal-003", "category": "literal", "text": "Идентификатор ghbdtn_id сохранён.", "expected": [], "output": "Идентификатор ghbdtn_id сохранён.", "seconds": 0.00021}
+{"type": "case", "id": "dict-literal-004", "category": "literal", "text": "Открой файл ghbdtn.txt.", "expected": [], "output": "Открой файл ghbdtn.txt.", "seconds": 0.000184}
+{"type": "case", "id": "dict-literal-005", "category": "literal", "text": "`руддщ` — значение в примере.", "expected": [], "output": "`руддщ` — значение в примере.", "seconds": 0.000416}
+{"type": "case", "id": "dict-literal-006", "category": "literal", "text": "Он написал «Ghbdtn» на обложке.", "expected": [], "output": "Он написал «Ghbdtn» на обложке.", "seconds": 0.000682}
+{"type": "summary", "count": 46, "completed": true}

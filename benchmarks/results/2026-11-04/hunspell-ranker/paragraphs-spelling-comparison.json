@@ -1,0 +1,231 @@
+{
+  "metric": "text-effects-v1",
+  "description": "Общий Unicode LCS diff итогового текста без нормализации",
+  "results": [
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\hunspell-ranker\\paragraphs-spelling-first.jsonl",
+      "count": 3,
+      "atomic_tp": 0,
+      "atomic_fp": 0,
+      "atomic_fn": 6,
+      "atomic_precision": null,
+      "atomic_recall": 0.0,
+      "matched_corrections": 0,
+      "gold_corrections": 6,
+      "correction_recall": 0.0,
+      "controls": 0,
+      "changed_controls": 0,
+      "changed_control_rate": null,
+      "exact_count": 0,
+      "exact_rate": 0.0,
+      "median_seconds": 0.008995,
+      "p95_seconds": 0.016729,
+      "categories": {
+        "length_profile": {
+          "count": 3,
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 6,
+          "atomic_precision": null,
+          "atomic_recall": 0.0,
+          "matched_corrections": 0,
+          "gold_corrections": 6,
+          "correction_recall": 0.0,
+          "controls": 0,
+          "changed_controls": 0,
+          "changed_control_rate": null,
+          "exact_count": 0,
+          "exact_rate": 0.0
+        }
+      },
+      "cases": [
+        {
+          "id": "paragraph-263",
+          "category": "length_profile",
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 2,
+          "matched_corrections": 0,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        },
+        {
+          "id": "paragraph-538",
+          "category": "length_profile",
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 2,
+          "matched_corrections": 0,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        },
+        {
+          "id": "paragraph-1183",
+          "category": "length_profile",
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 2,
+          "matched_corrections": 0,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\hunspell-ranker\\paragraphs-spelling-frequency.jsonl",
+      "count": 3,
+      "atomic_tp": 0,
+      "atomic_fp": 0,
+      "atomic_fn": 6,
+      "atomic_precision": null,
+      "atomic_recall": 0.0,
+      "matched_corrections": 0,
+      "gold_corrections": 6,
+      "correction_recall": 0.0,
+      "controls": 0,
+      "changed_controls": 0,
+      "changed_control_rate": null,
+      "exact_count": 0,
+      "exact_rate": 0.0,
+      "median_seconds": 0.008995,
+      "p95_seconds": 0.016729,
+      "categories": {
+        "length_profile": {
+          "count": 3,
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 6,
+          "atomic_precision": null,
+          "atomic_recall": 0.0,
+          "matched_corrections": 0,
+          "gold_corrections": 6,
+          "correction_recall": 0.0,
+          "controls": 0,
+          "changed_controls": 0,
+          "changed_control_rate": null,
+          "exact_count": 0,
+          "exact_rate": 0.0
+        }
+      },
+      "cases": [
+        {
+          "id": "paragraph-263",
+          "category": "length_profile",
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 2,
+          "matched_corrections": 0,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        },
+        {
+          "id": "paragraph-538",
+          "category": "length_profile",
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 2,
+          "matched_corrections": 0,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        },
+        {
+          "id": "paragraph-1183",
+          "category": "length_profile",
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 2,
+          "matched_corrections": 0,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\hunspell-ranker\\paragraphs-spelling-giga.jsonl",
+      "count": 3,
+      "atomic_tp": 0,
+      "atomic_fp": 0,
+      "atomic_fn": 6,
+      "atomic_precision": null,
+      "atomic_recall": 0.0,
+      "matched_corrections": 0,
+      "gold_corrections": 6,
+      "correction_recall": 0.0,
+      "controls": 0,
+      "changed_controls": 0,
+      "changed_control_rate": null,
+      "exact_count": 0,
+      "exact_rate": 0.0,
+      "median_seconds": 0.008995,
+      "p95_seconds": 0.016729,
+      "categories": {
+        "length_profile": {
+          "count": 3,
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 6,
+          "atomic_precision": null,
+          "atomic_recall": 0.0,
+          "matched_corrections": 0,
+          "gold_corrections": 6,
+          "correction_recall": 0.0,
+          "controls": 0,
+          "changed_controls": 0,
+          "changed_control_rate": null,
+          "exact_count": 0,
+          "exact_rate": 0.0
+        }
+      },
+      "cases": [
+        {
+          "id": "paragraph-263",
+          "category": "length_profile",
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 2,
+          "matched_corrections": 0,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        },
+        {
+          "id": "paragraph-538",
+          "category": "length_profile",
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 2,
+          "matched_corrections": 0,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        },
+        {
+          "id": "paragraph-1183",
+          "category": "length_profile",
+          "atomic_tp": 0,
+          "atomic_fp": 0,
+          "atomic_fn": 2,
+          "matched_corrections": 0,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        }
+      ]
+    }
+  ]
+}

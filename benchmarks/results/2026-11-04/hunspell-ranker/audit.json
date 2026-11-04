@@ -1,0 +1,35 @@
+{
+  "rows": 1322,
+  "model_requests": 311,
+  "statuses": {
+    "no_candidates": 1011,
+    "selected": 227,
+    "kept_all": 84
+  },
+  "contract_failures": 0,
+  "outside_candidate_changes": 0,
+  "repeated_input_groups": 121,
+  "different_choices_for_identical_inputs": [
+    [
+      {
+        "run": "ordinary",
+        "mode": "spelling",
+        "id": "ru-002",
+        "choices": [
+          1
+        ]
+      },
+      {
+        "run": "ordinary",
+        "mode": "layout",
+        "id": "ru-002",
+        "choices": [
+          0
+        ]
+      }
+    ]
+  ],
+  "differences_from_previous_uncapped_baselines": {},
+  "model_median_seconds": 0.269034,
+  "model_p95_seconds": 0.429538
+}

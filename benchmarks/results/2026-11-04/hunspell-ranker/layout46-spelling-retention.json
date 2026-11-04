@@ -1,0 +1,80 @@
+{
+  "method": "Число дословных вхождений protected без нормализации",
+  "results": [
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\hunspell-ranker\\layout46-spelling-first.jsonl",
+      "count": 46,
+      "retention_failures": 1,
+      "retention_failures_on_controls": 1,
+      "changed_controls": 1,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "literal": 1
+      },
+      "details": [
+        {
+          "id": "dict-literal-002",
+          "category": "literal",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "руддщ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\hunspell-ranker\\layout46-spelling-frequency.jsonl",
+      "count": 46,
+      "retention_failures": 1,
+      "retention_failures_on_controls": 1,
+      "changed_controls": 1,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "literal": 1
+      },
+      "details": [
+        {
+          "id": "dict-literal-002",
+          "category": "literal",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "руддщ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\hunspell-ranker\\layout46-spelling-giga.jsonl",
+      "count": 46,
+      "retention_failures": 1,
+      "retention_failures_on_controls": 1,
+      "changed_controls": 1,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "literal": 1
+      },
+      "details": [
+        {
+          "id": "dict-literal-002",
+          "category": "literal",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "руддщ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

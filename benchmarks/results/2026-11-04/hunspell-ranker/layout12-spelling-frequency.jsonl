@@ -1,0 +1,14 @@
+{"type": "metadata", "profile": "frequency", "run": {"id": "layout12", "data": "benchmarks/sber-large/layout-smoke-v1.jsonl", "split": "dev", "count": 12}, "mode": "spelling"}
+{"type": "case", "id": "layout-01", "category": "layout", "text": "ghbdtn", "expected": [{"original": "ghbdtn", "replacement": "привет"}], "output": "ghbdtn", "seconds": 0.000793}
+{"type": "case", "id": "layout-02", "category": "layout", "text": "Ghbdtn", "expected": [{"original": "Ghbdtn", "replacement": "Привет"}], "output": "Ghbdtn", "seconds": 5.7e-05}
+{"type": "case", "id": "layout-03", "category": "layout", "text": "rfr ltkf", "expected": [{"original": "rfr ltkf", "replacement": "как дела"}], "output": "rfr ltkf", "seconds": 6.3e-05}
+{"type": "case", "id": "layout-04", "category": "layout", "text": "Я хочу crfxfnm файл.", "expected": [{"original": "Я хочу crfxfnm файл.", "replacement": "Я хочу скачать файл."}], "output": "Я хочу crfxfnm файл.", "seconds": 0.000372}
+{"type": "case", "id": "layout-05", "category": "layout", "text": "Документ ye;yj проверить.", "expected": [{"original": "Документ ye;yj проверить.", "replacement": "Документ нужно проверить."}], "output": "Документ ye;yj проверить.", "seconds": 0.000206}
+{"type": "case", "id": "layout-06", "category": "layout", "text": "руддщ", "expected": [{"original": "руддщ", "replacement": "hello"}], "output": "руд", "seconds": 0.023639}
+{"type": "case", "id": "layout-07", "category": "layout", "text": "цщкдв", "expected": [{"original": "цщкдв", "replacement": "world"}], "output": "цщкдв", "seconds": 0.023183}
+{"type": "case", "id": "layout-08", "category": "layout", "text": "Еру ьщвуд шы куфвн", "expected": [{"original": "Еру ьщвуд шы куфвн", "replacement": "The model is ready"}], "output": "Еру ьщвуд швы куфвн", "seconds": 0.04515}
+{"type": "case", "id": "layout-09", "category": "control", "text": "Открой файл report.md.", "expected": [], "output": "Открой файл report.md.", "seconds": 0.000224}
+{"type": "case", "id": "layout-10", "category": "control", "text": "API вернул status=ok.", "expected": [], "output": "API вернул status=ok.", "seconds": 0.000173}
+{"type": "case", "id": "layout-11", "category": "control", "text": "Я использую Windows и Flutter.", "expected": [], "output": "Я использую Windows и Flutter.", "seconds": 0.000252}
+{"type": "case", "id": "layout-12", "category": "control", "text": "Этот файл находится на github.com.", "expected": [], "output": "Этот файл находится на github.com.", "seconds": 0.000321}
+{"type": "summary", "count": 12, "completed": true}
