@@ -85,7 +85,7 @@
     "benchmarks/dictionaries/protocol-v1.json": "07785f125ec26d8c4f5eb6d9cb7e864b3a759fe282bd4486bcfe22efd51551c0",
     "benchmarks/gigachat-prompts/holdout-v1.jsonl": "d344f5257fc925c834d7326bcdcbe7ba2c45b1878645ba38e00fa19cedfbec16",
     "benchmarks/hunspell-ranker/prompt-v1.txt": "635a2d11fd4c3620acd405d492597888e8572c67ebec30a6365c402c7984ba77",
-    "benchmarks/hunspell-ranker/render.py": "be9e3a8152cc482b45df21a29b12e41ee91ed1482f8e3106d167c64a90d84ceb",
+    "benchmarks/hunspell-ranker/render.py": "8d2915adea4b37fac59e8dedca30ea06931a87c036d518d24423863671bbcb31",
     "benchmarks/hunspell-ranker/run.py": "f13901af5d74e42af63cf9e68d8be509554e4cb764542f1f792db6af55a0c528",
     "benchmarks/paragraphs-v1.jsonl": "d823b62ef71e7636e1286acc0493cdb74bdbe879b2f1952ab71e629c42c702ec",
     "benchmarks/preservation/cases-v1.jsonl": "e969f419ec024d688f355845716d685debd92ce6da8234644528bf5bd8ab7d69",
@@ -100,5 +100,6 @@
     "tools/model_benchmark/lib/src/dictionary_engines.dart": "c1ec07bb2324ba269baa00fef8ac6155036abad0516d75ab7a26680bdc810620",
     "tools/model_benchmark/lib/src/hunspell_choices.dart": "5dfd11e2837f87bb75b0e5d2809704a95e3871267315118d3c9f1b243c0bc54c",
     "tools/model_benchmark/lib/src/protected_spans.dart": "87fcd6155f442f02d7244361aa149b1c0cb773ee834cbd233515a123a6164018"
-  }
+  },
+  "preflight_fix": "До первого запроса модели ограничен офлайн snapshot_download файлами токенизатора, чтобы не требовать отсутствующие PyTorch-веса. Промпт, варианты и логика выбора не менялись."
 }

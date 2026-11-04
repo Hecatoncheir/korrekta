@@ -18,7 +18,8 @@ def main():
     from transformers import AutoTokenizer
     revision = "8a6075316cd6d41269f7892caf046f7d5aa274a4"
     model = "ai-sage/GigaChat-20B-A3B-instruct-v1.5"
-    path = Path(snapshot_download(model, revision=revision, local_files_only=True))
+    path = Path(snapshot_download(model, revision=revision, local_files_only=True,
+                              allow_patterns=["tokenizer*.json", "special_tokens_map.json"]))
     tokenizer = AutoTokenizer.from_pretrained(path, local_files_only=True)
     special = json.loads((path / "tokenizer_config.json").read_text(encoding="utf-8"))["additional_special_tokens"]
     system = Path(__file__).with_name("prompt-v1.txt").read_text(encoding="utf-8")
