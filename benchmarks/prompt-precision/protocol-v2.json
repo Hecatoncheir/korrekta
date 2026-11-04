@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-11-04T00:57:30.125515+00:00",
+  "reason": "После трёх заранее заданных dev-вариантов все пять исходных ложных правок сохранились у победителя. До первого запроса holdout добавлен четвёртый вариант с примерами. Это адаптивная разработка по dev, не новый test; прежний выбор сохранён, правило ранжирования то же.",
+  "candidates": [
+    {
+      "id": "baseline",
+      "path": "benchmarks/gigachat-prompts/text-json.txt"
+    },
+    {
+      "id": "minimal",
+      "path": "benchmarks/prompt-precision/minimal.txt"
+    },
+    {
+      "id": "rules",
+      "path": "benchmarks/prompt-precision/rules.txt"
+    },
+    {
+      "id": "examples",
+      "path": "benchmarks/prompt-precision/examples.txt"
+    }
+  ],
+  "selection_rule": "Только dev80, после автоматической защиты: допуск clean>=baseline.clean-3, failures<=baseline.failures; затем минимум changed_controls, максимум clean, минимум raw.changed_controls, порядок baseline/minimal/rules.",
+  "test_rule": "После сохранения selection.json только baseline и выбранный промпт на новом holdout120. Старые test160/preservation120 — дополнительные регрессии. После holdout запросы и правила не меняются.",
+  "sha256_lf": {
+    "benchmarks/prompt-precision/protocol-v1.json": "531d3ec3acb99106bc2a823d4578fc45d8583ff52f6b1d76b8fb4197f8851217",
+    "benchmarks/prompt-precision/examples.txt": "b32f3da40a4378587a56a07f133fe80a855d0acd3d8df554315cfe72e2b0b880",
+    "benchmarks/prompt-precision/round2.py": "5781c92ec3fe82c84fffa954f61d70030a41cf51180e2d7d7d80d7404791d50a",
+    "benchmarks/results/2026-11-04/prompt-precision/selection.json": "06a222fe3f083f42936ee6f13130d2a7bc7b30be5baef2b8cd3e91c911a7c6c9"
+  }
+}
