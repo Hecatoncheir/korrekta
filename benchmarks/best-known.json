@@ -1,0 +1,11 @@
+{
+  "status": "best_verified_quality_reference",
+  "date": "2026-11-04",
+  "commit": "eb5256d87a3c6b3e7aa4e9f08a046b78254312c2",
+  "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+  "pipeline": "OpenCorpora/shared lexicon + SymSpell + Hunspell + LanguageTool6.8 + GigaChat; Dart inflections",
+  "context": 8192,
+  "report": "benchmarks/results/2026-11-04/ensemble-tuning/README.md",
+  "quality": {"clean": 55, "error_texts": 60, "changed_controls": 0, "controls": 80, "protected_failures": 0, "atomic_fp": 1},
+  "limits": "Лучший среди проверенных вариантов, не идеальная автоматическая корректура. Спорные варианты сохраняются для просмотра, M1 открыт. Экономичные конфигурации сравнивать отдельно, эталон не заменять молча."
+}

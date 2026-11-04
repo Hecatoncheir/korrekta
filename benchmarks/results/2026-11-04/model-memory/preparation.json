@@ -1,0 +1,18 @@
+{
+  "20b": {
+    "repo": "ai-sage/GigaChat-20B-A3B-instruct-v1.5",
+    "revision": "8a6075316cd6d41269f7892caf046f7d5aa274a4",
+    "rows": 143,
+    "max_prompt_tokens": 385,
+    "template_sha256": "dd760f4e624b5c943906ef656eb17394cb453ace4e4a62fc61baeb51c904151e",
+    "input_sha256_lf": "086c5d93c89e32cbb8112d1ea53f123ca20a3450226de8937a73589c3ef28fda"
+  },
+  "10b": {
+    "repo": "ai-sage/GigaChat3.1-10B-A1.8B-bf16",
+    "revision": "189fff27a1dee68473960c3d5bca53e0e07a3191",
+    "rows": 143,
+    "max_prompt_tokens": 1406,
+    "template_sha256": "e0b8ec1e172a124fe688e705a6e48fc30c575c23dae7388e43007f150d8343a3",
+    "input_sha256_lf": "624b65ad809f3a1e53c2f49d91e32669a82a3844f0940a796b602e53e811dab6"
+  }
+}

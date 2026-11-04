@@ -1,0 +1,84 @@
+{
+  "created_utc": "2026-11-04T03:42:10.388390+00:00",
+  "baseline_commit": "eb5256d87a3c6b3e7aa4e9f08a046b78254312c2",
+  "profiles": [
+    {
+      "id": "20b-8k",
+      "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+      "key": "20b",
+      "context": 8192
+    },
+    {
+      "id": "10b-8k",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "key": "10b",
+      "context": 8192
+    },
+    {
+      "id": "10b-4k",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "key": "10b",
+      "context": 4096
+    },
+    {
+      "id": "20b-4k",
+      "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+      "key": "20b",
+      "context": 4096
+    },
+    {
+      "id": "20b-2k",
+      "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+      "key": "20b",
+      "context": 2048
+    }
+  ],
+  "weights": {
+    "GigaChat-20B-A3B-instruct-v1.5-GGUF": {
+      "mediaType": "application/vnd.ollama.image.model",
+      "digest": "sha256:5bd88ebea2a2ee2622c50ec5c0ec88f67169e4667c47762f51a4e2157367923b",
+      "size": 12494806976
+    },
+    "GigaChat3.1-10B-A1.8B-GGUF": {
+      "mediaType": "application/vnd.ollama.image.model",
+      "digest": "sha256:68a8732fb5cee04f83ebffd7924e15c534d4442c5a43d2ba9e2041fe310b8deb",
+      "size": 6474702976
+    }
+  },
+  "data": "143 знакомых текста: фиксированные140 (60 ошибок/80 контролей) + 3 прежних абзаца; не новая независимая приёмка. Все генерации новые, промпт и inflections неизменны. Официальные шаблоны каждой модели, лимит ответа1024, temp0/seed42.",
+  "decision": "Потеря не более3 чистых из60 относительно нового одновременного 20b-8k, без роста изменённых контролей/protected/atomic_fp/сбоев; абзацы не хуже по clean/atomic_fp. Среди прошедших сравнить память. Это заранее принятый рабочий допуск5 процентных пунктов, не универсальное определение некритичности. Эталон20B сохранить независимо от экономичного профиля.",
+  "memory": "Каждые примерно0.5-1с: суммарная занятая GPU Nvidia; текущий RSS и private bytes семьи собственного Ollama, Dart и существующего LT отдельно. Это наблюдавшийся максимум выборки, не точный CUDA peak и не минимальные требования. RSS семей может повторно учитывать общие страницы; private не равно физической RAM. Холодная загрузка модели отдельно, файловый кеш ОС не сбрасывается.",
+  "sha256_lf": {
+    "benchmarks/best-known.json": "ec227aba2eafd542a26d674cfd74a743f9c6c3075e3bc391b3e0dcc85042feb0",
+    "benchmarks/gigachat-prompts/text-json.txt": "c2dab9675e57890f054f8c6036265e3c418e641cf5468340bdc31c8545dcb45a",
+    "benchmarks/model-memory/prepare.py": "13b4ef910864434b759776666e2ccde660daa2d21954c322604a97e3c49b7a3b",
+    "benchmarks/model-memory/run.py": "4f74b9e1da4a7cb627388661f7a682c4ba14c89538682c80d58762c7c1d354b8",
+    "benchmarks/results/2026-11-04/model-memory/10b-input.jsonl": "624b65ad809f3a1e53c2f49d91e32669a82a3844f0940a796b602e53e811dab6",
+    "benchmarks/results/2026-11-04/model-memory/20b-input.jsonl": "086c5d93c89e32cbb8112d1ea53f123ca20a3450226de8937a73589c3ef28fda",
+    "benchmarks/results/2026-11-04/model-memory/preparation.json": "9d997db2c883d030e603d8cb5466b6ca3f1c931e91e116a040fede2e3bf21ac0",
+    "tools/model_benchmark/bin/ensemble_memory.dart": "a4a66c6244e8670f2349d9f91fac5838992d5179def2cb4cac226101e82ac836",
+    "tools/model_benchmark/lib/ensemble.dart": "0dbbbfc36b854225e5ae14d754a7ce19f8034b3a4cd3d9283ba876dfcacc7593",
+    "tools/model_benchmark/lib/src/cli.dart": "7304e26717629876cdb96bce7b81e34f3927236ec2e0a0d735e986f43787ca11",
+    "tools/model_benchmark/lib/src/confirmation_response.dart": "2611a9a71cd9d69520cf2dd5388251dc3044e484216e85c4089a1339351acb49",
+    "tools/model_benchmark/lib/src/dictionary_checker.dart": "0af016c4fa89c705dd702b01f19d9bb96390c09a5ac23402797206497126d8f0",
+    "tools/model_benchmark/lib/src/dictionary_engines.dart": "c1ec07bb2324ba269baa00fef8ac6155036abad0516d75ab7a26680bdc810620",
+    "tools/model_benchmark/lib/src/ensemble.dart": "ce4ad90838b76ea5c8171cbb8fae20e58030862cc13ba60d916c7bda6f5d7142",
+    "tools/model_benchmark/lib/src/ensemble_roles.dart": "4e0d18ea14bfce3bd60cea753f21f54f9f533765c39c2d1b790b62c0b3897980",
+    "tools/model_benchmark/lib/src/ensemble_runtime.dart": "7f0a7ff2e696eb0ca55efd14565af4d839ca792c40227a9db48e11045a77c120",
+    "tools/model_benchmark/lib/src/guard_response.dart": "db4069f8d39830c924d57e4478ee15f3ca3b47bd7f3edf56471b9ec5394ef7a0",
+    "tools/model_benchmark/lib/src/hunspell_choices.dart": "b2c1dc819168ec028b950a9acbcd772b3526e09813e56869f9bb0aba09cf97d3",
+    "tools/model_benchmark/lib/src/languagetool.dart": "c83e4772e02aebcae737b93fa2c857c2599086762e3e3719ad082dd6ca93f897",
+    "tools/model_benchmark/lib/src/languagetool_cli.dart": "4b4bb82288631c8b746b435710d885de82a87f36bbd35da61903b532ace1533b",
+    "tools/model_benchmark/lib/src/languagetool_gate.dart": "e0fee2f745778e6d452c91889e2822c85493dbde962b8eb5e5b61c14995041cf",
+    "tools/model_benchmark/lib/src/local_languagetool.dart": "2dda6e87ace3ed4d475bdef8098de84f3dba5d1870ab669e894c3e1f5528275d",
+    "tools/model_benchmark/lib/src/protected_spans.dart": "87fcd6155f442f02d7244361aa149b1c0cb773ee834cbd233515a123a6164018",
+    "tools/model_benchmark/lib/src/response_contract.dart": "b6b26708d512e388502b8d29e085842b2eb2a5728db5791e9b1789eb4e995e46",
+    "tools/model_benchmark/lib/src/scoring.dart": "29752b6a20e3d717c0078b8d8685d1ef589a65ded57560af54bdf5b350a9428a",
+    "tools/model_benchmark/lib/src/symspell.dart": "405365f721121a3cc51fd475c006315c9f0742c1232d145a2f49bdcb22a45d0e",
+    "tools/model_benchmark/lib/src/text_comparison.dart": "32dea59955856399a635627e1091c3d644000f4547807b7ed4aa81ae1c688fec",
+    "tools/model_benchmark/lib/src/text_diff.dart": "76b7c90d57e8f68f4daee9d75bc1c8b9167e38047d0ff5342c104743433faf8b",
+    "tools/model_benchmark/lib/src/text_guard.dart": "b17a9db1f5646d168ae82232a03b3624e3a0d92c222a9978e80e3906e1e8766e",
+    "tools/model_benchmark/lib/src/text_scoring.dart": "6548b768f1f3158076afeaddd6e8bd3b70914d151699783eb053fec1d4e53eab",
+    "tools/model_benchmark/lib/text_guard.dart": "4b9f8a54827e3d9be72d937532383a75edbacf092944400f48475dd4fe8d4085"
+  }
+}
