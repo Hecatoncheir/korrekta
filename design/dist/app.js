@@ -375,8 +375,31 @@ document.getElementById('dictionary-list').addEventListener('click', event => {
 });
 document.getElementById('editor-nav').addEventListener('click', () => editor.focus());
 document.getElementById('settings-theme').addEventListener('click', () => document.querySelector('[data-theme-toggle]').click());
-document.getElementById('model-select').value = storage.get('model', 'GigaChat 3.1 Lightning');
-document.getElementById('model-select').addEventListener('change', event => { storage.set('model', event.target.value); toast('Выбор сохранён для макета'); });
+const MODEL_PRESETS = {
+  '20b': { id: 'hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M', name: 'GigaChat 20B', size: 'около 12,5 ГБ' },
+  '10b': { id: 'hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M', name: 'GigaChat 3.1 10B', size: 'около 6,5 ГБ' }
+};
+const savedModel = storage.get('model', null);
+let modelKey = Object.keys(MODEL_PRESETS).find(key => MODEL_PRESETS[key].id === savedModel)
+  ?? (savedModel === 'GigaChat 3.1 Lightning' ? '10b' : '20b');
+const modelChoices = document.querySelectorAll('input[name="model-choice"]');
+function renderModelChoice() {
+  const model = MODEL_PRESETS[modelKey];
+  modelChoices.forEach(input => { input.checked = input.value === modelKey; });
+  document.getElementById('setup-model-name').textContent = `${model.name} · ${model.size}`;
+  storage.set('model', model.id);
+}
+modelChoices.forEach(input => input.addEventListener('change', () => {
+  if (!input.checked) return;
+  modelKey = input.value;
+  renderModelChoice();
+  clearInterval(setupTimer);
+  setupStep = Math.min(setupStep, 2);
+  document.querySelector('.setup-progress').hidden = true;
+  document.getElementById('setup-error-message').hidden = true;
+  renderSetup();
+  toast('Выбор модели сохранён');
+}));
 document.getElementById('open-setup').addEventListener('click', () => { document.getElementById('settings-dialog').close(); openDialog('setup-dialog'); });
 document.addEventListener('keydown', event => {
   if (document.querySelector('dialog[open]')) return;
@@ -433,7 +456,7 @@ document.getElementById('setup-dialog').addEventListener('close', () => { clearI
 checked = true;
 suggestions = findSuggestions();
 selectedId = suggestions[0]?.id ?? null;
-render(); renderDictionary(); renderSetup();
+render(); renderDictionary(); renderModelChoice(); renderSetup();
 syncModeIndicator();
 document.fonts.ready.then(syncModeIndicator);
 window.addEventListener('resize', syncModeIndicator);
