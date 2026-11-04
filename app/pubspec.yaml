@@ -27,6 +27,9 @@ dependencies:
   crypto: ^3.0.8
   http: ^1.6.0
   characters: ^1.4.1
+  archive: ^4.6.0
+  tar: ^2.0.3
+  zstd_neo: ^0.2.0
 
 dev_dependencies:
   flutter_test:

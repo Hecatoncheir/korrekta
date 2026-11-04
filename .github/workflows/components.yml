@@ -1,0 +1,46 @@
+name: Компоненты локальной проверки
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Тег черновика выпуска компонентов
+        required: true
+        default: components-v1
+permissions:
+  contents: write
+concurrency:
+  group: components-${{ inputs.tag }}
+  cancel-in-progress: false
+jobs:
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-22.04
+            target: linux-x64
+          - os: macos-15
+            target: macos-universal
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Проверить тег
+        shell: bash
+        env:
+          COMPONENT_TAG: ${{ inputs.tag }}
+        run: '[[ "$COMPONENT_TAG" =~ ^components-v[0-9]+$ ]]'
+      - if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y build-essential pkg-config libtool automake gettext autopoint
+      - name: Собрать Hunspell 1.7.5
+        run: bash packaging/components/hunspell.sh '${{ matrix.target }}'
+      - name: Загрузить проверенную сборку
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COMPONENT_TAG: ${{ inputs.tag }}
+        run: gh release upload "$COMPONENT_TAG" 'release/hunspell-1.7.5-${{ matrix.target }}.tar.gz' --repo "$GITHUB_REPOSITORY"
+      - if: runner.os == 'Linux'
+        name: Загрузить соответствующий исходный код
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COMPONENT_TAG: ${{ inputs.tag }}
+        run: gh release upload "$COMPONENT_TAG" release/hunspell-1.7.5-source.tar.gz --repo "$GITHUB_REPOSITORY"

@@ -1,0 +1,11 @@
+# Компоненты локальной проверки
+
+Пакет сохраняет проверенные данные проекта без изменения содержимого. Корректа использует их локально. Личные словари, тексты пользователя, журналы и состояния запущенных служб в пакет не включаются.
+
+- OpenCorpora: снимок 417150, подготовленный `pymorphy3-dicts-ru 2.4.417150.4580142`. Исходный wheel с метаданными и уведомлениями включён в `SOURCES/opencorpora-source.whl`. Источники: https://opencorpora.org/ и https://github.com/no-plagiarism/pymorphy3-dicts . Производный список словоформ распространяется на условиях исходных данных OpenCorpora (CC BY-SA); атрибуция и условия находятся также в wheel.
+- Частотные списки RU/EN: SymSpell, ревизия `91fe939e9c1259813ee817e95239629c5badf8ec`. Исходники и уведомления: https://github.com/wolfgarbe/SymSpell/tree/91fe939e9c1259813ee817e95239629c5badf8ec . Файлы и контрольные суммы зафиксированы в `dictionaries-v1/manifest.json`.
+- Словари Hunspell RU/EN: LibreOffice dictionaries, ревизия `4f1df64b2e8e14751aa7c2205d170ca016071315`. Исходные уведомления `README_ru_RU.txt` и `license.txt` лежат рядом со словарями. Источник: https://github.com/LibreOffice/dictionaries/tree/4f1df64b2e8e14751aa7c2205d170ca016071315 .
+- Hunspell 1.7.5: MPL/GPL/LGPL, исходный архив https://github.com/hunspell/hunspell/releases/download/v1.7.5/hunspell-1.7.5.tar.gz . Нативная сборка Windows взята из MSYS2 UCRT64; исходные лицензии компонентов находятся в `SOURCES/msys2-licenses`, версии и URLs пакетов — в манифесте словарей. Исходники сборок и используемых библиотек: https://github.com/msys2/MINGW-packages и указанные там upstream-проекты.
+- LanguageTool 6.8 и зависимости Maven: исходные JAR с встроенными LICENSE/NOTICE, без модификаций. `SOURCES/languagetool-pom.xml` задаёт состав сервера; список файлов и SHA-256 — в `installation-manifest.json`. Исходники LanguageTool: https://github.com/languagetool-org/languagetool/tree/v6.8 ; артефакты и соответствующие исходники: https://repo.maven.apache.org/maven2/org/languagetool/ . LanguageTool распространяется по LGPL; отдельные зависимости имеют собственные лицензии, сохранённые в JAR.
+
+Java Temurin и Ollama скачиваются отдельно с официальных страниц выпусков вместе с их лицензиями. Пакет не предоставляет исключительных прав на компоненты и не меняет их лицензии.
