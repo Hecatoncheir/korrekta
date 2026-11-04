@@ -1,0 +1,113 @@
+{
+  "baseline": {
+    "raw": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 53,
+      "controls": 60,
+      "changed_controls": 16,
+      "atomic_precision": 0.6344086021505376,
+      "median_seconds": 0.302693,
+      "p95_seconds": 0.567851,
+      "clean_corrections": 43,
+      "contract_failures": [],
+      "changed_control_ids": [
+        "precision-test-001-correct",
+        "precision-test-011-correct",
+        "precision-test-012-correct",
+        "precision-test-013-correct",
+        "precision-test-016-correct",
+        "precision-test-019-correct",
+        "precision-test-026-correct",
+        "precision-test-030-correct",
+        "precision-test-037-correct",
+        "precision-test-038-correct",
+        "precision-test-042-correct",
+        "precision-test-054-correct",
+        "precision-test-055-correct",
+        "precision-test-056-correct",
+        "precision-test-057-correct",
+        "precision-test-058-correct"
+      ]
+    },
+    "guarded": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 53,
+      "controls": 60,
+      "changed_controls": 8,
+      "atomic_precision": 0.7972972972972973,
+      "median_seconds": 0.302873,
+      "p95_seconds": 0.568018,
+      "clean_corrections": 49,
+      "contract_failures": [],
+      "changed_control_ids": [
+        "precision-test-001-correct",
+        "precision-test-011-correct",
+        "precision-test-012-correct",
+        "precision-test-013-correct",
+        "precision-test-016-correct",
+        "precision-test-019-correct",
+        "precision-test-037-correct",
+        "precision-test-042-correct"
+      ]
+    }
+  },
+  "examples": {
+    "raw": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 53,
+      "controls": 60,
+      "changed_controls": 17,
+      "atomic_precision": 0.6413043478260869,
+      "median_seconds": 0.29308449999999997,
+      "p95_seconds": 0.596187,
+      "clean_corrections": 45,
+      "contract_failures": [],
+      "changed_control_ids": [
+        "precision-test-011-correct",
+        "precision-test-012-correct",
+        "precision-test-013-correct",
+        "precision-test-016-correct",
+        "precision-test-025-correct",
+        "precision-test-026-correct",
+        "precision-test-030-correct",
+        "precision-test-034-correct",
+        "precision-test-036-correct",
+        "precision-test-037-correct",
+        "precision-test-040-correct",
+        "precision-test-041-correct",
+        "precision-test-042-correct",
+        "precision-test-054-correct",
+        "precision-test-055-correct",
+        "precision-test-056-correct",
+        "precision-test-057-correct"
+      ]
+    },
+    "guarded": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 53,
+      "controls": 60,
+      "changed_controls": 10,
+      "atomic_precision": 0.7972972972972973,
+      "median_seconds": 0.2932555,
+      "p95_seconds": 0.596359,
+      "clean_corrections": 50,
+      "contract_failures": [],
+      "changed_control_ids": [
+        "precision-test-011-correct",
+        "precision-test-012-correct",
+        "precision-test-013-correct",
+        "precision-test-016-correct",
+        "precision-test-025-correct",
+        "precision-test-034-correct",
+        "precision-test-036-correct",
+        "precision-test-037-correct",
+        "precision-test-041-correct",
+        "precision-test-042-correct"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "ordinary": {
+    "raw": {
+      "count": 160,
+      "gold_corrections": 96,
+      "matched_corrections": 85,
+      "controls": 64,
+      "changed_controls": 10,
+      "atomic_precision": 0.7851239669421488,
+      "median_seconds": 0.26447750000000003,
+      "p95_seconds": 0.448078,
+      "clean_corrections": 79,
+      "contract_failures": [],
+      "changed_control_ids": [
+        "ru-132",
+        "ru-138",
+        "ru-149",
+        "ru-150",
+        "ru-152",
+        "ru-155",
+        "ru-157",
+        "ru-159",
+        "ru-173",
+        "ru-183"
+      ]
+    },
+    "guarded": {
+      "count": 160,
+      "gold_corrections": 96,
+      "matched_corrections": 74,
+      "controls": 64,
+      "changed_controls": 3,
+      "atomic_precision": 0.9325842696629213,
+      "median_seconds": 0.2646265,
+      "p95_seconds": 0.448227,
+      "clean_corrections": 72,
+      "contract_failures": [],
+      "changed_control_ids": [
+        "ru-132",
+        "ru-155",
+        "ru-157"
+      ]
+    }
+  },
+  "preservation": {
+    "raw": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 57,
+      "controls": 60,
+      "changed_controls": 18,
+      "atomic_precision": 0.6699029126213593,
+      "median_seconds": 0.3530715,
+      "p95_seconds": 0.640198,
+      "clean_corrections": 49,
+      "contract_failures": [],
+      "changed_control_ids": [
+        "preserve-005-correct",
+        "preserve-018-correct",
+        "preserve-019-correct",
+        "preserve-021-correct",
+        "preserve-024-correct",
+        "preserve-025-correct",
+        "preserve-028-correct",
+        "preserve-030-correct",
+        "preserve-031-correct",
+        "preserve-033-correct",
+        "preserve-037-correct",
+        "preserve-040-correct",
+        "preserve-053-correct",
+        "preserve-055-correct",
+        "preserve-057-correct",
+        "preserve-058-correct",
+        "preserve-059-correct",
+        "preserve-060-correct"
+      ]
+    },
+    "guarded": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 55,
+      "controls": 60,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.35325650000000003,
+      "p95_seconds": 0.640417,
+      "clean_corrections": 55,
+      "contract_failures": [],
+      "changed_control_ids": []
+    }
+  }
+}

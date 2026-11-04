@@ -1,0 +1,42 @@
+{
+  "role": "Пять известных случаев разработки; не независимая приёмка.",
+  "baseline_source": "benchmarks/results/2026-11-04/text-guard/gigachat20-test-guarded.jsonl",
+  "candidate_source": "benchmarks/results/2026-11-04/prompt-precision/examples-ordinary-guarded.jsonl",
+  "cases": [
+    {
+      "id": "ru-128",
+      "text": "Большинство участников поддержало предложение.",
+      "baseline_output": "Большинство участников поддержали предложение.",
+      "candidate_output": "Большинство участников поддержало предложение.",
+      "candidate_kept_original": true
+    },
+    {
+      "id": "ru-132",
+      "text": "Согласно приказу занятия отменены.",
+      "baseline_output": "Согласно приказу, занятия отменены.",
+      "candidate_output": "Согласно приказу, занятия отменены.",
+      "candidate_kept_original": false
+    },
+    {
+      "id": "ru-155",
+      "text": "Утром было тихо и шёл снег.",
+      "baseline_output": "Утром было тихо, и шёл снег.",
+      "candidate_output": "Утром было тихо, и шёл снег.",
+      "candidate_kept_original": false
+    },
+    {
+      "id": "ru-157",
+      "text": "Он сидел сложа руки.",
+      "baseline_output": "Он сидел, сложа руки.",
+      "candidate_output": "Он сидел, сложа руки.",
+      "candidate_kept_original": false
+    },
+    {
+      "id": "ru-170",
+      "text": "Можно попроще?",
+      "baseline_output": "Можно проще?",
+      "candidate_output": "Можно попроще?",
+      "candidate_kept_original": true
+    }
+  ]
+}
