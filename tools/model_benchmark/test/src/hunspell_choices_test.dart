@@ -60,12 +60,9 @@ void main() {
       () => parseChoices('{"text":"переписанный текст"}', 1),
       throwsFormatException,
     );
-    expect(
-      () => parseChoices('{"choices":[0],"text":"x"}', 1),
-      throwsFormatException,
-    );
-    expect(() => parseChoices('{"choices":[1.0]}', 1), throwsFormatException);
-    expect(() => parseChoices('{"choices":[]}', 1), throwsFormatException);
+    expect(() => parseChoices('{"c0":0,"text":"x"}', 1), throwsFormatException);
+    expect(() => parseChoices('{"c0":1.0}', 1), throwsFormatException);
+    expect(() => parseChoices('{}', 1), throwsFormatException);
   });
   test('Неверный номер, диапазон или пересечение не применяются частично', () {
     final slot = WordChoices(3, 'пишит', ['пишит', 'пишет']);
@@ -91,6 +88,6 @@ void main() {
     final slot = WordChoices(0, 'слово', source);
     source[1] = 'другой текст';
     expect(slot.options[1], 'слова');
-    expect(parseChoices('{"choices":[1]}', 1), [1]);
+    expect(parseChoices('{"c0":1}', 1), [1]);
   });
 }

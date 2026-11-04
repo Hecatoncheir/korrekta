@@ -137,28 +137,29 @@ SelectedText selectChoices(
 
 List<int> parseChoices(String content, int count) {
   final value = jsonDecode(content);
-  if (value is! Map<String, dynamic> ||
-      value.length != 1 ||
-      value['choices'] is! List<dynamic>) {
-    throw const FormatException('Нужен только массив choices');
+  if (value is! Map<String, dynamic> || value.length != count) {
+    throw const FormatException('Нужны только числовые поля c0..cN');
   }
-  final choices = value['choices'] as List<dynamic>;
-  if (choices.length != count || choices.any((item) => item is! int)) {
-    throw const FormatException('Неверная длина или тип вариантов');
+  final choices = <int>[];
+  for (var i = 0; i < count; i++) {
+    final choice = value['c$i'];
+    if (choice is! int) {
+      throw const FormatException('Отсутствует целый номер варианта');
+    }
+    choices.add(choice);
   }
-  return choices.cast<int>();
+  return choices;
 }
 
-Map<String, dynamic> choicesSchema(int count) => {
+Map<String, dynamic> choicesSchema(List<WordChoices> slots) => {
   'type': 'object',
   'properties': {
-    'choices': {
-      'type': 'array',
-      'items': {'type': 'integer', 'minimum': 0, 'maximum': 12},
-      'minItems': count,
-      'maxItems': count,
-    },
+    for (var i = 0; i < slots.length; i++)
+      'c$i': {
+        'type': 'integer',
+        'enum': List.generate(slots[i].options.length, (index) => index),
+      },
   },
-  'required': ['choices'],
+  'required': [for (var i = 0; i < slots.length; i++) 'c$i'],
   'additionalProperties': false,
 };

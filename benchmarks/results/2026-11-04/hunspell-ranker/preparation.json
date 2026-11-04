@@ -2,9 +2,9 @@
   "rows": 1322,
   "candidate_rows": 311,
   "max_slots": 3,
-  "maximum_prompt_tokens": 515,
+  "maximum_prompt_tokens": 564,
   "sha256_lf": {
     "candidates.jsonl": "b6d021c51fe9ce04dd3b7bcb829c6ab04d4758803d55490dcd7a16ebd975ad45",
-    "rendered.jsonl": "6e605514ef8c0f6b9e5f1c77533f918a29df5dd2d4c6da3fd5a813b00b3494ec"
+    "rendered.jsonl": "33b9dc29d5ce808b12451c269b66c45a35b169558a7639f86b37dabefdccf168"
   }
 }

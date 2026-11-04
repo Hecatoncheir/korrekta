@@ -42,7 +42,7 @@ def dart(arguments, capture=False):
 
 
 def verify():
-    protocol = json.loads((HERE / "protocol-v1.json").read_text(encoding="utf-8"))
+    protocol = json.loads((HERE / "protocol-v2.json").read_text(encoding="utf-8"))
     for name, sha in protocol["sha256_lf"].items():
         assert digest(ROOT / name) == sha, name
     return protocol
@@ -54,7 +54,7 @@ def prepare(protocol):
     plain = OUT / "candidates.jsonl"
     rendered = OUT / "rendered.jsonl"
     if not plain.exists():
-        dart(["bin/prepare_hunspell_choices.dart", "--protocol", str(HERE / "protocol-v1.json"), "--output", str(plain)])
+        dart(["bin/prepare_hunspell_choices.dart", "--protocol", str(HERE / "protocol-v2.json"), "--output", str(plain)])
     rows = read(plain)
     assert len(rows) == 2 * sum(run["count"] for run in protocol["runs"])
     if not rendered.exists():
@@ -156,7 +156,7 @@ def evaluate(protocol, check):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--phase", choices=["prepare", "run", "evaluate", "check"], required=True)
+    parser.add_argument("--phase", choices=["prepare", "probe", "run", "evaluate", "check"], required=True)
     args = parser.parse_args()
     protocol = verify()
     OUT.mkdir(parents=True, exist_ok=True)
@@ -165,7 +165,9 @@ def main():
         return
     for name, sha in json.loads((OUT / "preparation.json").read_text(encoding="utf-8"))["sha256_lf"].items():
         assert digest(OUT / name) == sha, name
-    if args.phase == "run":
+    if args.phase == "probe":
+        dart(["bin/rank_hunspell_choices.dart", "--input", str(OUT / "rendered.jsonl"), "--output", str(OUT / "probe.jsonl"), "--probe"])
+    elif args.phase == "run":
         dart(["bin/rank_hunspell_choices.dart", "--input", str(OUT / "rendered.jsonl"), "--output", str(OUT / "responses.jsonl")])
     else:
         evaluate(protocol, args.phase == "check")

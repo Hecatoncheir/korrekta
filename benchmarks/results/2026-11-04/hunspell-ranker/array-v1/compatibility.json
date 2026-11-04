@@ -1,0 +1,37 @@
+{
+  "role": "Проверка совместимости формата массива, не оценка качества отбора",
+  "source_commit": "ffbf17c6b7437ce41a278f25bc6c0f4e267ddc63",
+  "rows": 1322,
+  "requested": 311,
+  "invalid_requested": 311,
+  "cold_status": "invalid_response",
+  "example_error": "FormatException: Unexpected character (at character 13)\n{\"choices\":1]}\n            ^\n",
+  "source_copies": {
+    "tools/model_benchmark/lib/src/hunspell_choices.dart": {
+      "archive": "benchmarks/hunspell-ranker/array-v1/hunspell_choices.dart.txt",
+      "sha256_lf": "5dfd11e2837f87bb75b0e5d2809704a95e3871267315118d3c9f1b243c0bc54c"
+    },
+    "tools/model_benchmark/bin/rank_hunspell_choices.dart": {
+      "archive": "benchmarks/hunspell-ranker/array-v1/rank_hunspell_choices.dart.txt",
+      "sha256_lf": "794b0618b395cd6e69a17bdee8a71a7b6f09ea2cc717765f1424802d92d02238"
+    },
+    "benchmarks/hunspell-ranker/prompt-v1.txt": {
+      "archive": "benchmarks/hunspell-ranker/array-v1/prompt-v1.txt.txt",
+      "sha256_lf": "635a2d11fd4c3620acd405d492597888e8572c67ebec30a6365c402c7984ba77"
+    },
+    "benchmarks/hunspell-ranker/run.py": {
+      "archive": "benchmarks/hunspell-ranker/array-v1/run.py.txt",
+      "sha256_lf": "f13901af5d74e42af63cf9e68d8be509554e4cb764542f1f792db6af55a0c528"
+    },
+    "benchmarks/hunspell-ranker/render.py": {
+      "archive": "benchmarks/hunspell-ranker/array-v1/render.py.txt",
+      "sha256_lf": "8d2915adea4b37fac59e8dedca30ea06931a87c036d518d24423863671bbcb31"
+    }
+  },
+  "sha256_lf": {
+    "benchmarks/results/2026-11-04/hunspell-ranker/array-v1/candidates.jsonl": "b6d021c51fe9ce04dd3b7bcb829c6ab04d4758803d55490dcd7a16ebd975ad45",
+    "benchmarks/results/2026-11-04/hunspell-ranker/array-v1/preparation.json": "0f5635c18e13f034c9bd0f5251c66782f1a481dc22d767189c5df2eb1f469d58",
+    "benchmarks/results/2026-11-04/hunspell-ranker/array-v1/rendered.jsonl": "6e605514ef8c0f6b9e5f1c77533f918a29df5dd2d4c6da3fd5a813b00b3494ec",
+    "benchmarks/results/2026-11-04/hunspell-ranker/array-v1/responses.jsonl": "d9b4194360607597ce64d39e979d2da6012854cdbda3f298e48e82507eb314be"
+  }
+}

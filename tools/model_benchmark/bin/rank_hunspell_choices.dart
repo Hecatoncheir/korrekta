@@ -33,7 +33,7 @@ Future<JsonMap> decide(HttpClient client, Uri endpoint, JsonMap row) async {
       'raw': true,
       'stream': false,
       'think': false,
-      'format': choicesSchema(slots.length),
+      'format': choicesSchema(slots),
       'options': {...generationOptions(false), 'num_predict': 256},
       'keep_alive': '10m',
     }).timeout(const Duration(seconds: 120));
@@ -70,7 +70,8 @@ Future<void> main(List<String> arguments) async {
   final parser = ArgParser()
     ..addOption('input', mandatory: true)
     ..addOption('output', mandatory: true)
-    ..addOption('endpoint', defaultsTo: 'http://127.0.0.1:11435');
+    ..addOption('endpoint', defaultsTo: 'http://127.0.0.1:11435')
+    ..addFlag('probe', negatable: false);
   final client = HttpClient()..connectionTimeout = const Duration(seconds: 10);
   IOSink? sink;
   try {
@@ -103,12 +104,28 @@ Future<void> main(List<String> arguments) async {
     final cold = rows.firstWhere(
       (row) => (row['slots'] as List<dynamic>).isNotEmpty,
     );
+    final firstDecision = await decide(client, endpoint, cold);
     sink.writeln(
       jsonEncode({
         'type': 'cold_start',
-        ...await decide(client, endpoint, cold),
+        'id': cold['id'],
+        'rendered_prompt_sha256': cold['rendered_prompt_sha256'],
+        ...firstDecision,
       }),
     );
+    await sink.flush();
+    if (firstDecision.containsKey('error')) {
+      throw const FormatException(
+        'Проба формата не прошла; основной отбор остановлен',
+      );
+    }
+    if (options.flag('probe')) {
+      sink.writeln(
+        jsonEncode({'type': 'summary', 'completed': true, 'count': 0}),
+      );
+      stdout.writeln('Проба формата прошла');
+      return;
+    }
     for (var i = 0; i < rows.length; i++) {
       final row = rows[i];
       final decision = await decide(client, endpoint, row);

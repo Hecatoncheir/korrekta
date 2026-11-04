@@ -23,9 +23,7 @@ void main() {
         expect(body.containsKey('text'), false);
         request.response.write(
           jsonEncode({
-            'response': jsonEncode({
-              'choices': [answer],
-            }),
+            'response': jsonEncode({'c0': answer}),
             'done_reason': done,
           }),
         );
