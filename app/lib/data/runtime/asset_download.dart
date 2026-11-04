@@ -69,31 +69,27 @@ class AssetDownload {
     );
     var done = offset;
     final clock = Stopwatch()..start();
-    try {
-      await sink.addStream(
-        response.stream.timeout(const Duration(seconds: 60)).map((chunk) {
-          task.check();
-          done += chunk.length;
-          if (done > asset.bytes) {
-            throw const SetupFailure(
-              'Сервер прислал файл неожиданного размера. Повторите позже.',
-            );
-          }
-          if (clock.elapsedMilliseconds >= 100 || done == asset.bytes) {
-            report((
-              label: 'Скачиваем ${asset.label}',
-              completed: done,
-              total: asset.bytes,
-            ));
-            clock.reset();
-          }
-          return chunk;
-        }),
-      );
-      await sink.flush();
-    } finally {
-      await sink.close();
-    }
+    await writeDownload(
+      sink,
+      response.stream.timeout(const Duration(seconds: 60)).map((chunk) {
+        task.check();
+        done += chunk.length;
+        if (done > asset.bytes) {
+          throw const SetupFailure(
+            'Сервер прислал файл неожиданного размера. Повторите позже.',
+          );
+        }
+        if (clock.elapsedMilliseconds >= 100 || done == asset.bytes) {
+          report((
+            label: 'Скачиваем ${asset.label}',
+            completed: done,
+            total: asset.bytes,
+          ));
+          clock.reset();
+        }
+        return chunk;
+      }),
+    );
   }
 
   Future<http.StreamedResponse> _request(
@@ -147,5 +143,24 @@ class AssetDownload {
       () async => (await sha256.bind(File(path).openRead()).first).toString(),
     );
     return digest == asset.sha256;
+  }
+}
+
+Future<void> writeDownload(IOSink sink, Stream<List<int>> bytes) async {
+  var completed = false;
+  try {
+    await sink.addStream(bytes);
+    await sink.flush();
+    completed = true;
+  } finally {
+    if (completed) {
+      await sink.close();
+    } else {
+      try {
+        await sink.close();
+      } catch (_) {
+        // Поток мог закрыть файл при ошибке. Сохраняем исходную причину сбоя.
+      }
+    }
   }
 }

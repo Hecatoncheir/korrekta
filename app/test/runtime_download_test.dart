@@ -138,6 +138,28 @@ void main() {
       throwsA(isA<SetupFailure>()),
     );
   });
+
+  test('Обрыв сети сохраняет часть файла и исходную причину ошибки', () async {
+    final download = AssetDownload(
+      root,
+      clientFactory: () => MockClient.streaming(
+        (_, _) async => http.StreamedResponse(interrupted(), 200),
+      ),
+    );
+    await expectLater(
+      download.fetch(asset(bytes), SetupTask(), (_) {}),
+      throwsA(isA<SocketException>()),
+    );
+    expect(
+      await File(p.join(root.path, 'fixture.archive.part')).readAsBytes(),
+      [1, 2],
+    );
+  });
+}
+
+Stream<List<int>> interrupted() async* {
+  yield [1, 2];
+  throw const SocketException('Соединение прервалось');
 }
 
 SetupAsset asset(
