@@ -81,7 +81,7 @@
       "url": "https://github.com/ollama/ollama/releases/download/v0.40.4/ollama-darwin.tgz",
       "bytes": 167884528,
       "sha256": "a4ceae4b2aaf18df37ebcbfb56ba3a37a87838631112d66c2be07268693c8d58",
-      "expandedBytes": 500000000,
+      "expandedBytes": 600000000,
       "markers": [
         "ollama"
       ]
@@ -92,7 +92,7 @@
       "url": "https://github.com/ollama/ollama/releases/download/v0.40.4/ollama-darwin.tgz",
       "bytes": 167884528,
       "sha256": "a4ceae4b2aaf18df37ebcbfb56ba3a37a87838631112d66c2be07268693c8d58",
-      "expandedBytes": 500000000,
+      "expandedBytes": 600000000,
       "markers": [
         "ollama"
       ]

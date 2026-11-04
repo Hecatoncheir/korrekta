@@ -134,10 +134,13 @@ class _Extractor {
 
   Future<void> _prepare(String path, int size, int mode) async {
     _expanded += size;
-    if (_expanded > limit || size < 0 || !_files.add(path)) {
+    if (_expanded > limit || size < 0) {
       throw const FormatException(
-        'Неверный размер или повторяющийся файл архива',
+        'Распакованный компонент превышает допустимый размер',
       );
+    }
+    if (!_files.add(path)) {
+      throw const FormatException('Повторяющийся файл архива');
     }
     await Directory(p.dirname(path)).create(recursive: true);
     if (mode & 0x49 != 0) _executables.add(path);
