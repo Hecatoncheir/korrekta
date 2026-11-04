@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-11-04T00:52:57.895709+00:00",
+  "baseline_commit": "f13d7533fc74f04d4871e1cf51bccdf50585b91c",
+  "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+  "guard_version": "text-guard-v1",
+  "personal_names": [],
+  "candidates": [
+    {
+      "id": "baseline",
+      "path": "benchmarks/gigachat-prompts/text-json.txt"
+    },
+    {
+      "id": "minimal",
+      "path": "benchmarks/prompt-precision/minimal.txt"
+    },
+    {
+      "id": "rules",
+      "path": "benchmarks/prompt-precision/rules.txt"
+    }
+  ],
+  "selection_rule": "Только dev80, после автоматической защиты: допуск clean>=baseline.clean-3, failures<=baseline.failures; затем минимум changed_controls, максимум clean, минимум raw.changed_controls, порядок baseline/minimal/rules.",
+  "test_rule": "После сохранения selection.json только baseline и выбранный промпт на новом holdout120. Старые test160/preservation120 — дополнительные регрессии. После holdout запросы и правила не меняются.",
+  "runtime": "Ollama 0.40.13, официальный raw-шаблон, JSON text, прежние temperature0/seed42/ctx4096/predict768/repeat_penalty1.0. Только локальные запросы.",
+  "scope": "Пять ранее известных ложных правок и их аналоги переведены в dev. Новый holdout авторский и целевой, 60 пар/120 текстов, не внешний независимый рейтинг.",
+  "sha256_lf": {
+    "benchmarks/gigachat-prompts/text-json.txt": "c2dab9675e57890f054f8c6036265e3c418e641cf5468340bdc31c8545dcb45a",
+    "benchmarks/prompt-precision/minimal.txt": "a475852c0166da4a80465759e6f5fb5e5bcebf575ec7500937a0eb73c1c189d3",
+    "benchmarks/prompt-precision/rules.txt": "a7cad120f03cebcc15a316e1f7601759642bb00137356bb1e8401944ca6cbd8d",
+    "benchmarks/prompt-precision/dev-v1.jsonl": "cd7d1ca12df0b6528ac6b2176feed4bd1bd9baeafe99019887ba9493c7640490",
+    "benchmarks/prompt-precision/holdout-v1.jsonl": "085c534c5b800f1536360a7ccba35b4a020542bc9799aacc2ff5947186bc8bd1",
+    "benchmarks/prompt-precision/prepare.py": "b66d2ceb54d3ba1948caf4f077159d3cb4ad4ef35019dc1ea367b6084e20ec6d",
+    "benchmarks/prompt-precision/run.py": "9672f3f6dc719557beb5dc3ccde596b1e1bfbc8bb6975567d67e01b7ccbc181b",
+    "tools/model_benchmark/lib/src/text_guard.dart": "b17a9db1f5646d168ae82232a03b3624e3a0d92c222a9978e80e3906e1e8766e",
+    "tools/model_benchmark/lib/src/protected_spans.dart": "87fcd6155f442f02d7244361aa149b1c0cb773ee834cbd233515a123a6164018",
+    "tools/model_benchmark/lib/src/text_diff.dart": "76b7c90d57e8f68f4daee9d75bc1c8b9167e38047d0ff5342c104743433faf8b",
+    "tools/model_benchmark/lib/src/guard_response.dart": "db4069f8d39830c924d57e4478ee15f3ca3b47bd7f3edf56471b9ec5394ef7a0",
+    "benchmarks/cases-v1.jsonl": "a3e2a43453f886dea8db204d216c4a927fd8cf6409fdbc153f55e87d00e10b63",
+    "benchmarks/preservation/cases-v1.jsonl": "e969f419ec024d688f355845716d685debd92ce6da8234644528bf5bd8ab7d69"
+  }
+}

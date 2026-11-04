@@ -1,0 +1,80 @@
+{"id": "ru-001", "split": "dev", "category": "verb", "text": "Мне нравиться читать книги.", "edits": [{"original": "нравиться", "replacement": "нравится"}]}
+{"id": "ru-006", "split": "dev", "category": "verb", "text": "Тебе нужно хорошо выспатся.", "edits": [{"original": "выспатся", "replacement": "выспаться"}]}
+{"id": "ru-011", "split": "dev", "category": "verb", "text": "Я хочу научится плавать.", "edits": [{"original": "научится", "replacement": "научиться"}]}
+{"id": "ru-016", "split": "dev", "category": "verb", "text": "Не стоит торопится с ответом.", "edits": [{"original": "торопится", "replacement": "торопиться"}]}
+{"id": "ru-021", "split": "dev", "category": "agreement", "text": "Моя брат живёт рядом.", "edits": [{"original": "Моя брат", "replacement": "Мой брат"}]}
+{"id": "ru-026", "split": "dev", "category": "agreement", "text": "Наш команда выиграла матч.", "edits": [{"original": "Наш команда", "replacement": "Наша команда"}]}
+{"id": "ru-031", "split": "dev", "category": "agreement", "text": "Эта письмо пришло вчера.", "edits": [{"original": "Эта письмо", "replacement": "Это письмо"}]}
+{"id": "ru-036", "split": "dev", "category": "agreement", "text": "Здесь растёт высокие сосны.", "edits": [{"original": "растёт", "replacement": "растут"}]}
+{"id": "ru-041", "split": "dev", "category": "spelling", "text": "Я хочу прийдти пораньше.", "edits": [{"original": "прийдти", "replacement": "прийти"}]}
+{"id": "ru-046", "split": "dev", "category": "spelling", "text": "Мы разговаривали на счёт отпуска.", "edits": [{"original": "на счёт отпуска", "replacement": "насчёт отпуска"}]}
+{"id": "ru-051", "split": "dev", "category": "spelling", "text": "Он кое что забыл дома.", "edits": [{"original": "кое что", "replacement": "кое-что"}]}
+{"id": "ru-056", "split": "dev", "category": "spelling", "text": "Он извинился за инциндент.", "edits": [{"original": "инциндент", "replacement": "инцидент"}]}
+{"id": "ru-061", "split": "dev", "category": "punctuation", "text": "Я знаю что ты придёшь.", "edits": [{"original": "знаю что", "replacement": "знаю, что"}]}
+{"id": "ru-066", "split": "dev", "category": "punctuation", "text": "Дом где прошло моё детство снесли.", "edits": [{"original": "Дом где прошло моё детство снесли", "replacement": "Дом, где прошло моё детство, снесли"}]}
+{"id": "ru-071", "split": "dev", "category": "punctuation", "text": "Он остановился чтобы перевести дух.", "edits": [{"original": "остановился чтобы", "replacement": "остановился, чтобы"}]}
+{"id": "ru-076", "split": "dev", "category": "punctuation", "text": "Мы заметили как за окном пошёл снег.", "edits": [{"original": "заметили как", "replacement": "заметили, как"}]}
+{"id": "ru-081", "split": "dev", "category": "word_form", "text": "Согласно приказа встречу перенесли.", "edits": [{"original": "Согласно приказа", "replacement": "Согласно приказу"}]}
+{"id": "ru-086", "split": "dev", "category": "word_form", "text": "Я оплатил за проезд.", "edits": [{"original": "оплатил за проезд", "replacement": "оплатил проезд"}]}
+{"id": "ru-091", "split": "dev", "category": "word_form", "text": "Мне не хватает полтора недели.", "edits": [{"original": "полтора недели", "replacement": "полутора недель"}]}
+{"id": "ru-096", "split": "dev", "category": "word_form", "text": "Он самый старейший участник команды.", "edits": [{"original": "самый старейший", "replacement": "старейший"}]}
+{"id": "ru-101", "split": "dev", "category": "punctuation_other", "text": "Кажется это начало новой истории.", "edits": [{"original": "Кажется это", "replacement": "Кажется, это"}]}
+{"id": "ru-106", "split": "dev", "category": "punctuation_other", "text": "Мама я уже дома.", "edits": [{"original": "Мама я", "replacement": "Мама, я"}]}
+{"id": "ru-111", "split": "dev", "category": "punctuation_other", "text": "Я купил хлеб молоко и сыр.", "edits": [{"original": "хлеб молоко", "replacement": "хлеб, молоко"}]}
+{"id": "ru-116", "split": "dev", "category": "punctuation_other", "text": "Да я согласен.", "edits": [{"original": "Да я", "replacement": "Да, я"}]}
+{"id": "ru-121", "split": "dev", "category": "correct", "text": "Мне нравится читать книги.", "edits": []}
+{"id": "ru-126", "split": "dev", "category": "correct", "text": "Все дети вернулись с прогулки.", "edits": []}
+{"id": "ru-131", "split": "dev", "category": "correct", "text": "Благодаря вашей помощи всё получилось.", "edits": []}
+{"id": "ru-136", "split": "dev", "category": "correct", "text": "В течение недели было холодно.", "edits": []}
+{"id": "ru-141", "split": "dev", "category": "correct", "text": "В следствии по делу появились новые сведения.", "edits": []}
+{"id": "ru-146", "split": "dev", "category": "correct", "text": "Чтобы успеть, мы вышли раньше.", "edits": []}
+{"id": "ru-151", "split": "dev", "category": "correct", "text": "Когда закончится дождь, мы выйдем.", "edits": []}
+{"id": "ru-156", "split": "dev", "category": "correct", "text": "В саду цвели яблони и пели птицы.", "edits": []}
+{"id": "ru-161", "split": "dev", "category": "correct", "text": "Привет! Как дела?", "edits": []}
+{"id": "ru-166", "split": "dev", "category": "correct", "text": "Мне бы кофе и немного тишины.", "edits": []}
+{"id": "ru-171", "split": "dev", "category": "correct", "text": "В общем, всё хорошо.", "edits": []}
+{"id": "ru-176", "split": "dev", "category": "correct", "text": "Дождь, однако, скоро закончился.", "edits": []}
+{"id": "ru-181", "split": "dev", "category": "correct", "text": "Корректа работает локально.", "edits": []}
+{"id": "ru-186", "split": "dev", "category": "correct", "text": "API вернул JSON без ошибок.", "edits": []}
+{"id": "ru-191", "split": "dev", "category": "correct", "text": "Нижний Новгород встретил нас дождём.", "edits": []}
+{"id": "ru-196", "split": "dev", "category": "correct", "text": "Мы выбрали тёмно-зелёный цвет.", "edits": []}
+{"id": "precision-dev-001-correct", "pair": 1, "split": "dev", "category": "agreement", "text": "Большинство участников поддержало предложение.", "edits": [], "protected": []}
+{"id": "precision-dev-001-error", "pair": 1, "split": "dev", "category": "agreement", "text": "Большинство участников поддержола предложение.", "edits": [{"original": "поддержола", "replacement": "поддержало"}], "protected": []}
+{"id": "precision-dev-002-correct", "pair": 2, "split": "dev", "category": "optional", "text": "Согласно приказу занятия отменены.", "edits": [], "protected": []}
+{"id": "precision-dev-002-error", "pair": 2, "split": "dev", "category": "optional", "text": "Согласно приказа занятия отменены.", "edits": [{"original": "приказа", "replacement": "приказу"}], "protected": []}
+{"id": "precision-dev-003-correct", "pair": 3, "split": "dev", "category": "shared", "text": "Утром было тихо и шёл снег.", "edits": [], "protected": []}
+{"id": "precision-dev-003-error", "pair": 3, "split": "dev", "category": "shared", "text": "Утром было тихо и шол снег.", "edits": [{"original": "шол", "replacement": "шёл"}], "protected": []}
+{"id": "precision-dev-004-correct", "pair": 4, "split": "dev", "category": "idiom", "text": "Он сидел сложа руки.", "edits": [], "protected": []}
+{"id": "precision-dev-004-error", "pair": 4, "split": "dev", "category": "idiom", "text": "Он сидеел сложа руки.", "edits": [{"original": "сидеел", "replacement": "сидел"}], "protected": []}
+{"id": "precision-dev-005-correct", "pair": 5, "split": "dev", "category": "voice", "text": "Можно попроще?", "edits": [], "protected": []}
+{"id": "precision-dev-005-error", "pair": 5, "split": "dev", "category": "voice", "text": "Можно попрошэ?", "edits": [{"original": "попрошэ", "replacement": "попроще"}], "protected": []}
+{"id": "precision-dev-006-correct", "pair": 6, "split": "dev", "category": "agreement", "text": "Большинство слушателей записало ответ.", "edits": [], "protected": []}
+{"id": "precision-dev-006-error", "pair": 6, "split": "dev", "category": "agreement", "text": "Большинство слушателей записола ответ.", "edits": [{"original": "записола", "replacement": "записало"}], "protected": []}
+{"id": "precision-dev-007-correct", "pair": 7, "split": "dev", "category": "agreement", "text": "Ряд сотрудников подготовил доклад.", "edits": [], "protected": []}
+{"id": "precision-dev-007-error", "pair": 7, "split": "dev", "category": "agreement", "text": "Ряд сотрудников подгатовил доклад.", "edits": [{"original": "подгатовил", "replacement": "подготовил"}], "protected": []}
+{"id": "precision-dev-008-correct", "pair": 8, "split": "dev", "category": "agreement", "text": "Несколько человек пришли пораньше.", "edits": [], "protected": []}
+{"id": "precision-dev-008-error", "pair": 8, "split": "dev", "category": "agreement", "text": "Несколько человек пришле пораньше.", "edits": [{"original": "пришле", "replacement": "пришли"}], "protected": []}
+{"id": "precision-dev-009-correct", "pair": 9, "split": "dev", "category": "optional", "text": "Согласно договору оплата поступит завтра.", "edits": [], "protected": []}
+{"id": "precision-dev-009-error", "pair": 9, "split": "dev", "category": "optional", "text": "Согласно договора оплата поступит завтра.", "edits": [{"original": "договора", "replacement": "договору"}], "protected": []}
+{"id": "precision-dev-010-correct", "pair": 10, "split": "dev", "category": "optional", "text": "Благодаря помощи друзей работа завершилась вовремя.", "edits": [], "protected": []}
+{"id": "precision-dev-010-error", "pair": 10, "split": "dev", "category": "optional", "text": "Благодаря помощи друзей работа завершылась вовремя.", "edits": [{"original": "завершылась", "replacement": "завершилась"}], "protected": []}
+{"id": "precision-dev-011-correct", "pair": 11, "split": "dev", "category": "shared", "text": "Вечером стих ветер и выглянул месяц.", "edits": [], "protected": []}
+{"id": "precision-dev-011-error", "pair": 11, "split": "dev", "category": "shared", "text": "Вечером стих ветер и выгленул месяц.", "edits": [{"original": "выгленул", "replacement": "выглянул"}], "protected": []}
+{"id": "precision-dev-012-correct", "pair": 12, "split": "dev", "category": "shared", "text": "Он знает, что посылка уже прибыла.", "edits": [], "protected": []}
+{"id": "precision-dev-012-error", "pair": 12, "split": "dev", "category": "shared", "text": "Он знает что посылка уже прибыла.", "edits": [{"original": "знает что", "replacement": "знает, что"}], "protected": []}
+{"id": "precision-dev-013-correct", "pair": 13, "split": "dev", "category": "idiom", "text": "Она работала не покладая рук.", "edits": [], "protected": []}
+{"id": "precision-dev-013-error", "pair": 13, "split": "dev", "category": "idiom", "text": "Она роботала не покладая рук.", "edits": [{"original": "роботала", "replacement": "работала"}], "protected": []}
+{"id": "precision-dev-014-correct", "pair": 14, "split": "dev", "category": "idiom", "text": "Мы слушали затаив дыхание.", "edits": [], "protected": []}
+{"id": "precision-dev-014-error", "pair": 14, "split": "dev", "category": "idiom", "text": "Мы слушале затаив дыхание.", "edits": [{"original": "слушале", "replacement": "слушали"}], "protected": []}
+{"id": "precision-dev-015-correct", "pair": 15, "split": "dev", "category": "idiom", "text": "Он открыл окно, закончив разговор.", "edits": [], "protected": []}
+{"id": "precision-dev-015-error", "pair": 15, "split": "dev", "category": "idiom", "text": "Он открыл окно закончив разговор.", "edits": [{"original": "окно закончив", "replacement": "окно, закончив"}], "protected": []}
+{"id": "precision-dev-016-correct", "pair": 16, "split": "dev", "category": "voice", "text": "Давай поговорим об этом попозже.", "edits": [], "protected": []}
+{"id": "precision-dev-016-error", "pair": 16, "split": "dev", "category": "voice", "text": "Давай поговарим об этом попозже.", "edits": [{"original": "поговарим", "replacement": "поговорим"}], "protected": []}
+{"id": "precision-dev-017-correct", "pair": 17, "split": "dev", "category": "voice", "text": "Мне хочется чего-нибудь потеплее.", "edits": [], "protected": []}
+{"id": "precision-dev-017-error", "pair": 17, "split": "dev", "category": "voice", "text": "Мне хочеться чего-нибудь потеплее.", "edits": [{"original": "хочеться", "replacement": "хочется"}], "protected": []}
+{"id": "precision-dev-018-correct", "pair": 18, "split": "dev", "category": "protected", "text": "Элвари пишет заметку 🙂", "edits": [], "protected": ["Элвари", "🙂"]}
+{"id": "precision-dev-018-error", "pair": 18, "split": "dev", "category": "protected", "text": "Элвари пишит заметку 🙂", "edits": [{"original": "пишит", "replacement": "пишет"}], "protected": ["Элвари", "🙂"]}
+{"id": "precision-dev-019-correct", "pair": 19, "split": "dev", "category": "protected", "text": "Итог:\n\nэта настройка сохраняется автоматически.", "edits": [], "protected": ["\n\n"]}
+{"id": "precision-dev-019-error", "pair": 19, "split": "dev", "category": "protected", "text": "Итог:\n\nэта настройка сохраняеться автоматически.", "edits": [{"original": "сохраняеться", "replacement": "сохраняется"}], "protected": ["\n\n"]}
+{"id": "precision-dev-020-correct", "pair": 20, "split": "dev", "category": "protected", "text": "Файл nova_18.md содержит справку.", "edits": [], "protected": ["nova_18.md"]}
+{"id": "precision-dev-020-error", "pair": 20, "split": "dev", "category": "protected", "text": "Файл nova_18.md содержыт справку.", "edits": [{"original": "содержыт", "replacement": "содержит"}], "protected": ["nova_18.md"]}
