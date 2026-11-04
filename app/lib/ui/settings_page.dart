@@ -100,16 +100,14 @@ class ComponentPanel extends StatelessWidget {
               StatusLine('LanguageTool 6.8', status?.languageTool),
               StatusLine('Словари и Hunspell', state.ready ? true : null),
               const SizedBox(height: 12),
-              FilledButton.icon(
-                style: settingsActionStyle(),
-                onPressed: state.busy
-                    ? null
-                    : () => context.read<ComponentsCubit>().prepare(settings),
-                icon: const Icon(Icons.refresh_rounded, size: 18),
-                label: Text(
-                  state.ready ? 'Всё готово' : 'Продолжить подготовку',
+              if (!state.ready && !state.busy)
+                FilledButton.icon(
+                  style: settingsActionStyle(),
+                  onPressed: () =>
+                      context.read<ComponentsCubit>().prepare(settings),
+                  icon: const Icon(Icons.refresh_rounded, size: 18),
+                  label: const Text('Продолжить подготовку'),
                 ),
-              ),
               const SizedBox(height: 12),
               const Text(
                 'Компоненты скачиваются и запускаются автоматически. Первый запуск требует интернета и свободного места. После подготовки проверка и перевод работают локально.',

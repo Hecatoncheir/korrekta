@@ -148,6 +148,39 @@ void main() {
     await foreign.close();
   });
 
+  test(
+    'Остановка завершает собственный процесс и сохраняет посторонний',
+    () async {
+      final executable = Platform.isWindows ? 'powershell.exe' : '/bin/sleep';
+      final args = Platform.isWindows
+          ? [
+              '-NoProfile',
+              '-NonInteractive',
+              '-WindowStyle',
+              'Hidden',
+              '-Command',
+              'Start-Sleep -Seconds 30',
+            ]
+          : ['30'];
+      final foreign = await Process.start(executable, args);
+      var foreignExited = false;
+      final foreignExit = foreign.exitCode.then((_) => foreignExited = true);
+      final processes = OwnedProcesses(Directory(p.join(root.path, 'logs')));
+      try {
+        await processes.start('owned', executable, args);
+        expect(processes.alive('owned'), isTrue);
+        await processes.close();
+        expect(processes.alive('owned'), isFalse);
+        expect(foreignExited, isFalse);
+      } finally {
+        foreign.kill();
+        await foreignExit;
+        await foreign.stdout.drain<void>();
+        await foreign.stderr.drain<void>();
+      }
+    },
+  );
+
   test('Смена модели отменяет старую подготовку и применяет только последний результат', () async {
     final setup = ControlledSetup();
     final ready = <LocalModel>[];

@@ -101,7 +101,8 @@ class _Extractor {
             ),
           )
         : source.openRead().transform(gzip.decoder);
-    final reader = TarReader(stream);
+    // Официальный архив Ollama для macOS содержит расширенные PAX-метаданные.
+    final reader = TarReader(stream, maxSpecialFileSize: 1024 * 1024);
     try {
       while (await reader.moveNext()) {
         await _tarEntry(reader.current);

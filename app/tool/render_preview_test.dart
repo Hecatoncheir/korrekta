@@ -115,6 +115,30 @@ void main() {
     await tester.binding.setSurfaceSize(const Size(640, 800));
     await tester.pumpAndSettle();
     await savePreview(tester, boundaryKey, 'settings-narrow');
+    // Фиксированный прогресс загрузки для проверки узкого окна.
+    // ignore: invalid_use_of_visible_for_testing_member, invalid_use_of_protected_member
+    components.emit(
+      const ComponentsState(
+        busy: true,
+        progress: (
+          label: 'Скачиваем словари и LanguageTool 6.8',
+          completed: 134217728,
+          total: 285151182,
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    await savePreview(tester, boundaryKey, 'setup-downloading-narrow');
+    await tester.binding.setSurfaceSize(const Size(1280, 800));
+    // Проверяем длинное сообщение и повторную попытку без реальной ошибки диска.
+    // ignore: invalid_use_of_visible_for_testing_member, invalid_use_of_protected_member
+    components.emit(
+      const ComponentsState(
+        message: 'Не хватает места на диске. Освободите не менее 8,4 ГБ в расположении компонентов и повторите.',
+      ),
+    );
+    await tester.pumpAndSettle();
+    await savePreview(tester, boundaryKey, 'setup-error');
     expect(tester.takeException(), isNull);
     await tester.pumpWidget(const SizedBox());
     await editor.close();
