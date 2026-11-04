@@ -1,0 +1,206 @@
+{
+  "rule": "Только dev80, после автоматической защиты: допуск clean>=baseline.clean-3, failures<=baseline.failures; затем минимум changed_controls, максимум clean, минимум raw.changed_controls, порядок baseline/minimal/rules.",
+  "dev": {
+    "baseline": {
+      "raw": {
+        "count": 80,
+        "gold_corrections": 44,
+        "matched_corrections": 34,
+        "controls": 36,
+        "changed_controls": 12,
+        "atomic_precision": 0.5625,
+        "median_seconds": 0.457515,
+        "p95_seconds": 1.182906,
+        "clean_corrections": 30,
+        "contract_failures": [],
+        "changed_control_ids": [
+          "ru-131",
+          "ru-141",
+          "precision-dev-001-correct",
+          "precision-dev-002-correct",
+          "precision-dev-003-correct",
+          "precision-dev-004-correct",
+          "precision-dev-005-correct",
+          "precision-dev-009-correct",
+          "precision-dev-010-correct",
+          "precision-dev-016-correct",
+          "precision-dev-018-correct",
+          "precision-dev-019-correct"
+        ]
+      },
+      "guarded": {
+        "count": 80,
+        "gold_corrections": 44,
+        "matched_corrections": 30,
+        "controls": 36,
+        "changed_controls": 10,
+        "atomic_precision": 0.6666666666666666,
+        "median_seconds": 0.4576485,
+        "p95_seconds": 1.183355,
+        "clean_corrections": 29,
+        "contract_failures": [],
+        "changed_control_ids": [
+          "ru-131",
+          "ru-141",
+          "precision-dev-001-correct",
+          "precision-dev-002-correct",
+          "precision-dev-003-correct",
+          "precision-dev-004-correct",
+          "precision-dev-005-correct",
+          "precision-dev-009-correct",
+          "precision-dev-010-correct",
+          "precision-dev-016-correct"
+        ]
+      }
+    },
+    "minimal": {
+      "raw": {
+        "count": 80,
+        "gold_corrections": 44,
+        "matched_corrections": 36,
+        "controls": 36,
+        "changed_controls": 12,
+        "atomic_precision": 0.5606060606060606,
+        "median_seconds": 0.3024675,
+        "p95_seconds": 0.530422,
+        "clean_corrections": 33,
+        "contract_failures": [],
+        "changed_control_ids": [
+          "ru-141",
+          "ru-181",
+          "precision-dev-001-correct",
+          "precision-dev-002-correct",
+          "precision-dev-003-correct",
+          "precision-dev-004-correct",
+          "precision-dev-005-correct",
+          "precision-dev-006-correct",
+          "precision-dev-009-correct",
+          "precision-dev-016-correct",
+          "precision-dev-018-correct",
+          "precision-dev-019-correct"
+        ]
+      },
+      "guarded": {
+        "count": 80,
+        "gold_corrections": 44,
+        "matched_corrections": 31,
+        "controls": 36,
+        "changed_controls": 9,
+        "atomic_precision": 0.6666666666666666,
+        "median_seconds": 0.30262,
+        "p95_seconds": 0.5305949999999999,
+        "clean_corrections": 31,
+        "contract_failures": [],
+        "changed_control_ids": [
+          "ru-141",
+          "precision-dev-001-correct",
+          "precision-dev-002-correct",
+          "precision-dev-003-correct",
+          "precision-dev-004-correct",
+          "precision-dev-005-correct",
+          "precision-dev-006-correct",
+          "precision-dev-009-correct",
+          "precision-dev-016-correct"
+        ]
+      }
+    },
+    "rules": {
+      "raw": {
+        "count": 80,
+        "gold_corrections": 44,
+        "matched_corrections": 35,
+        "controls": 36,
+        "changed_controls": 10,
+        "atomic_precision": 0.5538461538461539,
+        "median_seconds": 0.2591865,
+        "p95_seconds": 0.332235,
+        "clean_corrections": 32,
+        "contract_failures": [],
+        "changed_control_ids": [
+          "ru-141",
+          "ru-176",
+          "precision-dev-001-correct",
+          "precision-dev-002-correct",
+          "precision-dev-003-correct",
+          "precision-dev-004-correct",
+          "precision-dev-006-correct",
+          "precision-dev-009-correct",
+          "precision-dev-016-correct",
+          "precision-dev-019-correct"
+        ]
+      },
+      "guarded": {
+        "count": 80,
+        "gold_corrections": 44,
+        "matched_corrections": 30,
+        "controls": 36,
+        "changed_controls": 9,
+        "atomic_precision": 0.6326530612244898,
+        "median_seconds": 0.2593375,
+        "p95_seconds": 0.332569,
+        "clean_corrections": 28,
+        "contract_failures": [],
+        "changed_control_ids": [
+          "ru-141",
+          "ru-176",
+          "precision-dev-001-correct",
+          "precision-dev-002-correct",
+          "precision-dev-003-correct",
+          "precision-dev-004-correct",
+          "precision-dev-006-correct",
+          "precision-dev-009-correct",
+          "precision-dev-016-correct"
+        ]
+      }
+    },
+    "examples": {
+      "raw": {
+        "count": 80,
+        "gold_corrections": 44,
+        "matched_corrections": 38,
+        "controls": 36,
+        "changed_controls": 8,
+        "atomic_precision": 0.6833333333333333,
+        "median_seconds": 0.29331450000000003,
+        "p95_seconds": 0.803736,
+        "clean_corrections": 34,
+        "contract_failures": [],
+        "changed_control_ids": [
+          "precision-dev-002-correct",
+          "precision-dev-003-correct",
+          "precision-dev-004-correct",
+          "precision-dev-009-correct",
+          "precision-dev-016-correct",
+          "precision-dev-018-correct",
+          "precision-dev-019-correct",
+          "precision-dev-020-correct"
+        ]
+      },
+      "guarded": {
+        "count": 80,
+        "gold_corrections": 44,
+        "matched_corrections": 34,
+        "controls": 36,
+        "changed_controls": 5,
+        "atomic_precision": 0.8222222222222222,
+        "median_seconds": 0.29344400000000004,
+        "p95_seconds": 0.803835,
+        "clean_corrections": 33,
+        "contract_failures": [],
+        "changed_control_ids": [
+          "precision-dev-002-correct",
+          "precision-dev-003-correct",
+          "precision-dev-004-correct",
+          "precision-dev-009-correct",
+          "precision-dev-016-correct"
+        ]
+      }
+    }
+  },
+  "selected": {
+    "id": "examples",
+    "path": "benchmarks/prompt-precision/examples.txt"
+  },
+  "round": 2,
+  "note": "После трёх заранее заданных dev-вариантов все пять исходных ложных правок сохранились у победителя. До первого запроса holdout добавлен четвёртый вариант с примерами. Это адаптивная разработка по dev, не новый test; прежний выбор сохранён, правило ранжирования то же."
+}
