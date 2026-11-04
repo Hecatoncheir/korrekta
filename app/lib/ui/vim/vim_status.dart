@@ -13,26 +13,35 @@ class VimStatus extends StatelessWidget {
     builder: (context, editor) => BlocBuilder<VimCubit, VimState>(
       bloc: vim,
       builder: (context, state) => Padding(
-        padding: const EdgeInsets.fromLTRB(20, 8, 24, 16),
+        padding: const EdgeInsets.fromLTRB(0, 4, 4, 0),
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Switch(
-              value: editor.settings.vimMode,
-              onChanged: onToggle,
-              key: const Key('vim-toggle'),
-            ),
-            const SizedBox(width: 8),
-            const Text('Vim mode'),
-            const SizedBox(width: 16),
-            if (state.enabled)
-              Expanded(
-                child: Text(
-                  '${vimModeName(state.mode)} ${state.pending}',
-                  style: TextStyle(
-                    fontFamily: 'JetBrains Mono',
-                    fontSize: 11,
-                    color: Theme.of(context).colorScheme.primary,
+            Semantics(
+              label: 'Vim mode',
+              child: SizedBox(
+                width: 36,
+                height: 26,
+                child: FittedBox(
+                  child: Switch(
+                    value: editor.settings.vimMode,
+                    onChanged: onToggle,
+                    key: const Key('vim-toggle'),
+                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   ),
+                ),
+              ),
+            ),
+            const SizedBox(width: 6),
+            const Text('Vim mode', style: TextStyle(fontSize: 11)),
+            const SizedBox(width: 10),
+            if (state.enabled)
+              Text(
+                '${vimModeName(state.mode)} ${state.pending}',
+                style: TextStyle(
+                  fontFamily: 'JetBrains Mono',
+                  fontSize: 9,
+                  color: Theme.of(context).colorScheme.primary,
                 ),
               ),
           ],
