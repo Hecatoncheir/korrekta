@@ -1,0 +1,2873 @@
+{
+  "false_controls": [
+    {
+      "run": "ordinary",
+      "id": "ru-128",
+      "text": "Большинство участников поддержало предложение.",
+      "expected": [],
+      "old_output": "Большинство участников поддержали предложение.",
+      "new_output": "Большинство участников поддержало предложение.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 23,
+          "original": "поддержало",
+          "options": [
+            "поддержало",
+            "поддержали"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "ordinary",
+      "id": "ru-132",
+      "text": "Согласно приказу занятия отменены.",
+      "expected": [],
+      "old_output": "Согласно приказу, занятия отменены.",
+      "new_output": "Согласно приказу занятия отменены.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 16,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "ordinary",
+      "id": "ru-155",
+      "text": "Утром было тихо и шёл снег.",
+      "expected": [],
+      "old_output": "Утром было тихо, и шёл снег.",
+      "new_output": "Утром было тихо и шёл снег.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 15,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "ordinary",
+      "id": "ru-157",
+      "text": "Он сидел сложа руки.",
+      "expected": [],
+      "old_output": "Он сидел, сложа руки.",
+      "new_output": "Он сидел сложа руки.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 8,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "ordinary",
+      "id": "ru-170",
+      "text": "Можно попроще?",
+      "expected": [],
+      "old_output": "Можно проще?",
+      "new_output": "Можно попроще?",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 6,
+          "original": "попроще",
+          "options": [
+            "попроще",
+            "проще"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-001-correct",
+      "text": "Большинство делегатов одобрило новый устав.",
+      "expected": [],
+      "old_output": "Большинство делегатов одобрили новый устав.",
+      "new_output": "Большинство делегатов одобрило новый устав.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 22,
+          "original": "одобрило",
+          "options": [
+            "одобрило",
+            "одобрили"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-011-correct",
+      "text": "Согласно расписанию поезд отправится в полдень.",
+      "expected": [],
+      "old_output": "Согласно расписанию, поезд отправится в полдень.",
+      "new_output": "Согласно расписанию поезд отправится в полдень.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 19,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-012-correct",
+      "text": "Согласно распоряжению доступ временно закрыт.",
+      "expected": [],
+      "old_output": "Согласно распоряжению, доступ временно закрыт.",
+      "new_output": "Согласно распоряжению доступ временно закрыт.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 21,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-013-correct",
+      "text": "По решению совета конкурс состоится осенью.",
+      "expected": [],
+      "old_output": "По решению совета, конкурс состоится осенью.",
+      "new_output": "По решению совета конкурс состоится осенью.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 17,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-016-correct",
+      "text": "В отличие от прежней версии программа запускается быстрее.",
+      "expected": [],
+      "old_output": "В отличие от прежней версии, программа запускается быстрее.",
+      "new_output": "В отличие от прежней версии программа запускается быстрее.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 27,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-019-correct",
+      "text": "Вопреки прогнозу погода оставалась ясной.",
+      "expected": [],
+      "old_output": "Вопреки прогнозу, погода оставалась ясной.",
+      "new_output": "Вопреки прогнозу погода оставалась ясной.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 16,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-037-correct",
+      "text": "Дети слушали рассказ развесив уши.",
+      "expected": [],
+      "old_output": "Дети слушали рассказ, развесив уши.",
+      "new_output": "Дети слушали рассказ развесив уши.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 20,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-042-correct",
+      "text": "Давай обсудим покупку попозже.",
+      "expected": [],
+      "old_output": "Давай обсудим покупку позже.",
+      "new_output": "Давай обсудим покупку попозже.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 22,
+          "original": "попозже",
+          "options": [
+            "попозже",
+            "позже"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fresh48",
+      "id": "ensemble-005-correct",
+      "text": "Благодаря помощи соседей ремонт завершён.",
+      "expected": [],
+      "old_output": "Благодаря помощи соседей, ремонт завершён.",
+      "new_output": "Благодаря помощи соседей ремонт завершён.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 24,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fresh48",
+      "id": "ensemble-014-correct",
+      "text": "норвета сегодня готовит ужин.",
+      "expected": [],
+      "old_output": "корвета сегодня готовит ужин.",
+      "new_output": "норвета сегодня готовит ужин.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 0,
+          "original": "норвета",
+          "options": [
+            "норвета",
+            "корвета",
+            "норвежка",
+            "совета",
+            "ответа"
+          ],
+          "sources": [
+            [],
+            [
+              "hunspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fresh48",
+      "id": "ensemble-023-correct",
+      "text": "пользователь руддщ оставил комментарий.",
+      "expected": [],
+      "old_output": "пользователь буддо оставил комментарий.",
+      "new_output": "пользователь руддщ оставил комментарий.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 13,
+          "original": "руддщ",
+          "options": [
+            "руддщ",
+            "буддо",
+            "рудик",
+            "будда",
+            "руда",
+            "рушди",
+            "руди",
+            "будде",
+            "будду",
+            "руд",
+            "руды",
+            "рудах",
+            "руде",
+            "руду",
+            "будды",
+            "рудой",
+            "рудно"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "error_texts_with_unexpected_effects": [
+    {
+      "run": "ordinary",
+      "id": "ru-004",
+      "text": "Она хочеть увидеть море.",
+      "expected": [
+        {
+          "original": "хочеть",
+          "replacement": "хочет"
+        }
+      ],
+      "old_output": "Она хотеть увидеть море.",
+      "new_output": "Она хочет увидеть море.",
+      "choices": [
+        7
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 4,
+          "original": "хочеть",
+          "options": [
+            "хочеть",
+            "хотеть",
+            "ходить",
+            "точить",
+            "мочить",
+            "почить",
+            "холить",
+            "хочет",
+            "хочешь",
+            "очень",
+            "хоть",
+            "хочется",
+            "почета",
+            "мечеть",
+            "гореть",
+            "болеть",
+            "почет"
+          ],
+          "sources": [
+            [],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "ordinary",
+      "id": "ru-049",
+      "text": "Кто то оставил здесь зонт.",
+      "expected": [
+        {
+          "original": "Кто то",
+          "replacement": "Кто-то"
+        }
+      ],
+      "old_output": "Кто, то оставил здесь зонт.",
+      "new_output": "Кто то оставил здесь зонт.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 3,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "ordinary",
+      "id": "ru-055",
+      "text": "Мы поздравили юбиляра с днём рожденья и пожелали счатья.",
+      "expected": [
+        {
+          "original": "счатья",
+          "replacement": "счастья"
+        }
+      ],
+      "old_output": "Мы поздравили юбиляра с днём рождения и пожелали статья.",
+      "new_output": "Мы поздравили юбиляра с днём рожденья и пожелали счастья.",
+      "choices": [
+        0,
+        5
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 29,
+          "original": "рожденья",
+          "options": [
+            "рожденья",
+            "рождения"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat",
+              "languagetool"
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "start": 49,
+          "original": "счатья",
+          "options": [
+            "счатья",
+            "статья",
+            "сватья",
+            "скотья",
+            "сжатья",
+            "счастья",
+            "статьи",
+            "статье",
+            "стать",
+            "счастье",
+            "статью",
+            "считая",
+            "спать",
+            "братья",
+            "статьях",
+            "счастью"
+          ],
+          "sources": [
+            [],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "ordinary",
+      "id": "ru-062",
+      "text": "Мы остались дома потому что шёл дождь.",
+      "expected": [
+        {
+          "original": "дома потому что",
+          "replacement": "дома, потому что"
+        }
+      ],
+      "old_output": "Мы остались дома потому, что шёл дождь.",
+      "new_output": "Мы остались дома потому что шёл дождь.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 23,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "ordinary",
+      "id": "ru-072",
+      "text": "Пока ты спал я приготовил завтрак.",
+      "expected": [
+        {
+          "original": "спал я",
+          "replacement": "спал, я"
+        }
+      ],
+      "old_output": "Пока ты спал, я, приготовил завтрак.",
+      "new_output": "Пока ты спал, я приготовил завтрак.",
+      "choices": [
+        1,
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 12,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "start": 14,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "ordinary",
+      "id": "ru-079",
+      "text": "Чем дольше я думал тем яснее становился ответ.",
+      "expected": [
+        {
+          "original": "думал тем",
+          "replacement": "думал, тем"
+        }
+      ],
+      "old_output": "Чем дольше я думал, тем яснее, становился ответ.",
+      "new_output": "Чем дольше я думал, тем яснее становился ответ.",
+      "choices": [
+        1,
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 18,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "start": 28,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "ordinary",
+      "id": "ru-082",
+      "text": "Благодаря помощь друга я справился с задачей.",
+      "expected": [
+        {
+          "original": "Благодаря помощь друга",
+          "replacement": "Благодаря помощи друга"
+        }
+      ],
+      "old_output": "Благодаря помощам друга я справился с задачей.",
+      "new_output": "Благодаря помощи друга я справился с задачей.",
+      "choices": [
+        2
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 10,
+          "original": "помощь",
+          "options": [
+            "помощь",
+            "помощам",
+            "помощи"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool"
+            ],
+            [
+              "gigachat",
+              "languagetool"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "preservation",
+      "id": "preserve-009-error",
+      "text": "Книга «Зелёный трамвай» лежыт на полке.",
+      "expected": [
+        {
+          "original": "лежыт",
+          "replacement": "лежит"
+        }
+      ],
+      "old_output": "Книга «Зелёный трамвай» лежать на полке.",
+      "new_output": "Книга «Зелёный трамвай» лежит на полке.",
+      "choices": [
+        3
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 24,
+          "original": "лежыт",
+          "options": [
+            "лежыт",
+            "лежать",
+            "лежат",
+            "лежит",
+            "лижет",
+            "лижут",
+            "ляжет",
+            "лет",
+            "лежал",
+            "левых",
+            "бежит",
+            "левый",
+            "летит",
+            "левые",
+            "летят"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "preservation",
+      "id": "preserve-010-error",
+      "text": "Мы решыле оставить заголовок «Тихий час» без изменений.",
+      "expected": [
+        {
+          "original": "решыле",
+          "replacement": "решили"
+        }
+      ],
+      "old_output": "Мы решали оставить заголовок «Тихий час» без изменений.",
+      "new_output": "Мы решили оставить заголовок «Тихий час» без изменений.",
+      "choices": [
+        2
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 3,
+          "original": "решыле",
+          "options": [
+            "решыле",
+            "решали",
+            "решили",
+            "решил",
+            "решила",
+            "реле",
+            "решило",
+            "решал",
+            "решете",
+            "решала",
+            "решите",
+            "решало"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "gigachat",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "preservation",
+      "id": "preserve-026-error",
+      "text": "Список покупок: хлеб, сыр и яблаки 🛒",
+      "expected": [
+        {
+          "original": "яблаки",
+          "replacement": "яблоки"
+        }
+      ],
+      "old_output": "Список покупок: хлеб, сыр и яблоке 🛒",
+      "new_output": "Список покупок: хлеб, сыр и яблоки 🛒",
+      "choices": [
+        2
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 28,
+          "original": "яблаки",
+          "options": [
+            "яблаки",
+            "яблоке",
+            "яблоки",
+            "яблоко",
+            "облаке",
+            "яблок",
+            "яблока",
+            "яблоку",
+            "облака",
+            "блоки",
+            "яблони",
+            "кулаки",
+            "облако",
+            "браки",
+            "бланки"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool"
+            ],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "preservation",
+      "id": "preserve-033-error",
+      "text": "- Чай уже готов.\n- Печенье лежыт на столе.",
+      "expected": [
+        {
+          "original": "лежыт",
+          "replacement": "лежит"
+        }
+      ],
+      "old_output": "- Чай уже готов.\n- Печенье лежать на столе.",
+      "new_output": "- Чай уже готов.\n- Печенье лежит на столе.",
+      "choices": [
+        3
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 27,
+          "original": "лежыт",
+          "options": [
+            "лежыт",
+            "лежать",
+            "лежат",
+            "лежит",
+            "лижет",
+            "лижут",
+            "ляжет",
+            "лет",
+            "лежал",
+            "левых",
+            "бежит",
+            "левый",
+            "летит",
+            "левые",
+            "летят"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "preservation",
+      "id": "preserve-039-error",
+      "text": "> Мы решыле продолжить работу.\nТак начинается письмо.",
+      "expected": [
+        {
+          "original": "решыле",
+          "replacement": "решили"
+        }
+      ],
+      "old_output": "> Мы решали продолжить работу.\nТак начинается письмо.",
+      "new_output": "> Мы решили продолжить работу.\nТак начинается письмо.",
+      "choices": [
+        2
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 5,
+          "original": "решыле",
+          "options": [
+            "решыле",
+            "решали",
+            "решили",
+            "решил",
+            "решила",
+            "реле",
+            "решило",
+            "решал",
+            "решете",
+            "решала",
+            "решите",
+            "решало"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "gigachat",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "preservation",
+      "id": "preserve-044-error",
+      "text": "Каталог E:\\Notes\\drafts содержыт старые заметки.",
+      "expected": [
+        {
+          "original": "содержыт",
+          "replacement": "содержит"
+        }
+      ],
+      "old_output": "Каталог E:\\Notes\\drafts содержать старые заметки.",
+      "new_output": "Каталог E:\\Notes\\drafts содержит старые заметки.",
+      "choices": [
+        3
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 24,
+          "original": "содержыт",
+          "options": [
+            "содержыт",
+            "содержать",
+            "содержат",
+            "содержит",
+            "содержал",
+            "содержа",
+            "содержите"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-001-error",
+      "text": "Большинство делегатов одобрила новый устав.",
+      "expected": [
+        {
+          "original": "одобрила",
+          "replacement": "одобрило"
+        }
+      ],
+      "old_output": "Большинство делегатов одобрили новый устав.",
+      "new_output": "Большинство делегатов одобрила новый устав.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 22,
+          "original": "одобрила",
+          "options": [
+            "одобрила",
+            "одобрили"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-011-error",
+      "text": "Согласно расписания поезд отправится в полдень.",
+      "expected": [
+        {
+          "original": "расписания",
+          "replacement": "расписанию"
+        }
+      ],
+      "old_output": "Согласно расписания, поезд отправится в полдень.",
+      "new_output": "Согласно расписания поезд отправится в полдень.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 19,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-013-error",
+      "text": "По решению совета конкурс состоиться осенью.",
+      "expected": [
+        {
+          "original": "состоиться",
+          "replacement": "состоится"
+        }
+      ],
+      "old_output": "По решению совета, конкурс состоится осенью.",
+      "new_output": "По решению совета конкурс состоится осенью.",
+      "choices": [
+        0,
+        1
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 17,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "start": 26,
+          "original": "состоиться",
+          "options": [
+            "состоиться",
+            "состоится",
+            "состояться",
+            "состоишься",
+            "достоится",
+            "состоимся",
+            "состоятся",
+            "удостоиться",
+            "состариться",
+            "составиться",
+            "построиться",
+            "освоиться"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-015-error",
+      "text": "При наличии билета посетитель праходит бесплатно.",
+      "expected": [
+        {
+          "original": "праходит",
+          "replacement": "проходит"
+        }
+      ],
+      "old_output": "При наличии билета посетитель проходить бесплатно.",
+      "new_output": "При наличии билета посетитель проходит бесплатно.",
+      "choices": [
+        2
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 30,
+          "original": "праходит",
+          "options": [
+            "праходит",
+            "проходить",
+            "проходит",
+            "приходить",
+            "преходить",
+            "преходит",
+            "приходит",
+            "приводит",
+            "находит",
+            "переходит",
+            "подходит",
+            "проходят",
+            "проводит",
+            "приходят",
+            "проходил",
+            "приходил"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-016-error",
+      "text": "В отличие от прежней версии программа запускаеться быстрее.",
+      "expected": [
+        {
+          "original": "запускаеться",
+          "replacement": "запускается"
+        }
+      ],
+      "old_output": "В отличие от прежней версии, программа запускается быстрее.",
+      "new_output": "В отличие от прежней версии программа запускается быстрее.",
+      "choices": [
+        0,
+        1
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 27,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "start": 38,
+          "original": "запускаеться",
+          "options": [
+            "запускаеться",
+            "запускается",
+            "запускаться",
+            "запускаешься",
+            "напускается",
+            "запускаются",
+            "запускаемся",
+            "напускаться"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool"
+            ],
+            [
+              "hunspell",
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "hunspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-028-error",
+      "text": "Мы останемся дома потому что дорогу замело.",
+      "expected": [
+        {
+          "original": "дома потому",
+          "replacement": "дома, потому"
+        }
+      ],
+      "old_output": "Мы останемся дома потому, что дорогу замело.",
+      "new_output": "Мы останемся дома потому что дорогу замело.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 24,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-037-error",
+      "text": "Дети слушоле рассказ развесив уши.",
+      "expected": [
+        {
+          "original": "слушоле",
+          "replacement": "слушали"
+        }
+      ],
+      "old_output": "Дети слушали рассказ, развесив уши.",
+      "new_output": "Дети слушали рассказ развесив уши.",
+      "choices": [
+        1,
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 5,
+          "original": "слушоле",
+          "options": [
+            "слушоле",
+            "слушали",
+            "слушок",
+            "слушал",
+            "слушала"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "start": 20,
+          "original": "",
+          "options": [
+            "",
+            ","
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-042-error",
+      "text": "Давай обсудем покупку попозже.",
+      "expected": [
+        {
+          "original": "обсудем",
+          "replacement": "обсудим"
+        }
+      ],
+      "old_output": "Давай обсудим покупку позже.",
+      "new_output": "Давай обсудим покупку попозже.",
+      "choices": [
+        1,
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 6,
+          "original": "обсудем",
+          "options": [
+            "обсудем",
+            "обсудим",
+            "обсадим",
+            "обсидим",
+            "обсядем",
+            "обсуди",
+            "обсудил",
+            "обсудит",
+            "обсудив",
+            "будем",
+            "обсуждаем"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "start": 22,
+          "original": "попозже",
+          "options": [
+            "попозже",
+            "позже"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-045-error",
+      "text": "Ну ладно, встретимься после обеда.",
+      "expected": [
+        {
+          "original": "встретимься",
+          "replacement": "встретимся"
+        }
+      ],
+      "old_output": "Ну ладно, встретиться после обеда.",
+      "new_output": "Ну ладно, встретимся после обеда.",
+      "choices": [
+        2
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 10,
+          "original": "встретимься",
+          "options": [
+            "встретимься",
+            "встретиться",
+            "встретимся",
+            "встретишься",
+            "встретится",
+            "встреться",
+            "встретился"
+          ],
+          "sources": [
+            [],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool"
+            ],
+            [
+              "hunspell",
+              "symspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-046-error",
+      "text": "Пожалуй, стоет взять куртку потеплее.",
+      "expected": [
+        {
+          "original": "стоет",
+          "replacement": "стоит"
+        }
+      ],
+      "old_output": "Пожалуй, стоять взять куртку потеплее.",
+      "new_output": "Пожалуй, стоит взять куртку потеплее.",
+      "choices": [
+        3
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 9,
+          "original": "стоет",
+          "options": [
+            "стоет",
+            "стоять",
+            "стоить",
+            "стоит",
+            "стоят",
+            "стоя",
+            "стояк",
+            "стонет",
+            "стоек",
+            "стает",
+            "сроет",
+            "споет",
+            "смоет",
+            "этот",
+            "своей",
+            "свое",
+            "тот",
+            "счет",
+            "своем",
+            "столь",
+            "свет"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "hunspell",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "symspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-047-error",
+      "text": "Мне бы задочку полегче на сегодня.",
+      "expected": [
+        {
+          "original": "задочку",
+          "replacement": "задачку"
+        }
+      ],
+      "old_output": "Мне бы будочку полегче на сегодня.",
+      "new_output": "Мне бы задочку полегче на сегодня.",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 7,
+          "original": "задочку",
+          "options": [
+            "задочку",
+            "будочку",
+            "дудочку",
+            "годочку",
+            "кадочку",
+            "лодочку",
+            "садочку",
+            "судочку",
+            "водочку",
+            "задачку",
+            "заточку",
+            "замочку",
+            "загадочку",
+            "задачу",
+            "дочку",
+            "удочку",
+            "захочу",
+            "палочку",
+            "лавочку",
+            "шапочку",
+            "парочку",
+            "заточки",
+            "бабочку"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "hunspell",
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "hunspell",
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-055-error",
+      "text": "Первая запись готова.\n\nВторая запись содержыт пояснение.",
+      "expected": [
+        {
+          "original": "содержыт",
+          "replacement": "содержит"
+        }
+      ],
+      "old_output": "Первая запись готова.\n\nВторая запись содержать пояснение.",
+      "new_output": "Первая запись готова.\n\nВторая запись содержит пояснение.",
+      "choices": [
+        3
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 37,
+          "original": "содержыт",
+          "options": [
+            "содержыт",
+            "содержать",
+            "содержат",
+            "содержит",
+            "содержал",
+            "содержа",
+            "содержите"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "precision120",
+      "id": "precision-test-059-error",
+      "text": "Файл report_73.txt содержыт текст `ready=false`.",
+      "expected": [
+        {
+          "original": "содержыт",
+          "replacement": "содержит"
+        }
+      ],
+      "old_output": "Файл report_73.txt содержать текст `ready=false`.",
+      "new_output": "Файл report_73.txt содержит текст `ready=false`.",
+      "choices": [
+        3
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 19,
+          "original": "содержыт",
+          "options": [
+            "содержыт",
+            "содержать",
+            "содержат",
+            "содержит",
+            "содержал",
+            "содержа",
+            "содержите"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fresh48",
+      "id": "ensemble-002-error",
+      "text": "Она хочеть закончить отчёт сегодня.",
+      "expected": [
+        {
+          "original": "хочеть",
+          "replacement": "хочет"
+        }
+      ],
+      "old_output": "Она хотеть закончить отчёт сегодня.",
+      "new_output": "Она хочет закончить отчёт сегодня.",
+      "choices": [
+        7
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 4,
+          "original": "хочеть",
+          "options": [
+            "хочеть",
+            "хотеть",
+            "ходить",
+            "точить",
+            "мочить",
+            "почить",
+            "холить",
+            "хочет",
+            "хочешь",
+            "очень",
+            "хоть",
+            "хочется",
+            "почета",
+            "мечеть",
+            "гореть",
+            "болеть",
+            "почет"
+          ],
+          "sources": [
+            [],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fresh48",
+      "id": "ensemble-005-error",
+      "text": "Благодаря помощь соседей ремонт завершён.",
+      "expected": [
+        {
+          "original": "помощь",
+          "replacement": "помощи"
+        }
+      ],
+      "old_output": "Благодаря помощам соседей ремонт завершён.",
+      "new_output": "Благодаря помощи соседей ремонт завершён.",
+      "choices": [
+        2
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 10,
+          "original": "помощь",
+          "options": [
+            "помощь",
+            "помощам",
+            "помощи"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool"
+            ],
+            [
+              "gigachat",
+              "languagetool"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fresh48",
+      "id": "ensemble-014-error",
+      "text": "норвета сегодня готоветь ужин.",
+      "expected": [
+        {
+          "original": "готоветь",
+          "replacement": "готовит"
+        }
+      ],
+      "old_output": "корвета сегодня готовить ужин.",
+      "new_output": "норвета сегодня готовить ужин.",
+      "choices": [
+        0,
+        1
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 0,
+          "original": "норвета",
+          "options": [
+            "норвета",
+            "корвета",
+            "норвежка",
+            "совета",
+            "ответа"
+          ],
+          "sources": [
+            [],
+            [
+              "hunspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "start": 16,
+          "original": "готоветь",
+          "options": [
+            "готоветь",
+            "готовить",
+            "готовит",
+            "готовите",
+            "готовишь",
+            "готовясь",
+            "готовят",
+            "готовь",
+            "готовьте",
+            "говеть",
+            "ответь"
+          ],
+          "sources": [
+            [],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "gigachat",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "symspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fresh48",
+      "id": "ensemble-015-error",
+      "text": "На полке стоят две чашка.",
+      "expected": [
+        {
+          "original": "чашка",
+          "replacement": "чашки"
+        }
+      ],
+      "old_output": "На полке стоит две чашки.",
+      "new_output": "На полке стоят две чашки.",
+      "choices": [
+        0,
+        1
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 9,
+          "original": "стоят",
+          "options": [
+            "стоят",
+            "стоит"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "start": 19,
+          "original": "чашка",
+          "options": [
+            "чашка",
+            "чашки"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fresh48",
+      "id": "ensemble-018-error",
+      "text": "🙂 Эта история кажется невероятнои!",
+      "expected": [
+        {
+          "original": "невероятнои",
+          "replacement": "невероятной"
+        }
+      ],
+      "old_output": "🙂 Эта история кажется невероятное!",
+      "new_output": "🙂 Эта история кажется невероятнои!",
+      "choices": [
+        0
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 23,
+          "original": "невероятнои",
+          "options": [
+            "невероятнои",
+            "невероятное",
+            "невероятно",
+            "невероятнее",
+            "невероятною",
+            "невероятной",
+            "невероятном",
+            "невероятные",
+            "невероятный",
+            "невероятии",
+            "невероятным",
+            "невероятных",
+            "невероятная",
+            "невероятного",
+            "невероятную",
+            "невероятными"
+          ],
+          "sources": [
+            [],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "hunspell",
+              "languagetool"
+            ],
+            [
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "languagetool"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "hunspell",
+              "symspell"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "run": "fresh48",
+      "id": "ensemble-023-error",
+      "text": "пользователь руддщ оставил коментарий.",
+      "expected": [
+        {
+          "original": "коментарий",
+          "replacement": "комментарий"
+        }
+      ],
+      "old_output": "пользователь буддо оставил комментарий.",
+      "new_output": "пользователь руддщ оставил комментарий.",
+      "choices": [
+        0,
+        1
+      ],
+      "slots": [
+        {
+          "id": 0,
+          "start": 13,
+          "original": "руддщ",
+          "options": [
+            "руддщ",
+            "буддо",
+            "рудик",
+            "будда",
+            "руда",
+            "рушди",
+            "руди",
+            "будде",
+            "будду",
+            "руд",
+            "руды",
+            "рудах",
+            "руде",
+            "руду",
+            "будды",
+            "рудой",
+            "рудно"
+          ],
+          "sources": [
+            [],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "languagetool"
+            ],
+            [
+              "hunspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "start": 27,
+          "original": "коментарий",
+          "options": [
+            "коментарий",
+            "комментарий",
+            "комментарии",
+            "комментария"
+          ],
+          "sources": [
+            [],
+            [
+              "gigachat",
+              "hunspell",
+              "languagetool",
+              "symspell"
+            ],
+            [
+              "symspell"
+            ],
+            [
+              "symspell"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "retained": 152,
+  "gained": 25,
+  "deferred_previously_clean": 30
+}

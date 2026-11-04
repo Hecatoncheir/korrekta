@@ -1,0 +1,377 @@
+[
+  {
+    "id": "tuning-005-error",
+    "text": "Проводник расказал о старом мосте.",
+    "expected": [
+      {
+        "original": "расказал",
+        "replacement": "рассказал"
+      }
+    ],
+    "output": "Проводник расказал о старом мосте.",
+    "atomic_fp": 0,
+    "choices": [
+      0
+    ],
+    "slots": [
+      {
+        "id": 0,
+        "start": 10,
+        "original": "расказал",
+        "options": [
+          "расказал",
+          "досказал",
+          "насказал",
+          "раскатал",
+          "раскачал",
+          "раскокал",
+          "раскопал",
+          "расковал",
+          "рассказал",
+          "раскалял",
+          "раскалил",
+          "сказал",
+          "рассказа",
+          "высказал",
+          "рассказала",
+          "рассказах",
+          "рассказали",
+          "рассказам",
+          "заказал",
+          "наказал"
+        ],
+        "sources": [
+          [],
+          [
+            "languagetool"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "hunspell",
+            "languagetool"
+          ],
+          [
+            "hunspell",
+            "languagetool"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "gigachat",
+            "hunspell",
+            "symspell"
+          ],
+          [
+            "hunspell"
+          ],
+          [
+            "hunspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tuning-023-error",
+    "text": "В письме не хватает один слова.",
+    "expected": [
+      {
+        "original": "один",
+        "replacement": "одного"
+      }
+    ],
+    "output": "В письме не хватает один слово.",
+    "atomic_fp": 1,
+    "choices": [
+      1
+    ],
+    "slots": [
+      {
+        "id": 0,
+        "start": 25,
+        "original": "слова",
+        "options": [
+          "слова",
+          "слово"
+        ],
+        "sources": [
+          [],
+          [
+            "languagetool"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tuning-034-error",
+    "text": "Он взял книгу которую давно искал.",
+    "expected": [
+      {
+        "original": "книгу",
+        "replacement": "книгу,"
+      }
+    ],
+    "output": "Он взял книгу которую давно искал.",
+    "atomic_fp": 0,
+    "choices": [
+      0
+    ],
+    "slots": [
+      {
+        "id": 0,
+        "start": 13,
+        "original": "",
+        "options": [
+          "",
+          ","
+        ],
+        "sources": [
+          [],
+          [
+            "gigachat"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tuning-046-error",
+    "text": "Заголовок «Лунный карман» оставеле неизменным.",
+    "expected": [
+      {
+        "original": "оставеле",
+        "replacement": "оставили"
+      }
+    ],
+    "output": "Заголовок «Лунный карман» оставеле неизменным.",
+    "atomic_fp": 0,
+    "choices": [
+      0
+    ],
+    "slots": [
+      {
+        "id": 0,
+        "start": 26,
+        "original": "оставеле",
+        "options": [
+          "оставеле",
+          "оставили",
+          "остарели",
+          "оставил",
+          "оставила",
+          "оставило",
+          "оставите",
+          "остовее",
+          "оставьте",
+          "оставлю",
+          "оставлен"
+        ],
+        "sources": [
+          [],
+          [
+            "languagetool",
+            "symspell"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "languagetool",
+            "symspell"
+          ],
+          [
+            "languagetool",
+            "symspell"
+          ],
+          [
+            "languagetool",
+            "symspell"
+          ],
+          [
+            "languagetool",
+            "symspell"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "gigachat"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tuning-047-error",
+    "text": "Пример `const x = \"ашибка\";` нужно провереть.",
+    "expected": [
+      {
+        "original": "провереть",
+        "replacement": "проверить"
+      }
+    ],
+    "output": "Пример `const x = \"ашибка\";` нужно провереть.",
+    "atomic_fp": 0,
+    "choices": [
+      0
+    ],
+    "slots": [
+      {
+        "id": 0,
+        "start": 35,
+        "original": "провереть",
+        "options": [
+          "провереть",
+          "проверить",
+          "проверять",
+          "протереть",
+          "провидеть",
+          "промерить",
+          "провисеть",
+          "промерять",
+          "пропереть",
+          "провертеть",
+          "проверьте",
+          "прореветь",
+          "проверещать",
+          "провернуть",
+          "проветрить",
+          "простереть",
+          "поверить",
+          "проверяет",
+          "проверены",
+          "проверена",
+          "проверено",
+          "проведать",
+          "повелеть",
+          "проведет",
+          "помереть"
+        ],
+        "sources": [
+          [],
+          [
+            "hunspell",
+            "languagetool",
+            "symspell"
+          ],
+          [
+            "hunspell",
+            "languagetool",
+            "symspell"
+          ],
+          [
+            "hunspell",
+            "languagetool"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "hunspell"
+          ],
+          [
+            "hunspell",
+            "symspell"
+          ],
+          [
+            "hunspell"
+          ],
+          [
+            "hunspell"
+          ],
+          [
+            "hunspell"
+          ],
+          [
+            "hunspell"
+          ],
+          [
+            "hunspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ]
+        ]
+      }
+    ]
+  }
+]

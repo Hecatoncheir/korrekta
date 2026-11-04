@@ -1,0 +1,11 @@
+{
+  "development": 448,
+  "compact_requests": 237,
+  "compact_failures": 0,
+  "fresh": 140,
+  "fresh_model_proposals": 140,
+  "fresh_collection_errors": 0,
+  "outside_candidate_changes": 0,
+  "whitespace_sequence_changes": 0,
+  "chosen_profile": "inflections"
+}

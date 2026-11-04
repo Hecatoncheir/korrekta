@@ -35,8 +35,9 @@ def metrics(rows, profile, run, check):
             result = row['role_results'][profile]
         item = {key: row[key] for key in ['id', 'category', 'text', 'expected']}
         item.update({'type': 'case', 'output': result['output'], 'seconds': 0.0})
-        if 'error' in result:
-            item['error'] = result['error']
+        failure = result.get('error') or (row.get('collection_error') if profile != 'lt' else None)
+        if failure:
+            item['error'] = failure
         records.append(item)
     records.append({'type': 'summary', 'count': len(rows), 'completed': True})
     if check or path.exists():
@@ -57,8 +58,9 @@ def metrics(rows, profile, run, check):
     f05 = 1.25 * precision * recall / (.25 * precision + recall) if precision + recall else 0.0
     outputs = {r['id']: r['output'] for r in records if r['type'] == 'case'}
     protection = sum(any(row['text'].count(fragment) != outputs[row['id']].count(fragment) for fragment in row.get('protected', [])) for row in rows)
-    errors = sum('error' in r for r in records)
-    return {'clean': sum(c['exact'] and not c['control'] for c in cases),
+    failed = {r['id'] for r in records if 'error' in r}
+    errors = len(failed)
+    return {'clean': sum(c['exact'] and not c['control'] and c['id'] not in failed for c in cases),
         'errors': errors, 'controls': value['controls'], 'changed_controls': value['changed_controls'],
         'gold': value['gold_corrections'], 'atomic_tp': tp, 'atomic_fp': fp, 'atomic_fn': fn,
         'precision': precision, 'recall': recall, 'f05': f05, 'protected_failures': protection}

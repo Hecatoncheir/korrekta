@@ -44,6 +44,25 @@ class Lexicon implements WordDictionary {
 }
 
 void main() {
+  test('Эталоны и разметка не влияют на прикладной выбор', () {
+    final data = row(
+      'Она хочеть петь.',
+      'хочеть',
+      ['хочеть', 'хочет'],
+      [
+        [],
+        ['gigachat', 'languagetool'],
+      ],
+      known: false,
+    );
+    final before = chooseRoles(data, 'inflections');
+    data['expected'] = [
+      {'original': 'Она', 'replacement': 'Он'},
+    ];
+    data['protected'] = ['хочеть'];
+    data['category'] = 'control';
+    expect(chooseRoles(data, 'inflections'), before);
+  });
   test('Более близкая согласованная замена сохраняет форму автора', () {
     final data = row(
       'Редактор исправляит текст.',

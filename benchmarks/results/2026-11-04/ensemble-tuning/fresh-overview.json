@@ -1,0 +1,92 @@
+{
+  "runs": {
+    "holdout140": {
+      "lt": {
+        "clean": 31,
+        "errors": 0,
+        "controls": 80,
+        "changed_controls": 5,
+        "gold": 60,
+        "atomic_tp": 38,
+        "atomic_fp": 20,
+        "atomic_fn": 26,
+        "precision": 0.6551724137931034,
+        "recall": 0.59375,
+        "f05": 0.6418918918918919,
+        "protected_failures": 4
+      },
+      "priority": {
+        "clean": 46,
+        "errors": 0,
+        "controls": 80,
+        "changed_controls": 11,
+        "gold": 60,
+        "atomic_tp": 56,
+        "atomic_fp": 30,
+        "atomic_fn": 8,
+        "precision": 0.6511627906976745,
+        "recall": 0.875,
+        "f05": 0.6862745098039217,
+        "protected_failures": 8
+      },
+      "inflections": {
+        "clean": 55,
+        "errors": 0,
+        "controls": 80,
+        "changed_controls": 0,
+        "gold": 60,
+        "atomic_tp": 57,
+        "atomic_fp": 1,
+        "atomic_fn": 7,
+        "precision": 0.9827586206896551,
+        "recall": 0.890625,
+        "f05": 0.9628378378378379,
+        "protected_failures": 0
+      }
+    }
+  },
+  "aggregate": {
+    "lt": {
+      "clean": 31,
+      "errors": 0,
+      "controls": 80,
+      "changed_controls": 5,
+      "gold": 60,
+      "atomic_tp": 38,
+      "atomic_fp": 20,
+      "atomic_fn": 26,
+      "protected_failures": 4,
+      "precision": 0.6551724137931034,
+      "recall": 0.59375,
+      "f05": 0.6418918918918919
+    },
+    "priority": {
+      "clean": 46,
+      "errors": 0,
+      "controls": 80,
+      "changed_controls": 11,
+      "gold": 60,
+      "atomic_tp": 56,
+      "atomic_fp": 30,
+      "atomic_fn": 8,
+      "protected_failures": 8,
+      "precision": 0.6511627906976745,
+      "recall": 0.875,
+      "f05": 0.6862745098039217
+    },
+    "inflections": {
+      "clean": 55,
+      "errors": 0,
+      "controls": 80,
+      "changed_controls": 0,
+      "gold": 60,
+      "atomic_tp": 57,
+      "atomic_fp": 1,
+      "atomic_fn": 7,
+      "protected_failures": 0,
+      "precision": 0.9827586206896551,
+      "recall": 0.890625,
+      "f05": 0.9628378378378379
+    }
+  }
+}
