@@ -1,0 +1,16 @@
+{
+  "quality_reference": "benchmarks/best-known.json",
+  "report": "benchmarks/results/2026-11-04/model-memory/README.md",
+  "low_ram_candidate": {
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "context": 2048,
+    "status": "verified_on_fixed143_fragments_not_default",
+    "requirement": "Перед подключением проверять число токенов официальным токенизатором: вход +1024 <2048. Текущий рабочий runtime с контекстом8192 не изменён. Для произвольных/длинных фрагментов автоматическое применение этих настроек не реализовано."
+  },
+  "low_vram_experimental": {
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "context": 4096,
+    "status": "experimental_not_default",
+    "limits": "52/60 чистых против55, одна дополнительная лишняя правка и1 сбой генерации на фиксированных140; имена и правильные тексты сохранены. Требуется проверка стабильности формата, прежде чем рекомендовать как основной."
+  }
+}

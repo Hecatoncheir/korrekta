@@ -1,0 +1,9 @@
+{
+  "accepted_economy_profiles": [
+    "20b-4k",
+    "20b-2k"
+  ],
+  "preferred_economy_profile": "20b-2k",
+  "quality_reference_preserved": "benchmarks/best-known.json",
+  "note": "Сравнение на знакомом фиксированном наборе, не новая независимая приёмка."
+}

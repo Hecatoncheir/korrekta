@@ -2,9 +2,9 @@ name: Проверка инструмента сравнения моделей
 on:
   push:
     branches: [main]
-    paths: ['tools/model_benchmark/**', 'benchmarks/text-guard/**', 'benchmarks/prompt-precision/**', 'benchmarks/lt-confirmation/**', 'benchmarks/dictionaries/**', 'benchmarks/hunspell-ranker/**', 'benchmarks/ensemble/**', 'benchmarks/ensemble-tuning/**', 'benchmarks/sage/**', 'benchmarks/sage-v1.1/**', 'benchmarks/giga20-gfusion/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
+    paths: ['tools/model_benchmark/**', 'benchmarks/text-guard/**', 'benchmarks/prompt-precision/**', 'benchmarks/lt-confirmation/**', 'benchmarks/dictionaries/**', 'benchmarks/hunspell-ranker/**', 'benchmarks/ensemble/**', 'benchmarks/ensemble-tuning/**', 'benchmarks/model-memory/**', 'benchmarks/best-known.json', 'benchmarks/resource-profiles.json', 'benchmarks/sage/**', 'benchmarks/sage-v1.1/**', 'benchmarks/giga20-gfusion/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
   pull_request:
-    paths: ['tools/model_benchmark/**', 'benchmarks/text-guard/**', 'benchmarks/prompt-precision/**', 'benchmarks/lt-confirmation/**', 'benchmarks/dictionaries/**', 'benchmarks/hunspell-ranker/**', 'benchmarks/ensemble/**', 'benchmarks/ensemble-tuning/**', 'benchmarks/sage/**', 'benchmarks/sage-v1.1/**', 'benchmarks/giga20-gfusion/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
+    paths: ['tools/model_benchmark/**', 'benchmarks/text-guard/**', 'benchmarks/prompt-precision/**', 'benchmarks/lt-confirmation/**', 'benchmarks/dictionaries/**', 'benchmarks/hunspell-ranker/**', 'benchmarks/ensemble/**', 'benchmarks/ensemble-tuning/**', 'benchmarks/model-memory/**', 'benchmarks/best-known.json', 'benchmarks/resource-profiles.json', 'benchmarks/sage/**', 'benchmarks/sage-v1.1/**', 'benchmarks/giga20-gfusion/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -50,6 +50,11 @@ jobs:
           python3 ../../benchmarks/ensemble-tuning/audit.py
           python3 ../../benchmarks/ensemble-tuning/prepare_fresh.py
           git diff --exit-code -- ../../benchmarks/ensemble-tuning/fresh-v1.jsonl
+      - name: Проверить сравнение моделей и памяти
+        run: |
+          python3 -m compileall -q ../../benchmarks/model-memory
+          python3 ../../benchmarks/model-memory/run.py --phase check
+          python3 ../../benchmarks/model-memory/evaluate.py --check
       - name: Проверить воспроизводимость набора
         run: |
           python3 ../../benchmarks/prepare_cases.py

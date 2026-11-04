@@ -1,0 +1,22 @@
+{
+  "20b-8k": {
+    "backend_rss_observed_peak": 5019725824,
+    "gpu_growth_over_idle_mib": 10220.0
+  },
+  "10b-8k": {
+    "backend_rss_observed_peak": 1959211008,
+    "gpu_growth_over_idle_mib": 6811.0
+  },
+  "10b-4k": {
+    "backend_rss_observed_peak": 2054361088,
+    "gpu_growth_over_idle_mib": 6656.0
+  },
+  "20b-4k": {
+    "backend_rss_observed_peak": 4616970240,
+    "gpu_growth_over_idle_mib": 10206.0
+  },
+  "20b-2k": {
+    "backend_rss_observed_peak": 4415619072,
+    "gpu_growth_over_idle_mib": 10368.0
+  }
+}

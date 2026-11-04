@@ -1,0 +1,81 @@
+{
+  "metric": "text-effects-v1",
+  "description": "Общий Unicode LCS diff итогового текста без нормализации",
+  "results": [
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\model-memory\\20b-8k-paragraphs-texts.jsonl",
+      "count": 3,
+      "atomic_tp": 3,
+      "atomic_fp": 0,
+      "atomic_fn": 3,
+      "atomic_precision": 1.0,
+      "atomic_recall": 0.5,
+      "matched_corrections": 3,
+      "gold_corrections": 6,
+      "correction_recall": 0.5,
+      "controls": 0,
+      "changed_controls": 0,
+      "changed_control_rate": null,
+      "exact_count": 0,
+      "exact_rate": 0.0,
+      "median_seconds": 1.70525,
+      "p95_seconds": 3.432524,
+      "categories": {
+        "length_profile": {
+          "count": 3,
+          "atomic_tp": 3,
+          "atomic_fp": 0,
+          "atomic_fn": 3,
+          "atomic_precision": 1.0,
+          "atomic_recall": 0.5,
+          "matched_corrections": 3,
+          "gold_corrections": 6,
+          "correction_recall": 0.5,
+          "controls": 0,
+          "changed_controls": 0,
+          "changed_control_rate": null,
+          "exact_count": 0,
+          "exact_rate": 0.0
+        }
+      },
+      "cases": [
+        {
+          "id": "paragraph-263",
+          "category": "length_profile",
+          "atomic_tp": 1,
+          "atomic_fp": 0,
+          "atomic_fn": 1,
+          "matched_corrections": 1,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        },
+        {
+          "id": "paragraph-538",
+          "category": "length_profile",
+          "atomic_tp": 1,
+          "atomic_fp": 0,
+          "atomic_fn": 1,
+          "matched_corrections": 1,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        },
+        {
+          "id": "paragraph-1183",
+          "category": "length_profile",
+          "atomic_tp": 1,
+          "atomic_fp": 0,
+          "atomic_fn": 1,
+          "matched_corrections": 1,
+          "gold_corrections": 2,
+          "control": false,
+          "changed_control": false,
+          "exact": false
+        }
+      ]
+    }
+  ]
+}

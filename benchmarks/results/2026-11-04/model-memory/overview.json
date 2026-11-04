@@ -1,0 +1,312 @@
+{
+  "20b-8k": {
+    "fixed140": {
+      "clean": 55,
+      "error_texts": 60,
+      "controls": 80,
+      "changed_controls": 0,
+      "atomic_fp": 1,
+      "precision": 0.9827586206896551,
+      "protected_failures": 0,
+      "failures": [],
+      "median_seconds": 0.332347,
+      "p95_seconds": 0.583475,
+      "model_median_seconds": 0.3050775
+    },
+    "paragraphs": {
+      "clean": 0,
+      "error_texts": 3,
+      "controls": 0,
+      "changed_controls": 0,
+      "atomic_fp": 0,
+      "precision": 1.0,
+      "protected_failures": 0,
+      "failures": [],
+      "median_seconds": 1.70525,
+      "p95_seconds": 3.432524,
+      "model_median_seconds": 1.670439
+    },
+    "resources": {
+      "gpu_idle_mib": 1265.0,
+      "gpu_observed_peak_mib": 11485.0,
+      "samples": 116,
+      "ollama_rss_observed_peak": 3941584896,
+      "ollama_private_observed_peak": 14896852992,
+      "dart_rss_observed_peak": 746041344,
+      "lt_rss_observed_peak": 353193984,
+      "resident": {
+        "name": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+        "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+        "size": 13718991664,
+        "digest": "01ac1d1577a6324849a2f7aa3a3b40f84988cc19dff17e82317a286ee7203277",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "deepseek",
+          "families": [
+            "deepseek"
+          ],
+          "parameter_size": "20.6B",
+          "quantization_level": "unknown"
+        },
+        "expires_at": "2026-11-04T06:53:45.7874622+03:00",
+        "size_vram": 10455319837,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      }
+    },
+    "cold_model_seconds": 10.342501,
+    "initialization_seconds": 3.557075,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "context": 8192
+  },
+  "10b-8k": {
+    "fixed140": {
+      "clean": 53,
+      "error_texts": 60,
+      "controls": 80,
+      "changed_controls": 0,
+      "atomic_fp": 2,
+      "precision": 0.9655172413793104,
+      "protected_failures": 0,
+      "failures": [
+        "tuning-034-correct",
+        "tuning-036-correct"
+      ],
+      "median_seconds": 0.0999275,
+      "p95_seconds": 0.365951,
+      "model_median_seconds": 0.088621
+    },
+    "paragraphs": {
+      "clean": 0,
+      "error_texts": 3,
+      "controls": 0,
+      "changed_controls": 0,
+      "atomic_fp": 0,
+      "precision": 1.0,
+      "protected_failures": 0,
+      "failures": [],
+      "median_seconds": 0.568202,
+      "p95_seconds": 1.107704,
+      "model_median_seconds": 0.539045
+    },
+    "resources": {
+      "gpu_idle_mib": 1233.0,
+      "gpu_observed_peak_mib": 8044.0,
+      "samples": 69,
+      "ollama_rss_observed_peak": 875642880,
+      "ollama_private_observed_peak": 8169717760,
+      "dart_rss_observed_peak": 728268800,
+      "lt_rss_observed_peak": 361345024,
+      "resident": {
+        "name": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+        "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+        "size": 6821301452,
+        "digest": "852c0b21ab28c34330a6050f8af936e4f9f8335265409f480392e133d2aabc82",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "deepseek2",
+          "families": [
+            "deepseek2"
+          ],
+          "parameter_size": "10.7B",
+          "quantization_level": "unknown"
+        },
+        "expires_at": "2026-11-04T06:54:28.1054759+03:00",
+        "size_vram": 6821301452,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      }
+    },
+    "cold_model_seconds": 4.799363,
+    "initialization_seconds": 3.551464,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "context": 8192
+  },
+  "10b-4k": {
+    "fixed140": {
+      "clean": 52,
+      "error_texts": 60,
+      "controls": 80,
+      "changed_controls": 0,
+      "atomic_fp": 2,
+      "precision": 0.9649122807017544,
+      "protected_failures": 0,
+      "failures": [
+        "tuning-036-error"
+      ],
+      "median_seconds": 0.099965,
+      "p95_seconds": 0.408714,
+      "model_median_seconds": 0.088957
+    },
+    "paragraphs": {
+      "clean": 0,
+      "error_texts": 3,
+      "controls": 0,
+      "changed_controls": 0,
+      "atomic_fp": 0,
+      "precision": 1.0,
+      "protected_failures": 0,
+      "failures": [],
+      "median_seconds": 0.582911,
+      "p95_seconds": 1.142834,
+      "model_median_seconds": 0.552105
+    },
+    "resources": {
+      "gpu_idle_mib": 1236.0,
+      "gpu_observed_peak_mib": 7892.0,
+      "samples": 55,
+      "ollama_rss_observed_peak": 846614528,
+      "ollama_private_observed_peak": 7915630592,
+      "dart_rss_observed_peak": 740069376,
+      "lt_rss_observed_peak": 479051776,
+      "resident": {
+        "name": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+        "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+        "size": 6585361366,
+        "digest": "852c0b21ab28c34330a6050f8af936e4f9f8335265409f480392e133d2aabc82",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "deepseek2",
+          "families": [
+            "deepseek2"
+          ],
+          "parameter_size": "10.7B",
+          "quantization_level": "unknown"
+        },
+        "expires_at": "2026-11-04T06:55:01.6795683+03:00",
+        "size_vram": 6585361366,
+        "context_length": 4096,
+        "runner": "llamacpp"
+      }
+    },
+    "cold_model_seconds": 3.458727,
+    "initialization_seconds": 3.511239,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "context": 4096
+  },
+  "20b-4k": {
+    "fixed140": {
+      "clean": 55,
+      "error_texts": 60,
+      "controls": 80,
+      "changed_controls": 0,
+      "atomic_fp": 1,
+      "precision": 0.9827586206896551,
+      "protected_failures": 0,
+      "failures": [],
+      "median_seconds": 0.286767,
+      "p95_seconds": 0.53918,
+      "model_median_seconds": 0.2641715
+    },
+    "paragraphs": {
+      "clean": 0,
+      "error_texts": 3,
+      "controls": 0,
+      "changed_controls": 0,
+      "atomic_fp": 0,
+      "precision": 1.0,
+      "protected_failures": 0,
+      "failures": [],
+      "median_seconds": 1.522344,
+      "p95_seconds": 2.961785,
+      "model_median_seconds": 1.488128
+    },
+    "resources": {
+      "gpu_idle_mib": 1295.0,
+      "gpu_observed_peak_mib": 11501.0,
+      "samples": 106,
+      "ollama_rss_observed_peak": 3410993152,
+      "ollama_private_observed_peak": 14426710016,
+      "dart_rss_observed_peak": 726638592,
+      "lt_rss_observed_peak": 482050048,
+      "resident": {
+        "name": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+        "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+        "size": 13240841009,
+        "digest": "01ac1d1577a6324849a2f7aa3a3b40f84988cc19dff17e82317a286ee7203277",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "deepseek",
+          "families": [
+            "deepseek"
+          ],
+          "parameter_size": "20.6B",
+          "quantization_level": "unknown"
+        },
+        "expires_at": "2026-11-04T06:56:08.4543306+03:00",
+        "size_vram": 10513977179,
+        "context_length": 4096,
+        "runner": "llamacpp"
+      }
+    },
+    "cold_model_seconds": 10.334307,
+    "initialization_seconds": 3.707588,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "context": 4096
+  },
+  "20b-2k": {
+    "fixed140": {
+      "clean": 55,
+      "error_texts": 60,
+      "controls": 80,
+      "changed_controls": 0,
+      "atomic_fp": 1,
+      "precision": 0.9827586206896551,
+      "protected_failures": 0,
+      "failures": [],
+      "median_seconds": 0.277834,
+      "p95_seconds": 0.521041,
+      "model_median_seconds": 0.24667
+    },
+    "paragraphs": {
+      "clean": 0,
+      "error_texts": 3,
+      "controls": 0,
+      "changed_controls": 0,
+      "atomic_fp": 0,
+      "precision": 1.0,
+      "protected_failures": 0,
+      "failures": [],
+      "median_seconds": 1.473931,
+      "p95_seconds": 2.932354,
+      "model_median_seconds": 1.44262
+    },
+    "resources": {
+      "gpu_idle_mib": 1180.0,
+      "gpu_observed_peak_mib": 11548.0,
+      "samples": 100,
+      "ollama_rss_observed_peak": 3207380992,
+      "ollama_private_observed_peak": 14181806080,
+      "dart_rss_observed_peak": 726245376,
+      "lt_rss_observed_peak": 482332672,
+      "resident": {
+        "name": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+        "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+        "size": 13001765681,
+        "digest": "01ac1d1577a6324849a2f7aa3a3b40f84988cc19dff17e82317a286ee7203277",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "deepseek",
+          "families": [
+            "deepseek"
+          ],
+          "parameter_size": "20.6B",
+          "quantization_level": "unknown"
+        },
+        "expires_at": "2026-11-04T06:57:12.3514575+03:00",
+        "size_vram": 10535221329,
+        "context_length": 2048,
+        "runner": "llamacpp"
+      }
+    },
+    "cold_model_seconds": 9.760099,
+    "initialization_seconds": 3.573093,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "context": 2048
+  }
+}

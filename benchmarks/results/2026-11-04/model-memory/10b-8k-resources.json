@@ -1,0 +1,29 @@
+{
+  "gpu_idle_mib": 1233.0,
+  "gpu_observed_peak_mib": 8044.0,
+  "samples": 69,
+  "ollama_rss_observed_peak": 875642880,
+  "ollama_private_observed_peak": 8169717760,
+  "dart_rss_observed_peak": 728268800,
+  "lt_rss_observed_peak": 361345024,
+  "resident": {
+    "name": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "size": 6821301452,
+    "digest": "852c0b21ab28c34330a6050f8af936e4f9f8335265409f480392e133d2aabc82",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "deepseek2",
+      "families": [
+        "deepseek2"
+      ],
+      "parameter_size": "10.7B",
+      "quantization_level": "unknown"
+    },
+    "expires_at": "2026-11-04T06:54:28.1054759+03:00",
+    "size_vram": 6821301452,
+    "context_length": 8192,
+    "runner": "llamacpp"
+  }
+}
