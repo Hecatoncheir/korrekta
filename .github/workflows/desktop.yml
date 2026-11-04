@@ -93,6 +93,8 @@ jobs:
           bash packaging/linux.sh '${{ steps.version.outputs.version }}'
           XDG_DATA_HOME="$RUNNER_TEMP/korrekta-data" KORREKTA_BIN_HOME="$RUNNER_TEMP/korrekta-bin" bash 'release/Korrekta-${{ steps.version.outputs.version }}-linux-x64.run'
           test -x "$RUNNER_TEMP/korrekta-data/korrekta/korrekta"
+          XDG_DATA_HOME="$RUNNER_TEMP/korrekta-data" KORREKTA_BIN_HOME="$RUNNER_TEMP/korrekta-bin" bash 'release/Korrekta-${{ steps.version.outputs.version }}-linux-x64.run'
+          test -x "$RUNNER_TEMP/korrekta-data/korrekta/korrekta"
       - if: matrix.target == 'macos'
         name: Проверить архитектуры и подготовить DMG
         run: |
