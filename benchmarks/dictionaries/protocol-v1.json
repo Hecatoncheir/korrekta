@@ -1,0 +1,126 @@
+{
+  "created_utc": "2026-11-04T01:48:32.855104+00:00",
+  "base_commit": "6307923fa07e626c9ef043d88de5192acba81007",
+  "version": "dictionary-v1",
+  "policy": "Известное слово не менять; неизвестное русское слово длиной 3..32: SymSpell symmetric deletes prefix7/max2 + OSA, минимум расстояния, максимум частоты, лексикографический порядок. Hunspell — первый допустимый штатный вариант; дополнительный профиль переупорядочен по OSA/частоте. Общий предел 2 операции и 40% длины. Нельзя удалять ё. Код, цитаты, регистр имён и оформление защищены. Пробелы и пунктуация вне токенов не меняются. Никакой грамматики/пунктуации/разделения слов.",
+  "layout_policy": "Отдельный явный режим: только неизвестное исходному языку слово длиной>=2, не все заглавные; точное соответствие клавиш RU/EN, целевой вариант должен быть словарным. Только в этом режиме обходится эвристическая защита name_candidate; остальные диапазоны и личный словарь сохраняются. Возможна неоднозначность с неизвестным названием, проверяется отдельно. Никакого подбора по test.",
+  "data": "OpenCorpora через pymorphy3-dicts-ru 2.4.417150.4580142, source revision417150, compiled2022-01-08. Используются явные формы из words.dawg, без предсказаний и без морфологической фильтрации тегов. Нормализация ё/е только в поиске членства. Частоты SymSpell ru-100k пересечены с OpenCorpora; en-80k для обратной раскладки. Hunspell1.7.5 MSYS2 UCRT64, словари LibreOffice RU/EN. Снимки и SHA в data-manifest.",
+  "evaluation": "Все прежние наборы + новый layout46 (20 пар и 6 буквальных названий/технических контролей), зафиксированные до оценки. Отдельный guard40-personal с ранее заданным личным словарём: это ручная настройка, не автоматическое распознавание. После просмотра метрик код и пороги не меняются.",
+  "profiles": [
+    {
+      "id": "symspell-spelling",
+      "engine": "symspell",
+      "layout": false
+    },
+    {
+      "id": "hunspell-spelling",
+      "engine": "hunspell",
+      "layout": false
+    },
+    {
+      "id": "hunspell-frequency-spelling",
+      "engine": "hunspell-frequency",
+      "layout": false
+    },
+    {
+      "id": "symspell-layout",
+      "engine": "symspell",
+      "layout": true
+    },
+    {
+      "id": "hunspell-layout",
+      "engine": "hunspell",
+      "layout": true
+    },
+    {
+      "id": "hunspell-frequency-layout",
+      "engine": "hunspell-frequency",
+      "layout": true
+    }
+  ],
+  "runs": [
+    {
+      "id": "dev",
+      "data": "benchmarks/cases-v1.jsonl",
+      "split": "dev",
+      "count": 40
+    },
+    {
+      "id": "ordinary",
+      "data": "benchmarks/cases-v1.jsonl",
+      "split": "test",
+      "count": 160
+    },
+    {
+      "id": "preservation",
+      "data": "benchmarks/preservation/cases-v1.jsonl",
+      "split": "test",
+      "count": 120
+    },
+    {
+      "id": "holdout80",
+      "data": "benchmarks/gigachat-prompts/holdout-v1.jsonl",
+      "split": "test",
+      "count": 80
+    },
+    {
+      "id": "guard40",
+      "data": "benchmarks/text-guard/holdout-v1.jsonl",
+      "split": "test",
+      "count": 40
+    },
+    {
+      "id": "precision120",
+      "data": "benchmarks/prompt-precision/holdout-v1.jsonl",
+      "split": "test",
+      "count": 120
+    },
+    {
+      "id": "layout12",
+      "data": "benchmarks/sber-large/layout-smoke-v1.jsonl",
+      "split": "dev",
+      "count": 12
+    },
+    {
+      "id": "paragraphs",
+      "data": "benchmarks/paragraphs-v1.jsonl",
+      "split": "dev",
+      "count": 3
+    },
+    {
+      "id": "layout46",
+      "data": "benchmarks/dictionaries/layout-holdout-v1.jsonl",
+      "split": "test",
+      "count": 46
+    },
+    {
+      "id": "guard40-personal",
+      "data": "benchmarks/text-guard/holdout-v1.jsonl",
+      "split": "test",
+      "count": 40,
+      "names_file": "benchmarks/text-guard/personal-names.json"
+    }
+  ],
+  "sha256_lf": {
+    "benchmarks/cases-v1.jsonl": "a3e2a43453f886dea8db204d216c4a927fd8cf6409fdbc153f55e87d00e10b63",
+    "benchmarks/dictionaries/data-manifest.json": "5a2ae2cfab98c154db74011f5c6348c4d269b034d09e50614657429b1273716a",
+    "benchmarks/dictionaries/layout-holdout-v1.jsonl": "b08f86f389979df207aed1b160cb4da96a040494209727702155e62872be094a",
+    "benchmarks/dictionaries/prepare.py": "a3f2843392a009d23e5891cbd5276d66189fcf73472fae568da9e1c2047ad2e6",
+    "benchmarks/dictionaries/prepare_layout.py": "6a98f5f195455b125ff234adb145049f3c0e64df15a57d50693b14f1479b0ea0",
+    "benchmarks/dictionaries/run.py": "fd143c6c7e0575d25c36d167132ba5aad7c6c6aefbb18cafbdc50d935f59393a",
+    "benchmarks/gigachat-prompts/holdout-v1.jsonl": "d344f5257fc925c834d7326bcdcbe7ba2c45b1878645ba38e00fa19cedfbec16",
+    "benchmarks/paragraphs-v1.jsonl": "d823b62ef71e7636e1286acc0493cdb74bdbe879b2f1952ab71e629c42c702ec",
+    "benchmarks/preservation/cases-v1.jsonl": "e969f419ec024d688f355845716d685debd92ce6da8234644528bf5bd8ab7d69",
+    "benchmarks/prompt-precision/holdout-v1.jsonl": "085c534c5b800f1536360a7ccba35b4a020542bc9799aacc2ff5947186bc8bd1",
+    "benchmarks/sber-large/layout-smoke-v1.jsonl": "bbb990154b3fe74b83093c880acbcf322bc750c16705879ecf94c8c270db3d98",
+    "benchmarks/text-guard/holdout-v1.jsonl": "b3e3828e1f6c2ea7c6bd66b6f1a44630090b81ef2e8a7c8c578977ad00c5b1ae",
+    "benchmarks/text-guard/personal-names.json": "26895d3a7f780fbe068b2d335691087ce345a2e178eb0821d05083ae92137f0c",
+    "tools/model_benchmark/bin/dictionary_benchmark.dart": "0f761dc888db906c9006faf3d2579c4f3d7b814e94edfd70a789f7019503025d",
+    "tools/model_benchmark/lib/src/dictionary_checker.dart": "0af016c4fa89c705dd702b01f19d9bb96390c09a5ac23402797206497126d8f0",
+    "tools/model_benchmark/lib/src/dictionary_engines.dart": "c1ec07bb2324ba269baa00fef8ac6155036abad0516d75ab7a26680bdc810620",
+    "tools/model_benchmark/lib/src/protected_spans.dart": "87fcd6155f442f02d7244361aa149b1c0cb773ee834cbd233515a123a6164018",
+    "tools/model_benchmark/lib/src/symspell.dart": "405365f721121a3cc51fd475c006315c9f0742c1232d145a2f49bdcb22a45d0e",
+    "tools/model_benchmark/lib/src/text_diff.dart": "76b7c90d57e8f68f4daee9d75bc1c8b9167e38047d0ff5342c104743433faf8b",
+    "tools/model_benchmark/lib/src/text_scoring.dart": "6548b768f1f3158076afeaddd6e8bd3b70914d151699783eb053fec1d4e53eab"
+  }
+}

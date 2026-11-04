@@ -1,0 +1,46 @@
+{"id": "dict-layout-001-correct", "pair": 1, "split": "test", "category": "layout-ru", "text": "доброе утро", "edits": [], "protected": []}
+{"id": "dict-layout-001-error", "pair": 1, "split": "test", "category": "layout-ru", "text": "lj,hjt enhj", "edits": [{"original": "lj,hjt enhj", "replacement": "доброе утро"}], "protected": []}
+{"id": "dict-layout-002-correct", "pair": 2, "split": "test", "category": "layout-ru", "text": "Спасибо!", "edits": [], "protected": []}
+{"id": "dict-layout-002-error", "pair": 2, "split": "test", "category": "layout-ru", "text": "Cgfcb,j!", "edits": [{"original": "Cgfcb,j", "replacement": "Спасибо"}], "protected": []}
+{"id": "dict-layout-003-correct", "pair": 3, "split": "test", "category": "layout-ru", "text": "документ готов", "edits": [], "protected": []}
+{"id": "dict-layout-003-error", "pair": 3, "split": "test", "category": "layout-ru", "text": "ljrevtyn ujnjd", "edits": [{"original": "ljrevtyn ujnjd", "replacement": "документ готов"}], "protected": []}
+{"id": "dict-layout-004-correct", "pair": 4, "split": "test", "category": "layout-ru", "text": "Нужно проверить файл.", "edits": [], "protected": []}
+{"id": "dict-layout-004-error", "pair": 4, "split": "test", "category": "layout-ru", "text": "Нужно ghjdthbnm файл.", "edits": [{"original": "ghjdthbnm", "replacement": "проверить"}], "protected": []}
+{"id": "dict-layout-005-correct", "pair": 5, "split": "test", "category": "layout-ru", "text": "Она открыла папку.", "edits": [], "protected": []}
+{"id": "dict-layout-005-error", "pair": 5, "split": "test", "category": "layout-ru", "text": "Она открыла gfgre.", "edits": [{"original": "gfgre", "replacement": "папку"}], "protected": []}
+{"id": "dict-layout-006-correct", "pair": 6, "split": "test", "category": "layout-ru", "text": "Теперь всё работает 🙂", "edits": [], "protected": ["🙂"]}
+{"id": "dict-layout-006-error", "pair": 6, "split": "test", "category": "layout-ru", "text": "Теперь всё hf,jnftn 🙂", "edits": [{"original": "hf,jnftn", "replacement": "работает"}], "protected": ["🙂"]}
+{"id": "dict-layout-007-correct", "pair": 7, "split": "test", "category": "layout-ru", "text": "План:\r\n\t  завтра обсудим детали.", "edits": [], "protected": ["\r\n\t  "]}
+{"id": "dict-layout-007-error", "pair": 7, "split": "test", "category": "layout-ru", "text": "План:\r\n\t  завтра j,celbv детали.", "edits": [{"original": "j,celbv", "replacement": "обсудим"}], "protected": ["\r\n\t  "]}
+{"id": "dict-layout-008-correct", "pair": 8, "split": "test", "category": "layout-ru", "text": "**Итог:** версия готова.", "edits": [], "protected": ["**Итог:**"]}
+{"id": "dict-layout-008-error", "pair": 8, "split": "test", "category": "layout-ru", "text": "**Итог:** dthcbz готова.", "edits": [{"original": "dthcbz", "replacement": "версия"}], "protected": ["**Итог:**"]}
+{"id": "dict-layout-009-correct", "pair": 9, "split": "test", "category": "layout-ru", "text": "Файл note_84.md содержит план.", "edits": [], "protected": ["note_84.md"]}
+{"id": "dict-layout-009-error", "pair": 9, "split": "test", "category": "layout-ru", "text": "Файл note_84.md cjlth;bn план.", "edits": [{"original": "cjlth;bn", "replacement": "содержит"}], "protected": ["note_84.md"]}
+{"id": "dict-layout-010-correct", "pair": 10, "split": "test", "category": "layout-ru", "text": "Равина проверяет заметку.", "edits": [], "protected": ["Равина"]}
+{"id": "dict-layout-010-error", "pair": 10, "split": "test", "category": "layout-ru", "text": "Равина ghjdthztn заметку.", "edits": [{"original": "ghjdthztn", "replacement": "проверяет"}], "protected": ["Равина"]}
+{"id": "dict-layout-011-correct", "pair": 11, "split": "test", "category": "layout-en", "text": "we are ready", "edits": [], "protected": []}
+{"id": "dict-layout-011-error", "pair": 11, "split": "test", "category": "layout-en", "text": "цу фку куфвн", "edits": [{"original": "цу фку куфвн", "replacement": "we are ready"}], "protected": []}
+{"id": "dict-layout-012-correct", "pair": 12, "split": "test", "category": "layout-en", "text": "open this file", "edits": [], "protected": []}
+{"id": "dict-layout-012-error", "pair": 12, "split": "test", "category": "layout-en", "text": "щзут ершы ашду", "edits": [{"original": "щзут ершы ашду", "replacement": "open this file"}], "protected": []}
+{"id": "dict-layout-013-correct", "pair": 13, "split": "test", "category": "layout-en", "text": "The draft is saved.", "edits": [], "protected": []}
+{"id": "dict-layout-013-error", "pair": 13, "split": "test", "category": "layout-en", "text": "Еру вкфае шы ыфмув.", "edits": [{"original": "Еру вкфае шы ыфмув", "replacement": "The draft is saved"}], "protected": []}
+{"id": "dict-layout-014-correct", "pair": 14, "split": "test", "category": "layout-en", "text": "Пожалуйста, напиши hello.", "edits": [], "protected": []}
+{"id": "dict-layout-014-error", "pair": 14, "split": "test", "category": "layout-en", "text": "Пожалуйста, напиши руддщ.", "edits": [{"original": "руддщ", "replacement": "hello"}], "protected": []}
+{"id": "dict-layout-015-correct", "pair": 15, "split": "test", "category": "layout-en", "text": "Слово world оставлено по-английски.", "edits": [], "protected": []}
+{"id": "dict-layout-015-error", "pair": 15, "split": "test", "category": "layout-en", "text": "Слово цщкдв оставлено по-английски.", "edits": [{"original": "цщкдв", "replacement": "world"}], "protected": []}
+{"id": "dict-layout-016-correct", "pair": 16, "split": "test", "category": "layout-en", "text": "keep calm", "edits": [], "protected": []}
+{"id": "dict-layout-016-error", "pair": 16, "split": "test", "category": "layout-en", "text": "лууз сфдь", "edits": [{"original": "лууз сфдь", "replacement": "keep calm"}], "protected": []}
+{"id": "dict-layout-017-correct", "pair": 17, "split": "test", "category": "layout-ru", "text": "новая запись", "edits": [], "protected": []}
+{"id": "dict-layout-017-error", "pair": 17, "split": "test", "category": "layout-ru", "text": "yjdfz pfgbcm", "edits": [{"original": "yjdfz pfgbcm", "replacement": "новая запись"}], "protected": []}
+{"id": "dict-layout-018-correct", "pair": 18, "split": "test", "category": "layout-en", "text": "report ready", "edits": [], "protected": []}
+{"id": "dict-layout-018-error", "pair": 18, "split": "test", "category": "layout-en", "text": "кузщке куфвн", "edits": [{"original": "кузщке куфвн", "replacement": "report ready"}], "protected": []}
+{"id": "dict-layout-019-correct", "pair": 19, "split": "test", "category": "layout-ru", "text": "Новая строка:\nзапись сохранена.", "edits": [], "protected": ["\n"]}
+{"id": "dict-layout-019-error", "pair": 19, "split": "test", "category": "layout-ru", "text": "Новая строка:\nзапись cj[hfytyf.", "edits": [{"original": "cj[hfytyf", "replacement": "сохранена"}], "protected": ["\n"]}
+{"id": "dict-layout-020-correct", "pair": 20, "split": "test", "category": "layout-ru", "text": "Мы идём домой.", "edits": [], "protected": []}
+{"id": "dict-layout-020-error", "pair": 20, "split": "test", "category": "layout-ru", "text": "Мы идём ljvjq.", "edits": [{"original": "ljvjq", "replacement": "домой"}], "protected": []}
+{"id": "dict-literal-001", "split": "test", "category": "literal", "text": "Проект Ghbdtn готов.", "edits": [], "protected": ["Ghbdtn"]}
+{"id": "dict-literal-002", "split": "test", "category": "literal", "text": "Автор руддщ добавил заметку.", "edits": [], "protected": ["руддщ"]}
+{"id": "dict-literal-003", "split": "test", "category": "literal", "text": "Идентификатор ghbdtn_id сохранён.", "edits": [], "protected": ["ghbdtn_id"]}
+{"id": "dict-literal-004", "split": "test", "category": "literal", "text": "Открой файл ghbdtn.txt.", "edits": [], "protected": ["ghbdtn.txt"]}
+{"id": "dict-literal-005", "split": "test", "category": "literal", "text": "`руддщ` — значение в примере.", "edits": [], "protected": ["`руддщ`"]}
+{"id": "dict-literal-006", "split": "test", "category": "literal", "text": "Он написал «Ghbdtn» на обложке.", "edits": [], "protected": ["«Ghbdtn»"]}
