@@ -1,0 +1,150 @@
+{
+  "created_utc": "2026-11-04T01:16:07.422084+00:00",
+  "base_commit": "d5bdc5ea918089e34c90abf8a027199f364da8dd",
+  "gate_version": "lt-agreement-v1",
+  "policy": "Только исходник и полное точное совпадение эффекта одной допустимой Dart-правки с одним вариантом LT на тех же UTF-16 позициях; все варианты, не только первый; без эталонов, без разметки protected; личный словарь пуст. Частичное совпадение составной замены не разрешается. Никакого подбора по результатам.",
+  "language_tool": {
+    "version": "6.8",
+    "endpoint": "http://127.0.0.1:8081",
+    "parameters": {
+      "language": "ru",
+      "level": "default"
+    },
+    "manifest_sha256": "b78372250e32fc4aeb5e63c0202da234d49064e3d85d1434f3f8f5499cf19b73"
+  },
+  "profiles": [
+    "giga-raw",
+    "giga-dart",
+    "lt-first",
+    "lt-dart",
+    "joint"
+  ],
+  "evaluation": "12 повторных обработок на прежних наборах, 1095 строк с повторами между профилями и dev/test. Это внутреннее сравнение уже известных текстов. Отдельно 8 новых реальных запросов модели и их проверки LT подтверждают работу связки, не новую приёмку качества.",
+  "runs": [
+    {
+      "id": "baseline-dev",
+      "source": "benchmarks/results/2026-11-04/prompt-precision/baseline-dev-raw.jsonl",
+      "data": "benchmarks/prompt-precision/dev-v1.jsonl",
+      "split": "dev",
+      "count": 80
+    },
+    {
+      "id": "baseline-ordinary",
+      "source": "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-test.jsonl",
+      "data": "benchmarks/cases-v1.jsonl",
+      "split": "test",
+      "count": 160
+    },
+    {
+      "id": "baseline-preservation",
+      "source": "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-preservation.jsonl",
+      "data": "benchmarks/preservation/cases-v1.jsonl",
+      "split": "test",
+      "count": 120
+    },
+    {
+      "id": "baseline-holdout80",
+      "source": "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-holdout.jsonl",
+      "data": "benchmarks/gigachat-prompts/holdout-v1.jsonl",
+      "split": "test",
+      "count": 80
+    },
+    {
+      "id": "baseline-layout",
+      "source": "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-layout.jsonl",
+      "data": "benchmarks/sber-large/layout-smoke-v1.jsonl",
+      "split": "dev",
+      "count": 12
+    },
+    {
+      "id": "baseline-paragraphs",
+      "source": "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-paragraphs.jsonl",
+      "data": "benchmarks/paragraphs-v1.jsonl",
+      "split": "dev",
+      "count": 3
+    },
+    {
+      "id": "baseline-guard40",
+      "source": "benchmarks/results/2026-11-04/text-guard/fresh-raw.jsonl",
+      "data": "benchmarks/text-guard/holdout-v1.jsonl",
+      "split": "test",
+      "count": 40
+    },
+    {
+      "id": "baseline-precision120",
+      "source": "benchmarks/results/2026-11-04/prompt-precision/baseline-holdout-raw.jsonl",
+      "data": "benchmarks/prompt-precision/holdout-v1.jsonl",
+      "split": "test",
+      "count": 120
+    },
+    {
+      "id": "examples-dev",
+      "source": "benchmarks/results/2026-11-04/prompt-precision/examples-dev-raw.jsonl",
+      "data": "benchmarks/prompt-precision/dev-v1.jsonl",
+      "split": "dev",
+      "count": 80
+    },
+    {
+      "id": "examples-ordinary",
+      "source": "benchmarks/results/2026-11-04/prompt-precision/examples-ordinary-raw.jsonl",
+      "data": "benchmarks/cases-v1.jsonl",
+      "split": "test",
+      "count": 160
+    },
+    {
+      "id": "examples-preservation",
+      "source": "benchmarks/results/2026-11-04/prompt-precision/examples-preservation-raw.jsonl",
+      "data": "benchmarks/preservation/cases-v1.jsonl",
+      "split": "test",
+      "count": 120
+    },
+    {
+      "id": "examples-precision120",
+      "source": "benchmarks/results/2026-11-04/prompt-precision/examples-holdout-raw.jsonl",
+      "data": "benchmarks/prompt-precision/holdout-v1.jsonl",
+      "split": "test",
+      "count": 120
+    }
+  ],
+  "sha256_lf": {
+    "benchmarks/cases-v1.jsonl": "a3e2a43453f886dea8db204d216c4a927fd8cf6409fdbc153f55e87d00e10b63",
+    "benchmarks/gigachat-prompts/holdout-v1.jsonl": "d344f5257fc925c834d7326bcdcbe7ba2c45b1878645ba38e00fa19cedfbec16",
+    "benchmarks/gigachat-prompts/text-json.txt": "c2dab9675e57890f054f8c6036265e3c418e641cf5468340bdc31c8545dcb45a",
+    "benchmarks/languagetool/server.properties": "c61f9842f2c7d533a741a630c6a7669058a7bb8525146dc4a50a4f20c3b32551",
+    "benchmarks/lt-confirmation/live-smoke-v1.jsonl": "f71fca8bf31245c7e0424934b3c6081a09c1c2cf1511232a2c83d3c9d911114f",
+    "benchmarks/lt-confirmation/run.py": "ececff225c4299d7e6876dfe2ce4e55103b151bd7f6e90be50867a7dfc52a3df",
+    "benchmarks/paragraphs-v1.jsonl": "d823b62ef71e7636e1286acc0493cdb74bdbe879b2f1952ab71e629c42c702ec",
+    "benchmarks/preservation/cases-v1.jsonl": "e969f419ec024d688f355845716d685debd92ce6da8234644528bf5bd8ab7d69",
+    "benchmarks/prompt-precision/dev-v1.jsonl": "cd7d1ca12df0b6528ac6b2176feed4bd1bd9baeafe99019887ba9493c7640490",
+    "benchmarks/prompt-precision/holdout-v1.jsonl": "085c534c5b800f1536360a7ccba35b4a020542bc9799aacc2ff5947186bc8bd1",
+    "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-holdout.jsonl": "9cca1beb5ed9ffbeb87a8530c1f59a641c60d9a24a130ba2b0657397d3b69d1a",
+    "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-layout.jsonl": "b28ae9ee583416c7b495ed2d91c5f5d8ffccc32cefd91bd8aa9fd6741ae1824e",
+    "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-paragraphs.jsonl": "baa1e23b79e64d41ca35b5cb7a32ab85785073799076814a94311afa58c07cb8",
+    "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-preservation.jsonl": "1eb88a3452a1d273041efe1737dbab643551616ae21705629b84531d2505d2fb",
+    "benchmarks/results/2026-11-03/giga20-gfusion/gigachat20-test.jsonl": "4b61a5f72c2492c59f142c4343692513fe54e359ea3aa532f3b3235ee1c4563d",
+    "benchmarks/results/2026-11-04/prompt-precision/baseline-dev-raw.jsonl": "dc0e3161dc8620cdd3403f6453641299894de2202dd8020ebf2228b168d2ec17",
+    "benchmarks/results/2026-11-04/prompt-precision/baseline-holdout-raw.jsonl": "5168855f8e38e0b3c56a238a209f577c434a83c25d852f2ba621278e149d4b39",
+    "benchmarks/results/2026-11-04/prompt-precision/examples-dev-raw.jsonl": "a108697e1c139c2c4f32a143e54b82166251815e8fc3bb79e3fe3fe6b50efa29",
+    "benchmarks/results/2026-11-04/prompt-precision/examples-holdout-raw.jsonl": "194e6a11429bbeae9c1f83563fd89cc809b06827f182bc24534db53aaeaec9e4",
+    "benchmarks/results/2026-11-04/prompt-precision/examples-ordinary-raw.jsonl": "2bda0c3e8b9cf6d5fa866b9d1738bcb079622b0dbeefe942eb5e1d4766f9ffeb",
+    "benchmarks/results/2026-11-04/prompt-precision/examples-preservation-raw.jsonl": "221bcfb79424683adb36eee6deb0c631f82773bc633599b3885f7085fba81cf9",
+    "benchmarks/results/2026-11-04/text-guard/fresh-raw.jsonl": "6becfec8750030dbc0c6b814eed3b34c5be33d80a24f40b3622efb160f0bbdca",
+    "benchmarks/sber-large/layout-smoke-v1.jsonl": "bbb990154b3fe74b83093c880acbcf322bc750c16705879ecf94c8c270db3d98",
+    "benchmarks/text-guard/holdout-v1.jsonl": "b3e3828e1f6c2ea7c6bd66b6f1a44630090b81ef2e8a7c8c578977ad00c5b1ae",
+    "tools/model_benchmark/bin/confirm_results.dart": "ba500c540f3bf1a9565549cd7e3cc355cdd47d32f30078de8642a1a550a77733",
+    "tools/model_benchmark/lib/src/cli.dart": "7304e26717629876cdb96bce7b81e34f3927236ec2e0a0d735e986f43787ca11",
+    "tools/model_benchmark/lib/src/confirmation_response.dart": "2611a9a71cd9d69520cf2dd5388251dc3044e484216e85c4089a1339351acb49",
+    "tools/model_benchmark/lib/src/guard_response.dart": "db4069f8d39830c924d57e4478ee15f3ca3b47bd7f3edf56471b9ec5394ef7a0",
+    "tools/model_benchmark/lib/src/languagetool.dart": "c83e4772e02aebcae737b93fa2c857c2599086762e3e3719ad082dd6ca93f897",
+    "tools/model_benchmark/lib/src/languagetool_cli.dart": "4b4bb82288631c8b746b435710d885de82a87f36bbd35da61903b532ace1533b",
+    "tools/model_benchmark/lib/src/languagetool_gate.dart": "e0fee2f745778e6d452c91889e2822c85493dbde962b8eb5e5b61c14995041cf",
+    "tools/model_benchmark/lib/src/local_languagetool.dart": "2dda6e87ace3ed4d475bdef8098de84f3dba5d1870ab669e894c3e1f5528275d",
+    "tools/model_benchmark/lib/src/protected_spans.dart": "87fcd6155f442f02d7244361aa149b1c0cb773ee834cbd233515a123a6164018",
+    "tools/model_benchmark/lib/src/response_contract.dart": "b6b26708d512e388502b8d29e085842b2eb2a5728db5791e9b1789eb4e995e46",
+    "tools/model_benchmark/lib/src/scoring.dart": "29752b6a20e3d717c0078b8d8685d1ef589a65ded57560af54bdf5b350a9428a",
+    "tools/model_benchmark/lib/src/text_comparison.dart": "32dea59955856399a635627e1091c3d644000f4547807b7ed4aa81ae1c688fec",
+    "tools/model_benchmark/lib/src/text_diff.dart": "76b7c90d57e8f68f4daee9d75bc1c8b9167e38047d0ff5342c104743433faf8b",
+    "tools/model_benchmark/lib/src/text_guard.dart": "b17a9db1f5646d168ae82232a03b3624e3a0d92c222a9978e80e3906e1e8766e",
+    "tools/model_benchmark/lib/src/text_scoring.dart": "6548b768f1f3158076afeaddd6e8bd3b70914d151699783eb053fec1d4e53eab"
+  }
+}

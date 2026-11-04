@@ -1,0 +1,8 @@
+{"id": "ru-128", "split": "dev", "category": "correct", "text": "Большинство участников поддержало предложение.", "edits": []}
+{"id": "ru-132", "split": "dev", "category": "correct", "text": "Согласно приказу занятия отменены.", "edits": []}
+{"id": "ru-155", "split": "dev", "category": "correct", "text": "Утром было тихо и шёл снег.", "edits": []}
+{"id": "ru-157", "split": "dev", "category": "correct", "text": "Он сидел сложа руки.", "edits": []}
+{"id": "ru-170", "split": "dev", "category": "correct", "text": "Можно попроще?", "edits": []}
+{"id": "ru-001", "split": "dev", "category": "verb", "text": "Мне нравиться читать книги.", "edits": [{"original": "нравиться", "replacement": "нравится"}]}
+{"id": "ru-006", "split": "dev", "category": "verb", "text": "Тебе нужно хорошо выспатся.", "edits": [{"original": "выспатся", "replacement": "выспаться"}]}
+{"id": "ru-011", "split": "dev", "category": "verb", "text": "Я хочу научится плавать.", "edits": [{"original": "научится", "replacement": "научиться"}]}
