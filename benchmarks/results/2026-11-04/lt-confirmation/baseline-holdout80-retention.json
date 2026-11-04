@@ -1,0 +1,231 @@
+{
+  "method": "Число дословных вхождений protected без нормализации",
+  "results": [
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-03\\giga20-gfusion\\gigachat20-holdout.jsonl",
+      "count": 80,
+      "retention_failures": 8,
+      "retention_failures_on_controls": 4,
+      "changed_controls": 7,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "names_quotes": 3,
+        "emoji_layout": 5
+      },
+      "details": [
+        {
+          "id": "prompt-011-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Ривена",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-016-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "„Медный сад“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-016-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "„Медный сад“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-026-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-026-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-028-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-030-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-030-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\lt-confirmation\\baseline-holdout80-giga-dart.jsonl",
+      "count": 80,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\lt-confirmation\\baseline-holdout80-lt-first.jsonl",
+      "count": 80,
+      "retention_failures": 6,
+      "retention_failures_on_controls": 3,
+      "changed_controls": 3,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "names_quotes": 4,
+        "emoji_layout": 2
+      },
+      "details": [
+        {
+          "id": "prompt-011-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Ривена",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-011-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Ривена",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-014-correct",
+          "category": "names_quotes",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Лисолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-014-error",
+          "category": "names_quotes",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Лисолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-030-correct",
+          "category": "emoji_layout",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "prompt-030-error",
+          "category": "emoji_layout",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\lt-confirmation\\baseline-holdout80-lt-dart.jsonl",
+      "count": 80,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\lt-confirmation\\baseline-holdout80-joint.jsonl",
+      "count": 80,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    }
+  ]
+}

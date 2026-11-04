@@ -1,0 +1,554 @@
+{
+  "method": "Число дословных вхождений protected без нормализации",
+  "results": [
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-03\\giga20-gfusion\\gigachat20-preservation.jsonl",
+      "count": 120,
+      "retention_failures": 19,
+      "retention_failures_on_controls": 14,
+      "changed_controls": 17,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "names": 1,
+        "emoji": 5,
+        "formatting": 7,
+        "mixed": 6
+      },
+      "details": [
+        {
+          "id": "preserve-011-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-021-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "🙂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-024-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "👍🏽",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-025-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "👩‍💻",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-027-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "✅",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-028-correct",
+          "category": "emoji",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "❤️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-031-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-035-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-035-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-037-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-037-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-040-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-040-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-054-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "❤️",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-055-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Нотолист",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-055-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Нотолист",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-058-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "📂",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-059-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-060-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "„Снег“",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\lt-confirmation\\baseline-preservation-giga-dart.jsonl",
+      "count": 120,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\lt-confirmation\\baseline-preservation-lt-first.jsonl",
+      "count": 120,
+      "retention_failures": 20,
+      "retention_failures_on_controls": 10,
+      "changed_controls": 10,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "names": 10,
+        "formatting": 2,
+        "mixed": 8
+      },
+      "details": [
+        {
+          "id": "preserve-011-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-011-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-012-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Нотолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-012-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Нотолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-013-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Финнор",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-013-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Финнор",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-017-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "«Рунолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-017-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "«Рунолист»",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-019-correct",
+          "category": "names",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Элины Ро",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-019-error",
+          "category": "names",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Элины Ро",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-037-correct",
+          "category": "formatting",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-037-error",
+          "category": "formatting",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-052-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-052-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Мирея",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-055-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Нотолист",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-055-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Нотолист",
+              "expected_count": 1,
+              "output_count": 0
+            },
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-056-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Финнор",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-056-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Финнор",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-059-correct",
+          "category": "mixed",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "preserve-059-error",
+          "category": "mixed",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "\n    ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\lt-confirmation\\baseline-preservation-lt-dart.jsonl",
+      "count": 120,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\lt-confirmation\\baseline-preservation-joint.jsonl",
+      "count": 120,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    }
+  ]
+}

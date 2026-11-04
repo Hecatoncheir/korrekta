@@ -1,0 +1,181 @@
+{
+  "method": "Число дословных вхождений protected без нормализации",
+  "results": [
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\prompt-precision\\examples-holdout-raw.jsonl",
+      "count": 120,
+      "retention_failures": 6,
+      "retention_failures_on_controls": 4,
+      "changed_controls": 17,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "protected": 6
+      },
+      "details": [
+        {
+          "id": "precision-test-054-correct",
+          "category": "protected",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\r\n\t",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "precision-test-055-correct",
+          "category": "protected",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "\n\n",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "precision-test-056-correct",
+          "category": "protected",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "precision-test-056-error",
+          "category": "protected",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "precision-test-057-correct",
+          "category": "protected",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "- **Итог:**",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "precision-test-057-error",
+          "category": "protected",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "- **Итог:**",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\lt-confirmation\\examples-precision120-giga-dart.jsonl",
+      "count": 120,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 10,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\lt-confirmation\\examples-precision120-lt-first.jsonl",
+      "count": 120,
+      "retention_failures": 4,
+      "retention_failures_on_controls": 2,
+      "changed_controls": 2,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "protected": 4
+      },
+      "details": [
+        {
+          "id": "precision-test-051-correct",
+          "category": "protected",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "Нэвира",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "precision-test-051-error",
+          "category": "protected",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "Нэвира",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "precision-test-056-correct",
+          "category": "protected",
+          "control": true,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "precision-test-056-error",
+          "category": "protected",
+          "control": false,
+          "changes": [
+            {
+              "fragment": ":  ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\lt-confirmation\\examples-precision120-lt-dart.jsonl",
+      "count": 120,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\lt-confirmation\\examples-precision120-joint.jsonl",
+      "count": 120,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    }
+  ]
+}

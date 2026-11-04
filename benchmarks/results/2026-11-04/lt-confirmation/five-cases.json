@@ -1,0 +1,105 @@
+{
+  "role": "Пять ранее известных случаев; не независимая приёмка.",
+  "cases": [
+    {
+      "id": "ru-128",
+      "text": "Большинство участников поддержало предложение.",
+      "gigachat_dart": "Большинство участников поддержали предложение.",
+      "confirmed_output": "Большинство участников поддержало предложение.",
+      "confirmation": {
+        "version": "lt-agreement-v1",
+        "status": "unconfirmed_changes",
+        "confirmed": [],
+        "unconfirmed": [
+          {
+            "start": 23,
+            "end": 33,
+            "original": "поддержало",
+            "replacement": "поддержали"
+          }
+        ]
+      },
+      "lt_matches": []
+    },
+    {
+      "id": "ru-132",
+      "text": "Согласно приказу занятия отменены.",
+      "gigachat_dart": "Согласно приказу, занятия отменены.",
+      "confirmed_output": "Согласно приказу занятия отменены.",
+      "confirmation": {
+        "version": "lt-agreement-v1",
+        "status": "unconfirmed_changes",
+        "confirmed": [],
+        "unconfirmed": [
+          {
+            "start": 16,
+            "end": 16,
+            "original": "",
+            "replacement": ","
+          }
+        ]
+      },
+      "lt_matches": []
+    },
+    {
+      "id": "ru-155",
+      "text": "Утром было тихо и шёл снег.",
+      "gigachat_dart": "Утром было тихо, и шёл снег.",
+      "confirmed_output": "Утром было тихо и шёл снег.",
+      "confirmation": {
+        "version": "lt-agreement-v1",
+        "status": "unconfirmed_changes",
+        "confirmed": [],
+        "unconfirmed": [
+          {
+            "start": 15,
+            "end": 15,
+            "original": "",
+            "replacement": ","
+          }
+        ]
+      },
+      "lt_matches": []
+    },
+    {
+      "id": "ru-157",
+      "text": "Он сидел сложа руки.",
+      "gigachat_dart": "Он сидел, сложа руки.",
+      "confirmed_output": "Он сидел сложа руки.",
+      "confirmation": {
+        "version": "lt-agreement-v1",
+        "status": "unconfirmed_changes",
+        "confirmed": [],
+        "unconfirmed": [
+          {
+            "start": 8,
+            "end": 8,
+            "original": "",
+            "replacement": ","
+          }
+        ]
+      },
+      "lt_matches": []
+    },
+    {
+      "id": "ru-170",
+      "text": "Можно попроще?",
+      "gigachat_dart": "Можно проще?",
+      "confirmed_output": "Можно попроще?",
+      "confirmation": {
+        "version": "lt-agreement-v1",
+        "status": "unconfirmed_changes",
+        "confirmed": [],
+        "unconfirmed": [
+          {
+            "start": 6,
+            "end": 13,
+            "original": "попроще",
+            "replacement": "проще"
+          }
+        ]
+      },
+      "lt_matches": []
+    }
+  ]
+}

@@ -2,9 +2,9 @@ name: Проверка инструмента сравнения моделей
 on:
   push:
     branches: [main]
-    paths: ['tools/model_benchmark/**', 'benchmarks/text-guard/**', 'benchmarks/prompt-precision/**', 'benchmarks/sage/**', 'benchmarks/sage-v1.1/**', 'benchmarks/giga20-gfusion/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
+    paths: ['tools/model_benchmark/**', 'benchmarks/text-guard/**', 'benchmarks/prompt-precision/**', 'benchmarks/lt-confirmation/**', 'benchmarks/sage/**', 'benchmarks/sage-v1.1/**', 'benchmarks/giga20-gfusion/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
   pull_request:
-    paths: ['tools/model_benchmark/**', 'benchmarks/text-guard/**', 'benchmarks/prompt-precision/**', 'benchmarks/sage/**', 'benchmarks/sage-v1.1/**', 'benchmarks/giga20-gfusion/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
+    paths: ['tools/model_benchmark/**', 'benchmarks/text-guard/**', 'benchmarks/prompt-precision/**', 'benchmarks/lt-confirmation/**', 'benchmarks/sage/**', 'benchmarks/sage-v1.1/**', 'benchmarks/giga20-gfusion/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -28,6 +28,8 @@ jobs:
         run: python3 ../../benchmarks/text-guard/summarize.py --check
       - name: Проверить исследование точности запроса
         run: python3 ../../benchmarks/prompt-precision/verify.py
+      - name: Проверить подтверждение правок через LT
+        run: python3 ../../benchmarks/lt-confirmation/run.py --check
       - name: Проверить воспроизводимость набора
         run: |
           python3 ../../benchmarks/prepare_cases.py
