@@ -2,9 +2,9 @@ name: Проверка инструмента сравнения моделей
 on:
   push:
     branches: [main]
-    paths: ['tools/model_benchmark/**', 'benchmarks/text-guard/**', 'benchmarks/prompt-precision/**', 'benchmarks/lt-confirmation/**', 'benchmarks/sage/**', 'benchmarks/sage-v1.1/**', 'benchmarks/giga20-gfusion/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
+    paths: ['tools/model_benchmark/**', 'benchmarks/text-guard/**', 'benchmarks/prompt-precision/**', 'benchmarks/lt-confirmation/**', 'benchmarks/dictionaries/**', 'benchmarks/sage/**', 'benchmarks/sage-v1.1/**', 'benchmarks/giga20-gfusion/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
   pull_request:
-    paths: ['tools/model_benchmark/**', 'benchmarks/text-guard/**', 'benchmarks/prompt-precision/**', 'benchmarks/lt-confirmation/**', 'benchmarks/sage/**', 'benchmarks/sage-v1.1/**', 'benchmarks/giga20-gfusion/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
+    paths: ['tools/model_benchmark/**', 'benchmarks/text-guard/**', 'benchmarks/prompt-precision/**', 'benchmarks/lt-confirmation/**', 'benchmarks/dictionaries/**', 'benchmarks/sage/**', 'benchmarks/sage-v1.1/**', 'benchmarks/giga20-gfusion/**', 'benchmarks/languagetool/**', 'benchmarks/preservation/**', 'benchmarks/sber-large/**', 'benchmarks/gigachat-prompts/**', 'benchmarks/cases-v1.*', 'benchmarks/prepare_cases.py', '.github/workflows/benchmark-tool.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -30,13 +30,16 @@ jobs:
         run: python3 ../../benchmarks/prompt-precision/verify.py
       - name: Проверить подтверждение правок через LT
         run: python3 ../../benchmarks/lt-confirmation/run.py --check
+      - name: Проверить словарное сравнение
+        run: python3 ../../benchmarks/dictionaries/run.py --check
       - name: Проверить воспроизводимость набора
         run: |
           python3 ../../benchmarks/prepare_cases.py
+          python3 ../../benchmarks/dictionaries/prepare_layout.py
           python3 ../../benchmarks/prompt-precision/prepare.py
           python3 ../../benchmarks/preservation/prepare_cases.py
           python3 ../../benchmarks/gigachat-prompts/prepare_holdout.py
-          git diff --exit-code -- ../../benchmarks/prompt-precision/dev-v1.jsonl ../../benchmarks/prompt-precision/holdout-v1.jsonl ../../benchmarks/cases-v1.jsonl ../../benchmarks/preservation/cases-v1.jsonl ../../benchmarks/gigachat-prompts/holdout-v1.jsonl
+          git diff --exit-code -- ../../benchmarks/dictionaries/layout-holdout-v1.jsonl ../../benchmarks/prompt-precision/dev-v1.jsonl ../../benchmarks/prompt-precision/holdout-v1.jsonl ../../benchmarks/cases-v1.jsonl ../../benchmarks/preservation/cases-v1.jsonl ../../benchmarks/gigachat-prompts/holdout-v1.jsonl
       - run: dart format --output=none --set-exit-if-changed .
       - run: dart analyze --fatal-infos
       - run: dart test

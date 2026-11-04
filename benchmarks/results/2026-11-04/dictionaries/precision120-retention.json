@@ -1,0 +1,65 @@
+{
+  "method": "Число дословных вхождений protected без нормализации",
+  "results": [
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\dictionaries\\precision120-symspell-spelling.jsonl",
+      "count": 120,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 1,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\dictionaries\\precision120-hunspell-spelling.jsonl",
+      "count": 120,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\dictionaries\\precision120-hunspell-frequency-spelling.jsonl",
+      "count": 120,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\dictionaries\\precision120-symspell-layout.jsonl",
+      "count": 120,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 1,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\dictionaries\\precision120-hunspell-layout.jsonl",
+      "count": 120,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\dictionaries\\precision120-hunspell-frequency-layout.jsonl",
+      "count": 120,
+      "retention_failures": 0,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {},
+      "details": []
+    }
+  ]
+}

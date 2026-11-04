@@ -1,0 +1,718 @@
+{
+  "dev": {
+    "symspell-spelling": {
+      "count": 40,
+      "gold_corrections": 24,
+      "matched_corrections": 3,
+      "controls": 16,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.00014350000000000002,
+      "p95_seconds": 0.00053,
+      "clean_corrections": 3
+    },
+    "hunspell-spelling": {
+      "count": 40,
+      "gold_corrections": 24,
+      "matched_corrections": 3,
+      "controls": 16,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.0006490000000000001,
+      "p95_seconds": 0.041281,
+      "clean_corrections": 3
+    },
+    "hunspell-frequency-spelling": {
+      "count": 40,
+      "gold_corrections": 24,
+      "matched_corrections": 3,
+      "controls": 16,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.0006195,
+      "p95_seconds": 0.041354,
+      "clean_corrections": 3
+    },
+    "symspell-layout": {
+      "count": 40,
+      "gold_corrections": 24,
+      "matched_corrections": 3,
+      "controls": 16,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.000144,
+      "p95_seconds": 0.000297,
+      "clean_corrections": 3
+    },
+    "hunspell-layout": {
+      "count": 40,
+      "gold_corrections": 24,
+      "matched_corrections": 3,
+      "controls": 16,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.0006885000000000001,
+      "p95_seconds": 0.066767,
+      "clean_corrections": 3
+    },
+    "hunspell-frequency-layout": {
+      "count": 40,
+      "gold_corrections": 24,
+      "matched_corrections": 3,
+      "controls": 16,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.000707,
+      "p95_seconds": 0.066722,
+      "clean_corrections": 3
+    }
+  },
+  "ordinary": {
+    "symspell-spelling": {
+      "count": 160,
+      "gold_corrections": 96,
+      "matched_corrections": 13,
+      "controls": 64,
+      "changed_controls": 1,
+      "atomic_precision": 0.7368421052631579,
+      "median_seconds": 0.00011850000000000001,
+      "p95_seconds": 0.000405,
+      "clean_corrections": 13
+    },
+    "hunspell-spelling": {
+      "count": 160,
+      "gold_corrections": 96,
+      "matched_corrections": 17,
+      "controls": 64,
+      "changed_controls": 0,
+      "atomic_precision": 0.9,
+      "median_seconds": 0.000509,
+      "p95_seconds": 0.063934,
+      "clean_corrections": 17
+    },
+    "hunspell-frequency-spelling": {
+      "count": 160,
+      "gold_corrections": 96,
+      "matched_corrections": 16,
+      "controls": 64,
+      "changed_controls": 0,
+      "atomic_precision": 0.85,
+      "median_seconds": 0.0005135000000000001,
+      "p95_seconds": 0.066425,
+      "clean_corrections": 16
+    },
+    "symspell-layout": {
+      "count": 160,
+      "gold_corrections": 96,
+      "matched_corrections": 13,
+      "controls": 64,
+      "changed_controls": 1,
+      "atomic_precision": 0.7368421052631579,
+      "median_seconds": 0.000115,
+      "p95_seconds": 0.0003,
+      "clean_corrections": 13
+    },
+    "hunspell-layout": {
+      "count": 160,
+      "gold_corrections": 96,
+      "matched_corrections": 17,
+      "controls": 64,
+      "changed_controls": 0,
+      "atomic_precision": 0.9,
+      "median_seconds": 0.0005845,
+      "p95_seconds": 0.079093,
+      "clean_corrections": 17
+    },
+    "hunspell-frequency-layout": {
+      "count": 160,
+      "gold_corrections": 96,
+      "matched_corrections": 16,
+      "controls": 64,
+      "changed_controls": 0,
+      "atomic_precision": 0.85,
+      "median_seconds": 0.000531,
+      "p95_seconds": 0.078817,
+      "clean_corrections": 16
+    }
+  },
+  "preservation": {
+    "symspell-spelling": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 24,
+      "controls": 60,
+      "changed_controls": 0,
+      "atomic_precision": 0.7777777777777778,
+      "median_seconds": 0.00014350000000000002,
+      "p95_seconds": 0.000623,
+      "clean_corrections": 24,
+      "protected_failures": 0
+    },
+    "hunspell-spelling": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 22,
+      "controls": 60,
+      "changed_controls": 0,
+      "atomic_precision": 0.71875,
+      "median_seconds": 0.0004805,
+      "p95_seconds": 0.072226,
+      "clean_corrections": 22,
+      "protected_failures": 0
+    },
+    "hunspell-frequency-spelling": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 25,
+      "controls": 60,
+      "changed_controls": 0,
+      "atomic_precision": 0.9310344827586207,
+      "median_seconds": 0.0004895,
+      "p95_seconds": 0.073189,
+      "clean_corrections": 25,
+      "protected_failures": 0
+    },
+    "symspell-layout": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 24,
+      "controls": 60,
+      "changed_controls": 0,
+      "atomic_precision": 0.7777777777777778,
+      "median_seconds": 0.0001495,
+      "p95_seconds": 0.000616,
+      "clean_corrections": 24,
+      "protected_failures": 0
+    },
+    "hunspell-layout": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 22,
+      "controls": 60,
+      "changed_controls": 0,
+      "atomic_precision": 0.71875,
+      "median_seconds": 0.0007949999999999999,
+      "p95_seconds": 0.098758,
+      "clean_corrections": 22,
+      "protected_failures": 0
+    },
+    "hunspell-frequency-layout": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 25,
+      "controls": 60,
+      "changed_controls": 0,
+      "atomic_precision": 0.9310344827586207,
+      "median_seconds": 0.0007995,
+      "p95_seconds": 0.098447,
+      "clean_corrections": 25,
+      "protected_failures": 0
+    }
+  },
+  "holdout80": {
+    "symspell-spelling": {
+      "count": 80,
+      "gold_corrections": 40,
+      "matched_corrections": 13,
+      "controls": 40,
+      "changed_controls": 0,
+      "atomic_precision": 0.8947368421052632,
+      "median_seconds": 0.0001335,
+      "p95_seconds": 0.000579,
+      "clean_corrections": 13,
+      "protected_failures": 0
+    },
+    "hunspell-spelling": {
+      "count": 80,
+      "gold_corrections": 40,
+      "matched_corrections": 13,
+      "controls": 40,
+      "changed_controls": 0,
+      "atomic_precision": 0.7142857142857143,
+      "median_seconds": 0.000476,
+      "p95_seconds": 0.076965,
+      "clean_corrections": 12,
+      "protected_failures": 0
+    },
+    "hunspell-frequency-spelling": {
+      "count": 80,
+      "gold_corrections": 40,
+      "matched_corrections": 15,
+      "controls": 40,
+      "changed_controls": 0,
+      "atomic_precision": 0.9473684210526315,
+      "median_seconds": 0.000498,
+      "p95_seconds": 0.076883,
+      "clean_corrections": 15,
+      "protected_failures": 0
+    },
+    "symspell-layout": {
+      "count": 80,
+      "gold_corrections": 40,
+      "matched_corrections": 13,
+      "controls": 40,
+      "changed_controls": 0,
+      "atomic_precision": 0.8947368421052632,
+      "median_seconds": 0.0001445,
+      "p95_seconds": 0.000601,
+      "clean_corrections": 13,
+      "protected_failures": 0
+    },
+    "hunspell-layout": {
+      "count": 80,
+      "gold_corrections": 40,
+      "matched_corrections": 13,
+      "controls": 40,
+      "changed_controls": 0,
+      "atomic_precision": 0.7142857142857143,
+      "median_seconds": 0.000651,
+      "p95_seconds": 0.082947,
+      "clean_corrections": 12,
+      "protected_failures": 0
+    },
+    "hunspell-frequency-layout": {
+      "count": 80,
+      "gold_corrections": 40,
+      "matched_corrections": 15,
+      "controls": 40,
+      "changed_controls": 0,
+      "atomic_precision": 0.9473684210526315,
+      "median_seconds": 0.0006395000000000001,
+      "p95_seconds": 0.083953,
+      "clean_corrections": 15,
+      "protected_failures": 0
+    }
+  },
+  "guard40": {
+    "symspell-spelling": {
+      "count": 40,
+      "gold_corrections": 20,
+      "matched_corrections": 7,
+      "controls": 20,
+      "changed_controls": 1,
+      "atomic_precision": 0.6666666666666666,
+      "median_seconds": 0.00012800000000000002,
+      "p95_seconds": 0.000727,
+      "clean_corrections": 7,
+      "protected_failures": 2
+    },
+    "hunspell-spelling": {
+      "count": 40,
+      "gold_corrections": 20,
+      "matched_corrections": 6,
+      "controls": 20,
+      "changed_controls": 1,
+      "atomic_precision": 0.6363636363636364,
+      "median_seconds": 0.00046750000000000003,
+      "p95_seconds": 0.071557,
+      "clean_corrections": 6,
+      "protected_failures": 2
+    },
+    "hunspell-frequency-spelling": {
+      "count": 40,
+      "gold_corrections": 20,
+      "matched_corrections": 8,
+      "controls": 20,
+      "changed_controls": 1,
+      "atomic_precision": 0.8181818181818182,
+      "median_seconds": 0.0004745,
+      "p95_seconds": 0.071841,
+      "clean_corrections": 8,
+      "protected_failures": 2
+    },
+    "symspell-layout": {
+      "count": 40,
+      "gold_corrections": 20,
+      "matched_corrections": 7,
+      "controls": 20,
+      "changed_controls": 1,
+      "atomic_precision": 0.6666666666666666,
+      "median_seconds": 0.000161,
+      "p95_seconds": 0.000629,
+      "clean_corrections": 7,
+      "protected_failures": 2
+    },
+    "hunspell-layout": {
+      "count": 40,
+      "gold_corrections": 20,
+      "matched_corrections": 6,
+      "controls": 20,
+      "changed_controls": 1,
+      "atomic_precision": 0.6363636363636364,
+      "median_seconds": 0.0006695,
+      "p95_seconds": 0.090289,
+      "clean_corrections": 6,
+      "protected_failures": 2
+    },
+    "hunspell-frequency-layout": {
+      "count": 40,
+      "gold_corrections": 20,
+      "matched_corrections": 8,
+      "controls": 20,
+      "changed_controls": 1,
+      "atomic_precision": 0.8181818181818182,
+      "median_seconds": 0.0006875,
+      "p95_seconds": 0.103875,
+      "clean_corrections": 8,
+      "protected_failures": 2
+    }
+  },
+  "precision120": {
+    "symspell-spelling": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 35,
+      "controls": 60,
+      "changed_controls": 1,
+      "atomic_precision": 0.7090909090909091,
+      "median_seconds": 0.0001445,
+      "p95_seconds": 0.000653,
+      "clean_corrections": 33,
+      "protected_failures": 0
+    },
+    "hunspell-spelling": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 33,
+      "controls": 60,
+      "changed_controls": 0,
+      "atomic_precision": 0.7,
+      "median_seconds": 0.0007635,
+      "p95_seconds": 0.08023,
+      "clean_corrections": 33,
+      "protected_failures": 0
+    },
+    "hunspell-frequency-spelling": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 37,
+      "controls": 60,
+      "changed_controls": 0,
+      "atomic_precision": 0.8125,
+      "median_seconds": 0.0007515,
+      "p95_seconds": 0.079427,
+      "clean_corrections": 37,
+      "protected_failures": 0
+    },
+    "symspell-layout": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 35,
+      "controls": 60,
+      "changed_controls": 1,
+      "atomic_precision": 0.7090909090909091,
+      "median_seconds": 0.0001515,
+      "p95_seconds": 0.000607,
+      "clean_corrections": 33,
+      "protected_failures": 0
+    },
+    "hunspell-layout": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 33,
+      "controls": 60,
+      "changed_controls": 0,
+      "atomic_precision": 0.7,
+      "median_seconds": 0.0007624999999999999,
+      "p95_seconds": 0.095683,
+      "clean_corrections": 33,
+      "protected_failures": 0
+    },
+    "hunspell-frequency-layout": {
+      "count": 120,
+      "gold_corrections": 60,
+      "matched_corrections": 37,
+      "controls": 60,
+      "changed_controls": 0,
+      "atomic_precision": 0.8125,
+      "median_seconds": 0.0007635000000000001,
+      "p95_seconds": 0.094259,
+      "clean_corrections": 37,
+      "protected_failures": 0
+    }
+  },
+  "layout12": {
+    "symspell-spelling": {
+      "count": 12,
+      "gold_corrections": 8,
+      "matched_corrections": 0,
+      "controls": 4,
+      "changed_controls": 0,
+      "atomic_precision": 0.0,
+      "median_seconds": 9.449999999999999e-05,
+      "p95_seconds": 0.000161,
+      "clean_corrections": 0
+    },
+    "hunspell-spelling": {
+      "count": 12,
+      "gold_corrections": 8,
+      "matched_corrections": 0,
+      "controls": 4,
+      "changed_controls": 0,
+      "atomic_precision": 0.0,
+      "median_seconds": 0.0002585,
+      "p95_seconds": 0.041775,
+      "clean_corrections": 0
+    },
+    "hunspell-frequency-spelling": {
+      "count": 12,
+      "gold_corrections": 8,
+      "matched_corrections": 0,
+      "controls": 4,
+      "changed_controls": 0,
+      "atomic_precision": 0.0,
+      "median_seconds": 0.0002615,
+      "p95_seconds": 0.042754,
+      "clean_corrections": 0
+    },
+    "symspell-layout": {
+      "count": 12,
+      "gold_corrections": 8,
+      "matched_corrections": 7,
+      "controls": 4,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 8.75e-05,
+      "p95_seconds": 0.00012,
+      "clean_corrections": 7
+    },
+    "hunspell-layout": {
+      "count": 12,
+      "gold_corrections": 8,
+      "matched_corrections": 7,
+      "controls": 4,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.0032389999999999997,
+      "p95_seconds": 0.041735,
+      "clean_corrections": 7
+    },
+    "hunspell-frequency-layout": {
+      "count": 12,
+      "gold_corrections": 8,
+      "matched_corrections": 7,
+      "controls": 4,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.0039640000000000005,
+      "p95_seconds": 0.041737,
+      "clean_corrections": 7
+    }
+  },
+  "paragraphs": {
+    "symspell-spelling": {
+      "count": 3,
+      "gold_corrections": 6,
+      "matched_corrections": 0,
+      "controls": 0,
+      "changed_controls": 0,
+      "atomic_precision": null,
+      "median_seconds": 0.001413,
+      "p95_seconds": 0.003197,
+      "clean_corrections": 0
+    },
+    "hunspell-spelling": {
+      "count": 3,
+      "gold_corrections": 6,
+      "matched_corrections": 0,
+      "controls": 0,
+      "changed_controls": 0,
+      "atomic_precision": null,
+      "median_seconds": 0.006724,
+      "p95_seconds": 0.01606,
+      "clean_corrections": 0
+    },
+    "hunspell-frequency-spelling": {
+      "count": 3,
+      "gold_corrections": 6,
+      "matched_corrections": 0,
+      "controls": 0,
+      "changed_controls": 0,
+      "atomic_precision": null,
+      "median_seconds": 0.005862,
+      "p95_seconds": 0.013544,
+      "clean_corrections": 0
+    },
+    "symspell-layout": {
+      "count": 3,
+      "gold_corrections": 6,
+      "matched_corrections": 0,
+      "controls": 0,
+      "changed_controls": 0,
+      "atomic_precision": null,
+      "median_seconds": 0.001563,
+      "p95_seconds": 0.003378,
+      "clean_corrections": 0
+    },
+    "hunspell-layout": {
+      "count": 3,
+      "gold_corrections": 6,
+      "matched_corrections": 0,
+      "controls": 0,
+      "changed_controls": 0,
+      "atomic_precision": null,
+      "median_seconds": 0.008293,
+      "p95_seconds": 0.017549,
+      "clean_corrections": 0
+    },
+    "hunspell-frequency-layout": {
+      "count": 3,
+      "gold_corrections": 6,
+      "matched_corrections": 0,
+      "controls": 0,
+      "changed_controls": 0,
+      "atomic_precision": null,
+      "median_seconds": 0.008861,
+      "p95_seconds": 0.017392,
+      "clean_corrections": 0
+    }
+  },
+  "layout46": {
+    "symspell-spelling": {
+      "count": 46,
+      "gold_corrections": 20,
+      "matched_corrections": 0,
+      "controls": 26,
+      "changed_controls": 1,
+      "atomic_precision": 0.0,
+      "median_seconds": 7.3e-05,
+      "p95_seconds": 0.000415,
+      "clean_corrections": 0,
+      "protected_failures": 1
+    },
+    "hunspell-spelling": {
+      "count": 46,
+      "gold_corrections": 20,
+      "matched_corrections": 0,
+      "controls": 26,
+      "changed_controls": 1,
+      "atomic_precision": 0.0,
+      "median_seconds": 0.000216,
+      "p95_seconds": 0.041062,
+      "clean_corrections": 0,
+      "protected_failures": 1
+    },
+    "hunspell-frequency-spelling": {
+      "count": 46,
+      "gold_corrections": 20,
+      "matched_corrections": 0,
+      "controls": 26,
+      "changed_controls": 1,
+      "atomic_precision": 0.0,
+      "median_seconds": 0.000241,
+      "p95_seconds": 0.04082,
+      "clean_corrections": 0,
+      "protected_failures": 1
+    },
+    "symspell-layout": {
+      "count": 46,
+      "gold_corrections": 20,
+      "matched_corrections": 19,
+      "controls": 26,
+      "changed_controls": 2,
+      "atomic_precision": 0.9393939393939394,
+      "median_seconds": 8.05e-05,
+      "p95_seconds": 0.000112,
+      "clean_corrections": 19,
+      "protected_failures": 2
+    },
+    "hunspell-layout": {
+      "count": 46,
+      "gold_corrections": 20,
+      "matched_corrections": 19,
+      "controls": 26,
+      "changed_controls": 2,
+      "atomic_precision": 0.9393939393939394,
+      "median_seconds": 0.0004195,
+      "p95_seconds": 0.044632,
+      "clean_corrections": 19,
+      "protected_failures": 2
+    },
+    "hunspell-frequency-layout": {
+      "count": 46,
+      "gold_corrections": 20,
+      "matched_corrections": 19,
+      "controls": 26,
+      "changed_controls": 2,
+      "atomic_precision": 0.9393939393939394,
+      "median_seconds": 0.0004485,
+      "p95_seconds": 0.04483,
+      "clean_corrections": 19,
+      "protected_failures": 2
+    }
+  },
+  "guard40-personal": {
+    "symspell-spelling": {
+      "count": 40,
+      "gold_corrections": 20,
+      "matched_corrections": 7,
+      "controls": 20,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.000126,
+      "p95_seconds": 0.000667,
+      "clean_corrections": 7,
+      "protected_failures": 0
+    },
+    "hunspell-spelling": {
+      "count": 40,
+      "gold_corrections": 20,
+      "matched_corrections": 6,
+      "controls": 20,
+      "changed_controls": 0,
+      "atomic_precision": 0.7777777777777778,
+      "median_seconds": 0.000438,
+      "p95_seconds": 0.07173,
+      "clean_corrections": 6,
+      "protected_failures": 0
+    },
+    "hunspell-frequency-spelling": {
+      "count": 40,
+      "gold_corrections": 20,
+      "matched_corrections": 8,
+      "controls": 20,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.0004575,
+      "p95_seconds": 0.070649,
+      "clean_corrections": 8,
+      "protected_failures": 0
+    },
+    "symspell-layout": {
+      "count": 40,
+      "gold_corrections": 20,
+      "matched_corrections": 7,
+      "controls": 20,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.0001345,
+      "p95_seconds": 0.000616,
+      "clean_corrections": 7,
+      "protected_failures": 0
+    },
+    "hunspell-layout": {
+      "count": 40,
+      "gold_corrections": 20,
+      "matched_corrections": 6,
+      "controls": 20,
+      "changed_controls": 0,
+      "atomic_precision": 0.7777777777777778,
+      "median_seconds": 0.0005275,
+      "p95_seconds": 0.091736,
+      "clean_corrections": 6,
+      "protected_failures": 0
+    },
+    "hunspell-frequency-layout": {
+      "count": 40,
+      "gold_corrections": 20,
+      "matched_corrections": 8,
+      "controls": 20,
+      "changed_controls": 0,
+      "atomic_precision": 1.0,
+      "median_seconds": 0.000631,
+      "p95_seconds": 0.090179,
+      "clean_corrections": 8,
+      "protected_failures": 0
+    }
+  }
+}
