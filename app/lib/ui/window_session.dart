@@ -20,6 +20,7 @@ class WindowSession with WindowListener {
   Timer? _timer;
   Future<void> _pending = Future.value();
   Future<bool> Function()? beforeClose;
+  void Function(String)? onFailure;
   bool _closing = false;
 
   static Future<WindowSession> restore(String directory) async {
@@ -102,6 +103,10 @@ class WindowSession with WindowListener {
       if (await beforeClose?.call() != true) return;
       await flush();
       await windowManager.destroy();
+    } on Exception {
+      onFailure?.call(
+        'Не удалось сохранить положение окна. Повторите закрытие.',
+      );
     } finally {
       _closing = false;
     }

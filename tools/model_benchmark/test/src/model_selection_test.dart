@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:korrekta_model_benchmark/src/cli.dart' show request;
-import 'package:korrekta_model_benchmark/src/ensemble_runtime.dart';
+import 'package:korrekta_model_benchmark/src/desktop_request.dart';
+import 'package:korrekta_model_benchmark/desktop.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -29,11 +29,11 @@ void main() {
           ensembleModel,
           'hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M',
         ]) {
-          await request(
+          await desktopRequest(
             client,
             Uri.parse('http://127.0.0.1:${server.port}'),
             'generate',
-            EnsembleRuntime.generationBody(model, 'prompt', {
+            DesktopRuntime.generationBody(model, 'prompt', {
               'type': 'object',
             }, 1024),
           );

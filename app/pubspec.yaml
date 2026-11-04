@@ -22,6 +22,10 @@ dependencies:
   window_manager: 0.5.1
   screen_retriever: 0.2.0
   screen_retriever_linux: 0.2.0
+  package_info_plus: ^10.2.2
+  pub_semver: ^2.2.1
+  crypto: ^3.0.8
+  http: ^1.6.0
 
 dev_dependencies:
   flutter_test:
@@ -33,6 +37,7 @@ flutter:
   assets:
     - assets/mark.png
     - assets/proposal.txt
+    - assets/update-macos.sh
   fonts:
     - family: Nunito
       fonts:

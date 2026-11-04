@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../domain/check_result.dart';
 import 'editor_cubit.dart';
+import 'panel_header.dart';
 
 class MarkedTextController extends TextEditingController {
   List<Suggestion> suggestions = const [];
@@ -79,8 +80,8 @@ class _TextEditorState extends State<TextEditor> {
       margin: EdgeInsets.zero,
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+          PanelHeader(
+            key: const Key('editor-header'),
             child: Row(
               children: [
                 const Expanded(

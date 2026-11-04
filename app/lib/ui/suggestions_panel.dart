@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../domain/check_result.dart';
 import 'editor_cubit.dart';
+import 'panel_header.dart';
 
 class SuggestionsPanel extends StatelessWidget {
   const SuggestionsPanel({super.key});
@@ -15,8 +16,8 @@ class SuggestionsPanel extends StatelessWidget {
         margin: EdgeInsets.zero,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(20),
+            PanelHeader(
+              key: const Key('suggestions-header'),
               child: Row(
                 children: [
                   Expanded(

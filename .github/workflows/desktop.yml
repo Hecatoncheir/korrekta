@@ -30,6 +30,8 @@ jobs:
         working-directory: app
       - run: flutter test
         working-directory: app
+      - name: Проверить сценарии установки и обновления
+        run: bash -n packaging/linux.sh packaging/macos.sh app/assets/update-macos.sh
       - run: dart pub get --enforce-lockfile && dart analyze --fatal-infos && dart test
         working-directory: tools/model_benchmark
       - name: Подготовить проверку сложности
@@ -79,9 +81,10 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force release | Out-Null
-          Invoke-WebRequest https://aka.ms/vs/17/release/vc_redist.x64.exe -OutFile release/vc_redist.x64.exe
-          $signature = Get-AuthenticodeSignature release/vc_redist.x64.exe
-          if ($signature.Status -ne 'Valid' -or $signature.SignerCertificate.Subject -notmatch 'Microsoft Corporation') { throw 'Неверная подпись Microsoft' }
+          $vsRoot = & 'C:/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe' -latest -property installationPath
+          $crt = Get-ChildItem "$vsRoot/VC/Redist/MSVC/*/x64/Microsoft.VC*.CRT" -Directory | Sort-Object FullName -Descending | Select-Object -First 1
+          if (-not $crt) { throw 'Не найдены компоненты Microsoft C++' }
+          Copy-Item "$($crt.FullName)/*.dll" app/build/windows/x64/runner/Release/
           & 'C:/Program Files (x86)/Inno Setup 6/ISCC.exe' '/DAppVersion=${{ steps.version.outputs.version }}' packaging/windows.iss
           if ($LASTEXITCODE -ne 0) { throw 'Ошибка сборки установщика' }
       - if: matrix.target == 'linux'

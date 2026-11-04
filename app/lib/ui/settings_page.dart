@@ -3,61 +3,42 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../data/local_components.dart';
 import '../domain/settings.dart';
 import 'components_cubit.dart';
 import 'editor_cubit.dart';
+import 'update_panel.dart';
+import 'workspace.dart';
 
-Future<void> openSettings(BuildContext context) => showDialog<void>(
-  context: context,
-  builder: (_) => BlocProvider.value(
-    value: context.read<EditorCubit>(),
-    child: BlocProvider(
-      create: (_) =>
-          ComponentsCubit(LocalComponents())
-            ..refresh(context.read<EditorCubit>().state.settings),
-      child: const SettingsDialog(),
-    ),
-  ),
-);
-
-class SettingsDialog extends StatelessWidget {
-  const SettingsDialog({super.key});
-
+class SettingsPage extends StatelessWidget {
+  const SettingsPage({super.key});
   @override
-  Widget build(BuildContext context) => Dialog(
-    child: SizedBox(
-      width: 600,
-      child: Padding(
+  Widget build(BuildContext context) => const WorkspaceColumns(
+    left: SettingsCard(child: ConnectionFields()),
+    right: SettingsCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          ModelPicker(),
+          SizedBox(height: 24),
+          ComponentPanel(),
+          Divider(height: 40),
+          UpdatePanel(),
+        ],
+      ),
+    ),
+  );
+}
+
+class SettingsCard extends StatelessWidget {
+  const SettingsCard({super.key, required this.child});
+  final Widget child;
+  @override
+  Widget build(BuildContext context) => Card(
+    margin: EdgeInsets.zero,
+    child: SizedBox.expand(
+      child: SingleChildScrollView(
         padding: const EdgeInsets.all(24),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: Text(
-                      'Настройки',
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                  ),
-                  IconButton(
-                    tooltip: 'Закрыть',
-                    onPressed: () => Navigator.pop(context),
-                    icon: const Icon(Icons.close),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 16),
-              const ModelPicker(),
-              const SizedBox(height: 16),
-              const ComponentPanel(),
-              const Divider(height: 32),
-              const ConnectionFields(),
-            ],
-          ),
-        ),
+        child: child,
       ),
     ),
   );
@@ -149,7 +130,7 @@ class ComponentPanel extends StatelessWidget {
             ),
           const SizedBox(height: 12),
           const Text(
-            'Запустите установленные Ollama и LanguageTool. Словари и Hunspell настраиваются ниже. Модели скачиваются в папку Ollama (OLLAMA_MODELS).',
+            'Запустите Ollama и LanguageTool. Словари и Hunspell настраиваются слева. Модели хранятся в папке Ollama.',
           ),
           Align(
             alignment: Alignment.centerLeft,

@@ -227,7 +227,6 @@ Future<JsonMap> request(
 ]) async {
   final url = endpoint.replace(path: '/api/$api');
   final connection = await client.openUrl(body == null ? 'GET' : 'POST', url);
-  connection.followRedirects = false;
   if (body != null) {
     connection.headers.contentType = ContentType.json;
     connection.write(jsonEncode(body));

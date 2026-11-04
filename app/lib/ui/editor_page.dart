@@ -5,9 +5,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'editor_cubit.dart';
-import 'settings_dialog.dart';
-import 'suggestions_panel.dart';
-import 'text_editor.dart';
+import 'components_cubit.dart';
+import 'navigation_cubit.dart';
+import 'workspace.dart';
+import 'update_announcer.dart';
 import 'window_session.dart';
 
 class EditorPage extends StatefulWidget {
@@ -26,11 +27,16 @@ class _EditorPageState extends State<EditorPage> {
     lifecycle;
     widget.session?.beforeClose = () async =>
         await saveBeforeExit() == AppExitResponse.exit;
+    widget.session?.onFailure = (message) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text(message)));
+    };
   }
 
   @override
   void dispose() {
     widget.session?.beforeClose = null;
+    widget.session?.onFailure = null;
     lifecycle.dispose();
     super.dispose();
   }
@@ -96,47 +102,33 @@ class _EditorPageState extends State<EditorPage> {
           context.read<EditorCubit>().check(),
     },
     child: Scaffold(
-      body: SafeArea(
-        child: Row(
-          children: [
-            const SideBar(),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    EditorHeader(onNew: newDraft),
-                    const SizedBox(height: 20),
-                    Expanded(
-                      child: LayoutBuilder(
-                        builder: (context, constraints) {
-                          if (constraints.maxWidth < 720) {
-                            return const Column(
-                              children: [
-                                Expanded(flex: 3, child: TextEditor()),
-                                SizedBox(height: 12),
-                                Expanded(flex: 2, child: SuggestionsPanel()),
-                              ],
-                            );
-                          }
-                          return const Row(
-                            children: [
-                              Expanded(flex: 7, child: TextEditor()),
-                              SizedBox(width: 20),
-                              Expanded(flex: 4, child: SuggestionsPanel()),
-                            ],
-                          );
-                        },
+      body: UpdateAnnouncer(
+        child: SafeArea(
+          child: Row(
+            children: [
+              const SideBar(),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      EditorHeader(onNew: newDraft),
+                      const SizedBox(height: 20),
+                      const Expanded(child: Workspace()),
+                      const SizedBox(height: 12),
+                      BlocBuilder<NavigationCubit, AppSection>(
+                        builder: (context, section) =>
+                            section == AppSection.editor
+                            ? const EditorFooter()
+                            : const SizedBox(height: 48),
                       ),
-                    ),
-                    const SizedBox(height: 12),
-                    const EditorFooter(),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     ),
@@ -165,12 +157,18 @@ class SideBar extends StatelessWidget {
         ),
         IconButton(
           tooltip: 'Редактор',
-          onPressed: () {},
-          icon: const Icon(Icons.edit_note_rounded, size: 30),
+          onPressed: () =>
+              context.read<NavigationCubit>().select(AppSection.editor),
+          icon: Icon(
+            Icons.edit_note_rounded,
+            size: 30,
+            color: Theme.of(context).colorScheme.primary,
+          ),
         ),
         const Spacer(),
         BlocBuilder<EditorCubit, EditorState>(
           builder: (context, state) => IconButton(
+            style: bottomIconStyle(context),
             tooltip: state.settings.dark ? 'Светлая тема' : 'Тёмная тема',
             onPressed: () => context.read<EditorCubit>().configure(
               state.settings.copyWith(dark: !state.settings.dark),
@@ -184,7 +182,13 @@ class SideBar extends StatelessWidget {
         ),
         IconButton(
           tooltip: 'Настройки',
-          onPressed: () => openSettings(context),
+          style: bottomIconStyle(context),
+          onPressed: () {
+            context.read<NavigationCubit>().select(AppSection.settings);
+            context.read<ComponentsCubit>().refresh(
+              context.read<EditorCubit>().state.settings,
+            );
+          },
           icon: const Icon(Icons.tune_rounded),
         ),
         const SizedBox(height: 20),
@@ -192,6 +196,12 @@ class SideBar extends StatelessWidget {
     ),
   );
 }
+
+ButtonStyle bottomIconStyle(BuildContext context) => IconButton.styleFrom(
+  foregroundColor: Color(
+    Theme.of(context).brightness == Brightness.dark ? 0xfffabd2f : 0xffb57614,
+  ),
+);
 
 class EditorHeader extends StatelessWidget {
   const EditorHeader({super.key, required this.onNew});

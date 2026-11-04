@@ -1,6 +1,6 @@
 import 'dart:isolate';
 
-import 'package:korrekta_model_benchmark/ensemble.dart';
+import 'package:korrekta_model_benchmark/desktop.dart';
 
 import '../domain/check_result.dart';
 import '../domain/settings.dart';
@@ -28,7 +28,7 @@ Future<CheckResult> collectText(
   Settings settings,
   String prompt,
 ) async {
-  final runtime = await EnsembleRuntime.open(
+  final runtime = await DesktopRuntime.open(
     store: settings.store,
     ollama: localEndpoint(settings.ollama).toString(),
     languageTool: localEndpoint(settings.languageTool).toString(),

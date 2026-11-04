@@ -15,6 +15,10 @@ import 'ui/editor_page.dart';
 import 'ui/theme.dart';
 import 'ui/window_chrome.dart';
 import 'ui/window_session.dart';
+import 'ui/update_cubit.dart';
+import 'ui/components_cubit.dart';
+import 'ui/navigation_cubit.dart';
+import 'data/local_components.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,13 +28,26 @@ Future<void> main() async {
     final draft = await store.load(Settings.defaults(directory.path));
     final prompt = await rootBundle.loadString('assets/proposal.txt');
     final session = await WindowSession.restore(directory.path);
+    final editor = EditorCubit(
+      checker: LocalChecker(prompt),
+      store: store,
+      draft: draft,
+    );
+    final updates = UpdateCubit.live(
+      Directory(p.join(directory.path, 'updates')),
+      () async {
+        if (editor.state.checking) throw StateError('Проверка ещё выполняется');
+        await editor.flush();
+        if (!editor.state.saved) throw StateError('Черновик не сохранён');
+        await session.flush();
+      },
+    );
     runApp(
-      BlocProvider(
-        create: (_) => EditorCubit(
-          checker: LocalChecker(prompt),
-          store: store,
-          draft: draft,
-        ),
+      MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (_) => editor),
+          BlocProvider(create: (_) => updates..check()),
+        ],
         child: KorrektaApp(session: session),
       ),
     );
@@ -57,27 +74,33 @@ class KorrektaApp extends StatelessWidget {
   const KorrektaApp({super.key, this.session});
   final WindowSession? session;
   @override
-  Widget build(BuildContext context) => BlocBuilder<EditorCubit, EditorState>(
-    buildWhen: (before, after) => before.settings.dark != after.settings.dark,
-    builder: (context, state) => MaterialApp(
-      title: 'Корректа',
-      debugShowCheckedModeBanner: false,
-      locale: const Locale('ru'),
-      supportedLocales: const [Locale('ru')],
-      localizationsDelegates: GlobalMaterialLocalizations.delegates,
-      theme: gruvbox(false),
-      darkTheme: gruvbox(true),
-      themeMode: state.settings.dark ? ThemeMode.dark : ThemeMode.light,
-      themeAnimationDuration:
-          WidgetsBinding
-              .instance
-              .platformDispatcher
-              .accessibilityFeatures
-              .disableAnimations
-          ? Duration.zero
-          : const Duration(milliseconds: 250),
-      home: EditorPage(session: session),
-      builder: (_, child) => WindowChrome(child: child!),
+  Widget build(BuildContext context) => MultiBlocProvider(
+    providers: [
+      BlocProvider(create: (_) => NavigationCubit()),
+      BlocProvider(create: (_) => ComponentsCubit(LocalComponents())),
+    ],
+    child: BlocBuilder<EditorCubit, EditorState>(
+      buildWhen: (before, after) => before.settings.dark != after.settings.dark,
+      builder: (context, state) => MaterialApp(
+        title: 'Корректа',
+        debugShowCheckedModeBanner: false,
+        locale: const Locale('ru'),
+        supportedLocales: const [Locale('ru')],
+        localizationsDelegates: GlobalMaterialLocalizations.delegates,
+        theme: gruvbox(false),
+        darkTheme: gruvbox(true),
+        themeMode: state.settings.dark ? ThemeMode.dark : ThemeMode.light,
+        themeAnimationDuration:
+            WidgetsBinding
+                .instance
+                .platformDispatcher
+                .accessibilityFeatures
+                .disableAnimations
+            ? Duration.zero
+            : const Duration(milliseconds: 250),
+        home: EditorPage(session: session),
+        builder: (_, child) => WindowChrome(child: child!),
+      ),
     ),
   );
 }

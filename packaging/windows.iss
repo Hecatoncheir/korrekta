@@ -7,7 +7,8 @@ AppName=Корректа
 AppVersion={#AppVersion}
 AppPublisher=Hecatoncheir
 AppPublisherURL=https://github.com/Hecatoncheir/korrekta
-DefaultDirName={autopf}\Korrekta
+DefaultDirName={localappdata}\Programs\Korrekta
+PrivilegesRequired=lowest
 DefaultGroupName=Корректа
 OutputDir=..\release
 OutputBaseFilename=Korrekta-{#AppVersion}-windows-x64-setup
@@ -18,17 +19,29 @@ SolidCompression=yes
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 WizardStyle=modern
+CloseApplications=yes
+RestartApplications=no
 
 [Languages]
 Name: russian; MessagesFile: compiler:Languages\Russian.isl
 
 [Files]
 Source: ..\app\build\windows\x64\runner\Release\*; DestDir: {app}; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: ..\release\vc_redist.x64.exe; DestDir: {tmp}; Flags: deleteafterinstall
 
 [Icons]
 Name: {group}\Корректа; Filename: {app}\korrekta.exe
 
 [Run]
-Filename: {tmp}\vc_redist.x64.exe; Parameters: /install /quiet /norestart; StatusMsg: Установка компонентов Microsoft; Flags: waituntilterminated
 Filename: {app}\korrekta.exe; Description: Открыть Корректу; Flags: nowait postinstall skipifsilent
+Filename: {app}\korrekta.exe; Flags: nowait; Check: RelaunchRequested
+
+[Code]
+function RelaunchRequested: Boolean;
+var
+  I: Integer;
+begin
+  Result := False;
+  for I := 1 to ParamCount do
+    if CompareText(ParamStr(I), '/RELAUNCH') = 0 then
+      Result := True;
+end;
