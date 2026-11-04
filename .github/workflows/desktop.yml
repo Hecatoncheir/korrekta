@@ -61,7 +61,8 @@ jobs:
       - name: Прочитать версию
         id: version
         shell: bash
-        run: echo "version=$(sed -n 's/^version: \([^+]*\).*/\1/p' app/pubspec.yaml)" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "version=$(sed -n 's/^version: \([^+]*\).*/\1/p' app/pubspec.yaml)" >> "$GITHUB_OUTPUT"
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.47.9'
