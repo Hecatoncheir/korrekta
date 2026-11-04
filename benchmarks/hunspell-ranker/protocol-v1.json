@@ -1,0 +1,104 @@
+{
+  "created_utc": "2026-11-04T02:11:38.045673+00:00",
+  "base_commit": "10d10742c8c70609ca3ee956abdf567f5ec00b66",
+  "version": "hunspell-ranker-v1",
+  "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+  "gguf_sha256": "5bd88ebea2a2ee2622c50ec5c0ec88f67169e4667c47762f51a4e2157367923b",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 4096,
+    "num_predict": 256,
+    "repeat_penalty": 1.0
+  },
+  "policy": "Hunspell1.7.5 и прежняя защита dictionary-v1. До 12 допустимых замен в штатном порядке на слово + исходник0; до 16 слов на текст. GigaChat выбирает только целый номер, отказ0 обязателен в каждом списке. Число ответов должно точно совпасть, номера проверяются по каждому списку, неполный/неверный ответ отклоняется целиком. Снимок проверяется. Свободного текста в контракте нет.",
+  "modes": "Основной spelling — только предложения Hunspell. Дополнительный layout включает прежний детерминированный кандидат клавиатуры, проверенный словарём Hunspell; это не выдаётся за штатную подсказку Hunspell. Одинаковые ограниченные списки для first/frequency/GigaChat.",
+  "input": "Официальный raw-шаблон токенизатора rev8a6075316cd6d41269f7892caf046f7d5aa274a4. Только text+slots с id каждого варианта; expected/protected/category не передаются. Словари и модель уже на E:, рендеринг офлайн.",
+  "evaluation": "Один фиксированный промпт без подбора. 10 прежних наборов/настроек, 661 строка x2 режима. Для пустого списка модель не вызывается. Все непустые списки проверяются новым реальным запросом, без кеша ответов. Достижимость эталона рассчитывается только после выбора как диагностический потолок, не используется в отборе. Наборы уже известны; новой независимой приёмкой результаты не являются.",
+  "runs": [
+    {
+      "id": "dev",
+      "data": "benchmarks/cases-v1.jsonl",
+      "split": "dev",
+      "count": 40
+    },
+    {
+      "id": "ordinary",
+      "data": "benchmarks/cases-v1.jsonl",
+      "split": "test",
+      "count": 160
+    },
+    {
+      "id": "preservation",
+      "data": "benchmarks/preservation/cases-v1.jsonl",
+      "split": "test",
+      "count": 120
+    },
+    {
+      "id": "holdout80",
+      "data": "benchmarks/gigachat-prompts/holdout-v1.jsonl",
+      "split": "test",
+      "count": 80
+    },
+    {
+      "id": "guard40",
+      "data": "benchmarks/text-guard/holdout-v1.jsonl",
+      "split": "test",
+      "count": 40
+    },
+    {
+      "id": "precision120",
+      "data": "benchmarks/prompt-precision/holdout-v1.jsonl",
+      "split": "test",
+      "count": 120
+    },
+    {
+      "id": "layout12",
+      "data": "benchmarks/sber-large/layout-smoke-v1.jsonl",
+      "split": "dev",
+      "count": 12
+    },
+    {
+      "id": "paragraphs",
+      "data": "benchmarks/paragraphs-v1.jsonl",
+      "split": "dev",
+      "count": 3
+    },
+    {
+      "id": "layout46",
+      "data": "benchmarks/dictionaries/layout-holdout-v1.jsonl",
+      "split": "test",
+      "count": 46
+    },
+    {
+      "id": "guard40-personal",
+      "data": "benchmarks/text-guard/holdout-v1.jsonl",
+      "split": "test",
+      "count": 40,
+      "names_file": "benchmarks/text-guard/personal-names.json"
+    }
+  ],
+  "sha256_lf": {
+    "benchmarks/cases-v1.jsonl": "a3e2a43453f886dea8db204d216c4a927fd8cf6409fdbc153f55e87d00e10b63",
+    "benchmarks/dictionaries/data-manifest.json": "5a2ae2cfab98c154db74011f5c6348c4d269b034d09e50614657429b1273716a",
+    "benchmarks/dictionaries/layout-holdout-v1.jsonl": "b08f86f389979df207aed1b160cb4da96a040494209727702155e62872be094a",
+    "benchmarks/dictionaries/protocol-v1.json": "07785f125ec26d8c4f5eb6d9cb7e864b3a759fe282bd4486bcfe22efd51551c0",
+    "benchmarks/gigachat-prompts/holdout-v1.jsonl": "d344f5257fc925c834d7326bcdcbe7ba2c45b1878645ba38e00fa19cedfbec16",
+    "benchmarks/hunspell-ranker/prompt-v1.txt": "635a2d11fd4c3620acd405d492597888e8572c67ebec30a6365c402c7984ba77",
+    "benchmarks/hunspell-ranker/render.py": "be9e3a8152cc482b45df21a29b12e41ee91ed1482f8e3106d167c64a90d84ceb",
+    "benchmarks/hunspell-ranker/run.py": "f13901af5d74e42af63cf9e68d8be509554e4cb764542f1f792db6af55a0c528",
+    "benchmarks/paragraphs-v1.jsonl": "d823b62ef71e7636e1286acc0493cdb74bdbe879b2f1952ab71e629c42c702ec",
+    "benchmarks/preservation/cases-v1.jsonl": "e969f419ec024d688f355845716d685debd92ce6da8234644528bf5bd8ab7d69",
+    "benchmarks/prompt-precision/holdout-v1.jsonl": "085c534c5b800f1536360a7ccba35b4a020542bc9799aacc2ff5947186bc8bd1",
+    "benchmarks/sber-large/layout-smoke-v1.jsonl": "bbb990154b3fe74b83093c880acbcf322bc750c16705879ecf94c8c270db3d98",
+    "benchmarks/text-guard/holdout-v1.jsonl": "b3e3828e1f6c2ea7c6bd66b6f1a44630090b81ef2e8a7c8c578977ad00c5b1ae",
+    "benchmarks/text-guard/personal-names.json": "26895d3a7f780fbe068b2d335691087ce345a2e178eb0821d05083ae92137f0c",
+    "tools/model_benchmark/bin/prepare_hunspell_choices.dart": "fbe24df14bc5464e052251dfa05af4f531647339e5bdc20480c7e9fe6bb008cf",
+    "tools/model_benchmark/bin/rank_hunspell_choices.dart": "794b0618b395cd6e69a17bdee8a71a7b6f09ea2cc717765f1424802d92d02238",
+    "tools/model_benchmark/lib/src/cli.dart": "7304e26717629876cdb96bce7b81e34f3927236ec2e0a0d735e986f43787ca11",
+    "tools/model_benchmark/lib/src/dictionary_checker.dart": "0af016c4fa89c705dd702b01f19d9bb96390c09a5ac23402797206497126d8f0",
+    "tools/model_benchmark/lib/src/dictionary_engines.dart": "c1ec07bb2324ba269baa00fef8ac6155036abad0516d75ab7a26680bdc810620",
+    "tools/model_benchmark/lib/src/hunspell_choices.dart": "5dfd11e2837f87bb75b0e5d2809704a95e3871267315118d3c9f1b243c0bc54c",
+    "tools/model_benchmark/lib/src/protected_spans.dart": "87fcd6155f442f02d7244361aa149b1c0cb773ee834cbd233515a123a6164018"
+  }
+}
