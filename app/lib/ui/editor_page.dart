@@ -5,6 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'editor_cubit.dart';
+import 'editor_binding.dart';
+import 'editor_footer.dart';
 import 'components_cubit.dart';
 import 'navigation_cubit.dart';
 import 'workspace.dart';
@@ -20,10 +22,12 @@ class EditorPage extends StatefulWidget {
 
 class _EditorPageState extends State<EditorPage> {
   late final lifecycle = AppLifecycleListener(onExitRequested: saveBeforeExit);
+  late final EditorBinding binding;
 
   @override
   void initState() {
     super.initState();
+    binding = EditorBinding(context.read<EditorCubit>());
     lifecycle;
     widget.session?.beforeClose = () async =>
         await saveBeforeExit() == AppExitResponse.exit;
@@ -38,6 +42,7 @@ class _EditorPageState extends State<EditorPage> {
     widget.session?.beforeClose = null;
     widget.session?.onFailure = null;
     lifecycle.dispose();
+    binding.dispose();
     super.dispose();
   }
 
@@ -94,40 +99,43 @@ class _EditorPageState extends State<EditorPage> {
   }
 
   @override
-  Widget build(BuildContext context) => CallbackShortcuts(
-    bindings: {
-      const SingleActivator(LogicalKeyboardKey.enter, control: true): () =>
-          context.read<EditorCubit>().check(),
-      const SingleActivator(LogicalKeyboardKey.enter, meta: true): () =>
-          context.read<EditorCubit>().check(),
-    },
-    child: Scaffold(
-      body: UpdateAnnouncer(
-        child: SafeArea(
-          child: Row(
-            children: [
-              const SideBar(),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      EditorHeader(onNew: newDraft),
-                      const SizedBox(height: 20),
-                      const Expanded(child: Workspace()),
-                      const SizedBox(height: 12),
-                      BlocBuilder<NavigationCubit, AppSection>(
-                        builder: (context, section) =>
-                            section == AppSection.editor
-                            ? const EditorFooter()
-                            : const SizedBox(height: 48),
-                      ),
-                    ],
+  Widget build(BuildContext context) => RepositoryProvider.value(
+    value: binding,
+    child: CallbackShortcuts(
+      bindings: {
+        const SingleActivator(LogicalKeyboardKey.enter, control: true): () =>
+            context.read<EditorCubit>().check(),
+        const SingleActivator(LogicalKeyboardKey.enter, meta: true): () =>
+            context.read<EditorCubit>().check(),
+      },
+      child: Scaffold(
+        body: UpdateAnnouncer(
+          child: SafeArea(
+            child: Row(
+              children: [
+                const SideBar(),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        EditorHeader(onNew: newDraft),
+                        const SizedBox(height: 20),
+                        const Expanded(child: Workspace()),
+                        const SizedBox(height: 12),
+                        BlocBuilder<NavigationCubit, AppSection>(
+                          builder: (context, section) =>
+                              section == AppSection.editor
+                              ? const EditorFooter()
+                              : const SizedBox(height: 48),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -235,61 +243,5 @@ class EditorHeader extends StatelessWidget {
         icon: const Icon(Icons.copy_rounded),
       ),
     ],
-  );
-}
-
-class EditorFooter extends StatelessWidget {
-  const EditorFooter({super.key});
-  @override
-  Widget build(BuildContext context) => BlocBuilder<EditorCubit, EditorState>(
-    builder: (context, state) => Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        if (state.message case final message?)
-          Padding(
-            padding: const EdgeInsets.only(bottom: 12),
-            child: Text(
-              message,
-              style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
-            ),
-          ),
-        Wrap(
-          alignment: WrapAlignment.spaceBetween,
-          crossAxisAlignment: WrapCrossAlignment.center,
-          spacing: 12,
-          runSpacing: 8,
-          children: [
-            Text(
-              '${state.settings.model.shortName} · Локально',
-              style: const TextStyle(
-                fontFamily: 'JetBrains Mono',
-                fontSize: 11,
-              ),
-            ),
-            Wrap(
-              spacing: 12,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: [
-                IconButton(
-                  tooltip: 'Отменить замену',
-                  onPressed: state.previous == null
-                      ? null
-                      : context.read<EditorCubit>().undo,
-                  icon: const Icon(Icons.undo_rounded),
-                ),
-                FilledButton.icon(
-                  key: const Key('check'),
-                  onPressed: state.checking || state.text.trim().isEmpty
-                      ? null
-                      : context.read<EditorCubit>().check,
-                  icon: const Icon(Icons.auto_fix_high_outlined),
-                  label: Text(state.checking ? 'Проверяем…' : 'Проверить'),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ],
-    ),
   );
 }

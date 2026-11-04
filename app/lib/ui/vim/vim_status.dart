@@ -13,7 +13,7 @@ class VimStatus extends StatelessWidget {
     builder: (context, editor) => BlocBuilder<VimCubit, VimState>(
       bloc: vim,
       builder: (context, state) => Padding(
-        padding: const EdgeInsets.fromLTRB(0, 4, 4, 0),
+        padding: const EdgeInsets.only(right: 4),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
