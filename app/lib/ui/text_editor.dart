@@ -4,8 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'editor_binding.dart';
 import 'editor_cubit.dart';
 import 'panel_header.dart';
-import 'vim/vim_cubit.dart';
-import 'vim/vim_keyboard.dart';
+import 'vim/vim_input.dart';
 
 class TextEditor extends StatelessWidget {
   const TextEditor({super.key});
@@ -41,35 +40,12 @@ class TextEditor extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(24),
-                child: BlocBuilder<VimCubit, VimState>(
-                  bloc: binding.vim,
-                  builder: (context, vimState) => Focus(
-                    onKeyEvent: (_, event) => vimKey(binding.vim, event),
-                    child: TextField(
-                      key: const Key('editor'),
-                      controller: binding.controller,
-                      focusNode: binding.focus,
-                      readOnly:
-                          vimState.enabled && vimState.mode != VimMode.insert,
-                      showCursor: true,
-                      cursorWidth:
-                          vimState.enabled && vimState.mode != VimMode.insert
-                          ? 11
-                          : 2,
-                      expands: true,
-                      minLines: null,
-                      maxLines: null,
-                      textAlignVertical: TextAlignVertical.top,
-                      style: const TextStyle(fontSize: 21, height: 1.7),
-                      decoration: const InputDecoration(
-                        hintText: 'Начните писать…',
-                        border: InputBorder.none,
-                        enabledBorder: InputBorder.none,
-                        focusedBorder: InputBorder.none,
-                        contentPadding: EdgeInsets.zero,
-                      ),
-                    ),
-                  ),
+                child: VimInput(
+                  controller: binding.controller,
+                  focus: binding.focus,
+                  vim: binding.vim,
+                  fieldKey: const Key('editor'),
+                  hint: 'Начните писать…',
                 ),
               ),
             ),

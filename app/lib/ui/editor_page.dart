@@ -8,10 +8,14 @@ import 'editor_cubit.dart';
 import 'editor_binding.dart';
 import 'editor_footer.dart';
 import 'components_cubit.dart';
+import 'setup_banner.dart';
 import 'navigation_cubit.dart';
 import 'workspace.dart';
 import 'update_announcer.dart';
 import 'window_session.dart';
+import 'translation_cubit.dart';
+import 'translation_footer.dart';
+import 'translation_binding.dart';
 
 class EditorPage extends StatefulWidget {
   const EditorPage({super.key, this.session});
@@ -23,11 +27,16 @@ class EditorPage extends StatefulWidget {
 class _EditorPageState extends State<EditorPage> {
   late final lifecycle = AppLifecycleListener(onExitRequested: saveBeforeExit);
   late final EditorBinding binding;
+  late final TranslationBinding translationBinding;
 
   @override
   void initState() {
     super.initState();
     binding = EditorBinding(context.read<EditorCubit>());
+    translationBinding = TranslationBinding(
+      context.read<TranslationCubit>(),
+      context.read<EditorCubit>(),
+    );
     lifecycle;
     widget.session?.beforeClose = () async =>
         await saveBeforeExit() == AppExitResponse.exit;
@@ -43,18 +52,24 @@ class _EditorPageState extends State<EditorPage> {
     widget.session?.onFailure = null;
     lifecycle.dispose();
     binding.dispose();
+    translationBinding.dispose();
     super.dispose();
   }
 
   Future<AppExitResponse> saveBeforeExit() async {
     final cubit = context.read<EditorCubit>();
-    await cubit.flush();
-    if (cubit.state.saved) return AppExitResponse.exit;
+    final translation = context.read<TranslationCubit>();
+    final components = context.read<ComponentsCubit>();
+    await Future.wait([cubit.flush(), translation.flush()]);
+    if (cubit.state.saved && translation.state.saved) {
+      await components.shutdown();
+      return AppExitResponse.exit;
+    }
     if (!mounted) return AppExitResponse.cancel;
     final exit = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Черновик не сохранён'),
+        title: const Text('Текст не сохранён'),
         content: const Text(
           'Вернитесь к тексту и скопируйте его, чтобы не потерять изменения.',
         ),
@@ -70,12 +85,20 @@ class _EditorPageState extends State<EditorPage> {
         ],
       ),
     );
-    return exit == true ? AppExitResponse.exit : AppExitResponse.cancel;
+    if (exit != true) return AppExitResponse.cancel;
+    await components.shutdown();
+    return AppExitResponse.exit;
   }
 
   Future<void> newDraft() async {
     final cubit = context.read<EditorCubit>();
-    if (cubit.state.text.isEmpty) return;
+    final translation = context.read<TranslationCubit>();
+    final translating =
+        context.read<NavigationCubit>().state == AppSection.translation;
+    final text = translating
+        ? '${translation.state.draft.text}${translation.state.draft.output}'
+        : cubit.state.text;
+    if (text.isEmpty) return;
     final clear = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
@@ -95,18 +118,41 @@ class _EditorPageState extends State<EditorPage> {
         ],
       ),
     );
-    if (clear == true) cubit.edit('');
+    if (clear != true) return;
+    if (translating) {
+      translation.clear();
+    } else {
+      cubit.edit('');
+    }
+  }
+
+  Future<void> runPrimary() {
+    final editor = context.read<EditorCubit>();
+    final translation = context.read<TranslationCubit>();
+    if (!context.read<ComponentsCubit>().state.ready ||
+        editor.state.checking ||
+        translation.state.translating) {
+      return Future.value();
+    }
+    return switch (context.read<NavigationCubit>().state) {
+      AppSection.editor => editor.check(),
+      AppSection.translation => translation.translate(editor.state.settings),
+      AppSection.settings => Future.value(),
+    };
   }
 
   @override
-  Widget build(BuildContext context) => RepositoryProvider.value(
-    value: binding,
+  Widget build(BuildContext context) => MultiRepositoryProvider(
+    providers: [
+      RepositoryProvider.value(value: binding),
+      RepositoryProvider.value(value: translationBinding),
+    ],
     child: CallbackShortcuts(
       bindings: {
         const SingleActivator(LogicalKeyboardKey.enter, control: true): () =>
-            context.read<EditorCubit>().check(),
+            runPrimary(),
         const SingleActivator(LogicalKeyboardKey.enter, meta: true): () =>
-            context.read<EditorCubit>().check(),
+            runPrimary(),
       },
       child: Scaffold(
         body: UpdateAnnouncer(
@@ -122,13 +168,15 @@ class _EditorPageState extends State<EditorPage> {
                       children: [
                         EditorHeader(onNew: newDraft),
                         const SizedBox(height: 20),
+                        const SetupBanner(),
                         const Expanded(child: Workspace()),
                         const SizedBox(height: 12),
                         BlocBuilder<NavigationCubit, AppSection>(
-                          builder: (context, section) =>
-                              section == AppSection.editor
-                              ? const EditorFooter()
-                              : const SizedBox(height: 48),
+                          builder: (context, section) => switch (section) {
+                            AppSection.editor => const EditorFooter(),
+                            AppSection.translation => const TranslationFooter(),
+                            AppSection.settings => const SizedBox(height: 48),
+                          },
                         ),
                       ],
                     ),
@@ -163,15 +211,16 @@ class SideBar extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 20),
           child: Image.asset('assets/mark.png', width: 44, height: 44),
         ),
-        IconButton(
-          tooltip: 'Редактор',
-          onPressed: () =>
-              context.read<NavigationCubit>().select(AppSection.editor),
-          icon: Icon(
-            Icons.edit_note_rounded,
-            size: 30,
-            color: Theme.of(context).colorScheme.primary,
-          ),
+        const SectionButton(
+          section: AppSection.editor,
+          label: 'Редактор',
+          icon: Icons.edit_note_rounded,
+        ),
+        const SizedBox(height: 8),
+        const SectionButton(
+          section: AppSection.translation,
+          label: 'Переводчик',
+          icon: Icons.translate_rounded,
         ),
         const Spacer(),
         BlocBuilder<EditorCubit, EditorState>(
@@ -192,6 +241,7 @@ class SideBar extends StatelessWidget {
           tooltip: 'Настройки',
           style: bottomIconStyle(context),
           onPressed: () {
+            FocusScope.of(context).unfocus();
             context.read<NavigationCubit>().select(AppSection.settings);
             context.read<ComponentsCubit>().refresh(
               context.read<EditorCubit>().state.settings,
@@ -215,33 +265,105 @@ class EditorHeader extends StatelessWidget {
   const EditorHeader({super.key, required this.onNew});
   final VoidCallback onNew;
   @override
-  Widget build(BuildContext context) => Row(
-    children: [
-      Expanded(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+  Widget build(BuildContext context) =>
+      BlocBuilder<NavigationCubit, AppSection>(
+        builder: (context, section) => Stack(
+          alignment: Alignment.center,
           children: [
-            Text('корректа.', style: Theme.of(context).textTheme.titleLarge),
-            const SizedBox(height: 6),
-            Text(
-              'Место для ваших мыслей',
-              style: Theme.of(context).textTheme.bodySmall,
+            Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'корректа.',
+                        style: Theme.of(context).textTheme.titleLarge,
+                      ),
+                      const SizedBox(height: 6),
+                      Text(
+                        section == AppSection.translation
+                            ? 'Перевод на вашем компьютере'
+                            : 'Место для ваших мыслей',
+                        style: Theme.of(context).textTheme.bodySmall,
+                      ),
+                    ],
+                  ),
+                ),
+                if (section != AppSection.settings)
+                  IconButton(
+                    tooltip: 'Новый текст',
+                    onPressed: onNew,
+                    icon: const Icon(Icons.note_add_outlined),
+                  ),
+                if (section != AppSection.settings)
+                  IconButton(
+                    tooltip: 'Скопировать текст',
+                    onPressed: () => Clipboard.setData(
+                      ClipboardData(
+                        text: section == AppSection.translation
+                            ? translationClipboard(
+                                context.read<TranslationCubit>().state,
+                              )
+                            : context.read<EditorCubit>().state.text,
+                      ),
+                    ),
+                    icon: const Icon(Icons.copy_rounded),
+                  ),
+              ],
             ),
+            if (section == AppSection.translation)
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: IconButton(
+                    key: const Key('swap-languages'),
+                    tooltip: 'Поменять языки местами',
+                    onPressed: context.read<TranslationCubit>().swap,
+                    icon: Icon(
+                      Icons.swap_horiz_rounded,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                  ),
+                ),
+              ),
           ],
         ),
-      ),
-      IconButton(
-        tooltip: 'Новый текст',
-        onPressed: onNew,
-        icon: const Icon(Icons.note_add_outlined),
-      ),
-      IconButton(
-        tooltip: 'Скопировать текст',
-        onPressed: () => Clipboard.setData(
-          ClipboardData(text: context.read<EditorCubit>().state.text),
+      );
+}
+
+String translationClipboard(TranslationState state) =>
+    state.draft.output.isEmpty ? state.draft.text : state.draft.output;
+
+class SectionButton extends StatelessWidget {
+  const SectionButton({
+    super.key,
+    required this.section,
+    required this.label,
+    required this.icon,
+  });
+  final AppSection section;
+  final String label;
+  final IconData icon;
+  @override
+  Widget build(BuildContext context) =>
+      BlocBuilder<NavigationCubit, AppSection>(
+        builder: (context, active) => IconButton(
+          tooltip: label,
+          isSelected: active == section,
+          style: IconButton.styleFrom(
+            foregroundColor: active == section
+                ? Theme.of(context).colorScheme.primary
+                : Theme.of(context).iconTheme.color,
+            backgroundColor: active == section
+                ? Theme.of(context).colorScheme.primary.withValues(alpha: .10)
+                : null,
+          ),
+          onPressed: () {
+            FocusScope.of(context).unfocus();
+            context.read<NavigationCubit>().select(section);
+          },
+          icon: Icon(icon, size: 28),
         ),
-        icon: const Icon(Icons.copy_rounded),
-      ),
-    ],
-  );
+      );
 }

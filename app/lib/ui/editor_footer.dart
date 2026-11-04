@@ -3,7 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'editor_binding.dart';
 import 'editor_cubit.dart';
+import 'components_cubit.dart';
 import 'vim/vim_status.dart';
+import 'translation_cubit.dart';
 
 class EditorFooter extends StatelessWidget {
   const EditorFooter({super.key});
@@ -93,7 +95,15 @@ class EditorActions extends StatelessWidget {
       const SizedBox(width: 12),
       FilledButton.icon(
         key: const Key('check'),
-        onPressed: state.checking || state.text.trim().isEmpty
+        onPressed:
+            !context.select<ComponentsCubit, bool>(
+                  (cubit) => cubit.state.ready,
+                ) ||
+                state.checking ||
+                context.select<TranslationCubit, bool>(
+                  (cubit) => cubit.state.translating,
+                ) ||
+                state.text.trim().isEmpty
             ? null
             : context.read<EditorCubit>().check,
         icon: const Icon(Icons.auto_fix_high_outlined),

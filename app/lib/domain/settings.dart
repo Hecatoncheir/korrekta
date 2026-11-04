@@ -51,19 +51,25 @@ class Settings {
   Object get checkingKey =>
       (model, store, hunspell, ollama, languageTool, names);
 
+  Object get runtimeKey => (model, store, hunspell, ollama, languageTool);
+
   Settings copyWith({
     LocalModel? model,
     bool? dark,
     bool? vimMode,
     List<String>? names,
+    String? store,
+    String? hunspell,
+    String? ollama,
+    String? languageTool,
   }) => Settings(
     model: model ?? this.model,
     dark: dark ?? this.dark,
     vimMode: vimMode ?? this.vimMode,
-    store: store,
-    hunspell: hunspell,
-    ollama: ollama,
-    languageTool: languageTool,
+    store: store ?? this.store,
+    hunspell: hunspell ?? this.hunspell,
+    ollama: ollama ?? this.ollama,
+    languageTool: languageTool ?? this.languageTool,
     names: names == null ? this.names : List.unmodifiable(names),
   );
 

@@ -183,7 +183,7 @@ class VimCubit extends Cubit<VimState> {
   }
 
   void _operatorKey(String key) {
-    if (visual) {
+    if (visual || !controller.selection.isCollapsed) {
       final selection = controller.selection;
       _operate(
         key,
@@ -219,6 +219,7 @@ class VimCubit extends Cubit<VimState> {
     _register = text.substring(start, end);
     unawaited(Clipboard.setData(ClipboardData(text: _register)));
     if (operation == 'y') {
+      _cursor = start;
       escape();
       return;
     }
@@ -313,16 +314,25 @@ class VimCubit extends Cubit<VimState> {
   Future<void> paste(bool before) async {
     final repeats = count;
     final snapshot = controller.value;
-    final value = _register.isNotEmpty
-        ? _register
-        : (await Clipboard.getData(Clipboard.kTextPlain))?.text;
-    if (value == null || value.isEmpty || controller.value != snapshot) return;
+    final mode = state.mode;
+    final value = await _pasteText();
+    if (value == null ||
+        value.isEmpty ||
+        controller.value != snapshot ||
+        state.mode != mode ||
+        !state.enabled) {
+      return;
+    }
+    if (!snapshot.selection.isCollapsed) {
+      _pasteSelection(snapshot.selection, value * repeats);
+      return;
+    }
     final placement = pastePlacement(
       text,
       _cursor,
       value,
       before: before,
-      linewise: _linewise,
+      linewise: value == _register ? _linewise : value.endsWith('\n'),
       count: repeats,
     );
     _replace(
@@ -332,6 +342,28 @@ class VimCubit extends Cubit<VimState> {
       placement.cursor,
     );
     _cursor = normalPosition(text, _cursor);
+    _select();
+  }
+
+  Future<String?> _pasteText() async {
+    try {
+      return (await Clipboard.getData(Clipboard.kTextPlain))?.text ?? _register;
+    } on PlatformException {
+      return _register;
+    }
+  }
+
+  void _pasteSelection(TextSelection selection, String insert) {
+    final changed = text.replaceRange(selection.start, selection.end, insert);
+    _replace(
+      selection.start,
+      selection.end,
+      insert,
+      previousCharacter(changed, selection.start + insert.length),
+    );
+    _cursor = normalPosition(text, _cursor);
+    _reset();
+    _mode(VimMode.normal);
     _select();
   }
 

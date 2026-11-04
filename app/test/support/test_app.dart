@@ -10,13 +10,29 @@ import 'package:korrekta/data/update_installer.dart';
 import 'package:korrekta/main.dart';
 import 'package:korrekta/ui/editor_cubit.dart';
 import 'package:korrekta/ui/update_cubit.dart';
+import 'package:korrekta/ui/translation_cubit.dart';
+import 'package:korrekta/data/runtime/runtime_manager.dart';
 
-Widget testApp(EditorCubit editor) {
+import 'translation_fakes.dart';
+
+Widget testApp(
+  EditorCubit editor, {
+  TranslationCubit? translation,
+  ComponentSetup? setup,
+}) {
   final client = MockClient((_) async => http.Response('[]', 200));
   final downloads = UpdateDownload(client, Directory.systemTemp);
   return MultiBlocProvider(
     providers: [
       BlocProvider.value(value: editor),
+      BlocProvider(
+        create: (_) =>
+            translation ??
+            TranslationCubit(
+              translator: FakeTranslator(),
+              store: MemoryTranslationStore(),
+            ),
+      ),
       BlocProvider(
         create: (_) => UpdateCubit(
           api: UpdateApi(client),
@@ -26,6 +42,6 @@ Widget testApp(EditorCubit editor) {
         ),
       ),
     ],
-    child: const KorrektaApp(),
+    child: KorrektaApp(setup: setup),
   );
 }

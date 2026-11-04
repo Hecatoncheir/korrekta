@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'update_cubit.dart';
+import 'theme.dart';
 
 class UpdatePanel extends StatelessWidget {
   const UpdatePanel({super.key});
@@ -21,9 +22,11 @@ class UpdatePanel extends StatelessWidget {
             spacing: 8,
             runSpacing: 8,
             children: [
-              OutlinedButton(
+              FilledButton.icon(
+                style: settingsActionStyle(),
                 onPressed: state.busy ? null : updates.check,
-                child: const Text('Проверить обновления'),
+                icon: const Icon(Icons.refresh_rounded, size: 18),
+                label: const Text('Проверить обновления'),
               ),
               if (state.release case final release?)
                 TextButton(

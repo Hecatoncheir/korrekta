@@ -1,5 +1,16 @@
 import 'package:flutter/material.dart';
 
+ButtonStyle settingsActionStyle() => FilledButton.styleFrom(
+  minimumSize: const Size(0, 48),
+  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+  textStyle: const TextStyle(fontFamily: 'Nunito Sans', fontSize: 13),
+  shape: const RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(Radius.circular(12)),
+  ),
+);
+
+const settingsFieldPadding = EdgeInsets.symmetric(horizontal: 16, vertical: 12);
+
 ThemeData gruvbox(bool dark) {
   final background = Color(dark ? 0xff282828 : 0xfffbf1c7);
   final surface = Color(dark ? 0xff32302f : 0xfff9f5d7);

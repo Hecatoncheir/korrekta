@@ -79,6 +79,10 @@ jobs:
         working-directory: app
       - run: flutter build ${{ matrix.target }} --release
         working-directory: app
+      - name: Проверить автоматическую установку и запуск компонентов
+        shell: bash
+        working-directory: app
+        run: dart run tool/smoke_runtime.dart --services-only --portable --root "$RUNNER_TEMP/korrekta runtime"
       - if: matrix.target == 'windows'
         name: Подготовить EXE
         shell: pwsh

@@ -1,19 +1,20 @@
 import 'package:file_selector/file_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../domain/settings.dart';
 import 'components_cubit.dart';
 import 'editor_cubit.dart';
 import 'update_panel.dart';
 import 'workspace.dart';
+import 'theme.dart';
+import 'translation_cubit.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
   @override
   Widget build(BuildContext context) => const WorkspaceColumns(
-    left: SettingsCard(child: ConnectionFields()),
+    left: Card(margin: EdgeInsets.zero, child: ConnectionFields()),
     right: SettingsCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -55,7 +56,6 @@ class ModelPicker extends StatelessWidget {
         if (model == null) return;
         final settings = state.settings.copyWith(model: model);
         context.read<EditorCubit>().configure(settings);
-        context.read<ComponentsCubit>().refresh(settings);
       },
       child: BlocBuilder<ComponentsCubit, ComponentsState>(
         builder: (context, components) => Column(
@@ -63,7 +63,11 @@ class ModelPicker extends StatelessWidget {
             for (final model in LocalModel.values)
               RadioListTile<LocalModel>(
                 value: model,
-                enabled: !components.busy,
+                enabled:
+                    !state.checking &&
+                    !context.select<TranslationCubit, bool>(
+                      (cubit) => cubit.state.translating,
+                    ),
                 title: Text(model.label),
                 dense: true,
               ),
@@ -78,74 +82,42 @@ class ComponentPanel extends StatelessWidget {
   const ComponentPanel({super.key});
 
   @override
-  Widget build(
-    BuildContext context,
-  ) => BlocBuilder<ComponentsCubit, ComponentsState>(
-    builder: (context, state) {
-      final settings = context.read<EditorCubit>().state.settings;
-      final status = state.status;
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Text(
-            'Всё на вашем компьютере',
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
-          const SizedBox(height: 12),
-          StatusLine('Ollama', status?.ollama),
-          StatusLine(settings.model.shortName, status?.model),
-          StatusLine('LanguageTool 6.8', status?.languageTool),
-          const SizedBox(height: 12),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
+  Widget build(BuildContext context) =>
+      BlocBuilder<ComponentsCubit, ComponentsState>(
+        builder: (context, state) {
+          final settings = context.read<EditorCubit>().state.settings;
+          final status = state.status;
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              OutlinedButton.icon(
+              Text(
+                'Всё на вашем компьютере',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              const SizedBox(height: 12),
+              StatusLine('Ollama', status?.ollama),
+              StatusLine(settings.model.shortName, status?.model),
+              StatusLine('LanguageTool 6.8', status?.languageTool),
+              StatusLine('Словари и Hunspell', state.ready ? true : null),
+              const SizedBox(height: 12),
+              FilledButton.icon(
+                style: settingsActionStyle(),
                 onPressed: state.busy
                     ? null
-                    : () => context.read<ComponentsCubit>().refresh(settings),
-                icon: const Icon(Icons.refresh),
-                label: const Text('Проверить подключение'),
+                    : () => context.read<ComponentsCubit>().prepare(settings),
+                icon: const Icon(Icons.refresh_rounded, size: 18),
+                label: Text(
+                  state.ready ? 'Всё готово' : 'Продолжить подготовку',
+                ),
               ),
-              FilledButton.icon(
-                onPressed: state.busy || status?.ollama != true
-                    ? null
-                    : () => context.read<ComponentsCubit>().download(settings),
-                icon: const Icon(Icons.download_rounded),
-                label: const Text('Скачать модель'),
+              const SizedBox(height: 12),
+              const Text(
+                'Компоненты скачиваются и запускаются автоматически. Первый запуск требует интернета и свободного места. После подготовки проверка и перевод работают локально.',
               ),
             ],
-          ),
-          if (state.busy)
-            Padding(
-              padding: const EdgeInsets.only(top: 16),
-              child: LinearProgressIndicator(value: state.progress?.fraction),
-            ),
-          if (state.progress case (:final fraction?, status: _))
-            Text('Загрузка модели: ${(fraction * 100).round()}%'),
-          if (state.message case final message?)
-            Padding(
-              padding: const EdgeInsets.only(top: 12),
-              child: Text(message),
-            ),
-          const SizedBox(height: 12),
-          const Text(
-            'Запустите Ollama и LanguageTool. Словари и Hunspell настраиваются слева. Модели хранятся в папке Ollama.',
-          ),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: TextButton(
-              onPressed: () => launchUrl(
-                Uri.parse('https://ollama.com/download'),
-                mode: LaunchMode.externalApplication,
-              ),
-              child: const Text('Установить Ollama'),
-            ),
-          ),
-        ],
+          );
+        },
       );
-    },
-  );
 }
 
 class StatusLine extends StatelessWidget {
@@ -187,6 +159,7 @@ class _ConnectionFieldsState extends State<ConnectionFields> {
   late final ollama = TextEditingController(text: initial.ollama);
   late final lt = TextEditingController(text: initial.languageTool);
   late final names = TextEditingController(text: initial.names.join('\n'));
+  late Settings previous = initial;
   String? error;
 
   @override
@@ -226,7 +199,6 @@ class _ConnectionFieldsState extends State<ConnectionFields> {
         ),
       );
       context.read<EditorCubit>().configure(settings);
-      context.read<ComponentsCubit>().refresh(settings);
       setState(() => error = 'Настройки сохранены');
     } on FormatException catch (failure) {
       setState(() => error = failure.message);
@@ -234,7 +206,62 @@ class _ConnectionFieldsState extends State<ConnectionFields> {
   }
 
   @override
-  Widget build(BuildContext context) => Column(
+  Widget build(BuildContext context) => BlocListener<EditorCubit, EditorState>(
+    listenWhen: (before, after) => before.settings != after.settings,
+    listener: (_, state) => sync(state.settings),
+    child: Column(
+      children: [
+        Expanded(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(24),
+            child: fields(context),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(24, 12, 24, 24),
+          child: Row(
+            children: [
+              Expanded(
+                child: Text(
+                  error ?? '',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+              ),
+              const SizedBox(width: 12),
+              SizedBox(
+                width: 160,
+                child: BlocBuilder<ComponentsCubit, ComponentsState>(
+                  builder: (context, state) => FilledButton(
+                    style: settingsActionStyle(),
+                    onPressed: save,
+                    child: const Text('Сохранить'),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+
+  void sync(Settings settings) {
+    final fields = [
+      (store, previous.store, settings.store),
+      (hunspell, previous.hunspell, settings.hunspell),
+      (ollama, previous.ollama, settings.ollama),
+      (lt, previous.languageTool, settings.languageTool),
+      (names, previous.names.join('\n'), settings.names.join('\n')),
+    ];
+    for (final (controller, oldValue, newValue) in fields) {
+      if (controller.text == oldValue && oldValue != newValue) {
+        controller.text = newValue;
+      }
+    }
+    previous = settings;
+  }
+
+  Widget fields(BuildContext context) => Column(
     crossAxisAlignment: CrossAxisAlignment.stretch,
     children: [
       Text(
@@ -246,6 +273,7 @@ class _ConnectionFieldsState extends State<ConnectionFields> {
         controller: store,
         decoration: InputDecoration(
           labelText: 'Папка dictionaries-v1',
+          contentPadding: settingsFieldPadding,
           suffixIcon: IconButton(
             tooltip: 'Выбрать папку',
             onPressed: chooseFolder,
@@ -256,18 +284,40 @@ class _ConnectionFieldsState extends State<ConnectionFields> {
       const SizedBox(height: 12),
       TextField(
         controller: hunspell,
-        decoration: const InputDecoration(labelText: 'Программа Hunspell'),
+        decoration: const InputDecoration(
+          labelText: 'Программа Hunspell',
+          contentPadding: settingsFieldPadding,
+        ),
       ),
       const SizedBox(height: 12),
       TextField(
         controller: ollama,
-        decoration: const InputDecoration(labelText: 'Локальный адрес Ollama'),
+        decoration: const InputDecoration(
+          labelText: 'Локальный адрес Ollama',
+          contentPadding: settingsFieldPadding,
+        ),
       ),
       const SizedBox(height: 12),
       TextField(
         controller: lt,
         decoration: const InputDecoration(
           labelText: 'Локальный адрес LanguageTool',
+          contentPadding: settingsFieldPadding,
+        ),
+      ),
+      const SizedBox(height: 12),
+      Align(
+        alignment: Alignment.centerLeft,
+        child: BlocBuilder<ComponentsCubit, ComponentsState>(
+          builder: (context, state) => OutlinedButton.icon(
+            onPressed: state.busy
+                ? null
+                : () => context.read<ComponentsCubit>().refresh(
+                    context.read<EditorCubit>().state.settings,
+                  ),
+            icon: const Icon(Icons.refresh, size: 18),
+            label: const Text('Проверить подключение'),
+          ),
         ),
       ),
       const SizedBox(height: 24),
@@ -281,18 +331,9 @@ class _ConnectionFieldsState extends State<ConnectionFields> {
         controller: names,
         minLines: 3,
         maxLines: 6,
-        decoration: const InputDecoration(hintText: 'Норвета\nКорректа'),
-      ),
-      const SizedBox(height: 16),
-      if (error case final message?)
-        Padding(
-          padding: const EdgeInsets.only(bottom: 12),
-          child: Text(message),
-        ),
-      BlocBuilder<ComponentsCubit, ComponentsState>(
-        builder: (context, state) => FilledButton(
-          onPressed: state.busy ? null : save,
-          child: const Text('Сохранить'),
+        decoration: const InputDecoration(
+          hintText: 'Норвета\nКорректа',
+          contentPadding: settingsFieldPadding,
         ),
       ),
     ],

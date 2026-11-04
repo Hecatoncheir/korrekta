@@ -1,0 +1,147 @@
+{
+  "data": {
+    "all": {
+      "id": "data-v1",
+      "label": "словари и LanguageTool 6.8",
+      "url": "https://github.com/Hecatoncheir/korrekta/releases/download/components-v1/runtime-data-v1.zip",
+      "bytes": 285151182,
+      "sha256": "6ffa196e92f4d994f59d349eb796d3b7529c2c96cb7d9786f683917e499600f9",
+      "expandedBytes": 400000000,
+      "markers": [
+        "dictionaries-v1/known-ru.txt",
+        "dictionaries-v1/hunspell/ru_RU.dic",
+        "dictionaries-v1/hunspell/en_US.dic",
+        "dictionaries-v1/frequency-ru.tsv",
+        "languagetool/6.8/lib/languagetool-server-6.8.jar",
+        "languagetool/6.8/server.properties"
+      ]
+    }
+  },
+  "hunspell": {
+    "linux-x64": {
+      "id": "hunspell-1.7.5-linux-x64",
+      "label": "Hunspell 1.7.5",
+      "url": "https://github.com/Hecatoncheir/korrekta/releases/download/components-v1/hunspell-1.7.5-linux-x64.tar.gz",
+      "bytes": 2824994,
+      "sha256": "a41ff40120c633e36c1efc73e1893a4df39c97f2f6c3a56bd292473d32d9543b",
+      "expandedBytes": 10000000,
+      "markers": [
+        "bin/hunspell"
+      ]
+    },
+    "macos-x64": {
+      "id": "hunspell-1.7.5-macos",
+      "label": "Hunspell 1.7.5",
+      "url": "https://github.com/Hecatoncheir/korrekta/releases/download/components-v1/hunspell-1.7.5-macos-universal.tar.gz",
+      "bytes": 479538,
+      "sha256": "9a0df8a61da64001e42a10e6fff7d5ad2341f7ef2e7f2b59deb153364eb85700",
+      "expandedBytes": 5000000,
+      "markers": [
+        "bin/hunspell"
+      ]
+    },
+    "macos-arm64": {
+      "id": "hunspell-1.7.5-macos",
+      "label": "Hunspell 1.7.5",
+      "url": "https://github.com/Hecatoncheir/korrekta/releases/download/components-v1/hunspell-1.7.5-macos-universal.tar.gz",
+      "bytes": 479538,
+      "sha256": "9a0df8a61da64001e42a10e6fff7d5ad2341f7ef2e7f2b59deb153364eb85700",
+      "expandedBytes": 5000000,
+      "markers": [
+        "bin/hunspell"
+      ]
+    }
+  },
+  "ollama": {
+    "windows-x64": {
+      "id": "ollama-0.40.4-windows-x64",
+      "label": "Ollama 0.40.4",
+      "url": "https://github.com/ollama/ollama/releases/download/v0.40.4/ollama-windows-amd64.zip",
+      "bytes": 1469916992,
+      "sha256": "7485a1172f8527db4342a63521b9342fc466185ff0855da378cc864ecf6354cf",
+      "expandedBytes": 7000000000,
+      "markers": [
+        "ollama.exe"
+      ]
+    },
+    "linux-x64": {
+      "id": "ollama-0.40.4-linux-x64",
+      "label": "Ollama 0.40.4",
+      "url": "https://github.com/ollama/ollama/releases/download/v0.40.4/ollama-linux-amd64.tar.zst",
+      "bytes": 1436408810,
+      "sha256": "15f31e9576d15a481e099b4145dba6e9f8c1f295927d6b8895300ae30ed3740a",
+      "expandedBytes": 7000000000,
+      "markers": [
+        "bin/ollama"
+      ]
+    },
+    "macos-x64": {
+      "id": "ollama-0.40.4-macos",
+      "label": "Ollama 0.40.4",
+      "url": "https://github.com/ollama/ollama/releases/download/v0.40.4/ollama-darwin.tgz",
+      "bytes": 167884528,
+      "sha256": "a4ceae4b2aaf18df37ebcbfb56ba3a37a87838631112d66c2be07268693c8d58",
+      "expandedBytes": 500000000,
+      "markers": [
+        "ollama"
+      ]
+    },
+    "macos-arm64": {
+      "id": "ollama-0.40.4-macos",
+      "label": "Ollama 0.40.4",
+      "url": "https://github.com/ollama/ollama/releases/download/v0.40.4/ollama-darwin.tgz",
+      "bytes": 167884528,
+      "sha256": "a4ceae4b2aaf18df37ebcbfb56ba3a37a87838631112d66c2be07268693c8d58",
+      "expandedBytes": 500000000,
+      "markers": [
+        "ollama"
+      ]
+    }
+  },
+  "java": {
+    "windows-x64": {
+      "id": "temurin-21.0.13-windows-x64",
+      "label": "Java 21",
+      "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jre_x64_windows_hotspot_21.0.13_9.zip",
+      "bytes": 49106397,
+      "sha256": "2332c0b4cff6bed722da3567c91d5e47568bcba863fa4945d0a8d6fc76158628",
+      "expandedBytes": 250000000,
+      "markers": [
+        "jdk-21.0.13+9-jre/bin/java.exe"
+      ]
+    },
+    "linux-x64": {
+      "id": "temurin-21.0.13-linux-x64",
+      "label": "Java 21",
+      "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jre_x64_linux_hotspot_21.0.13_9.tar.gz",
+      "bytes": 52181297,
+      "sha256": "a535a1df9c6284d9618872984e026ae0352d1f7e9e0605425c0e6114f47351dd",
+      "expandedBytes": 250000000,
+      "markers": [
+        "jdk-21.0.13+9-jre/bin/java"
+      ]
+    },
+    "macos-x64": {
+      "id": "temurin-21.0.13-macos-x64",
+      "label": "Java 21",
+      "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jre_x64_mac_hotspot_21.0.13_9.tar.gz",
+      "bytes": 41902098,
+      "sha256": "c909674b1c10c261b9a3fb7e9c0efebd303e33f88a4fe84be7135b5e2d711f89",
+      "expandedBytes": 250000000,
+      "markers": [
+        "jdk-21.0.13+9-jre/Contents/Home/bin/java"
+      ]
+    },
+    "macos-arm64": {
+      "id": "temurin-21.0.13-macos-arm64",
+      "label": "Java 21",
+      "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jre_aarch64_mac_hotspot_21.0.13_9.tar.gz",
+      "bytes": 47935740,
+      "sha256": "225bab0a09491ef06835488cd942f5d2befa9a0410a2484f0c8bbcf7506ec09a",
+      "expandedBytes": 250000000,
+      "markers": [
+        "jdk-21.0.13+9-jre/Contents/Home/bin/java"
+      ]
+    }
+  }
+}

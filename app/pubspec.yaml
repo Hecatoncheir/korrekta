@@ -41,6 +41,7 @@ flutter:
   assets:
     - assets/mark.png
     - assets/proposal.txt
+    - assets/components.json
     - assets/update-macos.sh
   fonts:
     - family: Nunito

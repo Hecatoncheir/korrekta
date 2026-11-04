@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:korrekta/domain/settings.dart';
 import 'package:korrekta/ui/vim/vim_cubit.dart';
@@ -156,6 +157,40 @@ void main() {
     expect(Settings.fromJson(json).vimMode, isFalse);
     final settings = const Settings().copyWith(vimMode: true);
     expect(Settings.fromJson(settings.toJson()).vimMode, isTrue);
+  });
+
+  test('y копирует выделение мышью, p вставляет его в другой буфер и заменяет Visual-выделение', () async {
+    String? clipboard;
+    final messenger =
+        TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
+    messenger.setMockMethodCallHandler(SystemChannels.platform, (call) async {
+      if (call.method == 'Clipboard.setData') {
+        clipboard = (call.arguments as Map)['text'] as String;
+      }
+      if (call.method == 'Clipboard.getData') return {'text': clipboard};
+      return null;
+    });
+    addTearDown(
+      () => messenger.setMockMethodCallHandler(SystemChannels.platform, null),
+    );
+    controller.selection = const TextSelection(baseOffset: 1, extentOffset: 3);
+    keys(vim, 'y');
+    expect((await Clipboard.getData(Clipboard.kTextPlain))!.text, '🙂');
+    expect(controller.text, 'А🙂Б\r\nВГ');
+    final second = TextEditingController(text: 'X')
+      ..selection = const TextSelection.collapsed(offset: 0);
+    final other = VimCubit(second)..enable(true);
+    await other.paste(false);
+    expect(second.text, 'X🙂');
+    clipboard = 'Z';
+    keys(vim, 'ggvl');
+    await vim.paste(false);
+    expect(controller.text, 'ZБ\r\nВГ');
+    expect(vim.state.mode, VimMode.normal);
+    vim.undo();
+    expect(controller.text, 'А🙂Б\r\nВГ');
+    await other.close();
+    second.dispose();
   });
 
   test('Смена Vim и темы сохраняет уже полученные подсказки', () async {
