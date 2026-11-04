@@ -1,0 +1,15 @@
+{
+  "rows": 448,
+  "requested_selections": 237,
+  "valid_selections": 237,
+  "collection_errors": 0,
+  "selection_errors": 0,
+  "outside_candidate_changes": 0,
+  "fresh_model_proposals": 48,
+  "sources_in_options": {
+    "gigachat": 237,
+    "hunspell": 376,
+    "languagetool": 577,
+    "symspell": 793
+  }
+}

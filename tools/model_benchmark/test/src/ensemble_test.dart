@@ -130,4 +130,60 @@ void main() {
       throwsFormatException,
     );
   });
+  test('Составной вариант LT сохраняет совместные изменения одним выбором', () {
+    const text = 'мы была готов.';
+    final result = pool(text, matches: [lt(3, 10, 'были готовы')]);
+    expect(result.slots, hasLength(1));
+    expect(result.apply([1], text), 'мы были готовы.');
+    expect(result.apply([0], text), text);
+  });
+  test('Вставка в тот же диапазон и разрыв суррогатной пары отклоняются', () {
+    expect(
+      () => selectEnsembleChoices(
+        'а',
+        [
+          WordChoices(0, '', ['', ',']),
+          WordChoices(0, 'а', ['а', 'б']),
+        ],
+        [1, 1],
+      ),
+      throwsFormatException,
+    );
+    expect(
+      () => selectEnsembleChoices(
+        '🙂',
+        [
+          WordChoices(1, '', ['', ',']),
+        ],
+        [1],
+      ),
+      throwsFormatException,
+    );
+  });
+  test(
+    'Пустой список не создаёт замен, частичное применение не происходит',
+    () {
+      expect(selectEnsembleChoices('текст', [], []).output, 'текст');
+      expect(
+        () => selectEnsembleChoices(
+          'а б',
+          [
+            WordChoices(0, 'а', ['а', 'в']),
+            WordChoices(2, 'б', ['б', 'г']),
+          ],
+          [1, 5],
+        ),
+        throwsFormatException,
+      );
+    },
+  );
+  test(
+    'Dart сохраняет точную форму официального шаблона без второго обрамления',
+    () {
+      expect(
+        gigaPrompt('Система', {'text': 'Я\n🙂'}),
+        '<s>Система<|message_sep|>user<|role_sep|>{"text":"Я\\n🙂"}<|message_sep|>available functions<|role_sep|>[]<|message_sep|>assistant<|role_sep|>',
+      );
+    },
+  );
 }

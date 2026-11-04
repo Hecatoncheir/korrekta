@@ -1,0 +1,454 @@
+{
+  "status": "review_required",
+  "original": "Мирэль хочеть увидеть море.\r\nнорвета готовит ужин. 🙂",
+  "proposed_text": "Мирэль хотеть увидеть море.\r\nнорвета готовит ужин. 🙂",
+  "automatic_application": false,
+  "note": "Предварительный вариант. Проверьте правки перед принятием. Отсутствие подсказок не гарантирует отсутствие ошибок.",
+  "details": {
+    "text": "Мирэль хочеть увидеть море.\r\nнорвета готовит ужин. 🙂",
+    "slots": [
+      {
+        "id": 0,
+        "start": 7,
+        "original": "хочеть",
+        "options": [
+          "хочеть",
+          "хотеть",
+          "ходить",
+          "точить",
+          "мочить",
+          "почить",
+          "холить",
+          "хочет",
+          "хочешь",
+          "очень",
+          "хоть",
+          "хочется",
+          "почета",
+          "мечеть",
+          "гореть",
+          "болеть",
+          "почет"
+        ],
+        "sources": [
+          [],
+          [
+            "hunspell",
+            "languagetool",
+            "symspell"
+          ],
+          [
+            "languagetool",
+            "symspell"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "languagetool"
+          ],
+          [
+            "gigachat",
+            "hunspell",
+            "languagetool",
+            "symspell"
+          ],
+          [
+            "hunspell",
+            "languagetool",
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ],
+          [
+            "symspell"
+          ]
+        ]
+      }
+    ],
+    "rejected": [
+      {
+        "source": "languagetool",
+        "failure": null,
+        "reasons": [
+          "protected_name_candidate"
+        ]
+      },
+      {
+        "source": "languagetool",
+        "failure": null,
+        "reasons": [
+          "protected_name_candidate"
+        ]
+      },
+      {
+        "source": "languagetool",
+        "failure": null,
+        "reasons": [
+          "protected_name_candidate"
+        ]
+      },
+      {
+        "source": "languagetool",
+        "failure": null,
+        "reasons": [
+          "protected_name_candidate"
+        ]
+      },
+      {
+        "source": "languagetool",
+        "failure": null,
+        "reasons": [
+          "protected_name_candidate"
+        ]
+      },
+      {
+        "source": "languagetool",
+        "failure": null,
+        "reasons": [
+          "protected_name_candidate"
+        ]
+      },
+      {
+        "source": "languagetool",
+        "failure": null,
+        "reasons": [
+          "protected_name_candidate"
+        ]
+      },
+      {
+        "source": "languagetool",
+        "failure": null,
+        "reasons": [
+          "nonlocal_or_formatting"
+        ]
+      },
+      {
+        "source": "languagetool",
+        "failure": null,
+        "reasons": [
+          "protected_personal_name"
+        ]
+      },
+      {
+        "source": "languagetool",
+        "failure": null,
+        "reasons": [
+          "protected_personal_name"
+        ]
+      },
+      {
+        "source": "languagetool",
+        "failure": null,
+        "reasons": [
+          "nonlocal_or_formatting",
+          "protected_personal_name"
+        ]
+      },
+      {
+        "source": "gigachat",
+        "failure": null,
+        "reasons": [
+          "protected_personal_name"
+        ]
+      }
+    ],
+    "hunspell_slots": [
+      {
+        "start": 7,
+        "original": "хочеть",
+        "options": [
+          "хочеть",
+          "хочет",
+          "хочешь",
+          "хотеть"
+        ]
+      }
+    ],
+    "symspell_slots": [
+      {
+        "start": 7,
+        "original": "хочеть",
+        "options": [
+          "хочеть",
+          "хочет",
+          "хочешь",
+          "хотеть",
+          "очень",
+          "хоть",
+          "хочется",
+          "ходить",
+          "почета",
+          "мечеть",
+          "гореть",
+          "болеть",
+          "почет"
+        ]
+      }
+    ],
+    "lt_response": {
+      "software": {
+        "name": "LanguageTool",
+        "version": "6.8",
+        "buildDate": "2026-05-05 16:34:58 +0200",
+        "apiVersion": 1,
+        "premium": false,
+        "premiumHint": "You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.",
+        "status": ""
+      },
+      "warnings": {
+        "incompleteResults": false
+      },
+      "language": {
+        "name": "Russian",
+        "code": "ru-RU",
+        "detectedLanguage": {
+          "name": "Russian",
+          "code": "ru-RU",
+          "confidence": 0.99999195,
+          "source": "+fallback"
+        }
+      },
+      "matches": [
+        {
+          "message": "Возможно найдена орфографическая ошибка.",
+          "shortMessage": "Орфографическая ошибка",
+          "replacements": [
+            {
+              "value": "Цирель"
+            },
+            {
+              "value": "Мигель"
+            },
+            {
+              "value": "Михель"
+            },
+            {
+              "value": "Микель"
+            },
+            {
+              "value": "Мирелли"
+            },
+            {
+              "value": "Мишель"
+            },
+            {
+              "value": "Перель"
+            },
+            {
+              "value": "Мир эль"
+            }
+          ],
+          "offset": 0,
+          "length": 6,
+          "context": {
+            "text": "Мирэль хочеть увидеть море.\r норвета готовит у...",
+            "offset": 0,
+            "length": 6
+          },
+          "sentence": "Мирэль хочеть увидеть море.",
+          "type": {
+            "typeName": "UnknownWord"
+          },
+          "rule": {
+            "id": "MORFOLOGIK_RULE_RU_RU",
+            "description": "Проверка орфографии с исправлениями",
+            "issueType": "misspelling",
+            "category": {
+              "id": "TYPOS",
+              "name": "Проверка орфографии"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 0
+        },
+        {
+          "message": "Возможно найдена орфографическая ошибка.",
+          "shortMessage": "Орфографическая ошибка",
+          "replacements": [
+            {
+              "value": "хотеть"
+            },
+            {
+              "value": "ходить"
+            },
+            {
+              "value": "точить"
+            },
+            {
+              "value": "мочить"
+            },
+            {
+              "value": "почить"
+            },
+            {
+              "value": "холить"
+            },
+            {
+              "value": "хочет"
+            },
+            {
+              "value": "хочешь"
+            },
+            {
+              "value": "сочить"
+            },
+            {
+              "value": "хо четь"
+            }
+          ],
+          "offset": 7,
+          "length": 6,
+          "context": {
+            "text": "Мирэль хочеть увидеть море.\r норвета готовит ужин. 🙂...",
+            "offset": 7,
+            "length": 6
+          },
+          "sentence": "Мирэль хочеть увидеть море.",
+          "type": {
+            "typeName": "UnknownWord"
+          },
+          "rule": {
+            "id": "MORFOLOGIK_RULE_RU_RU",
+            "description": "Проверка орфографии с исправлениями",
+            "issueType": "misspelling",
+            "category": {
+              "id": "TYPOS",
+              "name": "Проверка орфографии"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 0
+        },
+        {
+          "message": "Возможно найдена орфографическая ошибка.",
+          "shortMessage": "Орфографическая ошибка",
+          "replacements": [
+            {
+              "value": "Корвета"
+            },
+            {
+              "value": "Корвету"
+            },
+            {
+              "value": "Нор вета"
+            }
+          ],
+          "offset": 29,
+          "length": 7,
+          "context": {
+            "text": "Мирэль хочеть увидеть море.\r норвета готовит ужин. 🙂",
+            "offset": 29,
+            "length": 7
+          },
+          "sentence": "норвета готовит ужин.",
+          "type": {
+            "typeName": "UnknownWord"
+          },
+          "rule": {
+            "id": "MORFOLOGIK_RULE_RU_RU",
+            "description": "Проверка орфографии с исправлениями",
+            "issueType": "misspelling",
+            "category": {
+              "id": "TYPOS",
+              "name": "Проверка орфографии"
+            }
+          },
+          "ignoreForIncompleteSentence": false,
+          "contextForSureMatch": 0
+        }
+      ],
+      "sentenceRanges": [
+        [
+          0,
+          27
+        ],
+        [
+          29,
+          50
+        ],
+        [
+          51,
+          53
+        ]
+      ],
+      "extendedSentenceRanges": [
+        {
+          "from": 0,
+          "to": 27,
+          "detectedLanguages": [
+            {
+              "language": "ru",
+              "rate": 1.0
+            }
+          ]
+        },
+        {
+          "from": 28,
+          "to": 49,
+          "detectedLanguages": [
+            {
+              "language": "ru",
+              "rate": 1.0
+            }
+          ]
+        },
+        {
+          "from": 51,
+          "to": 53,
+          "detectedLanguages": [
+            {
+              "language": "ru",
+              "rate": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    "giga_response": {
+      "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+      "created_at": "2026-11-04T02:50:24.5799915Z",
+      "response": "{\"text\":\"Мирэль хочет увидеть море.\\r\\nНорвета готовит ужин. 🙂\"}",
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 10863530000,
+      "load_duration": 10048843100,
+      "prompt_eval_count": 168,
+      "prompt_eval_cached_count": 0,
+      "prompt_eval_duration": 537374000,
+      "eval_count": 20,
+      "eval_duration": 270249000
+    },
+    "giga_output": "Мирэль хочет увидеть море.\r\nНорвета готовит ужин. 🙂",
+    "cached_giga": false,
+    "personal_names": [
+      "норвета"
+    ],
+    "collection_seconds": 11.030986
+  }
+}

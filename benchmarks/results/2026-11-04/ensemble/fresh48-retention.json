@@ -1,0 +1,128 @@
+{
+  "method": "Число дословных вхождений protected без нормализации",
+  "results": [
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\ensemble\\fresh48-lt_guarded.jsonl",
+      "count": 48,
+      "retention_failures": 2,
+      "retention_failures_on_controls": 1,
+      "changed_controls": 1,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "unknown_name": 2
+      },
+      "details": [
+        {
+          "id": "ensemble-023-correct",
+          "category": "unknown_name",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "руддщ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "ensemble-023-error",
+          "category": "unknown_name",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "руддщ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\ensemble\\fresh48-priority_union.jsonl",
+      "count": 48,
+      "retention_failures": 4,
+      "retention_failures_on_controls": 2,
+      "changed_controls": 3,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "unknown_name": 4
+      },
+      "details": [
+        {
+          "id": "ensemble-014-correct",
+          "category": "unknown_name",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "норвета",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "ensemble-014-error",
+          "category": "unknown_name",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "норвета",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "ensemble-023-correct",
+          "category": "unknown_name",
+          "control": true,
+          "changes": [
+            {
+              "fragment": "руддщ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        },
+        {
+          "id": "ensemble-023-error",
+          "category": "unknown_name",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "руддщ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\vostr\\code\\korrekta\\benchmarks\\results\\2026-11-04\\ensemble\\fresh48-giga_selection.jsonl",
+      "count": 48,
+      "retention_failures": 1,
+      "retention_failures_on_controls": 0,
+      "changed_controls": 0,
+      "notices_on_controls": null,
+      "failures_by_category": {
+        "unknown_name": 1
+      },
+      "details": [
+        {
+          "id": "ensemble-023-error",
+          "category": "unknown_name",
+          "control": false,
+          "changes": [
+            {
+              "fragment": "руддщ",
+              "expected_count": 1,
+              "output_count": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

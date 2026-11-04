@@ -1,0 +1,1 @@
+{"type":"metadata","version":"ensemble-v1","model":"hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M","ollama":"http://127.0.0.1:11435","lt":"http://127.0.0.1:8081","personal_names":[],"options":{"temperature":0,"seed":42,"num_ctx":8192},"timing":"Текущая обработка; сохранённая генерация модели не входит, инициализация словарей отдельно"}
