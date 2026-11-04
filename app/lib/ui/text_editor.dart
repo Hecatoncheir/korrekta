@@ -4,6 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../domain/check_result.dart';
 import 'editor_cubit.dart';
 import 'panel_header.dart';
+import 'vim/vim_cubit.dart';
+import 'vim/vim_keyboard.dart';
+import 'vim/vim_status.dart';
 
 class MarkedTextController extends TextEditingController {
   List<Suggestion> suggestions = const [];
@@ -53,14 +56,42 @@ class _TextEditorState extends State<TextEditor> {
   late final controller = MarkedTextController()
     ..text = context.read<EditorCubit>().state.text;
   final focus = FocusNode();
+  late final VimCubit vim;
+  late String lastText;
+
+  @override
+  void initState() {
+    super.initState();
+    lastText = controller.text;
+    vim = VimCubit(controller)
+      ..enable(context.read<EditorCubit>().state.settings.vimMode);
+    controller.addListener(textChanged);
+  }
+
+  void textChanged() {
+    if (controller.text == lastText) return;
+    lastText = controller.text;
+    context.read<EditorCubit>().edit(lastText);
+  }
+
+  void toggleVim(bool enabled) {
+    final editor = context.read<EditorCubit>();
+    editor.configure(editor.state.settings.copyWith(vimMode: enabled));
+    vim.enable(enabled);
+    focus.requestFocus();
+  }
+
   @override
   void dispose() {
+    controller.removeListener(textChanged);
+    vim.close();
     controller.dispose();
     focus.dispose();
     super.dispose();
   }
 
   void update(EditorState state) {
+    vim.enable(state.settings.vimMode);
     controller.suggestions = state.result?.suggestions ?? const [];
     if (controller.text == state.text) return;
     final offset = controller.selection.extentOffset.clamp(
@@ -104,22 +135,34 @@ class _TextEditorState extends State<TextEditor> {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(24),
-              child: TextField(
-                key: const Key('editor'),
-                controller: controller,
-                focusNode: focus,
-                onChanged: context.read<EditorCubit>().edit,
-                expands: true,
-                minLines: null,
-                maxLines: null,
-                textAlignVertical: TextAlignVertical.top,
-                style: const TextStyle(fontSize: 21, height: 1.7),
-                decoration: const InputDecoration(
-                  hintText: 'Ваш голос остаётся.\nНачните писать…',
-                  border: InputBorder.none,
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
-                  contentPadding: EdgeInsets.zero,
+              child: BlocBuilder<VimCubit, VimState>(
+                bloc: vim,
+                builder: (context, vimState) => Focus(
+                  onKeyEvent: (_, event) => vimKey(vim, event),
+                  child: TextField(
+                    key: const Key('editor'),
+                    controller: controller,
+                    focusNode: focus,
+                    readOnly:
+                        vimState.enabled && vimState.mode != VimMode.insert,
+                    showCursor: true,
+                    cursorWidth:
+                        vimState.enabled && vimState.mode != VimMode.insert
+                        ? 11
+                        : 2,
+                    expands: true,
+                    minLines: null,
+                    maxLines: null,
+                    textAlignVertical: TextAlignVertical.top,
+                    style: const TextStyle(fontSize: 21, height: 1.7),
+                    decoration: const InputDecoration(
+                      hintText: 'Ваш голос остаётся.\nНачните писать…',
+                      border: InputBorder.none,
+                      enabledBorder: InputBorder.none,
+                      focusedBorder: InputBorder.none,
+                      contentPadding: EdgeInsets.zero,
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -138,6 +181,7 @@ class _TextEditorState extends State<TextEditor> {
               ],
             ),
           ),
+          VimStatus(vim: vim, onToggle: toggleVim),
         ],
       ),
     ),

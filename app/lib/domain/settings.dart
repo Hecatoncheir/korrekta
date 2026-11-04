@@ -22,6 +22,7 @@ class Settings {
   const Settings({
     this.model = LocalModel.quality,
     this.dark = true,
+    this.vimMode = false,
     this.store = '',
     this.hunspell = '',
     this.ollama = 'http://127.0.0.1:11434',
@@ -30,7 +31,7 @@ class Settings {
   });
 
   final LocalModel model;
-  final bool dark;
+  final bool dark, vimMode;
   final String store, hunspell, ollama, languageTool;
   final List<String> names;
 
@@ -47,20 +48,29 @@ class Settings {
     );
   }
 
-  Settings copyWith({LocalModel? model, bool? dark, List<String>? names}) =>
-      Settings(
-        model: model ?? this.model,
-        dark: dark ?? this.dark,
-        store: store,
-        hunspell: hunspell,
-        ollama: ollama,
-        languageTool: languageTool,
-        names: List.unmodifiable(names ?? this.names),
-      );
+  Object get checkingKey =>
+      (model, store, hunspell, ollama, languageTool, names);
+
+  Settings copyWith({
+    LocalModel? model,
+    bool? dark,
+    bool? vimMode,
+    List<String>? names,
+  }) => Settings(
+    model: model ?? this.model,
+    dark: dark ?? this.dark,
+    vimMode: vimMode ?? this.vimMode,
+    store: store,
+    hunspell: hunspell,
+    ollama: ollama,
+    languageTool: languageTool,
+    names: names == null ? this.names : List.unmodifiable(names),
+  );
 
   Map<String, Object> toJson() => {
     'model': model.name,
     'dark': dark,
+    'vimMode': vimMode,
     'store': store,
     'hunspell': hunspell,
     'ollama': ollama,
@@ -81,6 +91,7 @@ class Settings {
       Settings(
         model: LocalModel.values.byName(model),
         dark: dark,
+        vimMode: json['vimMode'] == true,
         store: store,
         hunspell: hunspell,
         ollama: ollama,

@@ -212,6 +212,7 @@ class _ConnectionFieldsState extends State<ConnectionFields> {
       final settings = Settings(
         model: current.model,
         dark: current.dark,
+        vimMode: current.vimMode,
         store: store.text.trim(),
         hunspell: hunspell.text.trim(),
         ollama: ollama.text.trim(),

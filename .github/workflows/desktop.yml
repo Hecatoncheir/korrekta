@@ -31,7 +31,10 @@ jobs:
       - run: flutter test
         working-directory: app
       - name: Проверить сценарии установки и обновления
-        run: bash -n packaging/linux.sh packaging/macos.sh app/assets/update-macos.sh
+        run: |
+          for file in packaging/linux.sh packaging/macos.sh app/assets/update-macos.sh; do
+            bash -n "$file"
+          done
       - run: dart pub get --enforce-lockfile && dart analyze --fatal-infos && dart test
         working-directory: tools/model_benchmark
       - name: Подготовить проверку сложности

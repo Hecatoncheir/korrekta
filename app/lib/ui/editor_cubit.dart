@@ -56,9 +56,11 @@ class EditorCubit extends Cubit<EditorState> {
   Timer? _saveTimer;
   Future<void> _pendingSave = Future.value();
   int _revision = 0;
+  int _checkRevision = 0;
 
   void edit(String text) {
     if (text == state.text) return;
+    _checkRevision++;
     _revision++;
     emit(
       state.copyWith(
@@ -72,8 +74,12 @@ class EditorCubit extends Cubit<EditorState> {
   }
 
   void configure(Settings settings) {
+    final changed = state.settings.checkingKey != settings.checkingKey;
+    if (changed) _checkRevision++;
     _revision++;
-    emit(state.copyWith(settings: settings, clearReview: true, saved: false));
+    emit(
+      state.copyWith(settings: settings, clearReview: changed, saved: false),
+    );
     _scheduleSave();
   }
 
@@ -115,16 +121,16 @@ class EditorCubit extends Cubit<EditorState> {
       );
       return;
     }
-    final revision = _revision;
+    final checkRevision = _checkRevision;
     final snapshot = state.text;
     final settings = state.settings;
     emit(state.copyWith(checking: true, clearReview: true));
     try {
       final result = await _checker.check(snapshot, settings);
-      if (isClosed || revision != _revision) return;
+      if (isClosed || checkRevision != _checkRevision) return;
       emit(state.copyWith(result: result, message: result.warning));
     } catch (error) {
-      if (!isClosed && revision == _revision) {
+      if (!isClosed && checkRevision == _checkRevision) {
         emit(state.copyWith(message: checkError(error)));
       }
     } finally {
@@ -139,6 +145,7 @@ class EditorCubit extends Cubit<EditorState> {
     if (result == null || choices.isEmpty) return;
     try {
       final next = result.apply(state.text, choices, state.settings.names);
+      _checkRevision++;
       _revision++;
       emit(
         state.copyWith(
@@ -159,6 +166,7 @@ class EditorCubit extends Cubit<EditorState> {
   void undo() {
     final previous = state.previous;
     if (previous == null) return;
+    _checkRevision++;
     _revision++;
     emit(
       state.copyWith(
