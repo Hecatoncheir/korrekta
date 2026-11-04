@@ -97,7 +97,8 @@ class UpdateInstaller {
       '-w',
       p.dirname(appBundle),
     ]);
-    if (result.exitCode != 0)
+    if (result.exitCode != 0) {
       throw StateError('Папка приложения недоступна для обновления');
+    }
   }
 }
