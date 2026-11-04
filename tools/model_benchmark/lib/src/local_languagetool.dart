@@ -18,6 +18,7 @@ class LocalLanguageTool {
 
   Future<JsonMap> _check(String text) async {
     final request = await _client.postUrl(endpoint.resolve('/v2/check'));
+    request.followRedirects = false;
     request.headers.contentType = ContentType(
       'application',
       'x-www-form-urlencoded',

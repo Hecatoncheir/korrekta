@@ -20,18 +20,22 @@ class EnsembleRuntime {
     this.hunspell,
     this.lt,
     this.endpoint,
+    this.model,
   );
   final HunspellPipe ru, en;
   final OpenCorporaDictionary symspell;
   final HunspellDictionary hunspell;
   final LocalLanguageTool lt;
   final Uri endpoint;
+  final String model;
   final client = HttpClient()..connectionTimeout = const Duration(seconds: 10);
 
   static Future<EnsembleRuntime> open({
     String store = 'E:/korrekta/dictionaries-v1',
     String ollama = 'http://127.0.0.1:11435',
     String languageTool = 'http://127.0.0.1:8081',
+    String model = ensembleModel,
+    String? hunspellExecutable,
   }) async {
     final endpoint = Uri.parse(ollama);
     if (endpoint.scheme != 'http' ||
@@ -50,11 +54,11 @@ class EnsembleRuntime {
         SymSpellIndex(frequencies),
       );
       ru = await HunspellPipe.start(
-        '$store/native/ucrt64/bin/hunspell.exe',
+        hunspellExecutable ?? defaultHunspell(store),
         '$store/hunspell/ru_RU',
       );
       en = await HunspellPipe.start(
-        '$store/native/ucrt64/bin/hunspell.exe',
+        hunspellExecutable ?? defaultHunspell(store),
         '$store/hunspell/en_US',
       );
       return EnsembleRuntime._(
@@ -64,6 +68,7 @@ class EnsembleRuntime {
         HunspellDictionary(ru, en, frequencies: frequencies),
         lt,
         endpoint,
+        model,
       );
     } catch (_) {
       await ru?.close();
@@ -83,25 +88,40 @@ class EnsembleRuntime {
     if (utf8.encode(prompt).length > 8192 - tokens - 32) {
       throw const FormatException('Запрос слишком большой; разделите текст');
     }
-    final response = await request(client, endpoint, 'generate', {
-      'model': ensembleModel,
-      'raw': true,
-      'prompt': prompt,
-      'format': schema,
-      'stream': false,
-      'think': false,
-      'keep_alive': '10m',
-      'options': {
-        ...generationOptions(false),
-        'num_ctx': 8192,
-        'num_predict': tokens,
-      },
-    }).timeout(const Duration(seconds: 120));
+    final response = await request(
+      client,
+      endpoint,
+      'generate',
+      generationBody(model, prompt, schema, tokens),
+    ).timeout(const Duration(seconds: 120));
     if (response['done_reason'] != 'stop') {
       throw const FormatException('Незавершённый ответ GigaChat');
     }
     return response;
   }
+
+  static String defaultHunspell(String store) =>
+      Platform.isWindows ? '$store/native/ucrt64/bin/hunspell.exe' : 'hunspell';
+
+  static Map<String, dynamic> generationBody(
+    String model,
+    String prompt,
+    Map<String, dynamic> schema,
+    int tokens,
+  ) => {
+    'model': model,
+    'raw': true,
+    'prompt': prompt,
+    'format': schema,
+    'stream': false,
+    'think': false,
+    'keep_alive': '10m',
+    'options': {
+      ...generationOptions(false),
+      'num_ctx': 8192,
+      'num_predict': tokens,
+    },
+  };
 
   Future<Map<String, dynamic>> collect(
     String text,

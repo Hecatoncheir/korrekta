@@ -1,0 +1,48 @@
+name: korrekta
+description: Локальная проверка русского текста.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  korrekta_model_benchmark:
+    path: ../tools/model_benchmark
+  path: ^1.9.1
+  path_provider: ^2.1.5
+  file_selector: 1.0.4
+  url_launcher: ^6.3.2
+  flutter_bloc: ^9.1.1
+  file_selector_linux: 0.9.3+2
+  window_manager: 0.5.1
+  screen_retriever: 0.2.0
+  screen_retriever_linux: 0.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/mark.png
+    - assets/proposal.txt
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/font-5.ttf
+          weight: 800
+    - family: Nunito Sans
+      fonts:
+        - asset: assets/fonts/font-7.ttf
+        - asset: assets/fonts/font-10.ttf
+          weight: 700
+    - family: JetBrains Mono
+      fonts:
+        - asset: assets/fonts/font-0.ttf

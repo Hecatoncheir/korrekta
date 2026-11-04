@@ -1,0 +1,126 @@
+name: Настольное приложение
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+    paths: ['app/**', 'tools/model_benchmark/**', 'packaging/**', 'tools/check_complexity.py', '.github/workflows/desktop.yml']
+  pull_request:
+    paths: ['app/**', 'tools/model_benchmark/**', 'packaging/**', 'tools/check_complexity.py', '.github/workflows/desktop.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: desktop-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.9'
+          channel: stable
+          cache: true
+      - run: flutter pub get --enforce-lockfile
+        working-directory: app
+      - run: dart format --output=none --set-exit-if-changed lib test tool
+        working-directory: app
+      - run: flutter analyze --fatal-infos
+        working-directory: app
+      - run: flutter test
+        working-directory: app
+      - run: dart pub get --enforce-lockfile && dart analyze --fatal-infos && dart test
+        working-directory: tools/model_benchmark
+      - name: Подготовить проверку сложности
+        run: |
+          git clone https://github.com/Hecatoncheir/treesitter_cyclomatic_complexity.git work/complexity
+          git -C work/complexity checkout 7b216f2344d87a910e6c1ffbd974fe60950c15ce
+          bash work/complexity/scripts/install-parsers.sh work/complexity/.ci/parsers
+          curl --fail --location https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.tar.gz | tar -xz -C work
+      - run: python3 tools/check_complexity.py --nvim work/nvim-linux-x86_64/bin/nvim
+      - uses: actions/upload-artifact@v4
+        with:
+          name: complexity
+          path: work/complexity-report.json
+  build:
+    needs: verify
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-2022
+            target: windows
+          - os: ubuntu-22.04
+            target: linux
+          - os: macos-15
+            target: macos
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Прочитать версию
+        id: version
+        shell: bash
+        run: echo "version=$(sed -n 's/^version: \([^+]*\).*/\1/p' app/pubspec.yaml)" >> "$GITHUB_OUTPUT"
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.9'
+          channel: stable
+          cache: true
+      - if: matrix.target == 'linux'
+        run: sudo apt-get update && sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev
+      - run: flutter pub get --enforce-lockfile
+        working-directory: app
+      - run: flutter build ${{ matrix.target }} --release
+        working-directory: app
+      - if: matrix.target == 'windows'
+        name: Подготовить EXE
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force release | Out-Null
+          Invoke-WebRequest https://aka.ms/vs/17/release/vc_redist.x64.exe -OutFile release/vc_redist.x64.exe
+          $signature = Get-AuthenticodeSignature release/vc_redist.x64.exe
+          if ($signature.Status -ne 'Valid' -or $signature.SignerCertificate.Subject -notmatch 'Microsoft Corporation') { throw 'Неверная подпись Microsoft' }
+          & 'C:/Program Files (x86)/Inno Setup 6/ISCC.exe' '/DAppVersion=${{ steps.version.outputs.version }}' packaging/windows.iss
+          if ($LASTEXITCODE -ne 0) { throw 'Ошибка сборки установщика' }
+      - if: matrix.target == 'linux'
+        name: Подготовить RUN и проверить установку без запуска
+        run: |
+          bash packaging/linux.sh '${{ steps.version.outputs.version }}'
+          XDG_DATA_HOME="$RUNNER_TEMP/korrekta-data" KORREKTA_BIN_HOME="$RUNNER_TEMP/korrekta-bin" bash 'release/Korrekta-${{ steps.version.outputs.version }}-linux-x64.run'
+          test -x "$RUNNER_TEMP/korrekta-data/korrekta/korrekta"
+      - if: matrix.target == 'macos'
+        name: Проверить архитектуры и подготовить DMG
+        run: |
+          lipo app/build/macos/Build/Products/Release/korrekta.app/Contents/MacOS/korrekta -verify_arch arm64 x86_64
+          bash packaging/macos.sh '${{ steps.version.outputs.version }}'
+          hdiutil verify 'release/Korrekta-${{ steps.version.outputs.version }}-macos-universal.dmg'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: desktop-${{ matrix.target }}
+          path: |
+            release/Korrekta-*.exe
+            release/Korrekta-*.run
+            release/Korrekta-*.dmg
+          if-no-files-found: error
+  publish:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: desktop-*
+          path: release
+          merge-multiple: true
+      - name: Опубликовать проверенные сборки
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          cd release
+          sha256sum Korrekta-* > SHA256SUMS
+          gh release create "$RELEASE_TAG" Korrekta-* SHA256SUMS --repo "$GITHUB_REPOSITORY" --verify-tag --prerelease --title "Корректа $RELEASE_TAG" --notes-file ../packaging/RELEASE.md
