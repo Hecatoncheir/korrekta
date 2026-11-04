@@ -17,8 +17,9 @@ Future<void> main() async {
     final api = UpdateApi(client);
     final release = await api.latest(suffix);
     final asset = release?.installer;
-    if (release == null || asset == null)
+    if (release == null || asset == null) {
       throw StateError('Нет опубликованного установщика');
+    }
     final digest = await api.checksum(release);
     final downloads = UpdateDownload(
       client,
