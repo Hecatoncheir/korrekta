@@ -36,3 +36,22 @@
 .gallery-page{grid-template-columns:minmax(0,1fr)}.gallery-main,.gallery-heading>div{min-width:0}
 @media(max-width:760px){.gallery-tabs{margin:0;padding:4px 2px;width:100%;min-width:0}.gallery-heading h1{overflow-wrap:break-word}}
 @media(max-width:420px){.download-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.platform-link{flex-direction:column;align-items:flex-start;gap:6px}.platform-link small{white-space:nowrap}}
+.gallery-feed{display:none}
+@media(max-width:760px){
+  .gallery-feed-ready .gallery-page{padding-inline:0}
+  .gallery-feed-ready .gallery-page>.site-header,
+  .gallery-feed-ready .gallery-heading,
+  .gallery-feed-ready .gallery-bottom{margin-inline:6%}
+  .gallery-feed-ready .gallery-tabs,
+  .gallery-feed-ready .gallery-panel,
+  .gallery-feed-ready .gallery-arrows{display:none}
+  .gallery-feed-ready .gallery-feed{display:grid;gap:40px;width:100%}
+  .gallery-feed>figure{margin:0;min-width:0;scroll-margin-top:16px}
+  .feed-image{display:block;width:100%;padding:0;cursor:zoom-in;line-height:0}
+  .feed-image>img{display:block;width:100%;height:auto;max-width:100%}
+  .feed-image:focus-visible{outline-offset:-3px}
+  .feed-caption{padding:18px 6% 0}
+  .feed-caption h2{font-size:22px;letter-spacing:-.025em;margin-bottom:8px}
+  .feed-caption p{font-size:14px;line-height:1.65;color:var(--muted)}
+  .feed-caption .pill{margin-bottom:10px}
+}

@@ -5,8 +5,8 @@
   <meta name="theme-color" content="#fbf1c7"><meta name="description" content="Скриншоты Корректы: проверка и принятие правок, перевод, генерация и настройки локального приложения.">
   <title>Корректа — посмотреть приложение</title>
   <link rel="icon" href="assets/app-icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="motion.css"><link rel="stylesheet" href="showcase.css">
-  <script src="shared.js?v=20261105" defer></script><script src="site.js?v=20261105" defer></script><script src="gallery.js?v=20261105" defer></script>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="motion.css"><link rel="stylesheet" href="showcase.css?v=20261105-2">
+  <script src="shared.js?v=20261105" defer></script><script src="site.js?v=20261105" defer></script><script src="gallery.js?v=20261105-2" defer></script>
 </head>
 <body><a class="skip" href="#main">К галерее</a>
 <div class="gallery-page">
@@ -24,6 +24,7 @@
       <button role="tab" id="tab-settings" aria-selected="false" aria-controls="gallery-panel" data-slide="settings" tabindex="-1">Настройки</button>
       <button role="tab" id="tab-light" aria-selected="false" aria-controls="gallery-panel" data-slide="light" tabindex="-1">Светлая тема</button>
     </div>
+    <section class="gallery-feed" aria-label="Все скриншоты приложения"></section>
     <section class="gallery-panel" id="gallery-panel" role="tabpanel" aria-labelledby="tab-checking" tabindex="0">
       <figure class="gallery-figure">
         <button class="gallery-image-button" aria-label="Увеличить скриншот" data-open="screenshot-dialog"><img id="gallery-image" src="assets/screenshots/checking.png" width="1280" height="800" alt="Ошибка выделена в редакторе; справа показан вариант исправления"><span class="zoom-hint"><span data-icon="expand"></span>Увеличить</span></button>

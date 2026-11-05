@@ -56,3 +56,44 @@ image.addEventListener('load', () => {
 });
 const initial = slides.findIndex(slide => `#${slide.id}` === location.hash);
 selectSlide(initial < 0 ? 0 : initial);
+
+function feedText(tag, text) {
+  const element = document.createElement(tag);
+  element.textContent = text;
+  return element;
+}
+
+function feedFigure(slide, index) {
+  const figure = document.createElement('figure');
+  figure.id = `example-${slide.id}`;
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'feed-image';
+  button.setAttribute('aria-label', `Увеличить скриншот: ${slide.label}`);
+  const screenshot = document.createElement('img');
+  Object.assign(screenshot, {
+    src: `assets/screenshots/${slide.image}`, alt: slide.alt,
+    width: 1280, height: 800, loading: index === 0 ? 'eager' : 'lazy'
+  });
+  button.append(screenshot);
+  button.addEventListener('click', () => {
+    selectSlide(index);
+    document.getElementById('screenshot-dialog').showModal();
+  });
+  const caption = document.createElement('figcaption');
+  caption.className = 'feed-caption';
+  if (slide.upcoming) {
+    const status = feedText('span', 'Готовится к выпуску');
+    status.className = 'pill';
+    caption.append(status);
+  }
+  caption.append(feedText('h2', slide.title), feedText('p', slide.description));
+  figure.append(button, caption);
+  return figure;
+}
+
+document.querySelector('.gallery-feed').append(...slides.map(feedFigure));
+document.documentElement.classList.add('gallery-feed-ready');
+if (initial >= 0 && matchMedia('(max-width: 760px)').matches) {
+  document.getElementById(`example-${slides[initial].id}`).scrollIntoView();
+}
