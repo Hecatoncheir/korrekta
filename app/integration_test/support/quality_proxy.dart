@@ -14,6 +14,7 @@ class QualityProxy {
   final _client = http.Client();
   late final HttpServer _server;
   String? currentCase;
+  String? forcedContent;
   int sequence = 0;
   final observations = <Map<String, Object?>>[];
 
@@ -31,6 +32,7 @@ class QualityProxy {
         [],
         (all, bytes) => all..addAll(bytes),
       );
+      if (await _inject(incoming, id, body)) return;
       final target = backend.replace(
         path: incoming.uri.path,
         query: incoming.uri.hasQuery ? incoming.uri.query : null,
@@ -49,8 +51,8 @@ class QualityProxy {
         bytes.addAll(chunk);
         incoming.response.add(chunk);
       }
-      if (incoming.uri.path == '/api/generate') {
-        await _record(id, body, bytes, response.statusCode);
+      if (['/api/generate', '/api/chat'].contains(incoming.uri.path)) {
+        await _record(id, body, bytes, response.statusCode, incoming.uri.path);
       }
     } catch (error) {
       incoming.response.statusCode = 502;
@@ -60,15 +62,40 @@ class QualityProxy {
     }
   }
 
+  Future<bool> _inject(HttpRequest incoming, String? id, List<int> body) async {
+    final content = forcedContent;
+    if (id == null || content == null || incoming.uri.path != '/api/chat') {
+      return false;
+    }
+    forcedContent = null;
+    final request = jsonDecode(utf8.decode(body)) as Map<String, dynamic>;
+    final bytes = utf8.encode(
+      jsonEncode({
+        'model': request['model'],
+        'done': true,
+        'done_reason': 'stop',
+        'message': {'role': 'assistant', 'content': content},
+      }),
+    );
+    incoming.response.headers.contentType = ContentType.json;
+    incoming.response.add(bytes);
+    await _record(id, body, bytes, 200, incoming.uri.path, injected: true);
+    return true;
+  }
+
   Future<void> _record(
     String? id,
     List<int> body,
     List<int> response,
     int status,
-  ) async {
+    String api, {
+    bool injected = false,
+  }) async {
     final request = jsonDecode(utf8.decode(body)) as Map<String, dynamic>;
     final row = <String, Object?>{
       'sequence': sequence++,
+      'api': api,
+      'injected': injected,
       'case': id,
       'utc': DateTime.now().toUtc().toIso8601String(),
       'model': request['model'],

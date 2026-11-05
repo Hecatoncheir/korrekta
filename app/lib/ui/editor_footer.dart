@@ -14,7 +14,8 @@ class EditorFooter extends StatelessWidget {
     builder: (context, state) => Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        if (state.message case final message?)
+        if (state.message case final message?
+            when message != state.result?.warning)
           Padding(
             padding: const EdgeInsets.only(bottom: 12),
             child: Text(

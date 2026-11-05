@@ -1,0 +1,1760 @@
+[
+  {
+    "profileModel": "quality",
+    "id": "control-style-8",
+    "profile": "empty",
+    "group": "style",
+    "kind": "control",
+    "text": "Он готовит подарок ко дню рожденья.",
+    "expected": [
+      "Он готовит подарок ко дню рожденья."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:16:05.131663Z",
+    "output": "Он готовит подарок ко дню рождения.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 6825,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 26,
+        "original": "рожденья",
+        "options": [
+          "рожденья",
+          "рождения"
+        ],
+        "recommended": 1,
+        "sources": [
+          "gigachat"
+        ]
+      }
+    ],
+    "recommendedCount": 1,
+    "score": {
+      "clean": false,
+      "changed": true,
+      "falseControl": true,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 35
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "control-names-18",
+    "profile": "empty",
+    "group": "names",
+    "kind": "control",
+    "text": "Имя файла руддщ.txt нужно сохранить без изменений.",
+    "expected": [
+      "Имя файла руддщ.txt нужно сохранить без изменений."
+    ],
+    "names": [],
+    "protected": [
+      "руддщ"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:16:37.602557Z",
+    "output": "Имя файла руддщ.txt нужно сохранить без изменений.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 8017,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 10,
+        "original": "руддщ",
+        "options": [
+          "руддщ",
+          "буддо",
+          "рудик",
+          "будда",
+          "руда",
+          "рушди",
+          "руди",
+          "будде",
+          "будду"
+        ],
+        "recommended": 0,
+        "sources": [
+          "languagetool"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "error-format-4",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "Проверка  № 7:\tУстройство работаит без сети.",
+    "expected": [
+      "Проверка  № 7:\tУстройство работает без сети."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:17:42.770617Z",
+    "output": "Проверка  № 7:\tУстройство работаит без сети.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 6902,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 26,
+        "original": "работаит",
+        "options": [
+          "работаит",
+          "работает",
+          "работают",
+          "работаем",
+          "работаете",
+          "работа",
+          "работать",
+          "работах",
+          "работал",
+          "работали",
+          "работник",
+          "работами",
+          "работала",
+          "работам",
+          "работая"
+        ],
+        "recommended": 0,
+        "sources": [
+          "gigachat",
+          "hunspell",
+          "languagetool",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "error-grammar-2",
+    "profile": "empty",
+    "group": "grammar",
+    "kind": "error",
+    "text": "После собрания мы вернулесь в мастерскую.",
+    "expected": [
+      "После собрания мы вернулись в мастерскую."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:19:36.481696Z",
+    "output": "После собрания мы вернулесь в мастерскую.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 7080,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 18,
+        "original": "вернулесь",
+        "options": [
+          "вернулесь",
+          "вернулись",
+          "дернулись",
+          "вернулась",
+          "вернулось",
+          "вернусь",
+          "вернулся",
+          "вернетесь"
+        ],
+        "recommended": 0,
+        "sources": [
+          "hunspell",
+          "languagetool",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "error-format-14",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "Ключ `user_namе` уже создан, но сервер не отвечаeт.",
+    "expected": [
+      "Ключ `user_namе` уже создан, но сервер не отвечает."
+    ],
+    "names": [],
+    "protected": [
+      "`user_namе`"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:20:56.183165Z",
+    "output": "Ключ `user_namе` уже создан, но сервер не отвечаeт.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 5587,
+    "wireModelVerified": true,
+    "cards": [],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 51
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "control-names-12",
+    "profile": "empty",
+    "group": "names",
+    "kind": "control",
+    "text": "Автор талви просит сохранить написание псевдонима.",
+    "expected": [
+      "Автор талви просит сохранить написание псевдонима."
+    ],
+    "names": [],
+    "protected": [
+      "талви"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:22:17.292386Z",
+    "output": "Автор талви просит сохранить написание псевдонима.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 6839,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 6,
+        "original": "талви",
+        "options": [
+          "талви",
+          "толки",
+          "балви",
+          "халве",
+          "молви",
+          "талае",
+          "талаи",
+          "талии",
+          "тали",
+          "тальи",
+          "стали",
+          "дали",
+          "италии",
+          "толщи",
+          "али",
+          "таки",
+          "танки",
+          "балки",
+          "такси"
+        ],
+        "recommended": 0,
+        "sources": [
+          "languagetool",
+          "hunspell",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "control-style-3",
+    "profile": "empty",
+    "group": "style",
+    "kind": "control",
+    "text": "Вопреки прогнозу вечер оказался тёплым.",
+    "expected": [
+      "Вопреки прогнозу вечер оказался тёплым."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:23:28.332411Z",
+    "output": "Вопреки прогнозу вечер оказался тёплым.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 6432,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 16,
+        "original": "",
+        "options": [
+          "",
+          ","
+        ],
+        "recommended": 0,
+        "sources": [
+          "gigachat"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 39
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "control-technical-20",
+    "profile": "empty",
+    "group": "technical",
+    "kind": "control",
+    "text": "Авторские метки: ghbdtn, руддщ и asdfgh.",
+    "expected": [
+      "Авторские метки: ghbdtn, руддщ и asdfgh."
+    ],
+    "names": [],
+    "protected": [
+      "руддщ"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:23:35.589053Z",
+    "output": "Авторские метки: ghbdtn, руддщ и asdfgh.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 7005,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 25,
+        "original": "руддщ",
+        "options": [
+          "руддщ",
+          "буддо",
+          "рудик",
+          "будда",
+          "руда",
+          "рушди",
+          "руди",
+          "будде",
+          "будду",
+          "руд",
+          "руды",
+          "рудах",
+          "руде",
+          "руду",
+          "будды",
+          "рудой",
+          "рудно"
+        ],
+        "recommended": 0,
+        "sources": [
+          "languagetool",
+          "symspell",
+          "hunspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 40
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "control-names-13",
+    "profile": "empty",
+    "group": "names",
+    "kind": "control",
+    "text": "Проект рунелия уже доступен на этом компьютере.",
+    "expected": [
+      "Проект рунелия уже доступен на этом компьютере."
+    ],
+    "names": [],
+    "protected": [
+      "рунелия"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:23:56.560569Z",
+    "output": "Проект рунелия уже доступен на этом компьютере.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 6780,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 7,
+        "original": "рунелия",
+        "options": [
+          "рунелия",
+          "рузилия",
+          "руления",
+          "ранения",
+          "рутения"
+        ],
+        "recommended": 0,
+        "sources": [
+          "languagetool",
+          "hunspell",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 47
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "control-format-1",
+    "profile": "empty",
+    "group": "format",
+    "kind": "control",
+    "text": "Черновик:\n  Первая запись сохранена.\n  Вторая запись тоже готова.",
+    "expected": [
+      "Черновик:\n  Первая запись сохранена.\n  Вторая запись тоже готова."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:24:03.639528Z",
+    "output": "Черновик:\n  Первая запись сохранена.\n  Вторая запись тоже готова.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 6837,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 53,
+        "original": "тоже",
+        "options": [
+          "тоже",
+          "также"
+        ],
+        "recommended": 0,
+        "sources": [
+          "gigachat"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 65
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "control-names-11",
+    "profile": "empty",
+    "group": "names",
+    "kind": "control",
+    "text": "Пользователь вельмора ответил на мой вопрос.",
+    "expected": [
+      "Пользователь вельмора ответил на мой вопрос."
+    ],
+    "names": [],
+    "protected": [
+      "вельмора"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:25:59.946918Z",
+    "output": "Пользователь вельмора ответил на мой вопрос.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 7116,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 13,
+        "original": "вельмора",
+        "options": [
+          "вельмора",
+          "вельможа",
+          "вельмира",
+          "вельмиру",
+          "вельможу",
+          "вильмара",
+          "вильмира",
+          "вельмож",
+          "вельможи"
+        ],
+        "recommended": 0,
+        "sources": [
+          "hunspell",
+          "languagetool",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "error-grammar-16",
+    "profile": "empty",
+    "group": "grammar",
+    "kind": "error",
+    "text": "Я не знаю куда положили запасной ключ.",
+    "expected": [
+      "Я не знаю, куда положили запасной ключ."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:27:04.627344Z",
+    "output": "Я не знаю куда положили запасной ключ.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 6787,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 9,
+        "original": "",
+        "options": [
+          "",
+          ","
+        ],
+        "recommended": 0,
+        "sources": [
+          "gigachat"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 38
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "error-format-6",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "`final retryCount = 3;`\nПосле ошибки программа повторяит запрос.",
+    "expected": [
+      "`final retryCount = 3;`\nПосле ошибки программа повторяет запрос."
+    ],
+    "names": [],
+    "protected": [
+      "`final retryCount = 3;`"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:28:10.133874Z",
+    "output": "`final retryCount = 3;`\nПосле ошибки программа повторяит запрос.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 6916,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 47,
+        "original": "повторяит",
+        "options": [
+          "повторяит",
+          "повторяет",
+          "повторит",
+          "повторяют",
+          "повторяем",
+          "повторяете",
+          "повторят",
+          "повторил",
+          "повторяю",
+          "повторить",
+          "повторять",
+          "повторял",
+          "повторяя",
+          "повторяли",
+          "повторяла",
+          "повторим"
+        ],
+        "recommended": 0,
+        "sources": [
+          "gigachat",
+          "hunspell",
+          "languagetool",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 64
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "error-format-15",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "Цена: 1250 ₽.\nЗаказ будит готов в пятницу.",
+    "expected": [
+      "Цена: 1250 ₽.\nЗаказ будет готов в пятницу."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:29:01.521963Z",
+    "output": "Цена: 1250 ₽.\nЗаказ будит готов в пятницу.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 7091,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 20,
+        "original": "будит",
+        "options": [
+          "будит",
+          "будет"
+        ],
+        "recommended": 0,
+        "sources": [
+          "gigachat"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 42
+    }
+  },
+  {
+    "profileModel": "quality",
+    "id": "control-style-1",
+    "profile": "empty",
+    "group": "style",
+    "kind": "control",
+    "text": "Согласно расписанию автобус отправится в четверг утром.",
+    "expected": [
+      "Согласно расписанию автобус отправится в четверг утром."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:29:15.630420Z",
+    "output": "Согласно расписанию автобус отправится в четверг утром.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 6859,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 19,
+        "original": "",
+        "options": [
+          "",
+          ","
+        ],
+        "recommended": 0,
+        "sources": [
+          "gigachat"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 55
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "control-style-8",
+    "profile": "empty",
+    "group": "style",
+    "kind": "control",
+    "text": "Он готовит подарок ко дню рожденья.",
+    "expected": [
+      "Он готовит подарок ко дню рожденья."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:34:14.887700Z",
+    "output": "Он готовит подарок ко дню рождения.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 4810,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 26,
+        "original": "рожденья",
+        "options": [
+          "рожденья",
+          "рождения"
+        ],
+        "recommended": 1,
+        "sources": [
+          "gigachat"
+        ]
+      }
+    ],
+    "recommendedCount": 1,
+    "score": {
+      "clean": false,
+      "changed": true,
+      "falseControl": true,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 35
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "control-names-18",
+    "profile": "empty",
+    "group": "names",
+    "kind": "control",
+    "text": "Имя файла руддщ.txt нужно сохранить без изменений.",
+    "expected": [
+      "Имя файла руддщ.txt нужно сохранить без изменений."
+    ],
+    "names": [],
+    "protected": [
+      "руддщ"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:34:36.861550Z",
+    "output": "Имя файла руддщ.txt нужно сохранить без изменений.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 5338,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 10,
+        "original": "руддщ",
+        "options": [
+          "руддщ",
+          "буддо",
+          "рудик",
+          "будда",
+          "руда",
+          "рушди",
+          "руди",
+          "будде",
+          "будду"
+        ],
+        "recommended": 0,
+        "sources": [
+          "languagetool"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-format-4",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "Проверка  № 7:\tУстройство работаит без сети.",
+    "expected": [
+      "Проверка  № 7:\tУстройство работает без сети."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:35:22.818449Z",
+    "output": "Проверка  № 7:\tУстройство работаит без сети.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 4809,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 26,
+        "original": "работаит",
+        "options": [
+          "работаит",
+          "работает",
+          "работают",
+          "работаем",
+          "работаете",
+          "работа",
+          "работать",
+          "работах",
+          "работал",
+          "работали",
+          "работник",
+          "работами",
+          "работала",
+          "работам",
+          "работая"
+        ],
+        "recommended": 0,
+        "sources": [
+          "hunspell",
+          "languagetool",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-format-3",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "## Итоги встречи\n\nМы обсуделе новый маршрут.\n\nСледующая встреча — в среду.",
+    "expected": [
+      "## Итоги встречи\n\nМы обсудили новый маршрут.\n\nСледующая встреча — в среду."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:35:38.972317Z",
+    "output": "## Итоги встречи\n\nМы обсуделе новый маршрут.\n\nСледующая встреча — в среду.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 5294,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 21,
+        "original": "обсуделе",
+        "options": [
+          "обсуделе",
+          "обсудили",
+          "обсидели",
+          "обсудил",
+          "обсудила",
+          "обсудило",
+          "обсудите",
+          "обсудели"
+        ],
+        "recommended": 0,
+        "sources": [
+          "languagetool",
+          "symspell",
+          "hunspell",
+          "gigachat"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 74
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-grammar-2",
+    "profile": "empty",
+    "group": "grammar",
+    "kind": "error",
+    "text": "После собрания мы вернулесь в мастерскую.",
+    "expected": [
+      "После собрания мы вернулись в мастерскую."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:36:46.580933Z",
+    "output": "После собрания мы вернулесь в мастерскую.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 4830,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 18,
+        "original": "вернулесь",
+        "options": [
+          "вернулесь",
+          "вернулись",
+          "дернулись",
+          "вернулась",
+          "вернулось",
+          "вернусь",
+          "вернулся",
+          "вернетесь"
+        ],
+        "recommended": 0,
+        "sources": [
+          "hunspell",
+          "languagetool",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-format-19",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "Строка 01  \n  Строка 02\n\nЭтот порядок нам нравиться.",
+    "expected": [
+      "Строка 01  \n  Строка 02\n\nЭтот порядок нам нравится."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:37:22.182346Z",
+    "output": "Строка 01  \n  Строка 02\n\nЭтот порядок нам нравиться.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 4666,
+    "wireModelVerified": true,
+    "cards": [],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 52
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-format-14",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "Ключ `user_namе` уже создан, но сервер не отвечаeт.",
+    "expected": [
+      "Ключ `user_namе` уже создан, но сервер не отвечает."
+    ],
+    "names": [],
+    "protected": [
+      "`user_namе`"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:37:42.740694Z",
+    "output": "Ключ `user_namе` уже создан, но сервер не отвечаeт.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 4599,
+    "wireModelVerified": true,
+    "cards": [],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 51
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-format-12",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "Метка: é / ё / й\nЯ выбрал новыи вариант палитры.",
+    "expected": [
+      "Метка: é / ё / й\nЯ выбрал новый вариант палитры."
+    ],
+    "names": [],
+    "protected": [
+      "é"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:38:35.932872Z",
+    "output": "Метка: é / ё / й\nЯ выбрал новыи вариант палитры.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 4901,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 27,
+        "original": "новыи",
+        "options": [
+          "новыи",
+          "новые",
+          "новый",
+          "новое",
+          "новее",
+          "нови",
+          "новы",
+          "новых",
+          "новым",
+          "новыми",
+          "новой",
+          "новая",
+          "ноги",
+          "новую"
+        ],
+        "recommended": 0,
+        "sources": [
+          "hunspell",
+          "languagetool",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 48
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "control-names-12",
+    "profile": "empty",
+    "group": "names",
+    "kind": "control",
+    "text": "Автор талви просит сохранить написание псевдонима.",
+    "expected": [
+      "Автор талви просит сохранить написание псевдонима."
+    ],
+    "names": [],
+    "protected": [
+      "талви"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:38:45.992772Z",
+    "output": "Автор талви просит сохранить написание псевдонима.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 4802,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 6,
+        "original": "талви",
+        "options": [
+          "талви",
+          "толки",
+          "балви",
+          "халве",
+          "молви",
+          "талае",
+          "талаи",
+          "талии",
+          "тали",
+          "тальи",
+          "стали",
+          "дали",
+          "италии",
+          "толщи",
+          "али",
+          "таки",
+          "танки",
+          "балки",
+          "такси"
+        ],
+        "recommended": 0,
+        "sources": [
+          "languagetool",
+          "hunspell",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "control-technical-20",
+    "profile": "empty",
+    "group": "technical",
+    "kind": "control",
+    "text": "Авторские метки: ghbdtn, руддщ и asdfgh.",
+    "expected": [
+      "Авторские метки: ghbdtn, руддщ и asdfgh."
+    ],
+    "names": [],
+    "protected": [
+      "руддщ"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:39:43.426811Z",
+    "output": "Авторские метки: ghbdtn, руддщ и asdfgh.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 5170,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 25,
+        "original": "руддщ",
+        "options": [
+          "руддщ",
+          "буддо",
+          "рудик",
+          "будда",
+          "руда",
+          "рушди",
+          "руди",
+          "будде",
+          "будду",
+          "руд",
+          "руды",
+          "рудах",
+          "руде",
+          "руду",
+          "будды",
+          "рудой",
+          "рудно"
+        ],
+        "recommended": 0,
+        "sources": [
+          "languagetool",
+          "symspell",
+          "hunspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 40
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "control-names-13",
+    "profile": "empty",
+    "group": "names",
+    "kind": "control",
+    "text": "Проект рунелия уже доступен на этом компьютере.",
+    "expected": [
+      "Проект рунелия уже доступен на этом компьютере."
+    ],
+    "names": [],
+    "protected": [
+      "рунелия"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:39:58.563988Z",
+    "output": "Проект рунелия уже доступен на этом компьютере.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 4885,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 7,
+        "original": "рунелия",
+        "options": [
+          "рунелия",
+          "рузилия",
+          "руления",
+          "ранения",
+          "рутения"
+        ],
+        "recommended": 0,
+        "sources": [
+          "languagetool",
+          "hunspell",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 47
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-names-6",
+    "profile": "empty",
+    "group": "names",
+    "kind": "error",
+    "text": "Вирмела попросила чтобы окно закрыли.",
+    "expected": [
+      "Вирмела попросила, чтобы окно закрыли."
+    ],
+    "names": [],
+    "protected": [
+      "Вирмела"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:40:45.805587Z",
+    "output": "Вирмела попросила чтобы окно закрыли.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 4759,
+    "wireModelVerified": true,
+    "cards": [],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 37
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "control-names-11",
+    "profile": "empty",
+    "group": "names",
+    "kind": "control",
+    "text": "Пользователь вельмора ответил на мой вопрос.",
+    "expected": [
+      "Пользователь вельмора ответил на мой вопрос."
+    ],
+    "names": [],
+    "protected": [
+      "вельмора"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:41:27.521456Z",
+    "output": "Пользователь вельмора ответил на мой вопрос.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 5182,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 13,
+        "original": "вельмора",
+        "options": [
+          "вельмора",
+          "вельможа",
+          "вельмира",
+          "вельмиру",
+          "вельможу",
+          "вильмара",
+          "вильмира",
+          "вельмож",
+          "вельможи"
+        ],
+        "recommended": 0,
+        "sources": [
+          "hunspell",
+          "languagetool",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-format-13",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "**Важно:** мы не меняим название проекта «Nymori».",
+    "expected": [
+      "**Важно:** мы не меняем название проекта «Nymori»."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:41:55.063656Z",
+    "output": "**Важно:** мы не меняим название проекта «Nymori».",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 5103,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 17,
+        "original": "меняим",
+        "options": [
+          "меняим",
+          "меняем",
+          "меняев",
+          "меняема",
+          "меняемо",
+          "меняемы",
+          "меняет",
+          "меням",
+          "меня",
+          "менявшим",
+          "меняющим",
+          "меньшим",
+          "менять",
+          "мелким",
+          "меняя",
+          "меняют",
+          "меняли",
+          "менял",
+          "меняла",
+          "ценим"
+        ],
+        "recommended": 0,
+        "sources": [
+          "hunspell",
+          "languagetool",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-format-8",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "Ссылка: https://example.org/velmora?q=Ghbdtn&lang=ru\nЯ проверел только описание.",
+    "expected": [
+      "Ссылка: https://example.org/velmora?q=Ghbdtn&lang=ru\nЯ проверил только описание."
+    ],
+    "names": [],
+    "protected": [
+      "Ghbdtn",
+      "https://example.org/velmora?q=Ghbdtn&lang=ru"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:42:05.412846Z",
+    "output": "Ссылка: https://example.org/velmora?q=Ghbdtn&lang=ru\nЯ проверел только описание.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 5110,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 55,
+        "original": "проверел",
+        "options": [
+          "проверел",
+          "проверил",
+          "проверял",
+          "промерил",
+          "промерял",
+          "проварил",
+          "проверен",
+          "проверила",
+          "провертел",
+          "провел",
+          "проревел",
+          "проверещал",
+          "проверки",
+          "проверка",
+          "проверке",
+          "проверку",
+          "поверил",
+          "проведем",
+          "проверок",
+          "проверяет",
+          "повелел"
+        ],
+        "recommended": 0,
+        "sources": [
+          "hunspell",
+          "languagetool",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 80
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-grammar-16",
+    "profile": "empty",
+    "group": "grammar",
+    "kind": "error",
+    "text": "Я не знаю куда положили запасной ключ.",
+    "expected": [
+      "Я не знаю, куда положили запасной ключ."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:42:15.520818Z",
+    "output": "Я не знаю куда положили запасной ключ.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 4771,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 9,
+        "original": "",
+        "options": [
+          "",
+          ","
+        ],
+        "recommended": 0,
+        "sources": [
+          "gigachat"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 38
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-format-6",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "`final retryCount = 3;`\nПосле ошибки программа повторяит запрос.",
+    "expected": [
+      "`final retryCount = 3;`\nПосле ошибки программа повторяет запрос."
+    ],
+    "names": [],
+    "protected": [
+      "`final retryCount = 3;`"
+    ],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:43:02.727410Z",
+    "output": "`final retryCount = 3;`\nПосле ошибки программа повторяит запрос.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 5281,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 47,
+        "original": "повторяит",
+        "options": [
+          "повторяит",
+          "повторяет",
+          "повторит",
+          "повторяют",
+          "повторяем",
+          "повторяете",
+          "повторят",
+          "повторил",
+          "повторяю",
+          "повторить",
+          "повторять",
+          "повторял",
+          "повторяя",
+          "повторяли",
+          "повторяла",
+          "повторим"
+        ],
+        "recommended": 0,
+        "sources": [
+          "hunspell",
+          "languagetool",
+          "symspell"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 64
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-format-15",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "Цена: 1250 ₽.\nЗаказ будит готов в пятницу.",
+    "expected": [
+      "Цена: 1250 ₽.\nЗаказ будет готов в пятницу."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:43:38.262574Z",
+    "output": "Цена: 1250 ₽.\nЗаказ будит готов в пятницу.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 4865,
+    "wireModelVerified": true,
+    "cards": [
+      {
+        "start": 20,
+        "original": "будит",
+        "options": [
+          "будит",
+          "будет"
+        ],
+        "recommended": 0,
+        "sources": [
+          "gigachat"
+        ]
+      }
+    ],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 42
+    }
+  },
+  {
+    "profileModel": "balanced",
+    "id": "error-format-18",
+    "profile": "empty",
+    "group": "format",
+    "kind": "error",
+    "text": "| Ключ | Значение |\n| --- | --- |\n| raw_id | velmora_07 |\n\nНиже указанны дополнительные сведения.",
+    "expected": [
+      "| Ключ | Значение |\n| --- | --- |\n| raw_id | velmora_07 |\n\nНиже указаны дополнительные сведения."
+    ],
+    "names": [],
+    "protected": [],
+    "preserveWhitespace": true,
+    "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+    "utc": "2026-11-05T02:43:59.610181Z",
+    "output": "| Ключ | Значение |\n| --- | --- |\n| raw_id | velmora_07 |\n\nНиже указанны дополнительные сведения.",
+    "complete": true,
+    "message": null,
+    "elapsedMs": 4586,
+    "wireModelVerified": true,
+    "cards": [],
+    "recommendedCount": 0,
+    "score": {
+      "clean": false,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 97
+    }
+  }
+]

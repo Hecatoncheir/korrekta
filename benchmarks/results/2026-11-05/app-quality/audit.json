@@ -1,0 +1,80 @@
+{
+  "datasetAndProductionHashesVerified": true,
+  "productionSourceFiles": 82,
+  "datasetSha256": "2e544aa8a975b250417aa344ec844f1781695154cda564a167a3281df828decf",
+  "models": {
+    "quality": {
+      "cases": 160,
+      "caseGenerationRequests": 160,
+      "unchangedInputGoldAndMetadata": true,
+      "recomputedScoresMatch": true,
+      "requestHashModelContextVerified": true,
+      "http200": 160,
+      "modelStopped": 160,
+      "modelLengthLimit": 0,
+      "medianOllamaSeconds": 0.5786129,
+      "rawModelPrimaryDiagnostic": {
+        "cases": 140,
+        "invalidTextJson": 0,
+        "literalOpeningBraceCases": [],
+        "literalBraceErrors": 0,
+        "literalBraceControls": 0,
+        "literalBraceErrorsRecoveredByApp": 0,
+        "changedControls": 22,
+        "protectedFailures": 16,
+        "whitespaceFailures": 10,
+        "markupFailures": 0
+      }
+    },
+    "balanced": {
+      "cases": 160,
+      "caseGenerationRequests": 160,
+      "unchangedInputGoldAndMetadata": true,
+      "recomputedScoresMatch": true,
+      "requestHashModelContextVerified": true,
+      "http200": 160,
+      "modelStopped": 160,
+      "modelLengthLimit": 0,
+      "medianOllamaSeconds": 0.3135654,
+      "rawModelPrimaryDiagnostic": {
+        "cases": 140,
+        "invalidTextJson": 0,
+        "literalOpeningBraceCases": [
+          "control-technical-18",
+          "error-format-20",
+          "control-technical-1",
+          "control-technical-14",
+          "control-format-6",
+          "error-format-4",
+          "control-format-14",
+          "error-format-10",
+          "control-technical-6",
+          "control-format-18",
+          "error-format-19",
+          "control-technical-2",
+          "control-format-4",
+          "control-style-18",
+          "error-format-11",
+          "error-format-12",
+          "control-format-9",
+          "control-technical-20",
+          "control-technical-7",
+          "control-technical-17",
+          "error-format-8",
+          "control-technical-12",
+          "error-format-5",
+          "error-format-18",
+          "control-technical-4",
+          "control-technical-5"
+        ],
+        "literalBraceErrors": 9,
+        "literalBraceControls": 17,
+        "literalBraceErrorsRecoveredByApp": 4,
+        "changedControls": 30,
+        "protectedFailures": 22,
+        "whitespaceFailures": 40,
+        "markupFailures": 5
+      }
+    }
+  }
+}

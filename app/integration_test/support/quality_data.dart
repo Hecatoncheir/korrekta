@@ -107,12 +107,17 @@ List<String> markupParts(String text) => RegExp(
 int occurrences(String text, String fragment) =>
     RegExp(RegExp.escape(fragment)).allMatches(text).length;
 
-Future<void> verifyQualityFreeze(String root) async {
-  final folder = p.join(root, 'benchmarks', 'app-quality');
+Future<void> verifyQualityFreeze(
+  String root, {
+  String study = 'app-quality',
+}) async {
+  final folder = p.join(root, 'benchmarks', study);
   final protocol = jsonDecode(
     await File(p.join(folder, 'protocol-v1.json')).readAsString(),
   ) as Map<String, dynamic>;
-  final data = File(p.join(folder, 'cases-v1.jsonl'));
+  final data = File(
+    p.join(root, 'benchmarks', 'app-quality', 'cases-v1.jsonl'),
+  );
   if (await fileHash(data) != protocol['datasetSha256']) {
     throw StateError('Набор изменён после фиксации');
   }

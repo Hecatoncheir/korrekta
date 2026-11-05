@@ -1,7 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'cli.dart' show generationOptions;
+import 'correction_response.dart';
+import 'desktop_generation.dart';
 import 'desktop_request.dart' show desktopRequest;
 import 'ensemble_runtime.dart' show ensembleModel;
 import 'dictionary_engines.dart';
@@ -78,49 +79,41 @@ class DesktopRuntime {
   }
 
   Future<Map<String, dynamic>> generate(
-    String prompt,
+    String instruction,
+    Map<String, dynamic> payload,
     Map<String, dynamic> schema,
     int tokens,
   ) async {
+    final request = generationRequest(
+      model,
+      instruction,
+      payload,
+      schema,
+      tokens,
+    );
+    final prompt =
+        request.body['prompt'] as String? ??
+        '$instruction${jsonEncode(payload)}';
     // Число байтов ограничивает сверху число токенов byte-level BPE.
-    // Это не даёт серверу незаметно обрезать начало длинного запроса.
+    // Для chat служебный префикс добавляет сервер; truncate/shift=false
+    // запрещают ему обрезать запрос или сдвигать контекст при генерации.
     if (utf8.encode(prompt).length > 8192 - tokens - 32) {
       throw const FormatException('Запрос слишком большой; разделите текст');
     }
     final response = await desktopRequest(
       client,
       endpoint,
-      'generate',
-      generationBody(model, prompt, schema, tokens),
+      request.api,
+      request.body,
     ).timeout(const Duration(seconds: 120));
-    if (response['done_reason'] != 'stop') {
+    if (response['done'] != true || response['done_reason'] != 'stop') {
       throw const FormatException('Незавершённый ответ GigaChat');
     }
-    return response;
+    return {...response, 'response': generationContent(response, request.api)};
   }
 
   static String defaultHunspell(String store) =>
       Platform.isWindows ? '$store/native/ucrt64/bin/hunspell.exe' : 'hunspell';
-
-  static Map<String, dynamic> generationBody(
-    String model,
-    String prompt,
-    Map<String, dynamic> schema,
-    int tokens,
-  ) => {
-    'model': model,
-    'raw': true,
-    'prompt': prompt,
-    'format': schema,
-    'stream': false,
-    'think': false,
-    'keep_alive': '10m',
-    'options': {
-      ...generationOptions(false),
-      'num_ctx': 8192,
-      'num_predict': tokens,
-    },
-  };
 
   Future<Map<String, dynamic>> collect(
     String text,
@@ -157,20 +150,15 @@ class DesktopRuntime {
           throw const FormatException('Неполный сохранённый ответ GigaChat');
         }
         giga = cachedGiga;
-        gigaOutput = giga['output'] as String;
+        gigaOutput = validateCorrectionText(text, giga['output'] as String);
       } else {
         giga = await generate(
-          gigaPrompt(proposalPrompt, {'text': text}),
+          proposalPrompt,
+          {'text': text},
           textResponseSchema,
           1024,
         );
-        final parsed = jsonDecode(giga['response'] as String);
-        if (parsed is! Map<String, dynamic> ||
-            parsed.length != 1 ||
-            parsed['text'] is! String) {
-          throw const FormatException('Неправильная структура текста GigaChat');
-        }
-        gigaOutput = parsed['text'] as String;
+        gigaOutput = readCorrectionText(text, giga['response'] as String);
       }
     } catch (failure) {
       error = failure.toString();
@@ -215,7 +203,8 @@ class DesktopRuntime {
       var choices = <int>[];
       if (slots.isNotEmpty) {
         response = await generate(
-          gigaPrompt(prompt, {'text': text, 'slots': row['slots']}),
+          prompt,
+          {'text': text, 'slots': row['slots']},
           choicesSchema(slots),
           512,
         );

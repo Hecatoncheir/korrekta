@@ -67,7 +67,7 @@ CheckResult resultFromRows(
       return Suggestion(WordChoices.fromJson(slots[i]), choices[i], sources);
     }),
     warning: row.containsKey('collection_error')
-        ? 'GigaChat не завершил проверку. Показаны предложения остальных источников. Повторите проверку.'
+        ? 'GigaChat не вернул пригодный ответ. Показаны предложения словарей и LanguageTool. Повторите проверку.'
         : null,
   );
 }

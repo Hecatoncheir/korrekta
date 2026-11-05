@@ -1,0 +1,1202 @@
+[
+  {
+    "model": "quality",
+    "id": "control-names-15",
+    "text": "Команда «Ольвика» готовится к новой встрече.",
+    "expected": [
+      "Команда «Ольвика» готовится к новой встрече."
+    ],
+    "emptyOutput": "Команда «Ольвика» готовится к новой встрече.",
+    "personalOutput": "Команда «Ольвика» готовится к новой встрече.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    }
+  },
+  {
+    "model": "quality",
+    "id": "control-names-18",
+    "text": "Имя файла руддщ.txt нужно сохранить без изменений.",
+    "expected": [
+      "Имя файла руддщ.txt нужно сохранить без изменений."
+    ],
+    "emptyOutput": "Имя файла руддщ.txt нужно сохранить без изменений.",
+    "personalOutput": "Имя файла руддщ.txt нужно сохранить без изменений.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    }
+  },
+  {
+    "model": "quality",
+    "id": "error-names-13",
+    "text": "Сервис рунелия сохраняет даные на устройстве.",
+    "expected": [
+      "Сервис рунелия сохраняет данные на устройстве."
+    ],
+    "emptyOutput": "Сервис рунелия сохраняет данные на устройстве.",
+    "personalOutput": "Сервис рунелия сохраняет данные на устройстве.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 46
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 46
+    }
+  },
+  {
+    "model": "quality",
+    "id": "error-names-12",
+    "text": "Автор талви прислала новыи вариант обложки.",
+    "expected": [
+      "Автор талви прислала новый вариант обложки."
+    ],
+    "emptyOutput": "Автор талви прислала новый вариант обложки.",
+    "personalOutput": "Автор талви прислала новый вариант обложки.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 43
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 43
+    }
+  },
+  {
+    "model": "quality",
+    "id": "control-names-12",
+    "text": "Автор талви просит сохранить написание псевдонима.",
+    "expected": [
+      "Автор талви просит сохранить написание псевдонима."
+    ],
+    "emptyOutput": "Автор талви просит сохранить написание псевдонима.",
+    "personalOutput": "Автор талви просит сохранить написание псевдонима.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    }
+  },
+  {
+    "model": "quality",
+    "id": "error-names-19",
+    "text": "Спросите у Нэйрена где лежат запасные ключи.",
+    "expected": [
+      "Спросите у Нэйрена, где лежат запасные ключи."
+    ],
+    "emptyOutput": "Спросите у Нэйрена, где лежат запасные ключи.",
+    "personalOutput": "Спросите у Нэйрена, где лежат запасные ключи.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 45
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 45
+    }
+  },
+  {
+    "model": "quality",
+    "id": "control-names-13",
+    "text": "Проект рунелия уже доступен на этом компьютере.",
+    "expected": [
+      "Проект рунелия уже доступен на этом компьютере."
+    ],
+    "emptyOutput": "Проект рунелия уже доступен на этом компьютере.",
+    "personalOutput": "Проект рунелия уже доступен на этом компьютере.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 47
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 47
+    }
+  },
+  {
+    "model": "quality",
+    "id": "error-names-14",
+    "text": "Проект nymori будит работать без сети.",
+    "expected": [
+      "Проект nymori будет работать без сети."
+    ],
+    "emptyOutput": "Проект nymori будет работать без сети.",
+    "personalOutput": "Проект nymori будет работать без сети.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 38
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 38
+    }
+  },
+  {
+    "model": "quality",
+    "id": "error-names-17",
+    "text": "Команда «Ольвика» представела новый макет.",
+    "expected": [
+      "Команда «Ольвика» представила новый макет."
+    ],
+    "emptyOutput": "Команда «Ольвика» представила новый макет.",
+    "personalOutput": "Команда «Ольвика» представила новый макет.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 42
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 42
+    }
+  },
+  {
+    "model": "quality",
+    "id": "control-names-11",
+    "text": "Пользователь вельмора ответил на мой вопрос.",
+    "expected": [
+      "Пользователь вельмора ответил на мой вопрос."
+    ],
+    "emptyOutput": "Пользователь вельмора ответил на мой вопрос.",
+    "personalOutput": "Пользователь вельмора ответил на мой вопрос.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    }
+  },
+  {
+    "model": "quality",
+    "id": "error-names-20",
+    "text": "Мы получили от Вэлиты подробныи ответ.",
+    "expected": [
+      "Мы получили от Вэлиты подробный ответ."
+    ],
+    "emptyOutput": "Мы получили от Вэлиты подробный ответ.",
+    "personalOutput": "Мы получили от Вэлиты подробный ответ.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 38
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 38
+    }
+  },
+  {
+    "model": "quality",
+    "id": "control-names-20",
+    "text": "Мой ник — lior_el, а не обычное русское слово.",
+    "expected": [
+      "Мой ник — lior_el, а не обычное русское слово."
+    ],
+    "emptyOutput": "Мой ник — lior_el, а не обычное русское слово.",
+    "personalOutput": "Мой ник — lior_el, а не обычное русское слово.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 46
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 46
+    }
+  },
+  {
+    "model": "quality",
+    "id": "control-names-14",
+    "text": "В настройках сервиса nymori выбран локальный режим.",
+    "expected": [
+      "В настройках сервиса nymori выбран локальный режим."
+    ],
+    "emptyOutput": "В настройках сервиса nymori выбран локальный режим.",
+    "personalOutput": "В настройках сервиса nymori выбран локальный режим.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 51
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 51
+    }
+  },
+  {
+    "model": "quality",
+    "id": "control-names-17",
+    "text": "Метка Ghbdtn используется как название образца.",
+    "expected": [
+      "Метка Ghbdtn используется как название образца."
+    ],
+    "emptyOutput": "Метка Ghbdtn используется как название образца.",
+    "personalOutput": "Метка Ghbdtn используется как название образца.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 47
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 47
+    }
+  },
+  {
+    "model": "quality",
+    "id": "control-names-19",
+    "text": "В карточке указан автор miromi_07.",
+    "expected": [
+      "В карточке указан автор miromi_07."
+    ],
+    "emptyOutput": "В карточке указан автор miromi_07.",
+    "personalOutput": "В карточке указан автор miromi_07.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 34
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 34
+    }
+  },
+  {
+    "model": "quality",
+    "id": "error-names-15",
+    "text": "Редактор Лэмира проверела текст на афише.",
+    "expected": [
+      "Редактор Лэмира проверила текст на афише."
+    ],
+    "emptyOutput": "Редактор Лэмира проверила текст на афише.",
+    "personalOutput": "Редактор Лэмира проверила текст на афише.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    }
+  },
+  {
+    "model": "quality",
+    "id": "error-names-16",
+    "text": "Я услышал что Териван вернулся из поездки.",
+    "expected": [
+      "Я услышал, что Териван вернулся из поездки."
+    ],
+    "emptyOutput": "Я услышал, что Териван вернулся из поездки.",
+    "personalOutput": "Я услышал, что Териван вернулся из поездки.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 43
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 43
+    }
+  },
+  {
+    "model": "quality",
+    "id": "control-names-16",
+    "text": "В отчёте «Тиверна» осталось восемь разделов.",
+    "expected": [
+      "В отчёте «Тиверна» осталось восемь разделов."
+    ],
+    "emptyOutput": "В отчёте «Тиверна» осталось восемь разделов.",
+    "personalOutput": "В отчёте «Тиверна» осталось восемь разделов.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    }
+  },
+  {
+    "model": "quality",
+    "id": "error-names-11",
+    "text": "Пользователь вельмора уже отправел форму.",
+    "expected": [
+      "Пользователь вельмора уже отправил форму."
+    ],
+    "emptyOutput": "Пользователь вельмора уже отправил форму.",
+    "personalOutput": "Пользователь вельмора уже отправил форму.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    }
+  },
+  {
+    "model": "quality",
+    "id": "error-names-18",
+    "text": "В отчёте «Тиверна» пропушена одна строка.",
+    "expected": [
+      "В отчёте «Тиверна» пропущена одна строка."
+    ],
+    "emptyOutput": "В отчёте «Тиверна» пропущена одна строка.",
+    "personalOutput": "В отчёте «Тиверна» пропущена одна строка.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "control-names-15",
+    "text": "Команда «Ольвика» готовится к новой встрече.",
+    "expected": [
+      "Команда «Ольвика» готовится к новой встрече."
+    ],
+    "emptyOutput": "Команда «Ольвика» готовится к новой встрече.",
+    "personalOutput": "Команда «Ольвика» готовится к новой встрече.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "control-names-18",
+    "text": "Имя файла руддщ.txt нужно сохранить без изменений.",
+    "expected": [
+      "Имя файла руддщ.txt нужно сохранить без изменений."
+    ],
+    "emptyOutput": "Имя файла руддщ.txt нужно сохранить без изменений.",
+    "personalOutput": "Имя файла руддщ.txt нужно сохранить без изменений.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "error-names-13",
+    "text": "Сервис рунелия сохраняет даные на устройстве.",
+    "expected": [
+      "Сервис рунелия сохраняет данные на устройстве."
+    ],
+    "emptyOutput": "Сервис рунелия сохраняет данные на устройстве.",
+    "personalOutput": "Сервис рунелия сохраняет данные на устройстве.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 46
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 46
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "error-names-12",
+    "text": "Автор талви прислала новыи вариант обложки.",
+    "expected": [
+      "Автор талви прислала новый вариант обложки."
+    ],
+    "emptyOutput": "Автор талви прислала новый вариант обложки.",
+    "personalOutput": "Автор талви прислала новый вариант обложки.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 43
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 43
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "control-names-12",
+    "text": "Автор талви просит сохранить написание псевдонима.",
+    "expected": [
+      "Автор талви просит сохранить написание псевдонима."
+    ],
+    "emptyOutput": "Автор талви просит сохранить написание псевдонима.",
+    "personalOutput": "Автор талви просит сохранить написание псевдонима.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 50
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "error-names-19",
+    "text": "Спросите у Нэйрена где лежат запасные ключи.",
+    "expected": [
+      "Спросите у Нэйрена, где лежат запасные ключи."
+    ],
+    "emptyOutput": "Спросите у Нэйрена, где лежат запасные ключи.",
+    "personalOutput": "Спросите у Нэйрена, где лежат запасные ключи.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 45
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 45
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "control-names-13",
+    "text": "Проект рунелия уже доступен на этом компьютере.",
+    "expected": [
+      "Проект рунелия уже доступен на этом компьютере."
+    ],
+    "emptyOutput": "Проект рунелия уже доступен на этом компьютере.",
+    "personalOutput": "Проект рунелия уже доступен на этом компьютере.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 47
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 47
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "error-names-14",
+    "text": "Проект nymori будит работать без сети.",
+    "expected": [
+      "Проект nymori будет работать без сети."
+    ],
+    "emptyOutput": "Проект nymori будет работать без сети.",
+    "personalOutput": "Проект nymori будет работать без сети.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 38
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 38
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "error-names-17",
+    "text": "Команда «Ольвика» представела новый макет.",
+    "expected": [
+      "Команда «Ольвика» представила новый макет."
+    ],
+    "emptyOutput": "Команда «Ольвика» представила новый макет.",
+    "personalOutput": "Команда «Ольвика» представила новый макет.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 42
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 42
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "control-names-11",
+    "text": "Пользователь вельмора ответил на мой вопрос.",
+    "expected": [
+      "Пользователь вельмора ответил на мой вопрос."
+    ],
+    "emptyOutput": "Пользователь вельмора ответил на мой вопрос.",
+    "personalOutput": "Пользователь вельмора ответил на мой вопрос.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "error-names-20",
+    "text": "Мы получили от Вэлиты подробныи ответ.",
+    "expected": [
+      "Мы получили от Вэлиты подробный ответ."
+    ],
+    "emptyOutput": "Мы получили от Вэлиты подробный ответ.",
+    "personalOutput": "Мы получили от Вэлиты подробный ответ.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 38
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 38
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "control-names-20",
+    "text": "Мой ник — lior_el, а не обычное русское слово.",
+    "expected": [
+      "Мой ник — lior_el, а не обычное русское слово."
+    ],
+    "emptyOutput": "Мой ник — lior_el, а не обычное русское слово.",
+    "personalOutput": "Мой ник — lior_el, а не обычное русское слово.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 46
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 46
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "control-names-14",
+    "text": "В настройках сервиса nymori выбран локальный режим.",
+    "expected": [
+      "В настройках сервиса nymori выбран локальный режим."
+    ],
+    "emptyOutput": "В настройках сервиса nymori выбран локальный режим.",
+    "personalOutput": "В настройках сервиса nymori выбран локальный режим.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 51
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 51
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "control-names-17",
+    "text": "Метка Ghbdtn используется как название образца.",
+    "expected": [
+      "Метка Ghbdtn используется как название образца."
+    ],
+    "emptyOutput": "Метка Ghbdtn используется как название образца.",
+    "personalOutput": "Метка Ghbdtn используется как название образца.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 47
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 47
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "control-names-19",
+    "text": "В карточке указан автор miromi_07.",
+    "expected": [
+      "В карточке указан автор miromi_07."
+    ],
+    "emptyOutput": "В карточке указан автор miromi_07.",
+    "personalOutput": "В карточке указан автор miromi_07.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 34
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 34
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "error-names-15",
+    "text": "Редактор Лэмира проверела текст на афише.",
+    "expected": [
+      "Редактор Лэмира проверила текст на афише."
+    ],
+    "emptyOutput": "Редактор Лэмира проверила текст на афише.",
+    "personalOutput": "Редактор Лэмира проверила текст на афише.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "error-names-16",
+    "text": "Я услышал что Териван вернулся из поездки.",
+    "expected": [
+      "Я услышал, что Териван вернулся из поездки."
+    ],
+    "emptyOutput": "Я услышал, что Териван вернулся из поездки.",
+    "personalOutput": "Я услышал, что Териван вернулся из поездки.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 43
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 43
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "control-names-16",
+    "text": "В отчёте «Тиверна» осталось восемь разделов.",
+    "expected": [
+      "В отчёте «Тиверна» осталось восемь разделов."
+    ],
+    "emptyOutput": "В отчёте «Тиверна» осталось восемь разделов.",
+    "personalOutput": "В отчёте «Тиверна» осталось восемь разделов.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": false,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 44
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "error-names-11",
+    "text": "Пользователь вельмора уже отправел форму.",
+    "expected": [
+      "Пользователь вельмора уже отправил форму."
+    ],
+    "emptyOutput": "Пользователь вельмора уже отправил форму.",
+    "personalOutput": "Пользователь вельмора уже отправил форму.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    }
+  },
+  {
+    "model": "balanced",
+    "id": "error-names-18",
+    "text": "В отчёте «Тиверна» пропушена одна строка.",
+    "expected": [
+      "В отчёте «Тиверна» пропущена одна строка."
+    ],
+    "emptyOutput": "В отчёте «Тиверна» пропущена одна строка.",
+    "personalOutput": "В отчёте «Тиверна» пропущена одна строка.",
+    "emptyComplete": true,
+    "personalComplete": true,
+    "emptyScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    },
+    "personalScore": {
+      "clean": true,
+      "changed": true,
+      "falseControl": false,
+      "protectedLost": [],
+      "whitespacePreserved": true,
+      "markupPreserved": true,
+      "graphemes": 41
+    }
+  }
+]

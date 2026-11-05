@@ -4,8 +4,11 @@ import 'dart:io';
 import 'package:crypto/crypto.dart';
 import 'package:path/path.dart' as p;
 
-Future<void> main() async {
-  final target = File('../benchmarks/app-quality/protocol-v1.json');
+import 'evaluate_app_quality.dart' show studyArgument;
+
+Future<void> main(List<String> args) async {
+  final study = studyArgument(args);
+  final target = File('../benchmarks/$study/protocol-v1.json');
   if (await target.exists()) throw StateError('Протокол уже зафиксирован');
   final sources = <String, String>{};
   for (final folder in [
@@ -30,6 +33,10 @@ Future<void> main() async {
   final dataset = File('../benchmarks/app-quality/cases-v1.jsonl');
   final protocol = {
     'version': 1,
+    'study': study,
+    if (study != 'app-quality')
+      'baseline': 'benchmarks/results/2026-11-05/app-quality',
+    if (study != 'app-quality') 'evaluationKind': 'Regression on the already known frozen 140 texts and 20 paired repeats; not a new independent language evaluation.',
     'frozenUtc': DateTime.now().toUtc().toIso8601String(),
     'productionCommit': (commit.stdout as String).trim(),
     'datasetSha256': await digest(dataset),

@@ -70,50 +70,119 @@ class SuggestionsBody extends StatelessWidget {
     }
     final result = state.result;
     if (result == null) return const EmptySuggestions();
-    if (result.suggestions.isEmpty) {
+    if (result.suggestions.isEmpty && result.warning == null) {
       return const EmptySuggestions(checked: true);
     }
     return ListView.separated(
       padding: const EdgeInsets.all(16),
-      itemCount: result.suggestions.length,
+      itemCount:
+          (result.warning == null ? 0 : 1) +
+          (result.suggestions.isEmpty ? 1 : result.suggestions.length),
       separatorBuilder: (_, _) => const Divider(height: 28),
-      itemBuilder: (context, index) =>
-          SuggestionCard(index: index, suggestion: result.suggestions[index]),
+      itemBuilder: (context, index) => reviewItem(result, index),
     );
   }
 }
 
+Widget reviewItem(CheckResult result, int index) {
+  if (result.warning case final warning?) {
+    if (index == 0) return PartialCheckWarning(message: warning);
+    index--;
+  }
+  if (result.suggestions.isEmpty) {
+    return const EmptySuggestions(checked: true, incomplete: true);
+  }
+  return SuggestionCard(index: index, suggestion: result.suggestions[index]);
+}
+
 class EmptySuggestions extends StatelessWidget {
-  const EmptySuggestions({super.key, this.checked = false});
-  final bool checked;
+  const EmptySuggestions({
+    super.key,
+    this.checked = false,
+    this.incomplete = false,
+  });
+  final bool checked, incomplete;
   @override
-  Widget build(BuildContext context) => Center(
-    child: SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              checked ? Icons.check_rounded : Icons.edit_outlined,
-              size: 42,
-              color: Theme.of(context).colorScheme.primary,
-            ),
-            const SizedBox(height: 20),
-            Text(
-              checked ? 'Проверка завершена' : 'Здесь будут подсказки',
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
-            const SizedBox(height: 10),
-            Text(
-              checked
-                  ? 'Подходящих правок не найдено.'
-                  : 'Напишите текст и нажмите «Проверить».',
-              textAlign: TextAlign.center,
-            ),
-          ],
+  Widget build(BuildContext context) {
+    final (icon, title, detail) = switch ((checked, incomplete)) {
+      (_, true) => (
+        Icons.info_outline,
+        'Подсказок пока нет',
+        'Можно повторить проверку.',
+      ),
+      (true, false) => (
+        Icons.check_rounded,
+        'Проверка завершена',
+        'Подходящих правок не найдено.',
+      ),
+      _ => (
+        Icons.edit_outlined,
+        'Здесь будут подсказки',
+        'Напишите текст и нажмите «Проверить».',
+      ),
+    };
+    return Center(
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                icon,
+                size: 42,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              const SizedBox(height: 20),
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              const SizedBox(height: 10),
+              Text(detail, textAlign: TextAlign.center),
+            ],
+          ),
         ),
+      ),
+    );
+  }
+}
+
+class PartialCheckWarning extends StatelessWidget {
+  const PartialCheckWarning({super.key, required this.message});
+  final String message;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    liveRegion: true,
+    child: Container(
+      key: const Key('partial-check-warning'),
+      width: double.infinity,
+      margin: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.errorContainer,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Проверка неполная',
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.onErrorContainer,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            message,
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.onErrorContainer,
+            ),
+          ),
+        ],
       ),
     ),
   );
