@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fbf1c7"><meta name="description" content="Скриншоты Корректы: проверка и принятие правок, перевод, генерация и настройки локального приложения.">
+  <title>Корректа — посмотреть приложение</title>
+  <link rel="icon" href="assets/app-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="motion.css"><link rel="stylesheet" href="showcase.css">
+  <script src="shared.js?v=20261105" defer></script><script src="site.js?v=20261105" defer></script><script src="gallery.js?v=20261105" defer></script>
+</head>
+<body><a class="skip" href="#main">К галерее</a>
+<div class="gallery-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Корректа — главная"><span data-mark></span><span class="wordmark">корректа<span class="brand-dot">.</span></span></a>
+    <nav class="site-nav" aria-label="Навигация"><a href="index.html" class="back-link"><span data-icon="arrow"></span>На главную</a><button class="icon-button" data-theme-toggle aria-label="Тёмная тема"></button></nav>
+  </header>
+  <main class="gallery-main" id="main">
+    <div class="gallery-heading"><div><span class="eyebrow">Внутри Корректы</span><h1>Место для ваших мыслей.</h1></div><a class="text-button" href="index.html#main">Скачать приложение <span data-icon="download"></span></a></div>
+    <div class="gallery-tabs" role="tablist" aria-label="Примеры работы приложения">
+      <button role="tab" id="tab-checking" aria-selected="true" aria-controls="gallery-panel" data-slide="checking" tabindex="0">Проверка</button>
+      <button role="tab" id="tab-corrections" aria-selected="false" aria-controls="gallery-panel" data-slide="corrections" tabindex="-1">Правки</button>
+      <button role="tab" id="tab-translation" aria-selected="false" aria-controls="gallery-panel" data-slide="translation" tabindex="-1">Перевод</button>
+      <button role="tab" id="tab-generation" aria-selected="false" aria-controls="gallery-panel" data-slide="generation" tabindex="-1">Генерация <span class="coming-badge">Скоро</span></button>
+      <button role="tab" id="tab-settings" aria-selected="false" aria-controls="gallery-panel" data-slide="settings" tabindex="-1">Настройки</button>
+      <button role="tab" id="tab-light" aria-selected="false" aria-controls="gallery-panel" data-slide="light" tabindex="-1">Светлая тема</button>
+    </div>
+    <section class="gallery-panel" id="gallery-panel" role="tabpanel" aria-labelledby="tab-checking" tabindex="0">
+      <figure class="gallery-figure">
+        <button class="gallery-image-button" aria-label="Увеличить скриншот" data-open="screenshot-dialog"><img id="gallery-image" src="assets/screenshots/checking.png" width="1280" height="800" alt="Ошибка выделена в редакторе; справа показан вариант исправления"><span class="zoom-hint"><span data-icon="expand"></span>Увеличить</span></button>
+        <figcaption class="gallery-description" aria-live="polite" aria-atomic="true"><div><h2 id="gallery-title">Замечает ошибки. Оставляет выбор вам.</h2><p id="gallery-description">«Мне нравиться читать.» → «Мне нравится читать.» Ошибка выделена в тексте, а предложение по исправлению — справа.</p></div><span class="pill" id="gallery-status">В приложении</span></figcaption>
+      </figure>
+    </section>
+    <div class="gallery-bottom"><p>Снимки Flutter-приложения на Windows. Примеры показывают интерфейс и отдельные сценарии работы.</p><div class="gallery-arrows"><span id="gallery-count" class="mono">01 / 06</span><button class="icon-button previous" id="gallery-previous" aria-label="Предыдущий скриншот"><span data-icon="arrow"></span></button><button class="icon-button" id="gallery-next" aria-label="Следующий скриншот"><span data-icon="arrow"></span></button></div></div>
+  </main>
+</div>
+<dialog id="screenshot-dialog" class="screenshot-dialog" aria-labelledby="zoom-title"><div class="dialog-head"><h2 id="zoom-title">Проверка текста</h2><button class="icon-button" data-close aria-label="Закрыть скриншот"><span data-icon="close"></span></button></div><img id="zoom-image" src="assets/screenshots/checking.png" width="1280" height="800" alt="Увеличенный скриншот проверки текста"></dialog>
+</body></html>
