@@ -4,10 +4,12 @@ const storage = {
   get(key, fallback) { try { return JSON.parse(localStorage.getItem(`korrekta-${key}`)) ?? fallback; } catch { return fallback; } },
   set(key, value) { try { localStorage.setItem(`korrekta-${key}`, JSON.stringify(value)); } catch {} }
 };
-document.documentElement.dataset.theme = storage.get('theme', 'light');
+document.documentElement.dataset.theme = storage.get('theme', 'dark');
 document.querySelectorAll('[data-mark]').forEach(el => el.innerHTML = mark);
 document.querySelectorAll('[data-icon]').forEach(el => el.innerHTML = icon(el.dataset.icon));
 function renderTheme() {
+  const darkTheme = document.documentElement.dataset.theme === 'dark';
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', darkTheme ? '#282828' : '#fbf1c7');
   document.querySelectorAll('[data-theme-toggle]').forEach(button => {
     const dark = document.documentElement.dataset.theme === 'dark';
     button.innerHTML = icon(dark ? 'sun' : 'moon');
