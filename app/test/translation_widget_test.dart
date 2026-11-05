@@ -94,7 +94,7 @@ void main() {
       await tester.pump();
       expect(find.text('Переводим…'), findsOneWidget);
       editor.configure(
-        editor.state.settings.copyWith(model: LocalModel.balanced),
+        editor.state.settings.copyWith(model: LocalModel.quality),
       );
       await tester.pumpAndSettle();
       service.pending!.complete('Запоздавший перевод');
@@ -103,7 +103,7 @@ void main() {
       service.pending = Completer();
       await tester.tap(find.byKey(const Key('translate')));
       await tester.pump();
-      expect(service.requests.last.settings.model, LocalModel.balanced);
+      expect(service.requests.last.settings.model, LocalModel.quality);
       await tester.tap(find.byKey(const Key('translate')));
       service.pending!.complete('Отменённый перевод');
       await tester.pumpAndSettle();

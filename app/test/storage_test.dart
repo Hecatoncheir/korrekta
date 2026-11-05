@@ -12,19 +12,22 @@ void main() {
       final directory = await Directory.systemTemp.createTemp('korrekta-test-');
       try {
         final store = FileDraftStore(File('${directory.path}/draft.json'));
+        final defaults = Settings.defaults(directory.path);
+        expect(
+          (await store.load(defaults)).settings.model,
+          LocalModel.balanced,
+        );
         const settings = Settings(
-          model: LocalModel.balanced,
+          model: LocalModel.quality,
           names: ['Норвета'],
         );
         await store.save((text: 'Первый\r\n  🙂', settings: settings));
         await store.save((text: 'Второй', settings: settings));
-        expect(
-          (await store.load(const Settings())).settings.model,
-          LocalModel.balanced,
-        );
+        expect((await store.load(defaults)).settings.model, LocalModel.quality);
         await store.file.writeAsString('{broken');
-        final restored = await store.load(const Settings());
+        final restored = await store.load(defaults);
         expect(restored.text, 'Первый\r\n  🙂');
+        expect(restored.settings.model, LocalModel.quality);
         expect(restored.settings.names, ['Норвета']);
         await store.save((text: 'Третий', settings: settings));
         expect(

@@ -47,15 +47,15 @@ void main() {
     final store = MemoryStore();
     final cubit = makeCubit(checker, store);
     await cubit.check();
-    cubit.configure(cubit.state.settings.copyWith(model: LocalModel.balanced));
+    cubit.configure(cubit.state.settings.copyWith(model: LocalModel.quality));
     expect(cubit.state.result, isNull);
     await cubit.check();
     expect(checker.requests.map((r) => r.settings.model), [
-      LocalModel.quality,
       LocalModel.balanced,
+      LocalModel.quality,
     ]);
     await cubit.close();
-    expect(store.draft?.settings.model, LocalModel.balanced);
+    expect(store.draft?.settings.model, LocalModel.quality);
   });
 
   test('Ответ старого текста и старой модели отбрасывается', () async {
@@ -63,7 +63,7 @@ void main() {
     final cubit = makeCubit(checker, MemoryStore());
     final request = cubit.check();
     cubit.edit('Новый текст');
-    cubit.configure(cubit.state.settings.copyWith(model: LocalModel.balanced));
+    cubit.configure(cubit.state.settings.copyWith(model: LocalModel.quality));
     checker.pending!.complete(CheckResult('Мне нравиться читать.', []));
     await request;
     expect(cubit.state.result, isNull);

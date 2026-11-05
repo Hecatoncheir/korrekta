@@ -191,14 +191,14 @@ void main() {
     );
     final first = cubit.prepare(const Settings());
     await Future<void>.delayed(Duration.zero);
-    expect(setup.calls, [LocalModel.quality]);
-    final second = cubit.prepare(const Settings(model: LocalModel.balanced));
+    expect(setup.calls, [LocalModel.balanced]);
+    final second = cubit.prepare(const Settings(model: LocalModel.quality));
     await first;
     await Future<void>.delayed(Duration.zero);
-    expect(setup.calls, [LocalModel.quality, LocalModel.balanced]);
+    expect(setup.calls, [LocalModel.balanced, LocalModel.quality]);
     setup.finish.complete();
     await second;
-    expect(ready, [LocalModel.balanced]);
+    expect(ready, [LocalModel.quality]);
     expect(cubit.state.ready, isTrue);
     await cubit.close();
     expect(setup.closed, isTrue);

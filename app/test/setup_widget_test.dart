@@ -17,7 +17,7 @@ void main() {
       final setup = ControlledSetup();
       await tester.pumpWidget(testApp(editor, setup: setup));
       await tester.pump();
-      expect(setup.calls, [LocalModel.quality]);
+      expect(setup.calls, [LocalModel.balanced]);
       expect(
         tester.widget<FilledButton>(find.byKey(const Key('check'))).onPressed,
         isNull,
@@ -34,10 +34,10 @@ void main() {
       );
       await tester.tap(find.byTooltip('Настройки'));
       await tester.pump();
-      await tester.tap(find.text(LocalModel.balanced.label));
+      await tester.tap(find.text(LocalModel.quality.label));
       await tester.pump();
-      expect(editor.state.settings.model, LocalModel.balanced);
-      expect(setup.calls, [LocalModel.quality, LocalModel.balanced]);
+      expect(editor.state.settings.model, LocalModel.quality);
+      expect(setup.calls, [LocalModel.balanced, LocalModel.quality]);
       setup.finish.complete();
       await tester.pump();
       await tester.pump();

@@ -20,7 +20,7 @@ enum LocalModel {
 
 class Settings {
   const Settings({
-    this.model = LocalModel.quality,
+    this.model = LocalModel.balanced,
     this.dark = true,
     this.vimMode = false,
     this.store = '',
