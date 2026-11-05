@@ -8,6 +8,8 @@
 
 Пошаговый план разработки и контрольные точки: [todo.md](todo.md).
 
+Опубликован предварительный [v0.1.7 для Windows, macOS и Linux](https://github.com/Hecatoncheir/korrekta/releases/tag/v0.1.7): исправлен ответ 10В, добавлено предупреждение о неполной проверке, для новых настроек выбрана 10В. Все задания релизного CI завершились успешно; файлы проверены по SHA-256.
+
 ## Прототип оформления
 
 [Сайт](https://hecatoncheir.github.io/korrekta/) · [Прототип приложения](https://hecatoncheir.github.io/korrekta/app.html) · [Логотипы и иконки](https://hecatoncheir.github.io/korrekta/brand.html)
