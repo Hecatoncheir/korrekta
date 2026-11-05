@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'vim_cubit.dart';
 import 'vim_keyboard.dart';
+import '../primary_action.dart';
 
 class VimInput extends StatelessWidget {
   const VimInput({
@@ -19,11 +21,20 @@ class VimInput extends StatelessWidget {
   final Key fieldKey;
   final String hint;
 
+  KeyEventResult onKey(BuildContext context, KeyEvent event) {
+    if (!normalSubmit(vim.state, event)) return vimKey(vim, event);
+    if (event is KeyDownEvent) {
+      vim.escape();
+      Actions.maybeInvoke(context, const RunPrimaryIntent());
+    }
+    return KeyEventResult.handled;
+  }
+
   @override
   Widget build(BuildContext context) => BlocBuilder<VimCubit, VimState>(
     bloc: vim,
     builder: (context, state) => Focus(
-      onKeyEvent: (_, event) => vimKey(vim, event),
+      onKeyEvent: (_, event) => onKey(context, event),
       child: TextField(
         key: fieldKey,
         controller: controller,
@@ -47,3 +58,11 @@ class VimInput extends StatelessWidget {
     ),
   );
 }
+
+bool normalSubmit(VimState state, KeyEvent event) =>
+    state.enabled &&
+    state.mode == VimMode.normal &&
+    const [
+      SingleActivator(LogicalKeyboardKey.enter),
+      SingleActivator(LogicalKeyboardKey.numpadEnter),
+    ].any((shortcut) => shortcut.accepts(event, HardwareKeyboard.instance));

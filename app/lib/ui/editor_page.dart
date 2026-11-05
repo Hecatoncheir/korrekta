@@ -19,6 +19,7 @@ import 'translation_binding.dart';
 import 'generation_binding.dart';
 import 'generation_cubit.dart';
 import 'generation_footer.dart';
+import 'primary_action.dart';
 
 class EditorPage extends StatefulWidget {
   const EditorPage({super.key, this.session});
@@ -176,43 +177,51 @@ class _EditorPageState extends State<EditorPage> {
       RepositoryProvider.value(value: translationBinding),
       RepositoryProvider.value(value: generationBinding),
     ],
-    child: CallbackShortcuts(
-      bindings: {
-        const SingleActivator(LogicalKeyboardKey.enter, control: true): () =>
-            runPrimary(),
-        const SingleActivator(LogicalKeyboardKey.enter, meta: true): () =>
-            runPrimary(),
+    child: Actions(
+      actions: {
+        RunPrimaryIntent: CallbackAction<RunPrimaryIntent>(
+          onInvoke: (_) => runPrimary(),
+        ),
       },
-      child: Scaffold(
-        body: UpdateAnnouncer(
-          child: SafeArea(
-            child: Row(
-              children: [
-                const SideBar(),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        EditorHeader(onNew: newDraft),
-                        const SizedBox(height: 20),
-                        const SetupBanner(),
-                        const Expanded(child: Workspace()),
-                        const SizedBox(height: 12),
-                        BlocBuilder<NavigationCubit, AppSection>(
-                          builder: (context, section) => switch (section) {
-                            AppSection.editor => const EditorFooter(),
-                            AppSection.translation => const TranslationFooter(),
-                            AppSection.generation => const GenerationFooter(),
-                            AppSection.settings => const SizedBox(height: 48),
-                          },
-                        ),
-                      ],
+      child: CallbackShortcuts(
+        bindings: {
+          const SingleActivator(LogicalKeyboardKey.enter, control: true): () =>
+              runPrimary(),
+          const SingleActivator(LogicalKeyboardKey.enter, meta: true): () =>
+              runPrimary(),
+        },
+        child: Scaffold(
+          body: UpdateAnnouncer(
+            child: SafeArea(
+              child: Row(
+                children: [
+                  const SideBar(),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          EditorHeader(onNew: newDraft),
+                          const SizedBox(height: 20),
+                          const SetupBanner(),
+                          const Expanded(child: Workspace()),
+                          const SizedBox(height: 12),
+                          BlocBuilder<NavigationCubit, AppSection>(
+                            builder: (context, section) => switch (section) {
+                              AppSection.editor => const EditorFooter(),
+                              AppSection.translation =>
+                                const TranslationFooter(),
+                              AppSection.generation => const GenerationFooter(),
+                              AppSection.settings => const SizedBox(height: 48),
+                            },
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
