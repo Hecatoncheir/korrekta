@@ -1,0 +1,246 @@
+{
+  "baselineCases": 320,
+  "literalBraceCases": 26,
+  "literalBraceRejected": 26,
+  "otherRejected": 8,
+  "cases": [
+    {
+      "case": "control-names-18",
+      "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+      "literalBrace": false,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-names-17",
+      "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+      "literalBrace": false,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-names-18-personal",
+      "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+      "literalBrace": false,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-names-17-personal",
+      "model": "hf.co/ai-sage/GigaChat-20B-A3B-instruct-v1.5-GGUF:Q4_K_M",
+      "literalBrace": false,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-technical-18",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "error-format-20",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-format-11",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": false,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-technical-19",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": false,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-technical-1",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-technical-14",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-format-6",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "error-format-4",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-format-14",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "error-format-10",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-technical-6",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-format-18",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "error-format-19",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-technical-2",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-format-4",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-style-18",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "error-format-11",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "error-format-12",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-format-9",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-technical-20",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-technical-7",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-technical-17",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "error-format-17",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": false,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "error-format-8",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-technical-12",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "error-format-5",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "error-format-18",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-technical-4",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-style-12",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": false,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    },
+    {
+      "case": "control-technical-5",
+      "model": "hf.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF:Q4_K_M",
+      "literalBrace": true,
+      "rejected": true,
+      "reason": "GigaChat вернул неполный или непригодный текст"
+    }
+  ]
+}

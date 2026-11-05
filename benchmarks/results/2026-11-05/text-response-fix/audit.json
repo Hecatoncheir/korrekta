@@ -1,0 +1,61 @@
+{
+  "datasetAndProductionHashesVerified": true,
+  "productionSourceFiles": 84,
+  "datasetSha256": "2e544aa8a975b250417aa344ec844f1781695154cda564a167a3281df828decf",
+  "models": {
+    "quality": {
+      "cases": 160,
+      "caseGenerationRequests": 160,
+      "apis": {
+        "/api/generate": 160
+      },
+      "unchangedInputGoldAndMetadata": true,
+      "recomputedScoresMatch": true,
+      "requestHashModelContextVerified": true,
+      "http200": 160,
+      "modelStopped": 160,
+      "modelLengthLimit": 0,
+      "medianOllamaSeconds": 0.637658,
+      "rawModelPrimaryDiagnostic": {
+        "cases": 140,
+        "invalidTextJson": 0,
+        "literalOpeningBraceCases": [],
+        "literalBraceErrors": 0,
+        "literalBraceControls": 0,
+        "literalBraceErrorsRecoveredByApp": 0,
+        "literalBraceWithoutWarning": 0,
+        "changedControls": 25,
+        "protectedFailures": 16,
+        "whitespaceFailures": 11,
+        "markupFailures": 0
+      }
+    },
+    "balanced": {
+      "cases": 160,
+      "caseGenerationRequests": 160,
+      "apis": {
+        "/api/chat": 160
+      },
+      "unchangedInputGoldAndMetadata": true,
+      "recomputedScoresMatch": true,
+      "requestHashModelContextVerified": true,
+      "http200": 160,
+      "modelStopped": 160,
+      "modelLengthLimit": 0,
+      "medianOllamaSeconds": 0.3199386,
+      "rawModelPrimaryDiagnostic": {
+        "cases": 140,
+        "invalidTextJson": 0,
+        "literalOpeningBraceCases": [],
+        "literalBraceErrors": 0,
+        "literalBraceControls": 0,
+        "literalBraceErrorsRecoveredByApp": 0,
+        "literalBraceWithoutWarning": 0,
+        "changedControls": 9,
+        "protectedFailures": 8,
+        "whitespaceFailures": 9,
+        "markupFailures": 0
+      }
+    }
+  }
+}

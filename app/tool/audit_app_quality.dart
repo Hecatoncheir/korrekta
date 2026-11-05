@@ -65,6 +65,13 @@ Map<String, Object?> auditModel(
   return {
     'cases': data.length,
     'caseGenerationRequests': calls.length,
+    'apis': {
+      for (final api
+          in calls.map((row) => row['api'] ?? '/api/generate').toSet())
+        api as String: calls
+            .where((row) => (row['api'] ?? '/api/generate') == api)
+            .length,
+    },
     'unchangedInputGoldAndMetadata': true,
     'recomputedScoresMatch': true,
     'requestHashModelContextVerified': true,
@@ -116,6 +123,9 @@ Map<String, Object> rawSafety(
         .length,
     'literalBraceErrorsRecoveredByApp': literalBraceRows
         .where((row) => row['kind'] == 'error' && row['score']['clean'] == true)
+        .length,
+    'literalBraceWithoutWarning': literalBraceRows
+        .where((row) => row['complete'] == true)
         .length,
     'changedControls': scored
         .where((row) => row['falseControl'] == true)
@@ -173,6 +183,11 @@ void auditRow(
   require(
     row['model'] == model && request['model'] == model,
     'Выбор модели не совпадает',
+  );
+  require(
+    (call['api'] ?? '/api/generate') ==
+        (request.containsKey('messages') ? '/api/chat' : '/api/generate'),
+    'API не соответствует форме запроса',
   );
   require(
     (request['options'] as Map)['num_ctx'] == 8192 &&

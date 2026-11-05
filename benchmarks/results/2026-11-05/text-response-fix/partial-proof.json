@@ -1,0 +1,59 @@
+{
+  "cases": [
+    {
+      "id": "spelling",
+      "text": "Я проверел документ.",
+      "partialWarningShown": true,
+      "originalPreserved": true,
+      "fallbackOutput": "Я проверел документ.",
+      "fallbackCards": [
+        {
+          "start": 2,
+          "original": "проверел",
+          "options": [
+            "проверел",
+            "проверил",
+            "проверял",
+            "промерил",
+            "промерял",
+            "проварил",
+            "проверен",
+            "проверила",
+            "провертел",
+            "провел",
+            "проревел",
+            "проверещал",
+            "проверки",
+            "проверка",
+            "проверке",
+            "проверку",
+            "поверил",
+            "проведем",
+            "проверок",
+            "проверяет",
+            "повелел"
+          ],
+          "recommended": 0,
+          "sources": [
+            "hunspell",
+            "languagetool",
+            "symspell"
+          ]
+        }
+      ],
+      "realRetryComplete": true,
+      "warningClearedOnRetry": true
+    },
+    {
+      "id": "control",
+      "text": "Все службы работают.",
+      "partialWarningShown": true,
+      "originalPreserved": true,
+      "fallbackOutput": "Все службы работают.",
+      "fallbackCards": [],
+      "realRetryComplete": true,
+      "warningClearedOnRetry": true
+    }
+  ],
+  "allPassed": true
+}

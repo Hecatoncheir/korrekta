@@ -15,6 +15,7 @@ def main():
     plugin = ROOT / 'work/complexity'
     sources = sorted((ROOT / 'app/lib').rglob('*.dart'))
     sources += sorted((ROOT / 'tools/model_benchmark/lib/src').glob('desktop_*.dart'))
+    sources.append(ROOT / 'tools/model_benchmark/lib/src/correction_response.dart')
     file_list = ROOT / 'work/complexity-files.txt'
     file_list.write_text('\n'.join(p.as_posix() for p in sources), encoding='utf-8')
     command = [options.nvim, '--headless', '-u', 'NONE', '-l',

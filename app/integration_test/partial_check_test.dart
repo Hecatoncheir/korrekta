@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -11,11 +12,12 @@ import 'support/quality_fixture.dart';
 import 'support/quality_steps.dart';
 
 void main() {
-  QualityBinding();
+  final binding = QualityBinding();
   testWidgets('Непригодный ответ: предупреждение, словари, повтор', (
     tester,
   ) async {
     const root = String.fromEnvironment('QUALITY_ROOT');
+    const inspect = bool.fromEnvironment('QUALITY_INSPECT');
     final output = Directory('$root/work/partial-check-proof');
     final fixture = QualityFixture(
       root,
@@ -27,11 +29,15 @@ void main() {
     await tester.pumpWidget(RepaintBoundary(key: boundary, child: fixture.app));
     fixture.bind(tester.element(find.byType(EditorPage)));
     try {
+      final proof = <Map<String, Object?>>[];
       await qualitySettings(tester, fixture, LocalModel.balanced, []);
-      for (final text in ['Я проверел документ.', 'Все службы работают.']) {
+      for (final (id, text) in [
+        ('spelling', 'Я проверел документ.'),
+        ('control', 'Все службы работают.'),
+      ]) {
         fixture.proxy.forcedContent = '{"text":"{"}';
         final item = QualityCase({
-          'id': 'injected-${text.length}',
+          'id': 'injected-$id',
           'text': text,
           'profile': 'empty',
           'kind': 'error',
@@ -50,7 +56,7 @@ void main() {
         // qualityCase проверяет также применение и отмену. После отмены
         // баннер исчезает, поэтому отдельно проверяем состояние до принятия.
         fixture.proxy.forcedContent = '{"text":"{"}';
-        fixture.proxy.currentCase = 'warning-${text.length}';
+        fixture.proxy.currentCase = 'warning-$id';
         await tester.tap(find.byKey(const Key('check')));
         await waitQuality(
           tester,
@@ -72,13 +78,15 @@ void main() {
             isTrue,
           );
         }
-        await saveQualityScreenshot(
-          tester,
-          boundary,
-          output,
-          'partial-${text.length}',
+        await tester.ensureVisible(
+          find.byKey(const Key('partial-check-warning')),
         );
-        fixture.proxy.currentCase = 'retry-${text.length}';
+        await saveQualityScreenshot(tester, boundary, output, 'partial-$id');
+        if (inspect && id == 'spelling') {
+          stdout.writeln('Инспекция предупреждения: ожидание 45 секунд');
+          await Future<void>.delayed(const Duration(seconds: 45));
+        }
+        fixture.proxy.currentCase = 'retry-$id';
         await tester.tap(find.byKey(const Key('check')));
         await waitQuality(
           tester,
@@ -87,7 +95,23 @@ void main() {
         );
         expect(fixture.editor.state.result!.warning, isNull);
         expect(find.byKey(const Key('partial-check-warning')), findsNothing);
+        proof.add({
+          'id': id,
+          'text': text,
+          'partialWarningShown': true,
+          'originalPreserved': true,
+          'fallbackOutput': result['output'],
+          'fallbackCards': result['cards'],
+          'realRetryComplete': true,
+          'warningClearedOnRetry': true,
+        });
       }
+      final report = {'cases': proof, 'allPassed': true};
+      binding.reportData = report;
+      await File('${output.path}/proof.json').writeAsString(
+        '${const JsonEncoder.withIndent('  ').convert(report)}\n',
+        flush: true,
+      );
     } finally {
       await fixture.close();
       await tester.pumpWidget(const SizedBox());
