@@ -161,18 +161,8 @@ Future<void> checkNovelty(List<Map<String, Object>> cases) async {
   await for (final entry in Directory(
     '../benchmarks',
   ).list(recursive: true, followLinks: false)) {
-    if (entry is! File || p.extension(entry.path) != '.jsonl') continue;
-    final parts = p.split(entry.path);
-    if (parts.contains('results') || parts.contains('app-quality')) continue;
-    await for (final line
-        in entry
-            .openRead()
-            .transform(utf8.decoder)
-            .transform(const LineSplitter())) {
-      final json = jsonDecode(line) as Map<String, dynamic>;
-      for (final key in ['text', 'input', 'original']) {
-        if (json[key] case final String text) previous.add(normalize(text));
-      }
+    if (entry is File && previousDataset(entry.path)) {
+      previous.addAll(await previousTexts(entry));
     }
   }
   final unique = <String>{};
@@ -182,6 +172,32 @@ Future<void> checkNovelty(List<Map<String, Object>> cases) async {
       throw StateError('Повтор старого текста: ${item['id']}');
     }
   }
+}
+
+bool previousDataset(String path) {
+  final parts = p.split(path);
+  return p.extension(path) == '.jsonl' &&
+      !parts.contains('results') &&
+      !parts.contains('app-quality');
+}
+
+Future<Set<String>> previousTexts(File file) async {
+  final texts = <String>{};
+  await for (final line
+      in file
+          .openRead()
+          .transform(utf8.decoder)
+          .transform(const LineSplitter())) {
+    final json = jsonDecode(line) as Map<String, dynamic>;
+    texts.addAll(
+      [
+        'text',
+        'input',
+        'original',
+      ].map((key) => json[key]).whereType<String>().map(normalize),
+    );
+  }
+  return texts;
 }
 
 String normalize(String text) =>
