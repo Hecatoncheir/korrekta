@@ -16,6 +16,9 @@ import 'window_session.dart';
 import 'translation_cubit.dart';
 import 'translation_footer.dart';
 import 'translation_binding.dart';
+import 'generation_binding.dart';
+import 'generation_cubit.dart';
+import 'generation_footer.dart';
 
 class EditorPage extends StatefulWidget {
   const EditorPage({super.key, this.session});
@@ -28,6 +31,7 @@ class _EditorPageState extends State<EditorPage> {
   late final lifecycle = AppLifecycleListener(onExitRequested: saveBeforeExit);
   late final EditorBinding binding;
   late final TranslationBinding translationBinding;
+  late final GenerationBinding generationBinding;
 
   @override
   void initState() {
@@ -35,6 +39,10 @@ class _EditorPageState extends State<EditorPage> {
     binding = EditorBinding(context.read<EditorCubit>());
     translationBinding = TranslationBinding(
       context.read<TranslationCubit>(),
+      context.read<EditorCubit>(),
+    );
+    generationBinding = GenerationBinding(
+      context.read<GenerationCubit>(),
       context.read<EditorCubit>(),
     );
     lifecycle;
@@ -53,15 +61,21 @@ class _EditorPageState extends State<EditorPage> {
     lifecycle.dispose();
     binding.dispose();
     translationBinding.dispose();
+    generationBinding.dispose();
     super.dispose();
   }
 
   Future<AppExitResponse> saveBeforeExit() async {
     final cubit = context.read<EditorCubit>();
     final translation = context.read<TranslationCubit>();
+    final generation = context.read<GenerationCubit>();
     final components = context.read<ComponentsCubit>();
-    await Future.wait([cubit.flush(), translation.flush()]);
-    if (cubit.state.saved && translation.state.saved) {
+    await Future.wait([cubit.flush(), translation.flush(), generation.flush()]);
+    if (cubit.state.saved &&
+        translation.state.saved &&
+        generation.state.saved) {
+      translation.cancel();
+      generation.cancel();
       await components.shutdown();
       return AppExitResponse.exit;
     }
@@ -86,6 +100,8 @@ class _EditorPageState extends State<EditorPage> {
       ),
     );
     if (exit != true) return AppExitResponse.cancel;
+    translation.cancel();
+    generation.cancel();
     await components.shutdown();
     return AppExitResponse.exit;
   }
@@ -93,11 +109,15 @@ class _EditorPageState extends State<EditorPage> {
   Future<void> newDraft() async {
     final cubit = context.read<EditorCubit>();
     final translation = context.read<TranslationCubit>();
-    final translating =
-        context.read<NavigationCubit>().state == AppSection.translation;
-    final text = translating
-        ? '${translation.state.draft.text}${translation.state.draft.output}'
-        : cubit.state.text;
+    final generation = context.read<GenerationCubit>();
+    final section = context.read<NavigationCubit>().state;
+    final text = switch (section) {
+      AppSection.generation =>
+        '${generation.state.draft.prompt}${generation.state.draft.output}',
+      AppSection.translation =>
+        '${translation.state.draft.text}${translation.state.draft.output}',
+      _ => cubit.state.text,
+    };
     if (text.isEmpty) return;
     final clear = await showDialog<bool>(
       context: context,
@@ -119,24 +139,32 @@ class _EditorPageState extends State<EditorPage> {
       ),
     );
     if (clear != true) return;
-    if (translating) {
-      translation.clear();
-    } else {
-      cubit.edit('');
+    switch (section) {
+      case AppSection.generation:
+        generation.clear();
+      case AppSection.translation:
+        translation.clear();
+      case AppSection.editor:
+        cubit.edit('');
+      case AppSection.settings:
+        break;
     }
   }
 
   Future<void> runPrimary() {
     final editor = context.read<EditorCubit>();
     final translation = context.read<TranslationCubit>();
+    final generation = context.read<GenerationCubit>();
     if (!context.read<ComponentsCubit>().state.ready ||
         editor.state.checking ||
-        translation.state.translating) {
+        translation.state.translating ||
+        generation.state.generating) {
       return Future.value();
     }
     return switch (context.read<NavigationCubit>().state) {
       AppSection.editor => editor.check(),
       AppSection.translation => translation.translate(editor.state.settings),
+      AppSection.generation => generation.generate(editor.state.settings),
       AppSection.settings => Future.value(),
     };
   }
@@ -146,6 +174,7 @@ class _EditorPageState extends State<EditorPage> {
     providers: [
       RepositoryProvider.value(value: binding),
       RepositoryProvider.value(value: translationBinding),
+      RepositoryProvider.value(value: generationBinding),
     ],
     child: CallbackShortcuts(
       bindings: {
@@ -175,6 +204,7 @@ class _EditorPageState extends State<EditorPage> {
                           builder: (context, section) => switch (section) {
                             AppSection.editor => const EditorFooter(),
                             AppSection.translation => const TranslationFooter(),
+                            AppSection.generation => const GenerationFooter(),
                             AppSection.settings => const SizedBox(height: 48),
                           },
                         ),
@@ -215,6 +245,12 @@ class SideBar extends StatelessWidget {
           section: AppSection.editor,
           label: 'Редактор',
           icon: Icons.edit_note_rounded,
+        ),
+        const SizedBox(height: 8),
+        const SectionButton(
+          section: AppSection.generation,
+          label: 'Генерация',
+          icon: Icons.auto_awesome_rounded,
         ),
         const SizedBox(height: 8),
         const SectionButton(
@@ -281,12 +317,11 @@ class EditorHeader extends StatelessWidget {
                         style: Theme.of(context).textTheme.titleLarge,
                       ),
                       const SizedBox(height: 6),
-                      Text(
-                        section == AppSection.translation
-                            ? 'Перевод на вашем компьютере'
-                            : 'Место для ваших мыслей',
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
+                      Text(switch (section) {
+                        AppSection.generation => 'Текст по вашему запросу',
+                        AppSection.translation => 'Перевод на вашем компьютере',
+                        _ => 'Место для ваших мыслей',
+                      }, style: Theme.of(context).textTheme.bodySmall),
                     ],
                   ),
                 ),
@@ -300,13 +335,7 @@ class EditorHeader extends StatelessWidget {
                   IconButton(
                     tooltip: 'Скопировать текст',
                     onPressed: () => Clipboard.setData(
-                      ClipboardData(
-                        text: section == AppSection.translation
-                            ? translationClipboard(
-                                context.read<TranslationCubit>().state,
-                              )
-                            : context.read<EditorCubit>().state.text,
-                      ),
+                      ClipboardData(text: sectionClipboard(context, section)),
                     ),
                     icon: const Icon(Icons.copy_rounded),
                   ),
@@ -334,6 +363,16 @@ class EditorHeader extends StatelessWidget {
 
 String translationClipboard(TranslationState state) =>
     state.draft.output.isEmpty ? state.draft.text : state.draft.output;
+
+String sectionClipboard(BuildContext context, AppSection section) =>
+    switch (section) {
+      AppSection.translation => translationClipboard(
+        context.read<TranslationCubit>().state,
+      ),
+      AppSection.generation =>
+        context.read<GenerationCubit>().state.draft.output,
+      _ => context.read<EditorCubit>().state.text,
+    };
 
 class SectionButton extends StatelessWidget {
   const SectionButton({

@@ -25,6 +25,9 @@ import 'data/local_components.dart';
 import 'data/local_translator.dart';
 import 'data/translation_store.dart';
 import 'ui/translation_cubit.dart';
+import 'data/generation_store.dart';
+import 'data/local_generator.dart';
+import 'ui/generation_cubit.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -54,6 +57,14 @@ Future<void> main() async {
       store: translationStore,
       draft: await translationStore.load(),
     );
+    final generationStore = FileGenerationStore(
+      File(p.join(directory.path, 'generation.json')),
+    );
+    final generation = GenerationCubit(
+      generator: LocalGenerator(),
+      store: generationStore,
+      draft: await generationStore.load(),
+    );
     final updates = UpdateCubit.live(
       Directory(p.join(directory.path, 'updates')),
       () async {
@@ -61,8 +72,17 @@ Future<void> main() async {
         if (translation.state.translating) {
           throw StateError('Перевод ещё выполняется');
         }
-        await Future.wait([editor.flush(), translation.flush()]);
-        if (!editor.state.saved || !translation.state.saved) {
+        if (generation.state.generating) {
+          throw StateError('Генерация ещё выполняется');
+        }
+        await Future.wait([
+          editor.flush(),
+          translation.flush(),
+          generation.flush(),
+        ]);
+        if (!editor.state.saved ||
+            !translation.state.saved ||
+            !generation.state.saved) {
           throw StateError('Текст не сохранён');
         }
         await session.flush();
@@ -74,6 +94,7 @@ Future<void> main() async {
         providers: [
           BlocProvider(create: (_) => editor),
           BlocProvider(create: (_) => translation),
+          BlocProvider(create: (_) => generation),
           BlocProvider(create: (_) => updates..check()),
         ],
         child: KorrektaApp(session: session, setup: runtime),
@@ -134,6 +155,7 @@ class KorrektaApp extends StatelessWidget {
           before.settings.runtimeKey != after.settings.runtimeKey,
       listener: (context, state) {
         context.read<TranslationCubit>().modelChanged();
+        context.read<GenerationCubit>().modelChanged();
         context.read<ComponentsCubit>().prepare(state.settings);
       },
       child: BlocBuilder<EditorCubit, EditorState>(

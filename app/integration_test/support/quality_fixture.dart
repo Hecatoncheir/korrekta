@@ -23,6 +23,10 @@ import 'quality_data.dart';
 import 'quality_proxy.dart';
 import 'quality_environment.dart';
 
+import 'package:korrekta/data/generation_store.dart';
+import 'package:korrekta/data/local_generator.dart';
+import 'package:korrekta/ui/generation_cubit.dart';
+
 class QualityFixture {
   QualityFixture(this.root, this.output, this.runtimeDirectory);
   final String root, runtimeDirectory;
@@ -31,6 +35,7 @@ class QualityFixture {
   late final QualityProxy proxy;
   late final EditorCubit editor;
   late final TranslationCubit translation;
+  late final GenerationCubit generation;
   late final UpdateCubit updates;
   late ComponentsCubit components;
 
@@ -67,6 +72,10 @@ class QualityFixture {
       translator: LocalTranslator(),
       store: FileTranslationStore(File(p.join(state.path, 'translation.json'))),
     );
+    generation = GenerationCubit(
+      generator: LocalGenerator(),
+      store: FileGenerationStore(File(p.join(state.path, 'generation.json'))),
+    );
     updates = UpdateCubit.live(
       Directory(p.join(state.path, 'updates')),
       editor.flush,
@@ -77,6 +86,7 @@ class QualityFixture {
     providers: [
       BlocProvider.value(value: editor),
       BlocProvider.value(value: translation),
+      BlocProvider.value(value: generation),
       BlocProvider.value(value: updates),
     ],
     child: KorrektaApp(setup: runtime),
@@ -89,6 +99,7 @@ class QualityFixture {
     await components.shutdown();
     await editor.close();
     await translation.close();
+    await generation.close();
     await updates.close();
     await proxy.close();
   }

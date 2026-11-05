@@ -6,6 +6,7 @@ import 'editor_cubit.dart';
 import 'components_cubit.dart';
 import 'vim/vim_status.dart';
 import 'translation_cubit.dart';
+import 'generation_cubit.dart';
 
 class EditorFooter extends StatelessWidget {
   const EditorFooter({super.key});
@@ -103,6 +104,9 @@ class EditorActions extends StatelessWidget {
                 state.checking ||
                 context.select<TranslationCubit, bool>(
                   (cubit) => cubit.state.translating,
+                ) ||
+                context.select<GenerationCubit, bool>(
+                  (cubit) => cubit.state.generating,
                 ) ||
                 state.text.trim().isEmpty
             ? null

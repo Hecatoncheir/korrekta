@@ -14,10 +14,14 @@ import 'package:korrekta/ui/translation_cubit.dart';
 import 'package:korrekta/data/runtime/runtime_manager.dart';
 
 import 'translation_fakes.dart';
+import 'generation_fakes.dart';
+
+import 'package:korrekta/ui/generation_cubit.dart';
 
 Widget testApp(
   EditorCubit editor, {
   TranslationCubit? translation,
+  GenerationCubit? generation,
   ComponentSetup? setup,
 }) {
   final client = MockClient((_) async => http.Response('[]', 200));
@@ -25,6 +29,14 @@ Widget testApp(
   return MultiBlocProvider(
     providers: [
       BlocProvider.value(value: editor),
+      BlocProvider(
+        create: (_) =>
+            generation ??
+            GenerationCubit(
+              generator: FakeGenerator(),
+              store: MemoryGenerationStore(),
+            ),
+      ),
       BlocProvider(
         create: (_) =>
             translation ??

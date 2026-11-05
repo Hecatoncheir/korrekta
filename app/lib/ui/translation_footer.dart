@@ -7,6 +7,7 @@ import 'components_cubit.dart';
 import 'translation_cubit.dart';
 import 'translation_binding.dart';
 import 'vim/vim_status.dart';
+import 'generation_cubit.dart';
 
 class TranslationFooter extends StatelessWidget {
   const TranslationFooter({super.key});
@@ -91,6 +92,9 @@ class TranslationAction extends StatelessWidget {
   Widget build(BuildContext context) {
     final editor = context.watch<EditorCubit>().state;
     final cubit = context.read<TranslationCubit>();
+    final generating = context.select<GenerationCubit, bool>(
+      (c) => c.state.generating,
+    );
     return FilledButton.icon(
       key: const Key('translate'),
       onPressed: state.translating
@@ -99,7 +103,8 @@ class TranslationAction extends StatelessWidget {
                   (cubit) => cubit.state.ready,
                 ) &&
                 state.ready &&
-                !editor.checking
+                !editor.checking &&
+                !generating
           ? () => cubit.translate(editor.settings)
           : null,
       icon: Icon(

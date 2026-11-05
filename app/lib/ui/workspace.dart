@@ -6,6 +6,7 @@ import 'settings_page.dart';
 import 'suggestions_panel.dart';
 import 'text_editor.dart';
 import 'translation_page.dart';
+import 'generation_page.dart';
 
 class Workspace extends StatelessWidget {
   const Workspace({super.key});
@@ -16,6 +17,7 @@ class Workspace extends StatelessWidget {
           index: section.index,
           children: const [
             WorkspaceColumns(left: TextEditor(), right: SuggestionsPanel()),
+            GenerationPage(),
             TranslationPage(),
             SettingsPage(),
           ],
