@@ -13,10 +13,11 @@ import 'support/quality_fixture.dart';
 import 'support/quality_steps.dart';
 
 void main() {
-  final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+  final binding = QualityBinding();
   const root = String.fromEnvironment('QUALITY_ROOT');
   const runtimeRoot = String.fromEnvironment('QUALITY_RUNTIME');
   const pilot = bool.fromEnvironment('QUALITY_PILOT');
+  const inspect = bool.fromEnvironment('QUALITY_INSPECT');
   testWidgets('Новый набор через настоящий интерфейс и локальные движки', (
     tester,
   ) async {
@@ -55,6 +56,7 @@ void main() {
       isTrue,
       reason: fixture.components.state.message,
     );
+    if (inspect) await Future<void>.delayed(const Duration(seconds: 45));
     final cases = await readCases(root, pilot);
     try {
       for (final model in LocalModel.values) {
@@ -71,6 +73,12 @@ void main() {
       await tester.pumpWidget(const SizedBox());
     }
   }, timeout: const Timeout(Duration(hours: 2)));
+}
+
+class QualityBinding extends IntegrationTestWidgetsFlutterBinding {
+  // Ввод для пакетного сценария идёт через тестовый канал Flutter, без ОС IME.
+  @override
+  bool get registerTestTextInput => true;
 }
 
 Future<void> runQualityModel(

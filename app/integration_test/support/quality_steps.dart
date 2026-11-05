@@ -74,7 +74,7 @@ Future<Map<String, Object?>> qualityCase(
   fixture.proxy.currentCase = item.id;
   final wireStart = fixture.proxy.observations.length;
   await tester.enterText(field, item.text);
-  await tester.pump();
+  await tester.pumpAndSettle();
   expect(fixture.editor.state.text, item.text);
   final timer = Stopwatch()..start();
   await tester.tap(find.byKey(const Key('check')));
@@ -124,7 +124,7 @@ Future<Map<String, Object?>> qualityCase(
   };
   if (recommended.isNotEmpty) {
     await tester.tap(find.byTooltip('Отменить замену'));
-    await tester.pump();
+    await tester.pumpAndSettle();
     expect(fixture.editor.state.text, item.text);
     expect(controller.text, item.text);
   }

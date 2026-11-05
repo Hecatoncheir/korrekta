@@ -27,6 +27,16 @@ Future<List<QualityCase>> readCases(String root, bool pilot) async {
         'protected': <String>[],
         'names': <String>[],
       }),
+      QualityCase({
+        'id': 'pilot-after-undo',
+        'profile': 'empty',
+        'group': 'pilot',
+        'kind': 'control',
+        'text': 'Норвета пишет в Flutter.\n  `final x = 1;` 🙂',
+        'expected': ['Норвета пишет в Flutter.\n  `final x = 1;` 🙂'],
+        'protected': ['Норвета', '`final x = 1;`', '🙂'],
+        'names': <String>[],
+      }),
     ];
   }
   final file = File(
