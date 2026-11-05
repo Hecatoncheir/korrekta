@@ -10,6 +10,9 @@ missing = []
 
 
 def check_link(source, value):
+    if '<' in value or '>' in value:
+        missing.append(f'{source.relative_to(ROOT)}: неверный URL ресурса: {value}')
+        return
     url = urlsplit(value)
     if url.scheme or url.netloc or not url.path:
         return
